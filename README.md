@@ -3,3 +3,5 @@
 <h1> Github Readme Activity Graph </h1>
 
 An activity graph to show your GitHub activities.
+
+<img src="http://localhost:7000/ashutosh00710" alt="Graph">
