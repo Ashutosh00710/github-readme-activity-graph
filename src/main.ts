@@ -17,7 +17,7 @@ app.get("/:user", (req: Request, res: Response) => {
       { bgColor: "#ffffff", color: "#ffffff" },
       "Ashutosh Dwivedi's Contribution Graph"
     );
-    graph.chart(data).then((chart: any) => {
+    graph.chart(data).then((chart: string) => {
       res.send(chart);
     });
   });
