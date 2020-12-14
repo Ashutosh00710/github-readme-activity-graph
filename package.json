@@ -20,7 +20,8 @@
   "homepage": "https://github.com/Ashutosh00710/github-readme-activity-graph#readme",
   "dependencies": {
     "@types/express": "^4.17.8",
-    "axios": "^0.21.0"
+    "axios": "^0.21.0",
+    "node-chartist": "^1.0.5"
   },
   "devDependencies": {
     "@types/node": "^14.14.7",

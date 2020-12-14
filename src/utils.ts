@@ -3,7 +3,7 @@ import axios, { AxiosRequestConfig } from "axios";
 export const calendarData = async (userId: string) => {
   try {
     let data: AxiosRequestConfig = await axios(
-      `http://github-calendar.herokuapp.com/commits/${userId}`
+      `http://github-calendar.herokuapp.com/commits/last/${userId}`
     );
     return data.data.data;
   } catch (err) {

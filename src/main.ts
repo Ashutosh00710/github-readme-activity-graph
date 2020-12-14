@@ -1,5 +1,6 @@
 import express, { Application, Request, Response } from "express";
 import { calendarData } from "./utils";
+import { Card } from "./GraphCards";
 
 const app: Application = express();
 
@@ -10,7 +11,15 @@ app.get("/", (req: Request, res: Response) => {
 app.get("/:user", (req: Request, res: Response) => {
   let user: string = req.params.user;
   calendarData(`${user}`).then((data: number[]) => {
-    res.send(`User Data: ${data}`);
+    const graph = new Card(
+      400,
+      800,
+      { bgColor: "#ffffff", color: "#ffffff" },
+      "Ashutosh Dwivedi's Contribution Graph"
+    );
+    graph.chart(data).then((chart: any) => {
+      res.send(chart);
+    });
   });
 });
 
