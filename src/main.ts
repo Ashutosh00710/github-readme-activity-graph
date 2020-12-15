@@ -13,7 +13,7 @@ app.get("/:user", (req: Request, res: Response): void => {
   calendarData(`${user}`).then((data: number[]) => {
     const graph = new Card(
       500,
-      1000,
+      800,
       { bgColor: "#ffffff", color: "#ffffff" },
       "Ashutosh Dwivedi's Contribution Graph"
     );

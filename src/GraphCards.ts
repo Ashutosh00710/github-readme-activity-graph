@@ -35,10 +35,8 @@ export class Card {
     const bar = await generate("bar", options, data);
     */
     const options = {
-      width: this.width - 200,
+      width: this.width,
       height: this.height - 100,
-      axisX: { title: "Days" },
-      axisY: { title: "Contributions" },
     };
 
     const line = await generate("line", options, {
@@ -52,14 +50,18 @@ export class Card {
           viewBox="0 0 ${this.width} ${this.height}"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-        >
+        >   
+            <rect xmlns="http://www.w3.org/2000/svg" data-testid="card-bg" x="0.5" y="0.5" rx="4.5" height="95%" stroke="#E4E2E2" width="100%" fill="#e2f3f5" stroke-opacity="1"/>
             <style>
+                body {
+                  font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+                }
                 .header {
                   font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
                   text-align: center
                 }
             </style>
-              <foreignObject width=${this.width - 200} height=${this.height}>
+              <foreignObject width=${this.width} height=${this.height}>
                 <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css"/>
                 <h2 class="header">${this.title}</h2>
                 ${line}
