@@ -35,8 +35,8 @@ export class Card {
     const bar = await generate("bar", options, data);
     */
     const options = {
-      width: "800",
-      height: "400",
+      width: this.width - 200,
+      height: this.height - 100,
       axisX: { title: "Days" },
       axisY: { title: "Contributions" },
     };
@@ -47,8 +47,8 @@ export class Card {
     });
     return `
       <svg
-          width="1000"
-          height="500"
+          width="${this.width}"
+          height="${this.height}"
           viewBox="0 0 ${this.width} ${this.height}"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +59,7 @@ export class Card {
                   text-align: center
                 }
             </style>
-              <foreignObject width="800" height="500">
+              <foreignObject width=${this.width - 200} height=${this.height}>
                 <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css"/>
                 <h2 class="header">${this.title}</h2>
                 ${line}
