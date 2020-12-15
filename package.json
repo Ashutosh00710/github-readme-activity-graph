@@ -4,8 +4,7 @@
   "description": "An activity graph to show you github activities (or contribution)",
   "main": "main.js",
   "scripts": {
-    "start": "node dist/main.js",
-    "dev": "nodemon src/main.ts",
+    "start": "nodemon src/main.ts",
     "build": "tsc -p ."
   },
   "repository": {
