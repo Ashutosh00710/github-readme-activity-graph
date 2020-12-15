@@ -27,7 +27,7 @@ export class Card {
 
   async chart(contributions: number[]): Promise<string> {
     /*           For bar graph
-    const options = { width: this.width, height: this.height };
+    const options = { width: this.width, height: this.height -100 };
     const data = {
       labels: Array.from(Array(contributions.length).keys()),
       series: [contributions],
