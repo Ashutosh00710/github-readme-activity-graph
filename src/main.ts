@@ -4,7 +4,7 @@ import { Card } from "./GraphCards";
 const cors = require("cors");
 
 const app: Application = express();
-let port = 7000;
+let port = process.env.PORT || 7000;
 
 app.use(cors());
 
