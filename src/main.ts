@@ -3,7 +3,7 @@ import { calendarData } from "./utils";
 import { Card } from "./GraphCards";
 
 const app: Application = express();
-let port = process.env.PORT || 5000;
+let port = process.env.PORT || 7000;
 
 app.get("/", (req: Request, res: Response) => {
   res.send(`<h1>Project is up and Running with TypeScript</h1>`);
@@ -19,6 +19,7 @@ app.get("/:user", (req: Request, res: Response): void => {
       "Ashutosh Dwivedi's Contribution Graph"
     );
     graph.chart(data).then((chart: string): void => {
+      res.setHeader("Content-Type", "image/svg+xml");
       res.send(chart);
     });
   });
