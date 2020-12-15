@@ -6,4 +6,4 @@ An activity graph to show your GitHub activities.
 
 ## Current Status of Project
 
-<img align="center" src="https://github.com/Ashutosh00710/github-readme-activity-graph/blob/main/asset/currentstatus.png" alt="Graph" width="520">
+<img align="center" src="https://github.com/Ashutosh00710/github-readme-activity-graph/blob/main/asset/currentstatus.png" alt="Graph" width="510">
