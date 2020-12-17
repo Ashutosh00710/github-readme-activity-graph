@@ -1,5 +1,5 @@
-const generate = require("node-chartist");
-const {graphStyle} = require("./graphStyle");
+import { createGraph } from "./createChart";
+const { graphStyle } = require("./graphStyle");
 
 interface colors {
   bgColor: string; //for background
@@ -40,7 +40,7 @@ export class Card {
       height: this.height - 100,
     };
 
-    const line = await generate("line", options, {
+    const line = await createGraph("line", options, {
       labels: Array.from(Array(contributions.length).keys()),
       series: [{ value: contributions }],
     });
@@ -66,7 +66,9 @@ export class Card {
             </style>
 
             <foreignObject x="20" y="20" width="${this.width}" height="50">
-              <h1 xmlns="http://www.w3.org/1999/xhtml" class="header">${this.title}</h1>
+              <h1 xmlns="http://www.w3.org/1999/xhtml" class="header">${
+                this.title
+              }</h1>
             </foreignObject>
 
             ${line}
