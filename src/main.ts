@@ -4,7 +4,7 @@ import { Card } from "./GraphCards";
 const cors = require("cors");
 
 const app: Application = express();
-let port = process.env.PORT || 7000;
+let port = 5000;
 
 app.use(cors());
 
@@ -19,12 +19,13 @@ app.get("/:user", (req: Request, res: Response): void => {
       500,
       800,
       { bgColor: "#ffffff", color: "#ffffff" },
-      "Ashutosh Dwivedi's Contribution Graph"
+      `${user.toUpperCase()}'s Contrinution Graph`
     );
     graph
       .chart(data)
-      .then((chart: string): void => {
-        res.send(chart);
+      .then((chart: string) => {
+        res.set("Content-Type", "image/svg+xml");
+        res.status(200).send(chart);
       })
       .catch((err) => {
         console.error(err);
