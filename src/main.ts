@@ -14,25 +14,25 @@ app.get("/", (req: Request, res: Response) => {
 
 app.get("/:user", (req: Request, res: Response): void => {
   let user: string = req.params.user;
-  calendarData(`${user}`).then((data: number[] | string ) => {
-    if(Array.isArray(data)){
-    const graph = new Card(
-      500,
-      800,
-      { bgColor: "#ffffff", color: "#ffffff" },
-      `${user.toUpperCase()}'s Contrinution Graph`
-    );
-    graph
-      .chart(data)
-      .then((chart: string) => {
-        res.set("Content-Type", "image/svg+xml");
-        res.status(200).send(chart);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-    }
-    else {
+  calendarData(`${user}`).then((data: number[] | string) => {
+    if (Array.isArray(data)) {
+      const graph = new Card(
+        500,
+        800,
+        { bgColor: "#ffffff", color: "#ffffff" },
+        `${user.toUpperCase()}'s Contrinution Graph`
+      );
+      graph
+        .chart(data)
+        .then((chart: string) => {
+          res.setHeader("Cache-Control", "public, max-age=3");
+          res.set("Content-Type", "image/svg+xml");
+          res.status(200).send(chart);
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    } else {
       res.send(`<h2>${data}</h2>`);
     }
   });
