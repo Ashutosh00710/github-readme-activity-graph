@@ -5,8 +5,8 @@ export const calendarData = async (userId: string) => {
     let data: AxiosRequestConfig = await axios(
       `http://github-calendar.herokuapp.com/commits/last/${userId}`
     );
-    return data.data.data;
+    return (data.data.data.length) ? data.data.data : `Can't fetch any contribution. Please check if your username is correct.`
   } catch (err) {
-    console.log("ERROR");
+    return `Please check your internet connection! 😬`;
   }
 };

@@ -14,7 +14,8 @@ app.get("/", (req: Request, res: Response) => {
 
 app.get("/:user", (req: Request, res: Response): void => {
   let user: string = req.params.user;
-  calendarData(`${user}`).then((data: number[]) => {
+  calendarData(`${user}`).then((data: number[] | string ) => {
+    if(Array.isArray(data)){
     const graph = new Card(
       500,
       800,
@@ -30,6 +31,10 @@ app.get("/:user", (req: Request, res: Response): void => {
       .catch((err) => {
         console.error(err);
       });
+    }
+    else {
+      res.send(`<h2>${data}</h2>`);
+    }
   });
 });
 
