@@ -1,6 +1,7 @@
+
 import { createGraph } from "./createChart";
 const { graphStyle } = require("./graphStyle");
-
+import {strokeAnimation, lineAnimation} from "./graphAnimation";
 interface colors {
   bgColor: string; //for background
   color: string; //for font
@@ -38,6 +39,7 @@ export class Card {
     const options = {
       width: this.width,
       height: this.height - 100,
+      axisY: {onlyInteger: true}
     };
 
     const line = await createGraph("line", options, {
@@ -63,6 +65,9 @@ export class Card {
                 }
 
                 ${graphStyle()}
+                ${strokeAnimation()}
+                ${lineAnimation()}
+
             </style>
 
             <foreignObject x="20" y="20" width="${this.width}" height="50">

@@ -170,10 +170,16 @@ const graphStyle = () => {
     .ct-point {
     stroke-width: 10px;
     stroke-linecap: round;
+    animation: blink 1s ease-in-out forwards;
     }
+
     .ct-line {
     stroke-width: 4px;
+    stroke-dasharray: 5000;
+    stroke-dashoffset: 5000;
+    animation: dash 5s ease-in-out forwards;
     }
+    
     .ct-area {
     stroke: none;
     fill-opacity: 0.1;
@@ -749,7 +755,7 @@ const graphStyle = () => {
     .ct-series-a .ct-slice-donut,
     .ct-series-a .ct-swatch {
     background-color: skyblue;
-    stroke: skyblue;
+    stroke: #4faf6f;
     }
     .ct-series-a .ct-area,
     .ct-series-a .ct-slice-pie {

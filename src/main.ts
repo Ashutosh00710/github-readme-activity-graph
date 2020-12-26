@@ -1,12 +1,9 @@
 import express, { Application, Request, Response } from "express";
 import { calendarData } from "./utils";
 import { Card } from "./GraphCards";
-const cors = require("cors");
 
 const app: Application = express();
 let port = process.env.PORT || 5000;
-
-app.use(cors());
 
 app.get("/", (req: Request, res: Response) => {
   res.send(`<h1>Project is up and Running with TypeScript</h1>`);
