@@ -15,3 +15,5 @@ Graph Rendering - as an SVG element with a colorful background (implemented usin
 |      Purpose       |  Library Name   |                  Link                   |
 | :----------------: | :-------------: | :-------------------------------------: |
 | Graph Construction | **CHARTISH.JS** | https://github.com/gionkunz/chartist-js |
+
+<img src="https://activity-graph.herokuapp.com/ashutosh00710" alt="graph"/>
