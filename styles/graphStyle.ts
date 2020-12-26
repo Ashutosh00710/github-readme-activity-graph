@@ -1,5 +1,5 @@
-const graphStyle = () => {
-    return `
+export const graphStyle = (color: string) =>
+  `
     .ct-double-octave:after,
     .ct-major-eleventh:after,
     .ct-major-second:after,
@@ -20,8 +20,8 @@ const graphStyle = () => {
     clear: both;
     }
     .ct-label {
-    fill: rgba(0, 0, 0, 0.4);
-    color: rgba(0, 0, 0, 0.4);
+    fill: #${color};
+    color: #${color};
     font-size: .75rem;
     line-height: 1;
     }
@@ -930,6 +930,3 @@ const graphStyle = () => {
     fill: indianred;
     }
     `;
-};
-
-module.exports = {graphStyle};
