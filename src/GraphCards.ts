@@ -5,6 +5,8 @@ import { strokeAnimation, lineAnimation } from "../styles/graphAnimation";
 interface colors {
   bgColor: string;
   color: string;
+  line: string;
+  point: string;
 }
 
 export class Card {
@@ -43,7 +45,7 @@ export class Card {
           viewBox="0 0 ${this.width} ${this.height}"
           fill="none"
           xmlns="http://www.w3.org/2000/svg">
-            <rect xmlns="http://www.w3.org/2000/svg" data-testid="card-bg" x="0.5" y="0.5" rx="4.5" height="80%" stroke="#E4E2E2" width="100%" fill="#${
+            <rect xmlns="http://www.w3.org/2000/svg" data-testid="card-bg" x="0.5" y="0.5" rx="4.5" height="80%" stroke="#E4E2E2" fill-opacity="1" width="100%" fill="#${
               this.colors.bgColor
             }" stroke-opacity="1"/>
             <style>
@@ -56,7 +58,11 @@ export class Card {
                   color: #${this.colors.color}
                 }
 
-                ${graphStyle(this.colors.color)}
+                ${graphStyle(
+                  this.colors.color,
+                  this.colors.line,
+                  this.colors.point
+                )}
                 ${strokeAnimation()}
                 ${lineAnimation()}
 

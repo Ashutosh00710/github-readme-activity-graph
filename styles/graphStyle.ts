@@ -1,4 +1,4 @@
-export const graphStyle = (color: string) =>
+export const graphStyle = (color: string, line: string, point: string) =>
   `
     .ct-double-octave:after,
     .ct-major-eleventh:after,
@@ -170,6 +170,7 @@ export const graphStyle = (color: string) =>
     .ct-point {
     stroke-width: 10px;
     stroke-linecap: round;
+    stroke: #${point};
     animation: blink 1s ease-in-out forwards;
     }
 
@@ -177,6 +178,7 @@ export const graphStyle = (color: string) =>
     stroke-width: 4px;
     stroke-dasharray: 5000;
     stroke-dashoffset: 5000;
+    stroke: #${line};
     animation: dash 5s ease-in-out forwards;
     }
     
@@ -193,8 +195,8 @@ export const graphStyle = (color: string) =>
     stroke-width: 60px;
     }
     .ct-series-a .ct-bar,
-    .ct-series-a .ct-line,
-    .ct-series-a .ct-point,
+    .ct-series-a ,
+    .ct-series-a ,
     .ct-series-a .ct-slice-donut {
     stroke: #d70206;
     }
@@ -750,8 +752,8 @@ export const graphStyle = (color: string) =>
     border-radius: 0.14em;
     }
     .ct-series-a .ct-bar,
-    .ct-series-a .ct-line,
-    .ct-series-a .ct-point,
+    .ct-series-a ,
+    .ct-series-a ,
     .ct-series-a .ct-slice-donut,
     .ct-series-a .ct-swatch {
     background-color: skyblue;

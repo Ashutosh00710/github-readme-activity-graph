@@ -2,6 +2,7 @@ import express, { Application, Request, Response } from "express";
 import { calendarData } from "./utils";
 import { Card } from "./GraphCards";
 import bodyParser from "body-parser";
+import { defaultColors } from "../styles/defaults";
 
 const app: Application = express();
 let port = process.env.PORT || 5000;
@@ -15,15 +16,22 @@ app.get("/", (req: Request, res: Response) => {
 
 app.get("/graph", (req: Request, res: Response): void => {
   let username = req.query.username;
-  let bgColor = req.query.bg_color;
-  let color = req.query.color;
+  let bgColor = req.query.bg_color ? req.query.bg_color : defaultColors.bgColor;
+  let color = req.query.color ? req.query.color : defaultColors.color;
+  let lineColor = req.query.line ? req.query.line : defaultColors.lineColor;
+  let pointColor = req.query.point ? req.query.point : defaultColors.pointColor;
 
   calendarData(`${username}`).then((data: number[] | string) => {
     if (Array.isArray(data)) {
       const graph = new Card(
         500,
         800,
-        { bgColor: `${bgColor}`, color: `${color}` },
+        {
+          bgColor: `${bgColor}`,
+          color: `${color}`,
+          line: `${lineColor}`,
+          point: `${pointColor}`,
+        },
         `${username}'s Contrinution Graph`
       );
       graph
