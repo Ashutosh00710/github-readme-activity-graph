@@ -43,7 +43,7 @@ app.get("/graph", (req: Request, res: Response): void => {
         500,
         800,
         colors,
-        `${username}'s Contrinution Graph`
+        `${username}'s Contribution Graph`
       );
       graph
         .chart(data)

@@ -30,7 +30,13 @@ export class Card {
     const options = {
       width: this.width,
       height: this.height - 100,
-      axisY: { onlyInteger: true },
+      axisY: { title: "Contributions", onlyInteger: true },
+      chartPadding: {
+        top: 50,
+        right: 20,
+        bottom: 5,
+        left: 30
+      },
     };
 
     const line = await createGraph("line", options, {
@@ -45,7 +51,7 @@ export class Card {
           viewBox="0 0 ${this.width} ${this.height}"
           fill="none"
           xmlns="http://www.w3.org/2000/svg">
-            <rect xmlns="http://www.w3.org/2000/svg" data-testid="card-bg" x="0.5" y="0.5" rx="4.5" height="80%" stroke="#E4E2E2" fill-opacity="1" width="100%" fill="#${
+            <rect xmlns="http://www.w3.org/2000/svg" data-testid="card_bg" id="cardBg" x="0.5" y="0.5" rx="4.5" height="88%" stroke="#E4E2E2" fill-opacity="1" width="100%" fill="#${
               this.colors.bgColor
             }" stroke-opacity="1"/>
             
@@ -58,6 +64,9 @@ export class Card {
                   text-align: center;
                   color: #${this.colors.color}
                 }
+                svg {
+                  font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+                }
                 ${graphStyle(
                   this.colors.color,
                   this.colors.lineColor,
@@ -67,9 +76,9 @@ export class Card {
                 ${lineAnimation()}
             </style>
 
-            <foreignObject x="20" y="20" width="${this.width}" height="50">
+            <foreignObject x="0" y="0" width="${this.width}" height="50">
               <h1 xmlns="http://www.w3.org/1999/xhtml" class="header">${
-                this.title
+              this.title
               }</h1>
             </foreignObject>
 
@@ -78,3 +87,5 @@ export class Card {
     `;
   }
 }
+
+
