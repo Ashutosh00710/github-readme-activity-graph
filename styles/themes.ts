@@ -1,4 +1,4 @@
-export let themes = {
+export const themes = {
   default: {
     bgColor: "f4fa9c",
     color: "071a52",
