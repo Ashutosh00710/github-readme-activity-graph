@@ -21,8 +21,6 @@ export const selectColors = (queryString: string): colors => {
       return themes["dracula"];
     case "gruvbox":
       return themes["gruvbox"];
-    case "cotton_candy":
-      return themes["cotton_candy"];
     default:
       return themes["default"];
   }

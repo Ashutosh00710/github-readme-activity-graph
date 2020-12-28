@@ -17,10 +17,4 @@ export const themes = {
     lineColor: "d8a657",
     pointColor: "e78a4e",
   },
-  cotton_candy: {
-    bgColor: "ffcfe9",
-    color: "9e4c98",
-    lineColor: "9e4c98",
-    pointColor: "403d3d",
-  },
 };
