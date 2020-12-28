@@ -10,7 +10,18 @@ A dynamically generated activity graph to show your GitHub activities.
 | :----------------: | :-------------: | :---------------------------------------: |
 | Graph Construction | **CHARTISH.JS** | <https://github.com/gionkunz/chartist-js> |
 
+
+### Default
+
+<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710" alt="graph"/>
+
+### Dracula
+
 <img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=dracula" alt="graph"/>
+
+### Gruvbox
+
+<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=gruvbox" alt="graph"/>
 
 ### URL Available
 
