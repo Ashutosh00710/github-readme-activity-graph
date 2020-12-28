@@ -1,6 +1,6 @@
 export const themes = {
   default: {
-    bgColor: "f4fa9c",
+    bgColor: "d1c5c0",
     color: "071a52",
     lineColor: "17b978",
     pointColor: "071a52",
