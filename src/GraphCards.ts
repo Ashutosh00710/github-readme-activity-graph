@@ -31,12 +31,12 @@ export class Card {
       width: this.width,
       height: this.height - 100,
       axisY: { title: "Contributions", onlyInteger: true, offset: 70 },
-      axisX: { title: "Days", offset: 50},
+      axisX: { title: "Days", offset: 50 },
       chartPadding: {
         top: 50,
         right: 50,
         bottom: 5,
-        left: 20
+        left: 20,
       },
     };
 
@@ -79,7 +79,7 @@ export class Card {
 
             <foreignObject x="0" y="0" width="${this.width}" height="50">
               <h1 xmlns="http://www.w3.org/1999/xhtml" class="header">${
-              this.title
+                this.title
               }</h1>
             </foreignObject>
 
@@ -88,5 +88,3 @@ export class Card {
     `;
   }
 }
-
-
