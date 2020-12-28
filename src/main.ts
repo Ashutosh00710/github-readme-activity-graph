@@ -1,8 +1,8 @@
 import express, { Application, Request, Response } from "express";
-import { calendarData } from "./utils";
-import { Card } from "./GraphCards";
+import { calendarData, selectColors } from "./utils";
+import { Card, colors } from "./GraphCards";
 import bodyParser from "body-parser";
-import { defaultColors } from "../styles/defaults";
+import { themes } from "../styles/themes";
 
 const app: Application = express();
 let port = process.env.PORT || 5000;
@@ -16,28 +16,39 @@ app.get("/", (req: Request, res: Response) => {
 
 app.get("/graph", (req: Request, res: Response): void => {
   let username = req.query.username;
-  let bgColor = req.query.bg_color ? req.query.bg_color : defaultColors.bgColor;
-  let color = req.query.color ? req.query.color : defaultColors.color;
-  let lineColor = req.query.line ? req.query.line : defaultColors.lineColor;
-  let pointColor = req.query.point ? req.query.point : defaultColors.pointColor;
+  let colors: colors;
+
+  if (String(req.query.theme) in themes) {
+    colors = selectColors(String(req.query.theme));
+  } else {
+    colors = {
+      bgColor: String(
+        req.query.bg_color ? req.query.bg_color : themes["default"].bgColor
+      ),
+      color: String(
+        req.query.color ? req.query.color : themes["default"].color
+      ),
+      lineColor: String(
+        req.query.line ? req.query.line : themes["default"].lineColor
+      ),
+      pointColor: String(
+        req.query.point ? req.query.point : themes["default"].pointColor
+      ),
+    };
+  }
 
   calendarData(`${username}`).then((data: number[] | string) => {
     if (Array.isArray(data)) {
       const graph = new Card(
         500,
         800,
-        {
-          bgColor: `${bgColor}`,
-          color: `${color}`,
-          line: `${lineColor}`,
-          point: `${pointColor}`,
-        },
+        colors,
         `${username}'s Contrinution Graph`
       );
       graph
         .chart(data)
         .then((chart: string) => {
-          res.setHeader("Cache-Control", "public, max-age=900"); // 15 minutes
+          res.setHeader("Cache-Control", "public, max-age=900");
           res.set("Content-Type", "image/svg+xml");
           res.status(200).send(chart);
         })

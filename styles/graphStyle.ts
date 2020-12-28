@@ -163,8 +163,9 @@ export const graphStyle = (color: string, line: string, point: string) =>
     text-anchor: end;
     }
     .ct-grid {
-    stroke: rgba(0, 0, 0, 0.2);
+    stroke: #${color};
     stroke-width: 1px;
+    stroke-opacity: 0.3;  
     stroke-dasharray: 2px;
     }
     .ct-point {

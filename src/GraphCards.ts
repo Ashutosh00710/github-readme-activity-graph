@@ -2,11 +2,11 @@ import { createGraph } from "./createChart";
 import { graphStyle } from "../styles/graphStyle";
 import { strokeAnimation, lineAnimation } from "../styles/graphAnimation";
 
-interface colors {
+export interface colors {
   bgColor: string;
   color: string;
-  line: string;
-  point: string;
+  lineColor: string;
+  pointColor: string;
 }
 
 export class Card {
@@ -48,6 +48,7 @@ export class Card {
             <rect xmlns="http://www.w3.org/2000/svg" data-testid="card-bg" x="0.5" y="0.5" rx="4.5" height="80%" stroke="#E4E2E2" fill-opacity="1" width="100%" fill="#${
               this.colors.bgColor
             }" stroke-opacity="1"/>
+            
             <style>
                 body {
                   font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -57,15 +58,13 @@ export class Card {
                   text-align: center;
                   color: #${this.colors.color}
                 }
-
                 ${graphStyle(
                   this.colors.color,
-                  this.colors.line,
-                  this.colors.point
+                  this.colors.lineColor,
+                  this.colors.pointColor
                 )}
                 ${strokeAnimation()}
                 ${lineAnimation()}
-
             </style>
 
             <foreignObject x="20" y="20" width="${this.width}" height="50">
