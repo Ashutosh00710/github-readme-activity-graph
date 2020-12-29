@@ -25,13 +25,14 @@ export class Card {
       width: this.width,
       height: this.height,
       axisY: { title: "Contributions", onlyInteger: true, offset: 70 },
-      axisX: { title: "Days", offset: 50 },
+      axisX: { title: "Days", offset: 50, showGrid: false },
       chartPadding: {
         top: 50,
         right: 50,
         bottom: 10,
         left: 20,
       },
+      showArea: true
     };
 
     const line = await createGraph("line", options, {
