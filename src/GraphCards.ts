@@ -23,13 +23,13 @@ export class Card {
   async chart(contributions: number[]): Promise<string> {
     const options = {
       width: this.width,
-      height: this.height - 100,
+      height: this.height,
       axisY: { title: "Contributions", onlyInteger: true, offset: 70 },
       axisX: { title: "Days", offset: 50 },
       chartPadding: {
         top: 50,
         right: 50,
-        bottom: 5,
+        bottom: 10,
         left: 20,
       },
     };
@@ -43,10 +43,9 @@ export class Card {
       <svg
           width="${this.width}"
           height="${this.height}"
-          viewBox="0 0 ${this.width} ${this.height}"
           fill="none"
           xmlns="http://www.w3.org/2000/svg">
-            <rect xmlns="http://www.w3.org/2000/svg" data-testid="card_bg" id="cardBg" x="0.5" y="0.5" rx="4.5" height="83%" stroke="#E4E2E2" fill-opacity="1" width="100%" fill="#${
+            <rect xmlns="http://www.w3.org/2000/svg" data-testid="card_bg" id="cardBg" x="0.5" y="0.5" rx="4.5" height="100%" stroke="#E4E2E2" fill-opacity="1" width="100%" fill="#${
               this.colors.bgColor
             }" stroke-opacity="1"/>
             

@@ -2,7 +2,9 @@ import axios, { AxiosRequestConfig } from "axios";
 import { themes } from "../styles/themes";
 import { colors } from "../interfaces/interface";
 
-export const calendarData = async (userId: string) => {
+export const calendarData = async (
+  userId: string
+): Promise<number[] | string> => {
   try {
     let data: AxiosRequestConfig = await axios(
       `http://github-calendar.herokuapp.com/commits/last/${userId}`
