@@ -13,15 +13,15 @@ A dynamically generated activity graph to show your GitHub activities.
 
 ### Default
 
-<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710" alt="graph"/>
+<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710" height=300 alt="graph"/>
 
 ### Dracula
 
-<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=dracula" alt="graph"/>
+<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=dracula" height=300 alt="graph"/>
 
 ### Gruvbox
 
-<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=gruvbox" alt="graph"/>
+<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=gruvbox" height=300 alt="graph"/>
 
 ### URL Available
 
