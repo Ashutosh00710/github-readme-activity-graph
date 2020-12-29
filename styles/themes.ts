@@ -1,4 +1,6 @@
-export const themes = {
+import { colors, theme } from "../interfaces/interface";
+
+export const themes: theme<colors> = {
   default: {
     bgColor: "d1c5c0",
     color: "071a52",

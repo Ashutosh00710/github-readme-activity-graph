@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig } from "axios";
 import { themes } from "../styles/themes";
-import { colors } from "./GraphCards";
+import { colors } from "../interfaces/interface";
 
 export const calendarData = async (userId: string) => {
   try {

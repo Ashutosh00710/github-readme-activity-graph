@@ -1,6 +1,7 @@
 import express, { Application, Request, Response } from "express";
 import { calendarData, selectColors } from "./utils";
-import { Card, colors } from "./GraphCards";
+import { Card } from "./GraphCards";
+import { colors } from "../interfaces/interface";
 import bodyParser from "body-parser";
 import { themes } from "../styles/themes";
 

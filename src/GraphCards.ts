@@ -1,13 +1,7 @@
 import { createGraph } from "./createChart";
 import { graphStyle } from "../styles/graphStyle";
 import { strokeAnimation, lineAnimation } from "../styles/graphAnimation";
-
-export interface colors {
-  bgColor: string;
-  color: string;
-  lineColor: string;
-  pointColor: string;
-}
+import { colors } from "../interfaces/interface";
 
 export class Card {
   height: number;
