@@ -4,7 +4,7 @@ import { Card } from "./GraphCards";
 import { colors } from "../interfaces/interface";
 import bodyParser from "body-parser";
 import { themes } from "../styles/themes";
-import { invalidUserSvg } from './svgs'
+import { invalidUserSvg } from "./svgs";
 
 const app: Application = express();
 let port: string | number = process.env.PORT || 5000;
