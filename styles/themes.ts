@@ -18,5 +18,11 @@ export const themes: theme<colors> = {
     color: "d4be98",
     lineColor: "d8a657",
     pointColor: "e78a4e",
-  },
+  }
+  // random: {
+  //   bgColor: "B63A3A",
+  //   color: "F9FAE9",
+  //   lineColor: "F4E23D",
+  //   pointColor: "F4E7E7"
+  // }
 };

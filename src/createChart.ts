@@ -38,3 +38,5 @@ export const createGraph = R.curryN(
     return `${chart}${legend}`;
   })
 );
+
+export default {chartist};

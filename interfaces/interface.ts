@@ -1,3 +1,5 @@
+import { promises } from "dns";
+
 export interface colors {
   bgColor: string;
   color: string;
@@ -8,3 +10,11 @@ export interface colors {
 export interface theme<T> {
   [key: string]: T;
 }
+
+export interface graphArgs {
+  height: number;
+  width: number;
+  colors: colors;
+  title: string;
+  line: Promise<string>;
+} 

@@ -9,7 +9,7 @@ export const calendarData = async (userId: string) => {
     );
     return data.data.data.length
       ? data.data.data
-      : `Can't fetch any contribution. Please check if your username is correct.`;
+      : `Can't fetch any contribution. Please check username 😬`;
   } catch (err) {
     return `Please check your internet connection! 😬`;
   }
@@ -21,6 +21,8 @@ export const selectColors = (queryString: string): colors => {
       return themes["dracula"];
     case "gruvbox":
       return themes["gruvbox"];
+    // case "random":
+    //   return themes["random"];
     default:
       return themes["default"];
   }

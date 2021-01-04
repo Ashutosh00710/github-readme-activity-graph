@@ -1,7 +1,6 @@
 import { createGraph } from "./createChart";
-import { graphStyle } from "../styles/graphStyle";
-import { strokeAnimation, lineAnimation } from "../styles/graphAnimation";
-import { colors } from "../interfaces/interface";
+import { colors, graphArgs } from "../interfaces/interface";
+import { graphSvg } from './svgs';
 
 export class Card {
   height: number;
@@ -32,54 +31,22 @@ export class Card {
         bottom: 5,
         left: 20,
       },
-      showArea: true
+      showArea: true,
     };
 
-    const line = await createGraph("line", options, {
-      labels: Array.from(Array(contributions.length).keys()),
+    const line: Promise<string> = await createGraph("line", options, {
+      labels: Array.from(Array(contributions.length).keys(), day => day + 1),
       series: [{ value: contributions }],
     });
 
-    return `
-      <svg
-          width="${this.width}"
-          height="${this.height}"
-          viewBox="0 0 ${this.width} ${this.height}"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-            <rect xmlns="http://www.w3.org/2000/svg" data-testid="card_bg" id="cardBg" x="0.5" y="0.5" rx="4.5" height="83%" stroke="#E4E2E2" fill-opacity="1" width="100%" fill="#${
-              this.colors.bgColor
-            }" stroke-opacity="1"/>
-            
-            <style>
-                body {
-                  font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
-                }
-                .header {
-                  font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
-                  text-align: center;
-                  color: #${this.colors.color}
-                }
-                svg {
-                  font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
-                }
-                ${graphStyle(
-                  this.colors.color,
-                  this.colors.lineColor,
-                  this.colors.pointColor
-                )}
-                ${strokeAnimation()}
-                ${lineAnimation()}
-            </style>
+    const args: graphArgs = {
+      height: this.height, 
+      width: this.width, 
+      colors: this.colors, 
+      title: this.title,
+      line
+    }
 
-            <foreignObject x="0" y="0" width="${this.width}" height="50">
-              <h1 xmlns="http://www.w3.org/1999/xhtml" class="header">${
-                this.title
-              }</h1>
-            </foreignObject>
-
-            ${line}
-        </svg>
-    `;
+    return graphSvg(args);
   }
 }
