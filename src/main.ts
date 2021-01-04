@@ -4,6 +4,7 @@ import { Card } from "./GraphCards";
 import { colors } from "../interfaces/interface";
 import bodyParser from "body-parser";
 import { themes } from "../styles/themes";
+import { invalidUserSvg } from './svgs'
 
 const app: Application = express();
 let port: string | number = process.env.PORT || 5000;
@@ -57,7 +58,8 @@ app.get("/graph", (req: Request, res: Response): void => {
           console.error(err);
         });
     } else {
-      res.send(`<h2>${data}</h2>`);
+      res.set("Content-Type", "image/svg+xml");
+      res.send(invalidUserSvg(data));
     }
   });
 });
