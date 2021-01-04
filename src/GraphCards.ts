@@ -1,6 +1,6 @@
 import { createGraph } from "./createChart";
 import { colors, graphArgs } from "../interfaces/interface";
-import { graphSvg } from './svgs';
+import { graphSvg } from "./svgs";
 
 export class Card {
   height: number;
@@ -31,22 +31,20 @@ export class Card {
         bottom: 10,
         left: 20,
       },
-      showArea: true,
     };
 
     const line: Promise<string> = await createGraph("line", options, {
-      labels: Array.from(Array(contributions.length).keys(), day => day + 1),
+      labels: Array.from(Array(contributions.length).keys(), (day) => day + 1),
       series: [{ value: contributions }],
     });
 
-
     const args: graphArgs = {
-      height: this.height, 
-      width: this.width, 
-      colors: this.colors, 
+      height: this.height,
+      width: this.width,
+      colors: this.colors,
       title: this.title,
-      line
-    }
+      line,
+    };
 
     return graphSvg(args);
   }
