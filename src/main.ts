@@ -7,7 +7,7 @@ import { themes } from "../styles/themes";
 import { invalidUserSvg } from './svgs'
 
 const app: Application = express();
-let port = process.env.PORT || 5000;
+let port: string | number = process.env.PORT || 5000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -17,7 +17,7 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 app.get("/graph", (req: Request, res: Response): void => {
-  let username = req.query.username;
+  let username: string = String(req.query.username);
   let colors: colors;
 
   if (String(req.query.theme) in themes) {
@@ -39,10 +39,10 @@ app.get("/graph", (req: Request, res: Response): void => {
     };
   }
 
-  calendarData(`${username}`).then((data: number[] | string) => {
+  calendarData(`${username}`).then((data: number[] | string): void => {
     if (Array.isArray(data)) {
-      const graph = new Card(
-        500,
+      const graph: Card = new Card(
+        400,
         800,
         colors,
         `${username}'s Contribution Graph`
