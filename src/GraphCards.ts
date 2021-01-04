@@ -22,13 +22,13 @@ export class Card {
   async chart(contributions: number[]): Promise<string> {
     const options = {
       width: this.width,
-      height: this.height - 100,
+      height: this.height,
       axisY: { title: "Contributions", onlyInteger: true, offset: 70 },
       axisX: { title: "Days", offset: 50, showGrid: false },
       chartPadding: {
         top: 50,
         right: 50,
-        bottom: 5,
+        bottom: 10,
         left: 20,
       },
       showArea: true,
@@ -38,6 +38,7 @@ export class Card {
       labels: Array.from(Array(contributions.length).keys(), day => day + 1),
       series: [{ value: contributions }],
     });
+
 
     const args: graphArgs = {
       height: this.height, 
