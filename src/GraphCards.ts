@@ -26,8 +26,22 @@ export class Card {
     const options = {
       width: this.width,
       height: this.height,
-      axisY: { title: "Contributions", onlyInteger: true, offset: 70 },
-      axisX: { title: "Days", offset: 50, showGrid: false },
+      axisY: { 
+        title: "Contributions", 
+        onlyInteger: true, 
+        offset: 70,
+        labelOffset: {
+          y: 4.5
+        } 
+      },
+      axisX: { 
+        title: "Days", 
+        offset: 50, 
+        showGrid: false,
+        labelOffset: {
+          x: -4.5
+        } 
+      },
       chartPadding: {
         top: 80,
         right: 50,
