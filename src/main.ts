@@ -36,7 +36,7 @@ app.get("/graph", (req: Request, res: Response): void => {
   calendarData(`${username}`).then((data: number[] | string): void => {
     if (Array.isArray(data)) {
       const graph: Card = new Card(
-        400,
+        420,
         800,
         colors,
         `${username}'s Contribution Graph`,

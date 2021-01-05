@@ -29,9 +29,9 @@ export class Card {
       axisY: { title: "Contributions", onlyInteger: true, offset: 70 },
       axisX: { title: "Days", offset: 50, showGrid: false },
       chartPadding: {
-        top: 50,
+        top: 80,
         right: 50,
-        bottom: 10,
+        bottom: 20,
         left: 20,
       },
       showArea: this.area,
@@ -47,8 +47,8 @@ export class Card {
       width: this.width,
       colors: this.colors,
       title: this.title,
-      line,
-    };
+      line
+    }
 
     return graphSvg(args);
   }
