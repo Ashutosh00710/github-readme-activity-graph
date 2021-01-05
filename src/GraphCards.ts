@@ -7,16 +7,19 @@ export class Card {
   width: number;
   colors: colors;
   title: string;
+  area: boolean;
   constructor(
     height: number,
     width: number,
     colors: colors,
-    title: string = ""
+    title: string = "",
+    area: boolean = false
   ) {
     this.height = height;
     this.width = width;
     this.colors = colors;
     this.title = title;
+    this.area = area;
   }
 
   async chart(contributions: number[]): Promise<string> {
@@ -31,7 +34,7 @@ export class Card {
         bottom: 20,
         left: 20,
       },
-      showArea: true
+      showArea: this.area,
     };
 
     const line: Promise<string> = await createGraph("line", options, {
