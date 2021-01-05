@@ -11,7 +11,7 @@ export const calendarData = async (
     );
     return data.data.data.length
       ? data.data.data
-      : `Can't fetch any contribution. Please check username 😬`;
+      : `Can't fetch any contribution. Please check your username 😬`;
   } catch (err) {
     return `Please check your internet connection! 😬`;
   }
@@ -29,6 +29,8 @@ export const selectColors = (queryString: string): colors => {
       return themes["rogue"];
     case "xcode":
       return themes["xcode"];
+    case "coral":
+      return themes["coral"];
     default:
       return themes["default"];
   }

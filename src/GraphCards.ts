@@ -26,21 +26,20 @@ export class Card {
     const options = {
       width: this.width,
       height: this.height,
-      axisY: { 
-        title: "Contributions", 
-        onlyInteger: true, 
+      axisY: {
+        title: "Contributions",
+        onlyInteger: true,
         offset: 70,
         labelOffset: {
-          y: 4.5
-        } 
+          y: 4.5,
+        },
       },
-      axisX: { 
-        title: "Days", 
-        offset: 50, 
-        showGrid: false,
+      axisX: {
+        title: "Days",
+        offset: 50,
         labelOffset: {
-          x: -4.5
-        } 
+          x: -4.5,
+        },
       },
       chartPadding: {
         top: 80,
@@ -49,6 +48,7 @@ export class Card {
         left: 20,
       },
       showArea: this.area,
+      fullWidth: true,
     };
 
     const line: Promise<string> = await createGraph("line", options, {
@@ -61,8 +61,8 @@ export class Card {
       width: this.width,
       colors: this.colors,
       title: this.title,
-      line
-    }
+      line,
+    };
 
     return graphSvg(args);
   }

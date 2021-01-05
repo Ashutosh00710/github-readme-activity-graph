@@ -12,33 +12,27 @@ A dynamically generated activity graph to show your GitHub activities.
 
 <p align="right">
 
-### Default
+### Themes
+
+- Default (Cotton Candy)
+- Dracula
+- Gruvbox
+- Rogue
+- Github
+- XCode
+- Coral
 
 <p align="center">
-<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710" height=300 alt="graph"/>
-</p>
-
-### Dracula
-
-<p align="center">
-<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=dracula" height=300 alt="graph"/>
-</p>
-
-### Gruvbox
-
-<p align="center">
-<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=gruvbox" height=300 alt="graph"/>
+<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710" height=200 alt="graph"/>
+<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=dracula" height=200 alt="graph"/>
+<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=gruvbox" height=200 alt="graph"/>
+<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=rogue" height=200 alt="graph"/>
+<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=github" height=200 alt="graph"/>
+<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=xcode" height=200 alt="graph"/>
+<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=coral" height=200 alt="graph"/>
 </p>
 
 ### URL Available
-
-### Theme
-
-Themes Available:
-
-- Default
-- Dracula
-- Gruvbox
 
 `https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=dracula`
 

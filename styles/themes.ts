@@ -2,10 +2,10 @@ import { colors, theme } from "../interfaces/interface";
 
 export const themes: theme<colors> = {
   default: {
-    bgColor: "d1c5c0",
-    color: "071a52",
-    lineColor: "17b978",
-    pointColor: "071a52",
+    bgColor: "ffcfe9",
+    color: "9e4c98",
+    lineColor: "9e4c98",
+    pointColor: "403d3d",
   },
   dracula: {
     bgColor: "44475a",
@@ -36,5 +36,11 @@ export const themes: theme<colors> = {
     color: "fcfcfa",
     lineColor: "c4e3ff",
     pointColor: "ff8070",
+  },
+  coral: {
+    bgColor: "9a3838",
+    color: "f9fae9",
+    lineColor: "f4e23d",
+    pointColor: "f4e7e7",
   },
 };
