@@ -18,11 +18,23 @@ export const themes: theme<colors> = {
     color: "d4be98",
     lineColor: "d8a657",
     pointColor: "e78a4e",
-  }
-  // random: {
-  //   bgColor: "B63A3A",
-  //   color: "F9FAE9",
-  //   lineColor: "F4E23D",
-  //   pointColor: "F4E7E7"
-  // }
+  },
+  rogue: {
+    bgColor: "172030",
+    color: "a3b09a",
+    lineColor: "b18bb1",
+    pointColor: "c6797e",
+  },
+  github: {
+    bgColor: "293036",
+    color: "ffffff",
+    lineColor: "9ecbff",
+    pointColor: "f97583",
+  },
+  xcode: {
+    bgColor: "202124",
+    color: "fcfcfa",
+    lineColor: "c4e3ff",
+    pointColor: "ff8070",
+  },
 };

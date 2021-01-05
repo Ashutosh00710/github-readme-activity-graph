@@ -19,24 +19,18 @@ app.get("/", (req: Request, res: Response) => {
 app.get("/graph", (req: Request, res: Response): void => {
   let username: string = String(req.query.username);
   let colors: colors;
+  let area: boolean;
+
+  if (String(req.query.area) === "true") {
+    area = true;
+  } else {
+    area = false;
+  }
 
   if (String(req.query.theme) in themes) {
     colors = selectColors(String(req.query.theme));
   } else {
-    colors = {
-      bgColor: String(
-        req.query.bg_color ? req.query.bg_color : themes["default"].bgColor
-      ),
-      color: String(
-        req.query.color ? req.query.color : themes["default"].color
-      ),
-      lineColor: String(
-        req.query.line ? req.query.line : themes["default"].lineColor
-      ),
-      pointColor: String(
-        req.query.point ? req.query.point : themes["default"].pointColor
-      ),
-    };
+    colors = selectColors("default");
   }
 
   calendarData(`${username}`).then((data: number[] | string): void => {
@@ -45,7 +39,8 @@ app.get("/graph", (req: Request, res: Response): void => {
         400,
         800,
         colors,
-        `${username}'s Contribution Graph`
+        `${username}'s Contribution Graph`,
+        area
       );
       graph
         .chart(data)

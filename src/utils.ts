@@ -23,8 +23,12 @@ export const selectColors = (queryString: string): colors => {
       return themes["dracula"];
     case "gruvbox":
       return themes["gruvbox"];
-    // case "random":
-    //   return themes["random"];
+    case "github":
+      return themes["github"];
+    case "rogue":
+      return themes["rogue"];
+    case "xcode":
+      return themes["xcode"];
     default:
       return themes["default"];
   }
