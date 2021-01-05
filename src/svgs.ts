@@ -9,9 +9,9 @@ export const graphSvg = (props: graphArgs) => `
     viewBox="0 0 ${props.width} ${props.height}"
     fill="none"
     xmlns="http://www.w3.org/2000/svg">
-        <rect xmlns="http://www.w3.org/2000/svg" data-testid="card_bg" id="cardBg" x="0.5" y="0.5" rx="4.5" height="100%" stroke="#E4E2E2" fill-opacity="1" width="100%" fill="#${
+        <rect xmlns="http://www.w3.org/2000/svg" data-testid="card_bg" id="cardBg" x="0" y="0" rx="2.5" height="100%" stroke="#E4E2E2" fill-opacity="1" width="100%" fill="#${
           props.colors.bgColor
-        }" stroke-opacity="1"/>
+        }" stroke-opacity="1" style="stroke:#ffffff; stroke-width:1;"/>
     
         <style>
             body {
