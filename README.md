@@ -23,13 +23,13 @@ A dynamically generated activity graph to show your GitHub activities.
 - Coral
 
 <p align="center">
-<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710" height=220 alt="graph"/>
-<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=dracula" height=220 alt="graph"/>
-<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=gruvbox" height=200 alt="graph"/>
-<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=rogue" height=200 alt="graph"/>
-<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=github" height=200 alt="graph"/>
-<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=xcode" height=200 alt="graph"/>
-<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=coral" height=200 alt="graph"/>
+<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710" height=210 alt="graph"/>
+<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=dracula" height=210 alt="graph"/>
+<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=gruvbox" height=210 alt="graph"/>
+<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=rogue" height=210 alt="graph"/>
+<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=github" height=210 alt="graph"/>
+<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=xcode" height=210 alt="graph"/>
+<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=coral" height=210 alt="graph"/>
 </p>
 
 ### URL Available
