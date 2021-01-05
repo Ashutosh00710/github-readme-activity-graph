@@ -20,7 +20,8 @@ export const graphSvg = (props: graphArgs) => `
             .header {
                 font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
                 text-align: center;
-                color: #${props.colors.color}
+                color: #${props.colors.color};
+                margin-top: 20px; 
             }
             svg {
                 font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;

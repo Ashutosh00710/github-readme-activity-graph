@@ -22,15 +22,16 @@ export class Card {
   async chart(contributions: number[]): Promise<string> {
     const options = {
       width: this.width,
-      height: this.height - 100,
+      height: this.height,
       axisY: { title: "Contributions", onlyInteger: true, offset: 70 },
       axisX: { title: "Days", offset: 50, showGrid: false },
       chartPadding: {
-        top: 50,
+        top: 80,
         right: 50,
-        bottom: 5,
+        bottom: 20,
         left: 20,
       },
+      showArea: true
     };
 
     const line: Promise<string> = await createGraph("line", options, {
