@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get('/', (req: Request, res: Response) => {
-  res.send(`<h1>GitHub Readme Activity Graph 📉📈</h1>`);
+  res.send(`<h1>GitHub Readme Activity Graph 📈</h1>`);
 });
 
 app.get('/graph', (req: Request, res: Response): void => {

@@ -1,41 +1,38 @@
-<img align="right" src="https://github.com/Ashutosh00710/github-readme-activity-graph/blob/main/asset/graph.jpg" alt="Graph" height=300/>
-
 # Github Readme Activity Graph 📈
 
 A dynamically generated activity graph to show your GitHub activities.
+
+<p align="right">
+
+### Available Themes
+
+|            Name            |                                                       Preview                                                       |
+| :------------------------: | :-----------------------------------------------------------------------------------------------------------------: |
+| **Default (Cotton Candy)** |        <img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710" height=250 alt="graph"/>        |
+|        **Dracula**         | <img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=dracula" height=250 alt="graph"/> |
+|        **Gruvbox**         | <img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=gruvbox" height=250 alt="graph"/> |
+|         **Rogue**          |  <img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=rogue" height=250 alt="graph"/>  |
+|         **Github**         | <img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=github" height=250 alt="graph"/>  |
+|         **XCode**          |  <img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=xcode" height=250 alt="graph"/>  |
+|         **Coral**          |  <img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=coral" height=250 alt="graph"/>  |
+
+## Customization
+
+Customize the appearance of your Activity Graph however you want with URL params.
+
+#### Common Options
+
+| Arguments  |                  Description                  |       Type of Value        |
+| :--------: | :-------------------------------------------: | :------------------------: |
+| `bg_color` |            card's background color            |   hex code (without `#`)   |
+|  `color`   |            graph card's text color            |   hex code (without `#`)   |
+|   `line`   |              graph's line color               |   hex code (without `#`)   |
+|  `point`   |         color of points on line graph         |   hex code (without `#`)   |
+|   `area`   |          shows area under the graph           | boolean (default: `false`) |
+|  `theme`   | name of [available themes](#available-themes) |           string           |
 
 ## Resources Used to build this project
 
 |      Purpose       |  Library Name   |                   Link                    |
 | :----------------: | :-------------: | :---------------------------------------: |
 | Graph Construction | **CHARTISH.JS** | <https://github.com/gionkunz/chartist-js> |
-
-<p align="right">
-
-### Themes
-
-- Default (Cotton Candy)
-- Dracula
-- Gruvbox
-- Rogue
-- Github
-- XCode
-- Coral
-
-<p align="center">
-<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710" height=210 alt="graph"/>
-<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=dracula" height=210 alt="graph"/>
-<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=gruvbox" height=210 alt="graph"/>
-<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=rogue" height=210 alt="graph"/>
-<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=github" height=210 alt="graph"/>
-<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=xcode" height=210 alt="graph"/>
-<img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=coral" height=210 alt="graph"/>
-</p>
-
-### URL Available
-
-`https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=dracula`
-
-#### Dynamic URL
-
-`http://localhost:5000/graph?username=ashutosh00710&bg_color=17b978&color=a7ff83&line=a7ff83&point=086972`
