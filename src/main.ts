@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get('/', (req: Request, res: Response) => {
-  res.send(`<h1>Project is up and Running with TypeScript</h1>`);
+  res.send(`<h1>GitHub Readme Activity Graph 📉📈</h1>`);
 });
 
 app.get('/graph', (req: Request, res: Response): void => {
@@ -30,7 +30,21 @@ app.get('/graph', (req: Request, res: Response): void => {
   if (String(req.query.theme) in themes) {
     colors = selectColors(String(req.query.theme));
   } else {
-    colors = selectColors('default');
+    //Custom options for user
+    colors = {
+      bgColor: String(
+        req.query.bg_color ? req.query.bg_color : themes['default'].bgColor
+      ),
+      color: String(
+        req.query.color ? req.query.color : themes['default'].color
+      ),
+      lineColor: String(
+        req.query.line ? req.query.line : themes['default'].lineColor
+      ),
+      pointColor: String(
+        req.query.point ? req.query.point : themes['default'].pointColor
+      ),
+    };
   }
 
   calendarData(`${username}`).then((data: number[] | string): void => {
