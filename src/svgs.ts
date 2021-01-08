@@ -1,6 +1,6 @@
-import { graphStyle } from "../styles/graphStyle";
-import { strokeAnimation, lineAnimation } from "../styles/graphAnimation";
-import { graphArgs } from "../interfaces/interface";
+import { graphStyle } from '../styles/graphStyle';
+import { strokeAnimation, lineAnimation } from '../styles/graphAnimation';
+import { graphArgs } from '../interfaces/interface';
 
 export const graphSvg = (props: graphArgs) => `
     <svg

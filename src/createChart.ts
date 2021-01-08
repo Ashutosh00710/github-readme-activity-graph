@@ -1,10 +1,10 @@
-const co = require("co");
-const chartist = require("../node_modules/node-chartist/lib/chartist");
-const generateChart = require("../node_modules/node-chartist/lib/chart");
-const generateLegend = require("../node_modules/node-chartist/lib/legend");
-const is = require("is_js");
-const R = require("ramda");
-const Ru = require("@panosoft/ramda-utils");
+const co = require('co');
+const chartist = require('../node_modules/node-chartist/lib/chartist');
+const generateChart = require('../node_modules/node-chartist/lib/chart');
+const generateLegend = require('../node_modules/node-chartist/lib/legend');
+const is = require('is_js');
+const R = require('ramda');
+const Ru = require('@panosoft/ramda-utils');
 
 /**
  * Generate Chart HTML
@@ -29,14 +29,14 @@ export const createGraph = R.curryN(
     options = is.function(options) ? options(Chartist) : options;
     if (is.not.json(options))
       throw new TypeError(
-        "options must be an object or a function that returns an object."
+        'options must be an object or a function that returns an object.'
       );
     options = Ru.defaults({ legend: false }, options);
     // create chart
     const chart = yield generateChart(Chartist, window, type, options, data);
-    const legend = options.legend ? generateLegend(data) : "";
+    const legend = options.legend ? generateLegend(data) : '';
     return `${chart}${legend}`;
   })
 );
 
-export default {chartist};
+export default { chartist };

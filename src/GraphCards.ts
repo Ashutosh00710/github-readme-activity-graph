@@ -1,6 +1,6 @@
-import { createGraph } from "./createChart";
-import { colors, graphArgs } from "../interfaces/interface";
-import { graphSvg } from "./svgs";
+import { createGraph } from './createChart';
+import { colors, graphArgs } from '../interfaces/interface';
+import { graphSvg } from './svgs';
 
 export class Card {
   height: number;
@@ -12,7 +12,7 @@ export class Card {
     height: number,
     width: number,
     colors: colors,
-    title: string = "",
+    title: string = '',
     area: boolean = false
   ) {
     this.height = height;
@@ -27,7 +27,7 @@ export class Card {
       width: this.width,
       height: this.height,
       axisY: {
-        title: "Contributions",
+        title: 'Contributions',
         onlyInteger: true,
         offset: 70,
         labelOffset: {
@@ -35,7 +35,7 @@ export class Card {
         },
       },
       axisX: {
-        title: "Days",
+        title: 'Days',
         offset: 50,
         labelOffset: {
           x: -4.5,
@@ -51,7 +51,7 @@ export class Card {
       fullWidth: true,
     };
 
-    const line: Promise<string> = await createGraph("line", options, {
+    const line: Promise<string> = await createGraph('line', options, {
       labels: Array.from(Array(contributions.length).keys(), (day) => day + 1),
       series: [{ value: contributions }],
     });

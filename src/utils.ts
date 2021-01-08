@@ -1,6 +1,6 @@
-import axios, { AxiosRequestConfig } from "axios";
-import { themes } from "../styles/themes";
-import { colors } from "../interfaces/interface";
+import axios, { AxiosRequestConfig } from 'axios';
+import { themes } from '../styles/themes';
+import { colors } from '../interfaces/interface';
 
 export const calendarData = async (
   userId: string
@@ -19,19 +19,19 @@ export const calendarData = async (
 
 export const selectColors = (queryString: string): colors => {
   switch (queryString) {
-    case "dracula":
-      return themes["dracula"];
-    case "gruvbox":
-      return themes["gruvbox"];
-    case "github":
-      return themes["github"];
-    case "rogue":
-      return themes["rogue"];
-    case "xcode":
-      return themes["xcode"];
-    case "coral":
-      return themes["coral"];
+    case 'dracula':
+      return themes['dracula'];
+    case 'gruvbox':
+      return themes['gruvbox'];
+    case 'github':
+      return themes['github'];
+    case 'rogue':
+      return themes['rogue'];
+    case 'xcode':
+      return themes['xcode'];
+    case 'coral':
+      return themes['coral'];
     default:
-      return themes["default"];
+      return themes['default'];
   }
 };
