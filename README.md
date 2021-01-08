@@ -1,6 +1,6 @@
 <img align="right" src="https://github.com/Ashutosh00710/github-readme-activity-graph/blob/main/asset/graph.jpg" alt="Graph" height=300/>
 
-# Github Readme Activity Graph 📈📉
+# Github Readme Activity Graph 📈
 
 A dynamically generated activity graph to show your GitHub activities.
 
