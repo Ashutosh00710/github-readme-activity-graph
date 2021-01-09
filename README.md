@@ -53,7 +53,7 @@ Customize the appearance of your Activity Graph however you want with URL params
 |   `area`   |          shows area under the graph           | boolean (default: `false`) |
 |  `theme`   | name of [available themes](#available-themes) |           string           |
 
-**Example:**
+**Example URL:**
 
 ```md
 [![Ashutosh's github activity graph](https://activity-graph.herokuapp.com/graph?username=ashutosh00710&bg_color=f4fa9c&color=17b978&line=17b978&point=17b978&area=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
