@@ -20,7 +20,7 @@ After _`username=ashutosh00710`_ put an _`&`_ and pass _`theme=theme_name`_
 [![Ashutosh's github activity graph](https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=dracula)](https://github.com/ashutosh00710/github-readme-activity-graph)
 ```
 
-[Manual Customization](#customization-🛠) is also available
+[Manual Customization](#customization) is also available
 
 ## Available Themes
 
@@ -34,7 +34,7 @@ After _`username=ashutosh00710`_ put an _`&`_ and pass _`theme=theme_name`_
 |         **XCode**          |  <img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=xcode" height=250 alt="graph"/>  |
 |         **Coral**          |  <img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=coral" height=250 alt="graph"/>  |
 
-## Customization 🛠
+## Customization
 
 Customize the appearance of your Activity Graph however you want with URL params.
 
