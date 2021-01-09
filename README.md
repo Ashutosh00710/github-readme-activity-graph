@@ -20,7 +20,7 @@ After _`username=ashutosh00710`_ put an _`&`_ and pass _`theme=theme_name`_
 [![Ashutosh's github activity graph](https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=dracula)](https://github.com/ashutosh00710/github-readme-activity-graph)
 ```
 
-[Manual Customization](#customization) is also available
+[Manual Customization](#customization-🛠) is also available
 
 ## Available Themes
 
