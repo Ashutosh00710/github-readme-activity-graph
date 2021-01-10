@@ -1,10 +1,10 @@
 import express, { Application, Request, Response } from 'express';
-import { calendarData, selectColors } from './utils';
+import { calendarData } from './utils';
 import { Card } from './GraphCards';
 import { colors } from '../interfaces/interface';
 import bodyParser from 'body-parser';
-import { themes } from '../styles/themes';
 import { invalidUserSvg } from './svgs';
+import { selectColors } from '../styles/themes';
 
 const app: Application = express();
 let port: string | number = process.env.PORT || 5000;
@@ -27,22 +27,25 @@ app.get('/graph', (req: Request, res: Response): void => {
     area = false;
   }
 
-  if (String(req.query.theme) in themes) {
+  if (req.query.theme) {
     colors = selectColors(String(req.query.theme));
   } else {
     //Custom options for user
+    console.log('Here');
     colors = {
       bgColor: String(
-        req.query.bg_color ? req.query.bg_color : themes['default'].bgColor
+        req.query.bg_color
+          ? req.query.bg_color
+          : selectColors('default').bgColor
       ),
       color: String(
-        req.query.color ? req.query.color : themes['default'].color
+        req.query.color ? req.query.color : selectColors('default').color
       ),
       lineColor: String(
-        req.query.line ? req.query.line : themes['default'].lineColor
+        req.query.line ? req.query.line : selectColors('default').lineColor
       ),
       pointColor: String(
-        req.query.point ? req.query.point : themes['default'].pointColor
+        req.query.point ? req.query.point : selectColors('default').pointColor
       ),
     };
   }

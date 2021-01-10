@@ -5,10 +5,6 @@ export interface colors {
   pointColor: string;
 }
 
-export interface theme<T> {
-  [key: string]: T;
-}
-
 export interface graphArgs {
   height: number;
   width: number;

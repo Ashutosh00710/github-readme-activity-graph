@@ -1,6 +1,4 @@
 import axios, { AxiosRequestConfig } from 'axios';
-import { themes } from '../styles/themes';
-import { colors } from '../interfaces/interface';
 
 export const calendarData = async (
   userId: string
@@ -14,24 +12,5 @@ export const calendarData = async (
       : `Can't fetch any contribution. Please check your username 😬`;
   } catch (err) {
     return `Please check your internet connection! 😬`;
-  }
-};
-
-export const selectColors = (queryString: string): colors => {
-  switch (queryString) {
-    case 'dracula':
-      return themes['dracula'];
-    case 'gruvbox':
-      return themes['gruvbox'];
-    case 'github':
-      return themes['github'];
-    case 'rogue':
-      return themes['rogue'];
-    case 'xcode':
-      return themes['xcode'];
-    case 'coral':
-      return themes['coral'];
-    default:
-      return themes['default'];
   }
 };
