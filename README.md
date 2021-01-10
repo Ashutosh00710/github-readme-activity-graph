@@ -8,9 +8,9 @@ A dynamically generated activity graph to show your GitHub activities.
 
 ## How to Use ? 🤔
 
-Just paste the following URL in your profile readme on github and you are good to go.
+Just paste the following URL in your profile readme and you are good to go.
 
-**Pass Your `username` in the URL**
+**Pass your `username` in the URL**
 
 ```md
 [![Ashutosh's github activity graph](https://activity-graph.herokuapp.com/graph?username=Ashutosh00710)](https://github.com/ashutosh00710/github-readme-activity-graph)
@@ -18,7 +18,7 @@ Just paste the following URL in your profile readme on github and you are good t
 
 ## Use themes
 
-After _`username=ashutosh00710`_ put an _`&`_ and pass _`theme=theme_name`_
+_`username=ashutosh00710&theme=theme_name`_
 
 ```md
 [![Ashutosh's github activity graph](https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=dracula)](https://github.com/ashutosh00710/github-readme-activity-graph)
