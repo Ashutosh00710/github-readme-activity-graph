@@ -4,6 +4,10 @@
 
 <h1 align="center">Github Readme Activity Graph</h1>
 
+<p align="center">
+    <img src="https://emoji.gg/assets/emoji/5643_github_octocat.png" height=100></img>
+</p>
+
 A dynamically generated activity graph to show your GitHub activities.
 
 ## How to Use ? 🤔
