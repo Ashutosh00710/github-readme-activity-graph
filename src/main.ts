@@ -6,7 +6,7 @@ import { invalidUserSvg } from './svgs';
 import { queryOption } from '../interfaces/interface';
 
 const app: Application = express();
-let port: string | number = process.env.PORT || 5000;
+let port: string | number = process.env.PORT || 5100;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

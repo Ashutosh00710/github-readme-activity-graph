@@ -105,5 +105,9 @@ export const graphStyle = (color: string, line: string, point: string) =>
     .ct-series-a .ct-slice-pie {
       fill: skyblue;
     }
+
+    .ct-label .ct-horizontal {
+      transform: rotate(-90deg)
+    }
     
     `;
