@@ -1,3 +1,8 @@
+export interface resp {
+  day: number;
+  data: number[];
+}
+
 export interface colors {
   bgColor: string;
   color: string;

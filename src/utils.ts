@@ -1,19 +1,20 @@
-import axios, { AxiosRequestConfig } from 'axios';
-import { queryOption, colors } from '../interfaces/interface';
+import { AxiosResponse, AxiosStatic } from 'axios';
+import { queryOption, colors, resp } from '../interfaces/interface';
 import { selectColors } from '../styles/themes';
 
 export const calendarData = async (
-  userId: string
+  userId: string,
+  axios: AxiosStatic
 ): Promise<number[] | string> => {
   try {
-    let data: AxiosRequestConfig = await axios(
+    let apiResponse: AxiosResponse<resp> = await axios(
       `http://github-calendar.herokuapp.com/commits/last/${userId}`
     );
-    return data.data.data.length
-      ? data.data.data
+    return apiResponse.data.data.length
+      ? apiResponse.data.data
       : `Can't fetch any contribution. Please check your username 😬`;
   } catch (err) {
-    return `Please check your internet connection! 😬`;
+    return err;
   }
 };
 

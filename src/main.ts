@@ -4,6 +4,7 @@ import { Card } from './GraphCards';
 import bodyParser from 'body-parser';
 import { invalidUserSvg } from './svgs';
 import { queryOption } from '../interfaces/interface';
+import axios from 'axios';
 
 const app: Application = express();
 let port: string | number = process.env.PORT || 5100;
@@ -22,7 +23,8 @@ app.get(
       const options: queryOption = queryOptions(req.query);
 
       const fetchCalendarData: string | number[] = await calendarData(
-        `${options.username}`
+        `${options.username}`,
+        axios //Dependency Injection
       );
 
       if (Array.isArray(fetchCalendarData)) {
