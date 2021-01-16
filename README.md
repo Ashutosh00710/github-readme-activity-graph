@@ -68,3 +68,8 @@ Customize the appearance of your Activity Graph however you want with URL params
 |      Purpose       |  Library Name   |                   Link                    |
 | :----------------: | :-------------: | :---------------------------------------: |
 | Graph Construction | **CHARTISH.JS** | <https://github.com/gionkunz/chartist-js> |
+
+</br>
+<hr/>
+
+### Made with ❤ and TypeScript 😉
