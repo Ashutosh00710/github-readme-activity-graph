@@ -8,7 +8,7 @@
     <img src="https://emoji.gg/assets/emoji/5643_github_octocat.png" height=100></img>
 </p>
 
-A dynamically generated activity graph to show your GitHub activities.
+A dynamically generated activity graph to show your GitHub activities of last 31 days.
 
 ## How to Use ? 🤔
 
