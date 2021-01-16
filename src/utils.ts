@@ -69,7 +69,7 @@ export const getGraph = async (req: Request, res: Response): Promise<void> => {
     if (Array.isArray(fetchCalendarData)) {
       const graph: Card = new Card(
         420,
-        800,
+        1200,
         options.colors,
         `${options.username}'s Contribution Graph`,
         options.area
