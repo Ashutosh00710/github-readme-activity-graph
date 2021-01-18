@@ -77,7 +77,7 @@ export const getGraph = async (req: Request, res: Response): Promise<void> => {
 
       const getChart: string = await graph.chart(fetchCalendarData);
 
-      res.setHeader('Cache-Control', 'public, max-age=900');
+      res.setHeader('Cache-Control', 'public, max-age=1800');
       res.set('Content-Type', 'image/svg+xml');
       res.status(200).send(getChart);
     } else {
