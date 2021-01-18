@@ -1,5 +1,5 @@
 import { graphStyle } from '../styles/graphStyle';
-import { strokeAnimation, lineAnimation } from '../styles/graphAnimation';
+import { pointAnimation, lineAnimation } from '../styles/graphAnimation';
 import { graphArgs } from '../interfaces/interface';
 
 export const graphSvg = (props: graphArgs) => `
@@ -31,7 +31,7 @@ export const graphSvg = (props: graphArgs) => `
               props.colors.lineColor,
               props.colors.pointColor
             )}
-            ${strokeAnimation()}
+            ${pointAnimation()}
             ${lineAnimation()}
         </style>
 

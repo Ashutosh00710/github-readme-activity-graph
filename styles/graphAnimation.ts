@@ -1,4 +1,4 @@
-export const strokeAnimation = () =>
+export const pointAnimation = () =>
   `
         @keyframes blink {
             from {
