@@ -12,6 +12,42 @@ We love your input! We want to make contributing to this project as easy and tra
 
 Our aim is to **keep it simple** for the developers to contribute to this project. See the folder structure (with concise description)
 
+## How to contribute
+
+1. First up you need to fork (make a copy) of this repo to your Github account.
+
+2. Clone (download) your fork to your computer
+
+3. Set your streams so you can sync your clone with the original repo (get the latest updates)
+
+   - `git remote add upstream https://github.com/Ashutosh00710/github-readme-activity-graph`
+   - `git pull upstream master`
+   - The above 2 commands will synchronize your forked version of the project with the actual repository.
+
+4. Create a branch `git checkout -b <your_branch_name>` and start making changes.
+
+5. Get a screenshot of your finished work! (if there are any UI changes) Try to crop it so that it looks good as a smallish (preferably squarish) image.
+
+6. Pull from the upstream again before you commit your changes, like you did in step 3. This is to ensure your still have the latest code.
+
+7. If you see a error like
+
+   ```md
+   Your local changes to the following files would be overwritten by merge. Please commit your changes or stash them before you merge
+   ```
+
+   on using `git pull upstream main` use:
+
+   - `git stash`
+   - `git pull upstream main`
+   - `git stash pop`
+
+   for more info on this [visit](https://bluecast.tech/blog/git-stash/)
+
+8. Commit and push the code to your fork
+
+9. Create a pull request to have the changes merged from your fork into the origin.
+
 ### Folder Structure
 
 ```
