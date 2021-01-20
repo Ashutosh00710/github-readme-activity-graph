@@ -35,12 +35,12 @@ _`username=ashutosh00710&theme=theme_name`_
 |            Name            |                                                       Preview                                                       |
 | :------------------------: | :-----------------------------------------------------------------------------------------------------------------: |
 | **Default (cotton candy)** |        <img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710" height=250 alt="graph"/>        |
-|        **dracula**         | <img src="https://activity-graph.herokuapp.com/graph?username=ASHUTOSH00710&theme=dracula" height=250 alt="graph"/> |
-|        **gruvbox**         | <img src="https://activity-graph.herokuapp.com/graph?username=ASHUTOSH00710&theme=gruvbox" height=250 alt="graph"/> |
-|         **rogue**          |  <img src="https://activity-graph.herokuapp.com/graph?username=ASHUTOSH00710&theme=rogue" height=250 alt="graph"/>  |
-|         **github**         | <img src="https://activity-graph.herokuapp.com/graph?username=ASHUTOSH00710&theme=github" height=250 alt="graph"/>  |
-|         **xcode**          |  <img src="https://activity-graph.herokuapp.com/graph?username=ASHUTOSH00710&theme=xcode" height=250 alt="graph"/>  |
-|         **coral**          |  <img src="https://activity-graph.herokuapp.com/graph?username=ASHUTOSH00710&theme=coral" height=250 alt="graph"/>  |
+|        **dracula**         | <img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=dracula" height=250 alt="graph"/> |
+|        **gruvbox**         | <img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=gruvbox" height=250 alt="graph"/> |
+|         **rogue**          |  <img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=rogue" height=250 alt="graph"/>  |
+|         **github**         | <img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=github" height=250 alt="graph"/>  |
+|         **xcode**          |  <img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=xcode" height=250 alt="graph"/>  |
+|         **coral**          |  <img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=coral" height=250 alt="graph"/>  |
 
 ## Customization
 
