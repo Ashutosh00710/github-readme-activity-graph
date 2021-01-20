@@ -57,8 +57,8 @@ const queryOptions = (queryString: any): queryOption => {
   return options;
 };
 
-const setHttpHeader = (res: Response) => {
-  res.setHeader('Cache-Control', 'public, max-age=1800');
+const setHttpHeader = (res: Response, directivesAndAge: string): void => {
+  res.setHeader('Cache-Control', `${directivesAndAge}`);
   res.set('Content-Type', 'image/svg+xml');
 };
 
@@ -82,14 +82,14 @@ export const getGraph = async (req: Request, res: Response): Promise<void> => {
 
       const getChart: string = await graph.chart(fetchCalendarData);
 
-      setHttpHeader(res);
+      setHttpHeader(res, 'public, max-age=1800');
       res.status(200).send(getChart);
     } else {
-      setHttpHeader(res);
+      setHttpHeader(res, 'no-store, max-age=0');
       res.send(invalidUserSvg(fetchCalendarData));
     }
   } catch (error) {
-    setHttpHeader(res);
+    setHttpHeader(res, 'no-store, max-age=0');
     res.send(invalidUserSvg('Something unexpected happened 💥'));
   }
 };
