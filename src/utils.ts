@@ -57,6 +57,11 @@ const queryOptions = (queryString: any): queryOption => {
   return options;
 };
 
+const setHeaderAndCache = (res: Response) => {
+  res.setHeader('Cache-Control', 'public, max-age=1800');
+  res.set('Content-Type', 'image/svg+xml');
+};
+
 export const getGraph = async (req: Request, res: Response): Promise<void> => {
   try {
     const options: queryOption = queryOptions(req.query);
@@ -77,17 +82,14 @@ export const getGraph = async (req: Request, res: Response): Promise<void> => {
 
       const getChart: string = await graph.chart(fetchCalendarData);
 
-      res.setHeader('Cache-Control', 'public, max-age=1800');
-      res.set('Content-Type', 'image/svg+xml');
+      setHeaderAndCache(res);
       res.status(200).send(getChart);
     } else {
-      res.setHeader('Cache-Control', 'public, max-age=1800');
-      res.set('Content-Type', 'image/svg+xml');
+      setHeaderAndCache(res);
       res.send(invalidUserSvg(fetchCalendarData));
     }
   } catch (error) {
-    res.setHeader('Cache-Control', 'public, max-age=1800');
-    res.set('Content-Type', 'image/svg+xml');
+    setHeaderAndCache(res);
     res.send(invalidUserSvg('Something unexpected happened 💥'));
   }
 };
