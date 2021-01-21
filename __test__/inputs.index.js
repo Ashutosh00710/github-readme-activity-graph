@@ -97,6 +97,14 @@ let fakeQueryStringRes = [
   },
 ];
 
+let fakeGraphArgs = {
+  height: 10,
+  width: 20,
+  colors: 'red',
+  title: 'graphSvg',
+  line: 'line',
+};
+
 let options = {
   width: this.width,
   height: this.height,
@@ -125,4 +133,9 @@ let options = {
   fullWidth: true,
 };
 
-module.exports = { fakeQueryString, fakeQueryStringRes, options };
+module.exports = {
+  fakeQueryString,
+  fakeQueryStringRes,
+  fakeGraphArgs,
+  options,
+};
