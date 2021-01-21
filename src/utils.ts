@@ -5,7 +5,7 @@ import axios, { AxiosResponse, AxiosStatic } from 'axios';
 import { queryOption, colors, resp } from '../interfaces/interface';
 import { selectColors } from '../styles/themes';
 
-const calendarData = async (
+export const calendarData = async (
   userId: string,
   axios: AxiosStatic
 ): Promise<number[] | string> => {
@@ -21,7 +21,7 @@ const calendarData = async (
   }
 };
 
-const queryOptions = (queryString: any): queryOption => {
+export const queryOptions = (queryString: any): queryOption => {
   let area: boolean = false;
   let colors: colors;
   if (String(queryString.area) === 'true') {
