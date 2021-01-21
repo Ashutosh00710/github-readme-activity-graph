@@ -16,6 +16,16 @@ export interface queryOption {
   area: boolean;
 }
 
+export interface ParsedQs {
+  username?: string;
+  bg_color?: string;
+  color?: string;
+  line?: string;
+  point?: string;
+  theme?: string;
+  area?: boolean;
+}
+
 export interface graphArgs {
   height: number;
   width: number;

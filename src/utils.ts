@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { Card } from './GraphCards';
 import { invalidUserSvg } from './svgs';
 import axios, { AxiosResponse, AxiosStatic } from 'axios';
-import { queryOption, colors, resp } from '../interfaces/interface';
+import { queryOption, colors, resp, ParsedQs } from '../interfaces/interface';
 import { selectColors } from '../styles/themes';
 
 export const calendarData = async (
@@ -10,9 +10,11 @@ export const calendarData = async (
   axios: AxiosStatic
 ): Promise<number[] | string> => {
   try {
+    //fetching contributions
     let apiResponse: AxiosResponse<resp> = await axios(
       `http://github-calendar.herokuapp.com/commits/last/${userId}`
     );
+    //if user doesn't exist --> apiResponse.data.data = []
     return apiResponse.data.data.length
       ? apiResponse.data.data
       : `Can't fetch any contribution. Please check your username 😬`;
@@ -21,9 +23,10 @@ export const calendarData = async (
   }
 };
 
-export const queryOptions = (queryString: any): queryOption => {
+export const queryOptions = (queryString: ParsedQs): queryOption => {
   let area: boolean = false;
   let colors: colors;
+
   if (String(queryString.area) === 'true') {
     area = true;
   }
