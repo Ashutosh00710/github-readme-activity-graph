@@ -5,3 +5,4 @@
 .vscode
 /dist
 .env
+/coverage

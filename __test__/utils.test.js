@@ -1,12 +1,10 @@
 const axios = require('axios');
 const { queryOptions, calendarData } = require('../src/utils');
 const { createGraph } = require('../src/createChart');
-const { graphSvg, invalidUserSvg } = require('../src/svgs');
 
 const {
   fakeQueryString,
   fakeQueryStringRes,
-  fakeGraphArgs,
   options,
 } = require('./inputs.index');
 
@@ -26,12 +24,4 @@ it('Graph Generation', async () => {
     series: [{ value: contributions }],
   });
   expect(graph).toEqual(expect.any(String));
-});
-
-//- Svg testing ✔
-it('Test SVGs', () => {
-  let fakeInvalidSvgArg = 'User not found!';
-  expect.assertions(2);
-  expect(graphSvg(fakeGraphArgs)).toEqual(expect.any(String));
-  expect(invalidUserSvg(fakeInvalidSvgArg)).toEqual(expect.any(String));
 });
