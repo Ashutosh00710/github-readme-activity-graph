@@ -1,27 +1,10 @@
 import { Request, Response } from 'express';
 import { Card } from './GraphCards';
 import { invalidUserSvg } from './svgs';
-import axios, { AxiosResponse, AxiosStatic } from 'axios';
-import { queryOption, colors, resp, ParsedQs } from '../interfaces/interface';
+import { queryOption, colors, ParsedQs } from '../interfaces/interface';
+import { responseGraph } from '../types/types';
+import { fetchContributions } from './fetching';
 import { selectColors } from '../styles/themes';
-
-export const calendarData = async (
-  userId: string,
-  axios: AxiosStatic
-): Promise<number[] | string> => {
-  try {
-    //fetching contributions
-    let apiResponse: AxiosResponse<resp> = await axios(
-      `http://github-calendar.herokuapp.com/commits/last/${userId}`
-    );
-    //if user doesn't exist --> apiResponse.data.data = []
-    return apiResponse.data.data.length
-      ? apiResponse.data.data
-      : `Can't fetch any contribution. Please check your username 😬`;
-  } catch (err) {
-    return err;
-  }
-};
 
 export const queryOptions = (queryString: ParsedQs): queryOption => {
   let area: boolean = false;
@@ -65,13 +48,12 @@ const setHttpHeader = (res: Response, directivesAndAge: string): void => {
   res.set('Content-Type', 'image/svg+xml');
 };
 
-export const getGraph = async (req: Request, res: Response): Promise<void> => {
+export const getGraph: responseGraph = async (req: Request, res: Response) => {
   try {
     const options: queryOption = queryOptions(req.query);
 
-    const fetchCalendarData: string | number[] = await calendarData(
-      `${options.username}`,
-      axios //Dependency Injection
+    const fetchCalendarData: number[] | string = await fetchContributions(
+      `${options.username}`
     );
 
     if (Array.isArray(fetchCalendarData)) {

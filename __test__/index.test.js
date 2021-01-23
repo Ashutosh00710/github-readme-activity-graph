@@ -17,15 +17,6 @@ it('Query Options', () => {
   );
 });
 
-//- Calendar Data Function (Promise) ✔
-it('Calander Data', async () => {
-  expect.assertions(2);
-  const data = await calendarData('ashutosh00710', axios);
-  expect(data).toEqual(expect.any(Array));
-  const userNotFound = await calendarData('', axios);
-  expect(userNotFound).toEqual(expect.any(String));
-});
-
 //- Chart Function ([Promise] Inside Graph Cards Class) ✔
 it('Graph Generation', async () => {
   expect.assertions(1);

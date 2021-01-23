@@ -1,6 +1,16 @@
-export interface resp {
-  day: number;
-  data: number[];
+export interface contributionData {
+  contributionDays: dailyContribution[];
+}
+
+export interface dailyContribution {
+  contributionCount: number;
+}
+
+export interface query {
+  query: string;
+  variables: {
+    LOGIN: string;
+  };
 }
 
 export interface colors {
