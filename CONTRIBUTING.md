@@ -24,13 +24,20 @@ Our aim is to **keep it simple** for the developers to contribute to this projec
    - `git pull upstream master`
    - The above 2 commands will synchronize your forked version of the project with the actual repository.
 
-4. Create a branch `git checkout -b <your_branch_name>` and start making changes.
+4. Create a branch `git checkout -b <your_branch_name>`.
 
-5. Get a screenshot of your finished work! (if there are any UI changes) Try to crop it so that it looks good as a smallish (preferably squarish) image.
+5. [Generate your personal access token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
 
-6. Pull from the upstream again before you commit your changes, like you did in step 3. This is to ensure your still have the latest code.
+6. Create a `.env` file in root directory and in there write  
+   `TOKEN=<your_generated_token>`
 
-7. If you see a error like
+   Now, open your terminal and write `npm start` and you are good to go!
+
+7. Get a screenshot of your finished work! (if there are any UI changes) Try to crop it so that it looks good as a smallish (preferably squarish) image.
+
+8. Pull from the upstream again before you commit your changes, like you did in step 3. This is to ensure your still have the latest code.
+
+9. If you see a error like
 
    ```md
    Your local changes to the following files would be overwritten by merge. Please commit your changes or stash them before you merge
@@ -44,9 +51,9 @@ Our aim is to **keep it simple** for the developers to contribute to this projec
 
    for more info on this [visit](https://bluecast.tech/blog/git-stash/)
 
-8. Commit and push the code to your fork
+10. Commit and push the code to your fork
 
-9. Create a pull request to have the changes merged from your fork into the origin.
+11. Create a pull request to have the changes merged from your fork into the origin.
 
 ### Folder Structure
 
