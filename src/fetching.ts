@@ -67,9 +67,12 @@ export const fetchContributions = async (
       })
     );
 
-    const day = new Date().getDay();
+    const presentDay = new Date().getDay();
     //returning data of last 31 days
-    userData.contributions = userData.contributions.slice(5 + day, 36 + day);
+    userData.contributions = userData.contributions.slice(
+      5 + presentDay,
+      36 + presentDay
+    );
     return userData;
   }
 };
