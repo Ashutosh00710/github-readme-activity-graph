@@ -1,5 +1,6 @@
 const { fetchContributions } = require('../src/fetching');
 
+//Testing fetch function (fetching.ts)
 it('Fetching Data with correct username', async () => {
   const fetchedData = await fetchContributions('ashutosh00710');
   expect.assertions(2);
