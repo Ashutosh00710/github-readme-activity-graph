@@ -1,7 +1,12 @@
 import { Request, Response } from 'express';
 import { Card } from './GraphCards';
 import { invalidUserSvg } from './svgs';
-import { queryOption, colors, ParsedQs } from '../interfaces/interface';
+import {
+  queryOption,
+  colors,
+  ParsedQs,
+  userDetails,
+} from '../interfaces/interface';
 import { responseGraph } from '../types/types';
 import { fetchContributions } from './fetching';
 import { selectColors } from '../styles/themes';
@@ -52,20 +57,22 @@ export const getGraph: responseGraph = async (req: Request, res: Response) => {
   try {
     const options: queryOption = queryOptions(req.query);
 
-    const fetchCalendarData: number[] | string = await fetchContributions(
+    const fetchCalendarData: userDetails | string = await fetchContributions(
       `${options.username}`
     );
 
-    if (Array.isArray(fetchCalendarData)) {
+    if (typeof fetchCalendarData === 'object') {
       const graph: Card = new Card(
         420,
         1200,
         options.colors,
-        `${options.username}'s Contribution Graph`,
+        `${fetchCalendarData.name}'s Contribution Graph`,
         options.area
       );
 
-      const getChart: string = await graph.chart(fetchCalendarData);
+      const getChart: string = await graph.chart(
+        fetchCalendarData.contributions
+      );
 
       setHttpHeader(res, 'public, max-age=1800');
       res.status(200).send(getChart);
