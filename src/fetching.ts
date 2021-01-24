@@ -61,13 +61,15 @@ export const fetchContributions = async (
     const arr: contributionData[] =
       apiResponse.data.data.user.contributionsCollection.contributionCalendar
         .weeks;
-    arr.slice(arr.length - 5, arr.length).map((el: contributionData) =>
+    arr.slice(arr.length - 6, arr.length).map((el: contributionData) =>
       el.contributionDays.map((el: dailyContribution) => {
         userData.contributions.push(el.contributionCount);
       })
     );
+
+    const day = new Date().getDay();
     //returning data of last 31 days
-    userData.contributions = userData.contributions.slice(4, 35);
+    userData.contributions = userData.contributions.slice(5 + day, 36 + day);
     return userData;
   }
 };
