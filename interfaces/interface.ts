@@ -43,3 +43,8 @@ export interface graphArgs {
   title: string;
   line: Promise<string>;
 }
+
+export interface userDetails {
+  contributions: number[];
+  name: string;
+}

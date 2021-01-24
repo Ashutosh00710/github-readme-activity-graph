@@ -3,6 +3,7 @@ import {
   contributionData,
   dailyContribution,
   query,
+  userDetails,
 } from '../interfaces/interface';
 
 require('dotenv').config('../');
@@ -12,6 +13,7 @@ const graphqlQuery = (username: string): query => {
     query: `
       query userInfo($LOGIN: String!) {
        user(login: $LOGIN) {
+         name
          contributionsCollection {
            contributionCalendar {
               totalContributions 
@@ -47,21 +49,25 @@ const fetch = async (data: query) =>
 
 export const fetchContributions = async (
   username: string
-): Promise<number[] | string> => {
+): Promise<userDetails | string> => {
   const apiResponse = await fetch(graphqlQuery(username));
   if (apiResponse.data.data.user === null)
     return `Can't fetch any contribution. Please check your username 😬`;
   else {
-    const contributions: number[] = [];
+    let userData: userDetails = {
+      contributions: [],
+      name: apiResponse.data.data.user.name,
+    };
     const arr: contributionData[] =
       apiResponse.data.data.user.contributionsCollection.contributionCalendar
         .weeks;
     arr.slice(arr.length - 5, arr.length).map((el: contributionData) =>
       el.contributionDays.map((el: dailyContribution) => {
-        contributions.push(el.contributionCount);
+        userData.contributions.push(el.contributionCount);
       })
     );
     //returning data of last 31 days
-    return contributions.slice(4, 35);
+    userData.contributions = userData.contributions.slice(4, 35);
+    return userData;
   }
 };
