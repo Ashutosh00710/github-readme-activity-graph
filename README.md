@@ -43,7 +43,7 @@ Now just add the following to your profile readme and you're good to go.
 ```
 
 Alternatively, you may use the server used by this project at https://activity-graph.herokuapp.com and pass in your username to access your graph.
-Like so, `https://activity-graph.herokuapp.com/graph?username=<your_username>`
+E.g. `https://activity-graph.herokuapp.com/graph?username=<your_username>`
 
 However, if there are a large number of requests or if the heroku account being used for the project runs out of dyno hours your graph will not load. 
 
