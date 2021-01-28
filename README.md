@@ -17,7 +17,7 @@ Just paste the following URL in your profile readme and you are good to go.
 ```
 
 
-### [Attention](#deploy-on-your-own-vercel-instance)
+### [Attention ⚠](#Deploy-on-your-own-heroku-instance)
 
 ## Use themes
 
