@@ -37,6 +37,13 @@ export const selectColors = (queryString: string): colors => {
         lineColor: 'c4e3ff',
         pointColor: 'ff8070',
       };
+    case 'redical':
+      return {
+        bgColor: '141321',
+        color: 'a9fef7',
+        lineColor: 'fe428e',
+        pointColor: 'f8d847',
+      };
     case 'coral':
       return {
         bgColor: '9a3838',

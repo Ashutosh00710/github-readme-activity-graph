@@ -39,6 +39,7 @@ _`username=ashutosh00710&theme=theme_name`_
 |        **gruvbox**         | <img src="./asset/gruvbox.svg" height=250 alt="graph"/> |
 |         **rogue**          |  <img src="./asset/rogue.svg" height=250 alt="graph"/>  |
 |         **github**         | <img src="./asset/github.svg" height=250 alt="graph"/>  |
+|        **redical**         | <img src="./asset/redical.svg" height=250 alt="graph"/> |
 |         **xcode**          |  <img src="./asset/xcode.svg" height=250 alt="graph"/>  |
 |         **coral**          |  <img src="./asset/coral.svg" height=250 alt="graph"/>  |
 
