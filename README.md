@@ -16,7 +16,8 @@ Just paste the following URL in your profile readme and you are good to go.
 [![Ashutosh's github activity graph](https://activity-graph.herokuapp.com/graph?username=Ashutosh00710)](https://github.com/ashutosh00710/github-readme-activity-graph)
 ```
 
-### [Attention ⚠](#deploy-on-your-own-vercel-instance)
+
+### [Attention](#deploy-on-your-own-vercel-instance)
 
 ## Use themes
 
