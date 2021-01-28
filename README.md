@@ -34,7 +34,7 @@ _`username=ashutosh00710&theme=theme_name`_
 
 |            Name            |                                                       Preview                                                       |
 | :------------------------: | :-----------------------------------------------------------------------------------------------------------------: |
-| **Default (cotton candy)** |                <img src="../github-readme-activity-graph/asset/default.svg" height=250 alt="graph"/>                |
+| **Default (cotton candy)** |                <img src="./asset/default.svg" height=250 alt="graph"/>                |
 |        **dracula**         | <img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=dracula" height=250 alt="graph"/> |
 |        **gruvbox**         | <img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=gruvbox" height=250 alt="graph"/> |
 |         **rogue**          |  <img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=rogue" height=250 alt="graph"/>  |
