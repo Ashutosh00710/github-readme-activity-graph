@@ -32,15 +32,15 @@ _`username=ashutosh00710&theme=theme_name`_
 
 ## Available Themes
 
-|            Name            |                                                       Preview                                                       |
-| :------------------------: | :-----------------------------------------------------------------------------------------------------------------: |
-| **Default (cotton candy)** |                <img src="./asset/default.svg" height=250 alt="graph"/>                |
-|        **dracula**         | <img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=dracula" height=250 alt="graph"/> |
-|        **gruvbox**         | <img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=gruvbox" height=250 alt="graph"/> |
-|         **rogue**          |  <img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=rogue" height=250 alt="graph"/>  |
-|         **github**         | <img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=github" height=250 alt="graph"/>  |
-|         **xcode**          |  <img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=xcode" height=250 alt="graph"/>  |
-|         **coral**          |  <img src="https://activity-graph.herokuapp.com/graph?username=Ashutosh00710&theme=coral" height=250 alt="graph"/>  |
+|            Name            |                         Preview                         |
+| :------------------------: | :-----------------------------------------------------: |
+| **Default (cotton candy)** | <img src="./asset/default.svg" height=250 alt="graph"/> |
+|        **dracula**         | <img src="./asset/dracula.svg" height=250 alt="graph"/> |
+|        **gruvbox**         | <img src="./asset/gruvbox.svg" height=250 alt="graph"/> |
+|         **rogue**          |  <img src="./asset/rogue.svg" height=250 alt="graph"/>  |
+|         **github**         | <img src="./asset/github.svg" height=250 alt="graph"/>  |
+|         **xcode**          |  <img src="./asset/xcode.svg" height=250 alt="graph"/>  |
+|         **coral**          |  <img src="./asset/coral.svg" height=250 alt="graph"/>  |
 
 ## Customization
 
