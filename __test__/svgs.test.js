@@ -1,6 +1,6 @@
 const { graphSvg, invalidUserSvg } = require('../src/svgs');
 const { Card } = require('../src/GraphCards');
-const { fakeGraphArgs, fakeQueryStringRes } = require('./inputs.index');
+const { fakeGraphArgs, fakeQueryStringRes } = require('./fakeInputs');
 
 //- Svg testing ✔
 it('Test SVGs', () => {

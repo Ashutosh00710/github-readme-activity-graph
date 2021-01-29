@@ -1,12 +1,11 @@
-const axios = require('axios');
-const { queryOptions, calendarData } = require('../src/utils');
+const { queryOptions } = require('../src/utils');
 const { createGraph } = require('../src/createChart');
 
 const {
   fakeQueryString,
   fakeQueryStringRes,
   options,
-} = require('./inputs.index');
+} = require('./fakeInputs');
 
 //- Query Option Function (utils.ts) ✔
 it('Query Options', () => {

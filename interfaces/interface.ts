@@ -1,11 +1,3 @@
-export interface contributionData {
-  contributionDays: dailyContribution[];
-}
-
-export interface dailyContribution {
-  contributionCount: number;
-}
-
 export interface query {
   query: string;
   variables: {
@@ -47,4 +39,26 @@ export interface graphArgs {
 export interface userDetails {
   contributions: number[];
   name: string;
+}
+
+export interface contributionCount {
+  contributionCount: number;
+}
+
+export interface week {
+  contributionDays: contributionCount[];
+}
+
+export interface responseOfApi {
+  data: {
+    user: {
+      name: string;
+      contributionsCollection: {
+        contributionCalendar: {
+          totalContributions: number;
+          weeks: week[];
+        };
+      };
+    };
+  };
 }

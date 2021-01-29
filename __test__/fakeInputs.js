@@ -133,9 +133,35 @@ let options = {
   fullWidth: true,
 };
 
+const expectedQuery = (username) => {
+  return {
+    query: `
+      query userInfo($LOGIN: String!) {
+       user(login: $LOGIN) {
+         name
+         contributionsCollection {
+           contributionCalendar {
+              totalContributions 
+              weeks {
+                contributionDays {
+                  contributionCount 
+                }
+              }
+            }      
+          }
+        }
+      },
+    `,
+    variables: {
+      LOGIN: username,
+    },
+  };
+};
+
 module.exports = {
   fakeQueryString,
   fakeQueryStringRes,
   fakeGraphArgs,
   options,
+  expectedQuery,
 };

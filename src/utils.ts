@@ -8,7 +8,7 @@ import {
   userDetails,
 } from '../interfaces/interface';
 import { responseGraph } from '../types/types';
-import { fetchContributions } from './fetching';
+import { fetchContributions, graphqlQuery, fetch } from './fetching';
 import { selectColors } from '../styles/themes';
 
 export const queryOptions = (queryString: ParsedQs): queryOption => {
@@ -58,7 +58,9 @@ export const getGraph: responseGraph = async (req: Request, res: Response) => {
     const options: queryOption = queryOptions(req.query);
 
     const fetchCalendarData: userDetails | string = await fetchContributions(
-      `${options.username}`
+      `${options.username}`,
+      graphqlQuery,
+      fetch
     );
 
     if (typeof fetchCalendarData === 'object') {

@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon src/main.ts",
     "build": "tsc -p .",
-    "test": "jest"
+    "test": "jest",
+    "coverage": "npm test -- --coverage"
   },
   "repository": {
     "type": "git",

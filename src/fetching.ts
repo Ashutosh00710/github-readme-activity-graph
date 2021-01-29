@@ -1,14 +1,15 @@
 import axios from 'axios';
 import {
-  contributionData,
-  dailyContribution,
   query,
   userDetails,
+  week,
+  contributionCount,
 } from '../interfaces/interface';
+import { fetcher } from '../types/types';
 
 require('dotenv').config('../');
 
-const graphqlQuery = (username: string): query => {
+export const graphqlQuery = (username: string): query => {
   return {
     query: `
       query userInfo($LOGIN: String!) {
@@ -39,7 +40,7 @@ const headers = {
   Authorization: `bearer ${token}`,
 };
 
-const fetch = async (data: query) =>
+export const fetch: fetcher = async (data: query) =>
   await axios({
     url: 'https://api.github.com/graphql',
     method: 'POST',
@@ -48,31 +49,37 @@ const fetch = async (data: query) =>
   });
 
 export const fetchContributions = async (
-  username: string
+  username: string,
+  graphqlQuery: (username: string) => query,
+  fetch: fetcher
 ): Promise<userDetails | string> => {
-  const apiResponse = await fetch(graphqlQuery(username));
-  if (apiResponse.data.data.user === null)
-    return `Can't fetch any contribution. Please check your username 😬`;
-  else {
-    let userData: userDetails = {
-      contributions: [],
-      name: apiResponse.data.data.user.name,
-    };
-    const arr: contributionData[] =
-      apiResponse.data.data.user.contributionsCollection.contributionCalendar
-        .weeks;
-    arr.slice(arr.length - 6, arr.length).map((el: contributionData) =>
-      el.contributionDays.map((el: dailyContribution) => {
-        userData.contributions.push(el.contributionCount);
-      })
-    );
+  try {
+    const apiResponse = await fetch(graphqlQuery(username));
+    if (apiResponse.data.data.user === null)
+      return `Can't fetch any contribution. Please check your username 😬`;
+    else {
+      let userData: userDetails = {
+        contributions: [],
+        name: apiResponse.data.data.user.name,
+      };
+      const weeks: week[] =
+        apiResponse.data.data.user.contributionsCollection.contributionCalendar
+          .weeks;
+      weeks.slice(weeks.length - 6, weeks.length).map((week: week) =>
+        week.contributionDays.map((contributionCount: contributionCount) => {
+          userData.contributions.push(contributionCount.contributionCount);
+        })
+      );
 
-    const presentDay = new Date().getDay();
-    //returning data of last 31 days
-    userData.contributions = userData.contributions.slice(
-      5 + presentDay,
-      36 + presentDay
-    );
-    return userData;
+      const presentDay = new Date().getDay();
+      //returning data of last 31 days
+      userData.contributions = userData.contributions.slice(
+        5 + presentDay,
+        36 + presentDay
+      );
+      return userData;
+    }
+  } catch (error) {
+    return error;
   }
 };
