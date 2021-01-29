@@ -60,25 +60,32 @@ Our aim is to **keep it simple** for the developers to contribute to this projec
 ```
 
 ├── ...
-├── .github                 #conatins issues and pull request templates
+├── .github                          #conatins issues and pull request templates
 │ ├── ISSUE_TEMPLATE
 │ │ ├── bug_report.md
 │ │ └── feature_request.md
 │ └── PULL_REQUEST_TEMPLATE.md
-├── asset
-│ └── logo.svg
+├── __test__                         #conatins test for the project
+│ ├── utils.test.js                  #tests for functions in src/utils.ts
+│ ├── svgs.test.js                   #tests for functions in src/svgs.ts
+│ ├── mockFunctions.js               #contains mock functions for fetching.test.js
+│ ├── fetching.test.js               #tests for functions in src/fetching.ts
+│ └── fakeInputs.js                  #conatins fake inputs for tests
+├── asset                            #contains logo and screenshots of graphs
 ├── interfaces
-│ └── interface.ts          #contains all used interfaces throughout the code
+│ └── interface.ts                   #contains all used interfaces throughout the code
+├── types
+│ └── types.ts                       #contains all used types throughout the code
 ├── src
-│ ├── createChart.ts        #creation of graph with chartist.js and node-chartist
-│ ├── GraphChards.ts        #class of Graph Cards
-│ ├── main.ts               #everything starts from here
-│ ├── svgs.ts               #contains svgs used or created throughout the project
-│ └── utils.ts              #contains utility functions
+│ ├── createChart.ts                 #creation of graph with chartist.js and node-chartist
+│ ├── GraphChards.ts                 #class of Graph Cards
+│ ├── main.ts                        #everything starts from here
+│ ├── svgs.ts                        #contains svgs used or created throughout the project
+│ └── utils.ts                       #contains utility functions
 ├── styles
-│ ├── graphAnimation.ts     #contains all the animations of the graph
-│ ├── graphStyle.ts         #contains style(CSS) of the graph
-│ └── themes.ts             #all the themes are here
+│ ├── graphAnimation.ts              #contains all the animations of the graph
+│ ├── graphStyle.ts                  #contains style(CSS) of the graph
+│ └── themes.ts                      #all the themes are here
 ├── ...
 
 ```
