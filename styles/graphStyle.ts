@@ -77,7 +77,7 @@ export const graphStyle = (color: string, line: string, point: string) =>
     .ct-grid {
       stroke: #${color};
       stroke-width: 1px;
-      stroke-opacity: 0.3;  
+      stroke-opacity: 0.3;
       stroke-dasharray: 2px;
     }
 

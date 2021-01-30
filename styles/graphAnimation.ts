@@ -3,7 +3,7 @@ export const pointAnimation = () =>
         @keyframes blink {
             from {
                 opacity: 0;
-                transform:translateX(-20px); 
+                transform:translateX(-20px);
             }
             to {
                 opacity:1;
