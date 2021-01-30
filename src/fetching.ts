@@ -5,11 +5,11 @@ import {
   week,
   contributionCount,
 } from '../interfaces/interface';
-import { fetcher } from '../types/types';
+import { fetcher, gqlQuery } from '../types/types';
 
 require('dotenv').config('../');
 
-export const graphqlQuery = (username: string): query => {
+export const graphqlQuery: gqlQuery = (username: string) => {
   return {
     query: `
       query userInfo($LOGIN: String!) {
@@ -50,7 +50,7 @@ export const fetch: fetcher = async (data: query) =>
 
 export const fetchContributions = async (
   username: string,
-  graphqlQuery: (username: string) => query,
+  graphqlQuery: gqlQuery,
   fetch: fetcher
 ): Promise<userDetails | string> => {
   try {
