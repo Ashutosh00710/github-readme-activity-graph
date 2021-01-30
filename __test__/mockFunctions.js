@@ -1,3 +1,14 @@
+const { dummyWeeksData } = require('./fakeInputs');
+
+const weeks = () => {
+  for (let i = 1; i <= new Date().getDay(); i++) {
+    dummyWeeksData[6].contributionDays.push({
+      contributionCount: 0,
+    });
+  }
+  return dummyWeeksData;
+};
+
 const mockFetch = jest.fn().mockReturnValue(
   Promise.resolve({
     data: {
@@ -7,180 +18,7 @@ const mockFetch = jest.fn().mockReturnValue(
           contributionsCollection: {
             contributionCalendar: {
               totalContributions: 389,
-              weeks: [
-                {
-                  contributionDays: [
-                    {
-                      contributionCount: 2,
-                    },
-                    {
-                      contributionCount: 3,
-                    },
-                    {
-                      contributionCount: 16,
-                    },
-                    {
-                      contributionCount: 0,
-                    },
-                    {
-                      contributionCount: 5,
-                    },
-                    {
-                      contributionCount: 3,
-                    },
-                    {
-                      contributionCount: 0,
-                    },
-                  ],
-                },
-                {
-                  contributionDays: [
-                    {
-                      contributionCount: 0,
-                    },
-                    {
-                      contributionCount: 0,
-                    },
-                    {
-                      contributionCount: 0,
-                    },
-                    {
-                      contributionCount: 0,
-                    },
-                    {
-                      contributionCount: 2,
-                    },
-                    {
-                      contributionCount: 0,
-                    },
-                    {
-                      contributionCount: 5,
-                    },
-                  ],
-                },
-                {
-                  contributionDays: [
-                    {
-                      contributionCount: 1,
-                    },
-                    {
-                      contributionCount: 8,
-                    },
-                    {
-                      contributionCount: 5,
-                    },
-                    {
-                      contributionCount: 0,
-                    },
-                    {
-                      contributionCount: 0,
-                    },
-                    {
-                      contributionCount: 0,
-                    },
-                    {
-                      contributionCount: 0,
-                    },
-                  ],
-                },
-                {
-                  contributionDays: [
-                    {
-                      contributionCount: 0,
-                    },
-                    {
-                      contributionCount: 4,
-                    },
-                    {
-                      contributionCount: 8,
-                    },
-                    {
-                      contributionCount: 0,
-                    },
-                    {
-                      contributionCount: 0,
-                    },
-                    {
-                      contributionCount: 14,
-                    },
-                    {
-                      contributionCount: 6,
-                    },
-                  ],
-                },
-                {
-                  contributionDays: [
-                    {
-                      contributionCount: 13,
-                    },
-                    {
-                      contributionCount: 2,
-                    },
-                    {
-                      contributionCount: 10,
-                    },
-                    {
-                      contributionCount: 2,
-                    },
-                    {
-                      contributionCount: 1,
-                    },
-                    {
-                      contributionCount: 5,
-                    },
-                    {
-                      contributionCount: 13,
-                    },
-                  ],
-                },
-                {
-                  contributionDays: [
-                    {
-                      contributionCount: 1,
-                    },
-                    {
-                      contributionCount: 3,
-                    },
-                    {
-                      contributionCount: 6,
-                    },
-                    {
-                      contributionCount: 7,
-                    },
-                    {
-                      contributionCount: 2,
-                    },
-                    {
-                      contributionCount: 1,
-                    },
-                    {
-                      contributionCount: 5,
-                    },
-                  ],
-                },
-                {
-                  contributionDays: [
-                    {
-                      contributionCount: 11,
-                    },
-                    {
-                      contributionCount: 0,
-                    },
-                    {
-                      contributionCount: 1,
-                    },
-                    {
-                      contributionCount: 12,
-                    },
-                    {
-                      contributionCount: 16,
-                    },
-                    {
-                      contributionCount: 0,
-                    },
-                  ],
-                },
-              ],
+              weeks: weeks(),
             },
           },
         },
