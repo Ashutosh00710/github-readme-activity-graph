@@ -17,13 +17,13 @@ export const graphqlQuery: gqlQuery = (username: string) => {
          name
          contributionsCollection {
            contributionCalendar {
-              totalContributions 
+              totalContributions
               weeks {
                 contributionDays {
-                  contributionCount 
+                  contributionCount
                 }
               }
-            }      
+            }
           }
         }
       },
@@ -40,8 +40,8 @@ const headers = {
   Authorization: `bearer ${token}`,
 };
 
-export const fetch: fetcher = async (data: query) =>
-  await axios({
+export const fetch: fetcher = (data: query) =>
+  axios({
     url: 'https://api.github.com/graphql',
     method: 'POST',
     headers,

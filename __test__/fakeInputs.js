@@ -141,13 +141,13 @@ const expectedQuery = (username) => {
          name
          contributionsCollection {
            contributionCalendar {
-              totalContributions 
+              totalContributions
               weeks {
                 contributionDays {
-                  contributionCount 
+                  contributionCount
                 }
               }
-            }      
+            }
           }
         }
       },
