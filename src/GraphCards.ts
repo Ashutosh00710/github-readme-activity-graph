@@ -23,6 +23,7 @@ export class Card {
   }
 
   async chart(contributions: number[]): Promise<string> {
+    //Options to pass in createGraph function
     const options = {
       width: this.width,
       height: this.height,
@@ -51,11 +52,13 @@ export class Card {
       fullWidth: true,
     };
 
+    //Construction of graph from node-chartist
     const line: Promise<string> = await createGraph('line', options, {
       labels: Array.from(Array(contributions.length).keys(), (day) => day + 1),
       series: [{ value: contributions }],
     });
 
+    //Arguments to construct graphs with rect and other options
     const args: graphArgs = {
       height: this.height,
       width: this.width,
