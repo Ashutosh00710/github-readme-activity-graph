@@ -31,7 +31,10 @@ Our aim is to **keep it simple** for the developers to contribute to this projec
 6. Create a `.env` file in root directory and in there write  
    `TOKEN=<your_generated_token>`
 
-   Now, open your terminal and write `npm start` and you are good to go!
+   Now, open your terminal and write the following commands:
+
+   - `npm install` (install the dependencies)
+   - `npm start` (run the project on localhost)
 
 7. Get a screenshot of your finished work! (if there are any UI changes) Try to crop it so that it looks good as a smallish (preferably squarish) image.
 
