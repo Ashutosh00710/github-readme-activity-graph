@@ -6,7 +6,16 @@
 
 A dynamically generated activity graph to show your GitHub activities of last 31 days.
 
-## How to Use ? 🤔
+## Table of contents
+- [How to Use?](#how-to-use)
+- [Themes](#available-themes)
+- [Customization](#customization)
+- [Deploy on your own Heroku instance](#deploy-on-your-own-heroku-instance)
+- [Contributing](#contributing)
+- [Thanks](#resources-used-to-build-this-project)
+
+
+## How to Use
 
 Just paste the following URL in your profile readme and you are good to go.
 
@@ -92,6 +101,8 @@ Now just add the following to your profile readme and you're good to go.
 ```md
 ![Github Activity Graph](<url from step 6>/graph?username=<username>)
 ```
+## Contributing
+Please read through our [contributing guidelines](https://github.com/Ashutosh00710/github-readme-activity-graph/blob/main/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
 
 ## Resources Used to build this project
 
@@ -102,4 +113,4 @@ Now just add the following to your profile readme and you're good to go.
 </br>
 <hr/>
 
-### Made with ❤ and TypeScript 😉
+### Made with ❤ and TypeScript <img src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg" width="25">
