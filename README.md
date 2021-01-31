@@ -7,7 +7,7 @@
 A dynamically generated activity graph to show your GitHub activities of last 31 days.
 
 ## Table of contents
-- [How to Use ?](#how-to-use)
+- [How to Use?](#how-to-use)
 - [Themes](#available-themes)
 - [Customization](#customization)
 - [Deploy on your own Heroku instance](#deploy-on-your-own-heroku-instance)
@@ -15,7 +15,7 @@ A dynamically generated activity graph to show your GitHub activities of last 31
 - [Thanks](#resources-used-to-build-this-project)
 
 
-## How to Use ? 🤔
+## How to Use
 
 Just paste the following URL in your profile readme and you are good to go.
 
