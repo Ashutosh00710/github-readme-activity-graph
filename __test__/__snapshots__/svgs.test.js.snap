@@ -1,0 +1,360 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test SVGs 1`] = `
+"
+    <svg
+        width=\\"20\\"
+        height=\\"10\\"
+        viewBox=\\"0 0 20 10\\"
+        fill=\\"none\\"
+        xmlns=\\"http://www.w3.org/2000/svg\\">
+            <rect xmlns=\\"http://www.w3.org/2000/svg\\" data-testid=\\"card_bg\\" id=\\"cardBg\\" 
+            x=\\"0\\" y=\\"0\\" rx=\\"2.5\\" height=\\"100%\\" stroke=\\"#E4E2E2\\" fill-opacity=\\"1\\" 
+            width=\\"100%\\" fill=\\"#undefined\\" stroke-opacity=\\"1\\" style=\\"stroke:#ffffff; stroke-width:1;\\"/>
+        
+            <style>
+                body {
+                    font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+                }
+                .header {
+                    font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+                    text-align: center;
+                    color: #undefined;
+                    margin-top: 20px; 
+                }
+                svg {
+                    font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+                }
+                
+    .ct-label {
+      fill: #undefined;
+      color: #undefined;
+      font-size: .75rem;
+      line-height: 1;
+    }
+
+    .ct-grid-background,
+    .ct-line {
+      fill: none;
+    }
+
+    .ct-chart-bar .ct-label,
+    .ct-chart-line .ct-label {
+      display: block;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+    }
+
+    .ct-label.ct-horizontal.ct-start {
+      -webkit-box-align: flex-end;
+      -webkit-align-items: flex-end;
+      -ms-flex-align: flex-end;
+      align-items: flex-end;
+      -webkit-box-pack: flex-start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+      text-anchor: start;
+    }
+
+    .ct-label.ct-horizontal.ct-end {
+      -webkit-box-align: flex-start;
+      -webkit-align-items: flex-start;
+      -ms-flex-align: flex-start;
+      align-items: flex-start;
+      -webkit-box-pack: flex-start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+      text-anchor: start;
+    }
+
+    .ct-label.ct-vertical.ct-start {
+      -webkit-box-align: flex-end;
+      -webkit-align-items: flex-end;
+      -ms-flex-align: flex-end;
+      align-items: flex-end;
+      -webkit-box-pack: flex-end;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: flex-end;
+      justify-content: flex-end;
+      text-align: right;
+      text-anchor: end;
+    }
+
+    .ct-label.ct-vertical.ct-end {
+      -webkit-box-align: flex-end;
+      -webkit-align-items: flex-end;
+      -ms-flex-align: flex-end;
+      align-items: flex-end;
+      -webkit-box-pack: flex-start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+      text-anchor: start;
+    }
+
+    .ct-grid {
+      stroke: #undefined;
+      stroke-width: 1px;
+      stroke-opacity: 0.3;  
+      stroke-dasharray: 2px;
+    }
+
+    .ct-point {
+      stroke-width: 10px;
+      stroke-linecap: round;
+      stroke: #undefined;
+      animation: blink 1s ease-in-out forwards;
+    }
+
+    .ct-line {
+      stroke-width: 4px;
+      stroke-dasharray: 5000;
+      stroke-dashoffset: 5000;
+      stroke: #undefined;
+      animation: dash 5s ease-in-out forwards;
+    }
+    
+    .ct-area {
+      stroke: none;
+      fill-opacity: 0.1;
+    }
+
+    .ct-series-a .ct-area,
+    .ct-series-a .ct-slice-pie {
+      fill: skyblue;
+    }
+
+    .ct-label .ct-horizontal {
+      transform: rotate(-90deg)
+    }
+    
+    
+                
+        @keyframes blink {
+            from {
+                opacity: 0;
+                transform:translateX(-20px); 
+            }
+            to {
+                opacity:1;
+                transform: translateX(0);
+            }
+        }
+    
+                
+        @keyframes dash {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+    
+    
+            </style>
+
+            <foreignObject x=\\"0\\" y=\\"0\\" width=\\"20\\" height=\\"50\\">
+                <h1 xmlns=\\"http://www.w3.org/1999/xhtml\\" class=\\"header\\">
+                    graphSvg
+                </h1>
+            </foreignObject>
+            line
+    </svg>
+"
+`;
+
+exports[`Test SVGs 2`] = `
+"
+    <svg
+        width=\\"400\\"
+        height=\\"200\\"
+        viewBox=\\"0 0 420 200\\"
+        fill=\\"none\\"
+        xmlns=\\"http://www.w3.org/2000/svg\\">
+        <style>
+                svg {
+                    font: 600 14px 'Segoe UI', Ubuntu, Sans-Serif;
+                }
+        </style>
+        <rect xmlns=\\"http://www.w3.org/2000/svg\\" data-testid=\\"card_bg\\" id=\\"cardBg\\" x=\\"0.5\\" 
+        y=\\"0.5\\" rx=\\"4.5\\" height=\\"100%\\" stroke=\\"#E4E2E2\\" fill-opacity=\\"1\\" width=\\"100%\\" 
+        fill=\\"#44475a\\" stroke-opacity=\\"1\\"/>
+        <text x=\\"20\\" y=\\"100\\" fill=\\"#bd93f9\\">User not found!</text>
+    </svg>
+"
+`;
+
+exports[`chart SVGs 1`] = `
+"
+    <svg
+        width=\\"1200\\"
+        height=\\"420\\"
+        viewBox=\\"0 0 1200 420\\"
+        fill=\\"none\\"
+        xmlns=\\"http://www.w3.org/2000/svg\\">
+            <rect xmlns=\\"http://www.w3.org/2000/svg\\" data-testid=\\"card_bg\\" id=\\"cardBg\\" 
+            x=\\"0\\" y=\\"0\\" rx=\\"2.5\\" height=\\"100%\\" stroke=\\"#E4E2E2\\" fill-opacity=\\"1\\" 
+            width=\\"100%\\" fill=\\"#ffcfe9\\" stroke-opacity=\\"1\\" style=\\"stroke:#ffffff; stroke-width:1;\\"/>
+        
+            <style>
+                body {
+                    font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+                }
+                .header {
+                    font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+                    text-align: center;
+                    color: #9e4c98;
+                    margin-top: 20px; 
+                }
+                svg {
+                    font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+                }
+                
+    .ct-label {
+      fill: #9e4c98;
+      color: #9e4c98;
+      font-size: .75rem;
+      line-height: 1;
+    }
+
+    .ct-grid-background,
+    .ct-line {
+      fill: none;
+    }
+
+    .ct-chart-bar .ct-label,
+    .ct-chart-line .ct-label {
+      display: block;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+    }
+
+    .ct-label.ct-horizontal.ct-start {
+      -webkit-box-align: flex-end;
+      -webkit-align-items: flex-end;
+      -ms-flex-align: flex-end;
+      align-items: flex-end;
+      -webkit-box-pack: flex-start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+      text-anchor: start;
+    }
+
+    .ct-label.ct-horizontal.ct-end {
+      -webkit-box-align: flex-start;
+      -webkit-align-items: flex-start;
+      -ms-flex-align: flex-start;
+      align-items: flex-start;
+      -webkit-box-pack: flex-start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+      text-anchor: start;
+    }
+
+    .ct-label.ct-vertical.ct-start {
+      -webkit-box-align: flex-end;
+      -webkit-align-items: flex-end;
+      -ms-flex-align: flex-end;
+      align-items: flex-end;
+      -webkit-box-pack: flex-end;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: flex-end;
+      justify-content: flex-end;
+      text-align: right;
+      text-anchor: end;
+    }
+
+    .ct-label.ct-vertical.ct-end {
+      -webkit-box-align: flex-end;
+      -webkit-align-items: flex-end;
+      -ms-flex-align: flex-end;
+      align-items: flex-end;
+      -webkit-box-pack: flex-start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+      text-anchor: start;
+    }
+
+    .ct-grid {
+      stroke: #9e4c98;
+      stroke-width: 1px;
+      stroke-opacity: 0.3;  
+      stroke-dasharray: 2px;
+    }
+
+    .ct-point {
+      stroke-width: 10px;
+      stroke-linecap: round;
+      stroke: #403d3d;
+      animation: blink 1s ease-in-out forwards;
+    }
+
+    .ct-line {
+      stroke-width: 4px;
+      stroke-dasharray: 5000;
+      stroke-dashoffset: 5000;
+      stroke: #9e4c98;
+      animation: dash 5s ease-in-out forwards;
+    }
+    
+    .ct-area {
+      stroke: none;
+      fill-opacity: 0.1;
+    }
+
+    .ct-series-a .ct-area,
+    .ct-series-a .ct-slice-pie {
+      fill: skyblue;
+    }
+
+    .ct-label .ct-horizontal {
+      transform: rotate(-90deg)
+    }
+    
+    
+                
+        @keyframes blink {
+            from {
+                opacity: 0;
+                transform:translateX(-20px); 
+            }
+            to {
+                opacity:1;
+                transform: translateX(0);
+            }
+        }
+    
+                
+        @keyframes dash {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+    
+    
+            </style>
+
+            <foreignObject x=\\"0\\" y=\\"0\\" width=\\"1200\\" height=\\"50\\">
+                <h1 xmlns=\\"http://www.w3.org/1999/xhtml\\" class=\\"header\\">
+                    xyz's Contribution Graph
+                </h1>
+            </foreignObject>
+            <svg xmlns:ct=\\"http://gionkunz.github.com/chartist-js/ct\\" width=\\"1200\\" height=\\"420\\" class=\\"ct-chart-line\\"><g class=\\"ct-grids\\"><line x1=\\"90\\" x2=\\"90\\" y1=\\"80\\" y2=\\"350\\" class=\\"ct-grid ct-horizontal\\"></line><line x1=\\"355\\" x2=\\"355\\" y1=\\"80\\" y2=\\"350\\" class=\\"ct-grid ct-horizontal\\"></line><line x1=\\"620\\" x2=\\"620\\" y1=\\"80\\" y2=\\"350\\" class=\\"ct-grid ct-horizontal\\"></line><line x1=\\"885\\" x2=\\"885\\" y1=\\"80\\" y2=\\"350\\" class=\\"ct-grid ct-horizontal\\"></line><line x1=\\"1150\\" x2=\\"1150\\" y1=\\"80\\" y2=\\"350\\" class=\\"ct-grid ct-horizontal\\"></line><line y1=\\"350\\" y2=\\"350\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line><line y1=\\"282.5\\" y2=\\"282.5\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line><line y1=\\"215\\" y2=\\"215\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line><line y1=\\"147.5\\" y2=\\"147.5\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line><line y1=\\"80\\" y2=\\"80\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line></g><g><g class=\\"ct-series ct-series-a\\"><path d=\\"M90,350C178.333,327.5,266.667,305,355,282.5C443.333,260,531.667,237.5,620,215C708.333,192.5,796.667,170,885,147.5C973.333,125,1061.667,102.5,1150,80\\" class=\\"ct-line\\"></path><line x1=\\"90\\" y1=\\"350\\" x2=\\"90.01\\" y2=\\"350\\" class=\\"ct-point\\" ct:value=\\"1\\"></line><line x1=\\"355\\" y1=\\"282.5\\" x2=\\"355.01\\" y2=\\"282.5\\" class=\\"ct-point\\" ct:value=\\"2\\"></line><line x1=\\"620\\" y1=\\"215\\" x2=\\"620.01\\" y2=\\"215\\" class=\\"ct-point\\" ct:value=\\"3\\"></line><line x1=\\"885\\" y1=\\"147.5\\" x2=\\"885.01\\" y2=\\"147.5\\" class=\\"ct-point\\" ct:value=\\"4\\"></line><line x1=\\"1150\\" y1=\\"80\\" x2=\\"1150.01\\" y2=\\"80\\" class=\\"ct-point\\" ct:value=\\"5\\"></line></g></g><g class=\\"ct-labels\\"><text x=\\"85.5\\" y=\\"370\\" width=\\"265\\" height=\\"40\\" class=\\"ct-label ct-horizontal ct-end\\">1</text><text x=\\"350.5\\" y=\\"370\\" width=\\"265\\" height=\\"40\\" class=\\"ct-label ct-horizontal ct-end\\">2</text><text x=\\"615.5\\" y=\\"370\\" width=\\"265\\" height=\\"40\\" class=\\"ct-label ct-horizontal ct-end\\">3</text><text x=\\"880.5\\" y=\\"370\\" width=\\"265\\" height=\\"40\\" class=\\"ct-label ct-horizontal ct-end\\">4</text><text x=\\"1145.5\\" y=\\"370\\" width=\\"30\\" height=\\"40\\" class=\\"ct-label ct-horizontal ct-end\\">5</text><text y=\\"354.5\\" x=\\"80\\" height=\\"67.5\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">1</text><text y=\\"287\\" x=\\"80\\" height=\\"67.5\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">2</text><text y=\\"219.5\\" x=\\"80\\" height=\\"67.5\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">3</text><text y=\\"152\\" x=\\"80\\" height=\\"67.5\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">4</text><text y=\\"84.5\\" x=\\"80\\" height=\\"30\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">5</text></g><text class=\\"ct-axis-title ct-label\\" x=\\"620\\" y=\\"400\\" dominant-baseline=\\"text-after-edge\\" text-anchor=\\"middle\\">Days</text><text class=\\"ct-axis-title ct-label\\" x=\\"20\\" y=\\"215\\" transform=\\"rotate(-90, 20, 215)\\" dominant-baseline=\\"hanging\\" text-anchor=\\"middle\\">Contributions</text></svg>
+    </svg>
+"
+`;
