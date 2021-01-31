@@ -113,4 +113,4 @@ Please read through our [contributing guidelines](https://github.com/Ashutosh007
 </br>
 <hr/>
 
-### Made with ❤ and TypeScript 😉
+### Made with ❤ and TypeScript <img src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg" width="25">
