@@ -8,7 +8,8 @@ export const graphSvg = (props: graphArgs) => `
         height="${props.height}"
         viewBox="0 0 ${props.width} ${props.height}"
         fill="none"
-        xmlns="http://www.w3.org/2000/svg">
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
             <rect xmlns="http://www.w3.org/2000/svg" data-testid="card_bg" id="cardBg" 
             x="0" y="0" rx="2.5" height="100%" stroke="#E4E2E2" fill-opacity="1" 
             width="100%" fill="#${
@@ -42,6 +43,9 @@ export const graphSvg = (props: graphArgs) => `
                     ${props.title}
                 </h1>
             </foreignObject>
+            <a xlink:href="https://github.com/Ashutosh00710/github-readme-activity-graph" target="__blank">
+                 <text x="${props.width/2.5}" y="${props.height - 5}" fill="red">Github Readme Activity Graph!</text>
+            </a>
             ${props.line}
     </svg>
 `;
