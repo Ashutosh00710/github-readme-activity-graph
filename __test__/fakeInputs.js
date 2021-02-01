@@ -325,14 +325,12 @@ const themes = {
     lineColor: 'ff79c6',
     pointColor: 'bd93f9',
   },
-
   gruvbox: {
     bgColor: '504945',
     color: 'd4be98',
     lineColor: 'd8a657',
     pointColor: 'e78a4e',
   },
-
   github: {
     bgColor: '293036',
     color: 'ffffff',
