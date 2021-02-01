@@ -5,7 +5,7 @@ import {
   week,
   contributionCount,
 } from '../interfaces/interface';
-import { fetcher, gqlQuery } from '../types/types';
+import { fetchContribution, fetcher, gqlQuery } from '../types/types';
 
 require('dotenv').config('../');
 
@@ -50,11 +50,11 @@ export const fetch: fetcher = (data: query) =>
     data,
   });
 
-export const fetchContributions = async (
+export const fetchContributions: fetchContribution = async (
   username: string,
   graphqlQuery: gqlQuery, //Dependency Injection
   fetch: fetcher
-): Promise<userDetails | string> => {
+) => {
   try {
     const apiResponse = await fetch(graphqlQuery(username));
     if (apiResponse.data.data.user === null)

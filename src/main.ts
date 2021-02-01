@@ -1,6 +1,7 @@
 import express, { Application, Request, Response } from 'express';
 import { getGraph } from './utils';
 import bodyParser from 'body-parser';
+import { graphqlQuery, fetch } from './fetching';
 
 const app: Application = express();
 let port: string | number = process.env.PORT || 5100;
@@ -13,7 +14,7 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 //Get Graph
-app.get('/graph', getGraph);
+app.get('/graph', getGraph(graphqlQuery, fetch));
 
 app.listen(port, (): void => {
   console.log(`Server is Running in port ${port}`);

@@ -7,8 +7,8 @@ import {
   ParsedQs,
   userDetails,
 } from '../interfaces/interface';
-import { responseGraph } from '../types/types';
-import { fetchContributions, graphqlQuery, fetch } from './fetching';
+import { fetcher, gqlQuery } from '../types/types';
+import { fetchContributions } from './fetching';
 import { selectColors } from '../styles/themes';
 
 export const queryOptions = (queryString: ParsedQs): queryOption => {
@@ -53,7 +53,11 @@ const setHttpHeader = (res: Response, directivesAndAge: string): void => {
   res.set('Content-Type', 'image/svg+xml');
 };
 
-export const getGraph: responseGraph = async (req: Request, res: Response) => {
+//HOF
+export const getGraph = (graphqlQuery: gqlQuery, fetch: fetcher) => async (
+  req: Request,
+  res: Response
+) => {
   try {
     const options: queryOption = queryOptions(req.query);
 
