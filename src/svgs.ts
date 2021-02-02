@@ -42,6 +42,16 @@ export const graphSvg = (props: graphArgs) => `
                     ${props.title}
                 </h1>
             </foreignObject>
+
+            <a href="https://github.com/Ashutosh00710/github-readme-activity-graph">
+                <image 
+                href="https://raw.githubusercontent.com/Ashutosh00710/github-readme-activity-graph/main/asset/logo.svg" 
+                x="${props.width - 80}" 
+                y="20" 
+                height="30px" 
+                width="30px" />
+            </a>
+            
             ${props.line}
     </svg>
 `;
