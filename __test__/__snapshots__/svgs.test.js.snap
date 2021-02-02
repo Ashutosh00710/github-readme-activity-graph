@@ -169,7 +169,7 @@ exports[`Test SVGs 1`] = `
                 <image 
                 href=\\"https://raw.githubusercontent.com/Ashutosh00710/github-readme-activity-graph/main/asset/logo.svg\\" 
                 x=\\"-60\\" 
-                y=\\"2\\" 
+                y=\\"20\\" 
                 height=\\"30px\\" 
                 width=\\"30px\\" />
             </a>
@@ -369,7 +369,7 @@ exports[`chart SVGs 1`] = `
                 <image 
                 href=\\"https://raw.githubusercontent.com/Ashutosh00710/github-readme-activity-graph/main/asset/logo.svg\\" 
                 x=\\"1120\\" 
-                y=\\"2\\" 
+                y=\\"20\\" 
                 height=\\"30px\\" 
                 width=\\"30px\\" />
             </a>
