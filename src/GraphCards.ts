@@ -54,7 +54,7 @@ export class Card {
 
     //Construction of graph from node-chartist
     const line: Promise<string> = await createGraph('line', options, {
-      labels: Array.from(Array(contributions.length).keys(), (day) => day + 1),
+      labels: [...Array(contributions.length + 1).keys()].slice(1),
       series: [{ value: contributions }],
     });
 
