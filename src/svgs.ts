@@ -13,7 +13,7 @@ export const graphSvg = (props: graphArgs) => `
             x="0" y="0" rx="2.5" height="100%" stroke="#E4E2E2" fill-opacity="1" 
             width="100%" fill="#${
               props.colors.bgColor
-            }" stroke-opacity="1" style="stroke:#ffffff; stroke-width:1;"/>
+            }" stroke-opacity="1" style="stroke:#${props.colors.borderColor}; stroke-width:1;"/>
         
             <style>
                 body {
