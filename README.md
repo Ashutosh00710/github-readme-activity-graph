@@ -57,19 +57,20 @@ Customize the appearance of your Activity Graph however you want with URL params
 
 #### Common Options
 
-| Arguments  |                  Description                  |       Type of Value        |
-| :--------: | :-------------------------------------------: | :------------------------: |
-| `bg_color` |            card's background color            |   hex code (without `#`)   |
-|  `color`   |            graph card's text color            |   hex code (without `#`)   |
-|   `line`   |              graph's line color               |   hex code (without `#`)   |
-|  `point`   |         color of points on line graph         |   hex code (without `#`)   |
-|   `area`   |          shows area under the graph           | boolean (default: `false`) |
-|  `theme`   | name of [available themes](#available-themes) |           string           |
+|   Arguments   |                  Description                  |       Type of Value        |
+| :-----------: | :-------------------------------------------: | :------------------------: |
+|   `bg_color`  |            card's background color            |   hex code (without `#`)   |
+|    `color`    |            graph card's text color            |   hex code (without `#`)   |
+|    `line`     |              graph's line color               |   hex code (without `#`)   |
+|    `point`    |         color of points on line graph         |   hex code (without `#`)   |
+|    `area`     |          shows area under the graph           | boolean (default: `false`) |
+| `hide_border` |   makes the border of the graph transparent   | boolean (default: `false`) |
+|    `theme`    | name of [available themes](#available-themes) |           string           |
 
 **Example:**
 
 ```md
-[![Ashutosh's github activity graph](https://activity-graph.herokuapp.com/graph?username=ashutosh00710&bg_color=f4fa9c&color=17b978&line=17b978&point=17b978&area=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
+[![Ashutosh's github activity graph](https://activity-graph.herokuapp.com/graph?username=ashutosh00710&bg_color=f4fa9c&color=17b978&line=17b978&point=17b978&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
 ```
 
 ## Deploy on your own Heroku instance

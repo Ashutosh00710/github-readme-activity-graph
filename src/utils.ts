@@ -25,7 +25,7 @@ export const queryOptions = (queryString: ParsedQs): queryOption => {
     bgColor: queryString.bg_color
       ? queryString.bg_color
       : selectColors(theme).bgColor,
-    borderColor: String(queryString.hideBorder) === 'true'
+    borderColor: String(queryString.hide_border) === 'true'
       ? "0000" // transparent
       : selectColors(theme).borderColor,
     color: queryString.color
