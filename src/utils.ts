@@ -14,30 +14,30 @@ import { selectColors } from '../styles/themes';
 export const queryOptions = (queryString: ParsedQs): queryOption => {
   let area: boolean = false;
   let colors: colors;
+  let theme: string = queryString.theme || 'default';
 
   if (String(queryString.area) === 'true') {
     area = true;
   }
 
-  if (queryString.theme) {
-    colors = selectColors(queryString.theme as string);
-  } else {
-    //Custom options for user
-    colors = {
-      bgColor: queryString.bg_color
-        ? (queryString.bg_color as string)
-        : selectColors('default').bgColor,
-      color: queryString.color
-        ? (queryString.color as string)
-        : selectColors('default').color,
-      lineColor: queryString.line
-        ? (queryString.line as string)
-        : selectColors('default').lineColor,
-      pointColor: queryString.point
-        ? (queryString.point as string)
-        : selectColors('default').pointColor,
-    };
-  }
+  // Custom options for user
+  colors = {
+    bgColor: queryString.bg_color
+      ? queryString.bg_color
+      : selectColors(theme).bgColor,
+    borderColor: String(queryString.hideBorder) === 'true'
+      ? "0000" // transparent
+      : selectColors(theme).borderColor,
+    color: queryString.color
+      ? queryString.color
+      : selectColors(theme).color,
+    lineColor: queryString.line
+      ? queryString.line
+      : selectColors(theme).lineColor,
+    pointColor: queryString.point
+      ? queryString.point
+      : selectColors(theme).pointColor,
+  };
 
   const options: queryOption = {
     username: String(queryString.username),

@@ -7,6 +7,7 @@ export interface query {
 
 export interface colors {
   bgColor: string;
+  borderColor: string;
   color: string;
   lineColor: string;
   pointColor: string;
@@ -21,6 +22,7 @@ export interface queryOption {
 export interface ParsedQs {
   username?: string;
   bg_color?: string;
+  hideBorder?: boolean;
   color?: string;
   line?: string;
   point?: string;
