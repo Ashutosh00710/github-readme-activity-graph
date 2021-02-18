@@ -22,7 +22,7 @@ export interface queryOption {
 export interface ParsedQs {
   username?: string;
   bg_color?: string;
-  hide_border?: boolean;
+  hideBorder?: boolean;
   color?: string;
   line?: string;
   point?: string;

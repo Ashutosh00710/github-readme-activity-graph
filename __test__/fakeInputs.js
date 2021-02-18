@@ -39,7 +39,7 @@ let fakeQueryString = [
     line: 'ff79c6',
     point: 'bd93f9',
     area: true,
-    hide_border: true,
+    hideBorder: true,
   },
 ];
 
