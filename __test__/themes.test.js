@@ -9,5 +9,6 @@ it('Theme testing', () => {
   expect(selectColors('redical')).toEqual(themes['redical']);
   expect(selectColors('xcode')).toEqual(themes['xcode']);
   expect(selectColors('coral')).toEqual(themes['coral']);
+  expect(selectColors('react-dark')).toEqual(themes['reactDark']);
   expect(selectColors('default')).toEqual(themes['default']);
 });

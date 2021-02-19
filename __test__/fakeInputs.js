@@ -394,6 +394,13 @@ const themes = {
     lineColor: 'f4e23d',
     pointColor: 'f4e7e7',
   },
+  reactDark: {
+    bgColor: '0d1117',
+    borderColor: 'ffffff',
+    color: '5bcdec',
+    lineColor: '5bcdec',
+    pointColor: 'ffffff',
+  },
   default: {
     bgColor: 'ffcfe9',
     borderColor: 'ffffff',
