@@ -161,8 +161,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
             <sub><b>Jonah Lawrence</b></sub>
         </a>
         <br />
-        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=DenverCoder1" title="Documentation">💻</a></td>
+        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=DenverCoder1" title="Documentation">💻</a>
         <a href="#documentation-ashutosh" title="Documentation">📖</a>
+    </td>
     <td align="center">
         <a href="https://github.com/MilindModi">
             <img src="https://avatars.githubusercontent.com/u/28483876?s=460&v=4" width="100px;" alt=""/>
