@@ -132,6 +132,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
         <br />
         <a href="#projectManagement-ashutosh" title="Project Management">📆</a>
         <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=ashutosh00710" title="Code">💻</a>
+        <a href="#documentation-ashutosh" title="Documentation">📖</a>
     </td>
     <td align="center">
         <a href="http://github.com/kshitij978">
@@ -142,6 +143,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
         <br />
         <a href="#projectManagement-kshitij" title="Project Management">📆</a>
         <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=kshitij978" title="Code">💻</a>
+        <a href="#documentation-ashutosh" title="Documentation">📖</a>
     </td>
     <td align="center">
         <a href="https://github.com/tintindas">
@@ -160,6 +162,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
         </a>
         <br />
         <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=DenverCoder1" title="Documentation">💻</a></td>
+        <a href="#documentation-ashutosh" title="Documentation">📖</a>
     <td align="center">
         <a href="https://github.com/MilindModi">
             <img src="https://avatars.githubusercontent.com/u/28483876?s=460&v=4" width="100px;" alt=""/>
