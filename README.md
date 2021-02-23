@@ -7,13 +7,20 @@
 A dynamically generated activity graph to show your GitHub activities of last 31 days.
 
 ## Table of contents
-- [How to Use?](#how-to-use)
-- [Themes](#available-themes)
-- [Customization](#customization)
-- [Deploy on your own Heroku instance](#deploy-on-your-own-heroku-instance)
-- [Contributing](#contributing)
-- [Thanks](#resources-used-to-build-this-project)
 
+- [Table of contents](#table-of-contents)
+- [How to Use](#how-to-use)
+  - [Attention ⚠](#attention-)
+- [Use themes](#use-themes)
+- [Available Themes](#available-themes)
+- [Customization](#customization)
+    - [Common Options](#common-options)
+- [Deploy on your own Heroku instance](#deploy-on-your-own-heroku-instance)
+  - [Set up your server](#set-up-your-server)
+- [Contributing](#contributing)
+- [Contributors ✨](#contributors-)
+- [Resources Used to build this project](#resources-used-to-build-this-project)
+  - [Made with ❤ and TypeScript <img src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg" width="25">](#made-with--and-typescript-)
 
 ## How to Use
 
@@ -24,7 +31,6 @@ Just paste the following URL in your profile readme and you are good to go.
 ```md
 [![Ashutosh's github activity graph](https://activity-graph.herokuapp.com/graph?username=Ashutosh00710)](https://github.com/ashutosh00710/github-readme-activity-graph)
 ```
-
 
 ### [Attention ⚠](#Deploy-on-your-own-heroku-instance)
 
@@ -60,7 +66,7 @@ Customize the appearance of your Activity Graph however you want with URL params
 
 |   Arguments   |                  Description                  |       Type of Value        |
 | :-----------: | :-------------------------------------------: | :------------------------: |
-|   `bg_color`  |            card's background color            |   hex code (without `#`)   |
+|  `bg_color`   |            card's background color            |   hex code (without `#`)   |
 |    `color`    |            graph card's text color            |   hex code (without `#`)   |
 |    `line`     |              graph's line color               |   hex code (without `#`)   |
 |    `point`    |         color of points on line graph         |   hex code (without `#`)   |
@@ -103,8 +109,34 @@ Now just add the following to your profile readme and you're good to go.
 ```md
 ![Github Activity Graph](<url from step 6>/graph?username=<username>)
 ```
+
 ## Contributing
+
 Please read through our [contributing guidelines](https://github.com/Ashutosh00710/github-readme-activity-graph/blob/main/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="http://github.com/Ashutosh00710"><img src="https://avatars.githubusercontent.com/u/42907572?s=460&u=3c5c03fdddeec2483819b845bd549616d48b71e5&v=4" width="100px;" alt=""/><br /><sub><b>Ashutosh Dwivedi</b></sub></a><br /><a href="#projectManagement-ashutosh" title="Project Management">📆</a> <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=ashutosh00710" title="Code">💻</a></td>
+    <td align="center"><a href="http://github.com/kshitij978"><img src="https://avatars.githubusercontent.com/u/42491256?s=460&u=db0c5e26632c9f4917db50e714cd7552c1559ba8&v=4" width="100px;" alt=""/><br /><sub><b>Kshitij Srivastava</b></sub></a><br /><a href="#projectManagement-kshitij" title="Project Management">📆</a> <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=kshitij978" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/tintindas"><img src="https://avatars.githubusercontent.com/u/47525983?s=460&u=0cedda5548e62fc342f32f89d230253cb8b9b099&v=4" width="100px;" alt=""/><br /><sub><b>Upamanyu Das</b></sub></a><br /><a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=tintindas" title="Code">📖</a> </td>
+    <td align="center"><a href="https://github.com/DenverCoder1"><img src="https://avatars.githubusercontent.com/u/20955511?s=460&u=5bbdbfe0199b05d6ca913fb799236c8beedcd192&v=4" width="100px;" alt=""/><br /><sub><b>Jonah Lawrence</b></sub></a><br /><a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=DenverCoder1" title="Documentation">💻</a></td>
+    <td align="center"><a href="https://github.com/MilindModi"><img src="https://avatars.githubusercontent.com/u/28483876?s=460&v=4" width="100px;" alt=""/><br /><sub><b>Milind Modi</b></sub></a><br /><a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=MilindModi" title="Code">📖</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
 ## Resources Used to build this project
 
