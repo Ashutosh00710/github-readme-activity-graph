@@ -57,6 +57,7 @@ _`username=ashutosh00710&theme=theme_name`_
 |         **xcode**          |   <img src="./asset/xcode.svg" height=250 alt="graph"/>    |
 |         **coral**          |   <img src="./asset/coral.svg" height=250 alt="graph"/>    |
 |       **react-dark**       | <img src="./asset/react-dark.svg" height=250 alt="graph"/> |
+|          **nord**          |    <img src="./asset/nord.svg" height=250 alt="graph"/>    |
 
 ## Customization
 
