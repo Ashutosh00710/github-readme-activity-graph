@@ -66,6 +66,14 @@ export const selectColors = (queryString: string): colors => {
         lineColor: '5bcdec',
         pointColor: 'ffffff',
       };
+    case 'nord':
+      return {
+        bgColor: '2e3440',
+        borderColor: 'ffffff',
+        color: '88c0d0',
+        lineColor: '88c0d0',
+        pointColor: 'ffffff',
+      };
     default:
       return {
         bgColor: 'ffcfe9',
