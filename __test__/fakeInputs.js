@@ -401,6 +401,13 @@ const themes = {
     lineColor: '5bcdec',
     pointColor: 'ffffff',
   },
+  nord: {
+    bgColor: '2e3440',
+    borderColor: 'ffffff',
+    color: '88c0d0',
+    lineColor: '88c0d0',
+    pointColor: 'ffffff',
+  },
   default: {
     bgColor: 'ffcfe9',
     borderColor: 'ffffff',
