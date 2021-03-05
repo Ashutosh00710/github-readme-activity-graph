@@ -25,8 +25,7 @@ it('Query Options', () => {
 //Testing express routes
 const fakeSurver = () => {
   const app = express();
-  app.use(bodyParser.urlencoded({ extended: false }));
-  app.use(bodyParser.json());
+  app.use(express.urlencoded({ extended: false }));
   return app;
 };
 
