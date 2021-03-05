@@ -1,4 +1,4 @@
-const { fetchContributions, graphqlQuery } = require('../src/fetching');
+const { fetchContributions, graphqlQuery } = require('../src/fetcher');
 const {
   mockQueryCorrect,
   mockQueryIncorrect,

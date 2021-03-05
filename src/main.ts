@@ -1,7 +1,7 @@
 import express, { Application, Request, Response } from 'express';
 import { getGraph } from './utils';
 import bodyParser from 'body-parser';
-import { graphqlQuery, fetch } from './fetching';
+import { graphqlQuery, fetch } from './fetcher';
 
 const app: Application = express();
 let port: string | number = process.env.PORT || 5100;

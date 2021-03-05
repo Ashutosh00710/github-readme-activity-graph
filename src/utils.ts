@@ -8,7 +8,7 @@ import {
   userDetails,
 } from '../interfaces/interface';
 import { fetcher, gqlQuery } from '../types/types';
-import { fetchContributions } from './fetching';
+import { fetchContributions } from './fetcher';
 import { selectColors } from '../styles/themes';
 
 export const queryOptions = (queryString: ParsedQs): queryOption => {
