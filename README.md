@@ -177,6 +177,15 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
         <br />
         <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=MilindModi" title="Documentation">📖</a>
     </td>
+    <td align="center">
+        <a href="https://github.com/Vaibhav-afk">
+            <img src="https://avatars.githubusercontent.com/u/67143938?s=400&u=96dcbfcff0afcd5597a904181bc4cc309a4b22fa&v=4" width="100px;" alt=""/>
+            <br />
+            <sub><b>Vaibhav</b></sub>
+        </a>
+        <br />
+        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=Vaibhav-afk" title="Code">💻</a>
+    </td>
   </tr>
 </table>
 
