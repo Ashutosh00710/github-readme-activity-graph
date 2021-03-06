@@ -74,6 +74,14 @@ export const selectColors = (queryString: string): colors => {
         lineColor: '88c0d0',
         pointColor: 'ffffff',
       };
+    case 'lucent':
+      return {
+        bgColor: 'cccccc',
+        borderColor: '000000',
+        color: '000000',
+        lineColor: 'ffd369',
+        pointColor: 'faf3e0',
+    };
     default:
       return {
         bgColor: 'ffcfe9',

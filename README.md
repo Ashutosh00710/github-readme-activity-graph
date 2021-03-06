@@ -58,6 +58,7 @@ _`username=ashutosh00710&theme=theme_name`_
 |         **coral**          |   <img src="./asset/coral.svg" height=250 alt="graph"/>    |
 |       **react-dark**       | <img src="./asset/react-dark.svg" height=250 alt="graph"/> |
 |          **nord**          |    <img src="./asset/nord.svg" height=250 alt="graph"/>    |
+|          **lucent**          |    <img src="./asset/lucent.svg" height=250 alt="graph"/>    |
 
 ## Customization
 
@@ -181,7 +182,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
         <a href="https://github.com/Vaibhav-afk">
             <img src="https://avatars.githubusercontent.com/u/67143938?s=400&u=96dcbfcff0afcd5597a904181bc4cc309a4b22fa&v=4" width="100px;" alt=""/>
             <br />
-            <sub><b>Vaibhaiv</b></sub>
+            <sub><b>Vaibhav</b></sub>
         </a>
         <br />
         <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=Vaibhav-afk" title="Code">💻</a>
