@@ -29,7 +29,7 @@ Our aim is to **keep it simple** for the developers to contribute to this projec
 5. [Generate your personal access token](https://github.com/settings/tokens)
 
 6. Create a `.env` file in root directory and in there write  
-   `TOKEN=your_generated_token`
+   `TOKEN=<your_generated_token>`
 
    Now, open your terminal and write the following commands:
 
