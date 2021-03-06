@@ -408,6 +408,13 @@ const themes = {
     lineColor: '88c0d0',
     pointColor: 'ffffff',
   },
+  lucent: {
+    bgColor: 'cccccc',
+    borderColor: '000000',
+    color: '000000',
+    lineColor: 'ffd369',
+    pointColor: 'faf3e0',
+  },
   default: {
     bgColor: 'ffcfe9',
     borderColor: 'ffffff',
