@@ -18,6 +18,7 @@ A dynamically generated activity graph to show your GitHub activities of last 31
 - [Deploy on your own Heroku instance](#deploy-on-your-own-heroku-instance)
   - [Set up your server](#set-up-your-server)
 - [Contributing](#contributing)
+- [Core Team 💻](#core-team-)
 - [Contributors ✨](#contributors-)
 - [Resources Used to build this project](#resources-used-to-build-this-project)
   - [Made with ❤ and TypeScript <img src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg" width="25">](#made-with--and-typescript-)
@@ -58,7 +59,7 @@ _`username=ashutosh00710&theme=theme_name`_
 |         **coral**          |   <img src="./asset/coral.svg" height=250 alt="graph"/>    |
 |       **react-dark**       | <img src="./asset/react-dark.svg" height=250 alt="graph"/> |
 |          **nord**          |    <img src="./asset/nord.svg" height=250 alt="graph"/>    |
-|          **lucent**          |    <img src="./asset/lucent.svg" height=250 alt="graph"/>    |
+|         **lucent**         |   <img src="./asset/lucent.svg" height=250 alt="graph"/>   |
 
 ## Customization
 
@@ -116,16 +117,11 @@ Now just add the following to your profile readme and you're good to go.
 
 Please read through our [contributing guidelines](https://github.com/Ashutosh00710/github-readme-activity-graph/blob/main/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
 
-## Contributors ✨
+## Core Team 💻
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
 <table>
-  <tr>
-    <td align="center">
+    <tr>
+        <td align="center">
         <a href="http://github.com/Ashutosh00710">
             <img src="https://avatars.githubusercontent.com/u/42907572?s=460&u=3c5c03fdddeec2483819b845bd549616d48b71e5&v=4" width="100px;" alt=""/>
             <br />
@@ -150,6 +146,18 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
         <a href="#documentation" title="Documentation">📖</a>
         <a href="#design" title="Design">🎨</a>
     </td>
+    </tr>
+</table>
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
     <td align="center">
         <a href="https://github.com/tintindas">
             <img src="https://avatars.githubusercontent.com/u/47525983?s=460&u=0cedda5548e62fc342f32f89d230253cb8b9b099&v=4" width="100px;" alt=""/>
