@@ -54,12 +54,8 @@ _`username=ashutosh00710&theme=theme_name`_
 |        **gruvbox**         |  <img src="./asset/gruvbox.svg" height=250 alt="graph"/>   |
 |         **rogue**          |   <img src="./asset/rogue.svg" height=250 alt="graph"/>    |
 |         **github**         |   <img src="./asset/github.svg" height=250 alt="graph"/>   |
-|        **redical**         |  <img src="./asset/redical.svg" height=250 alt="graph"/>   |
-|         **xcode**          |   <img src="./asset/xcode.svg" height=250 alt="graph"/>    |
-|         **coral**          |   <img src="./asset/coral.svg" height=250 alt="graph"/>    |
-|       **react-dark**       | <img src="./asset/react-dark.svg" height=250 alt="graph"/> |
-|          **nord**          |    <img src="./asset/nord.svg" height=250 alt="graph"/>    |
-|         **lucent**         |   <img src="./asset/lucent.svg" height=250 alt="graph"/>   |
+
+For more themes click [here](https://github.com/Ashutosh00710/github-readme-activity-graph/blob/main/THEMES.md)
 
 ## Customization
 
