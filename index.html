@@ -271,7 +271,7 @@
       };
       //set auth header
       const headers = {
-        Authorization: 'bearer 280e4b3e907dcc859c97e15d4664e812824d3749',
+        Authorization: 'bearer ',
       };
       //get user data
       axios({
@@ -282,7 +282,9 @@
       })
         .then((apiResponse) => {
           if (apiResponse.data.data.user === null)
-            return `Can't fetch any contribution. Please check your username 😬`;
+            alert(
+              `Can't fetch any contribution. Please check your username 😬`
+            );
           else {
             let userData = {
               contributions: [],
