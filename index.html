@@ -17,6 +17,9 @@
       color: #9c9c9c;
       font: 1rem 'PT Sans', sans-serif;
     }
+    body {
+      height: 90vh;
+    }
     html,
     body,
     a {
@@ -33,6 +36,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      height: 100%;
     }
     .uppercase {
       text-transform: uppercase;
@@ -75,6 +79,7 @@
       outline: 0;
       padding: 22px 18px;
     }
+
     @keyframes blink {
       from {
         opacity: 0;
@@ -85,11 +90,13 @@
         transform: translateX(0);
       }
     }
+
     @keyframes dash {
       to {
         stroke-dashoffset: 0;
       }
     }
+
     .ct-label {
       fill: #5bcdec;
       color: #5bcdec;
@@ -205,35 +212,109 @@
     }
 
     .rect {
+      width: 90%;
+      padding: auto;
       background-color: #2e3440;
       margin-top: 2rem;
       border-radius: 4px;
+    }
+
+    .split_container {
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+
+    .left {
+      width: 30%;
+      margin-right: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    .right {
+      width: 100%;
+    }
+
+    .form {
+      margin: auto;
+      width: 50%;
+    }
+
+    .picker {
+      margin-left: 1rem;
     }
   </style>
   <body>
     <div class="container">
       <h1>GitHub Readme Activity Graph</h1>
-      <div class="container__item">
-        <form class="form">
-          <input
-            type="username"
-            class="form__field"
-            placeholder="Your GitHub Username"
-            id="username"
-          />
-          <button
-            type="button"
-            class="btn btn--primary btn--inside uppercase"
-            id="submit-button"
-          >
-            Build Graph
-          </button>
-        </form>
+      <div class="split_container">
+        <section class="left">
+          <form>
+            <input
+              type="color"
+              class="picker"
+              name="bgColor"
+              value="#2e3440"
+              id="bgColor"
+            />
+            <label for="bgColor">Background Color</label>
+          </form>
+          <div>
+            <input
+              type="color"
+              class="picker"
+              name="line"
+              value="#5bcdec"
+              id="line"
+            />
+            <label for="line">Line Color</label>
+          </div>
+          <div>
+            <input
+              type="color"
+              class="picker"
+              name="point"
+              value="#ffffff"
+              id="point"
+            />
+            <label for="point">Point Color</label>
+          </div>
+          <div>
+            <input
+              type="color"
+              class="picker"
+              name="color"
+              value="#5bcdec"
+              id="color"
+            />
+            <label for="color">Text Color</label>
+          </div>
+        </section>
+        <section class="right">
+          <div class="container__item">
+            <form class="form">
+              <input
+                type="username"
+                class="form__field"
+                placeholder="Your GitHub Username"
+                id="username"
+              />
+              <button
+                type="button"
+                class="btn btn--primary btn--inside uppercase"
+                id="submit-button"
+              >
+                Build Graph
+              </button>
+            </form>
+          </div>
+          <div class="rect">
+            <div class="ct-chart"></div>
+          </div>
+        </section>
       </div>
-      <div class="rect">
-        <div class="ct-chart"></div>
-      </div>
-      <input type="color" />
     </div>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.4/chartist.min.js"></script>
@@ -241,7 +322,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chartist-plugin-axistitle@0.0.7/dist/chartist-plugin-axistitle.min.js"></script>
   <script>
     //Get submit button
-    var submitButton = document.getElementById('submit-button');
+    let submitButton = document.getElementById('submit-button');
     //on click event
     submitButton.addEventListener('click', (event) => {
       //get username
@@ -271,7 +352,7 @@
       };
       //set auth header
       const headers = {
-        Authorization: 'bearer ',
+        Authorization: 'bearer 09065429d04927ea6fb2156d190b0e1a833b8df0',
       };
       //get user data
       axios({
@@ -315,8 +396,8 @@
               series: [{ value: userData.contributions }],
             };
             const options = {
-              width: 1200,
-              height: 420,
+              width: 1000,
+              height: 380,
               axisY: {
                 title: 'Contributions',
                 onlyInteger: true,
@@ -370,5 +451,65 @@
         .catch((err) => console.error(err));
     });
     //Dynamic changes
+    //Background
+    let bgInput = document.getElementById('bgColor');
+    bgInput.addEventListener('input', function () {
+      document.querySelector('.rect').style.backgroundColor = bgInput.value;
+    });
+    //line
+    function line() {
+      let theInput = document.getElementById('line');
+      theInput.addEventListener('input', function () {
+        document.querySelector('.ct-line').style.stroke = theInput.value;
+      });
+    }
+    //color
+    function color() {
+      let theInput = document.getElementById('color');
+      theInput.addEventListener('input', function () {
+        let allLables = document.querySelectorAll('.ct-label');
+        var index = 0,
+          length = allLables.length;
+        for (; index < length; index++) {
+          allLables[index].style.fill = theInput.value;
+          allLables[index].style.color = theInput.value;
+        }
+      });
+
+      theInput.addEventListener('input', function () {
+        let allLables = document.querySelectorAll('.ct-axis-title');
+        var index = 0,
+          length = allLables.length;
+        for (; index < length; index++) {
+          allLables[index].style.fill = theInput.value;
+        }
+      });
+
+      theInput.addEventListener('input', function () {
+        let allLables = document.querySelectorAll('.ct-grid');
+        var index = 0,
+          length = allLables.length;
+        for (; index < length; index++) {
+          allLables[index].style.stroke = theInput.value;
+        }
+      });
+    }
+    //point
+    function point() {
+      let pointInput = document.getElementById('point');
+      pointInput.addEventListener('input', function () {
+        let allPointLables = document.querySelectorAll('.ct-point');
+        var idx = 0,
+          len = allPointLables.length;
+        for (; idx < len; idx++) {
+          allPointLables[idx].style.stroke = pointInput.value;
+        }
+      });
+    }
+
+    //calling
+    line();
+    color();
+    point();
   </script>
 </html>
