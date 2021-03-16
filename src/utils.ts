@@ -25,12 +25,11 @@ export const queryOptions = (queryString: ParsedQs): queryOption => {
     bgColor: queryString.bg_color
       ? queryString.bg_color
       : selectColors(theme).bgColor,
-    borderColor: String(queryString.hide_border) === 'true'
-      ? "0000" // transparent
-      : selectColors(theme).borderColor,
-    color: queryString.color
-      ? queryString.color
-      : selectColors(theme).color,
+    borderColor:
+      String(queryString.hide_border) === 'true'
+        ? '0000' // transparent
+        : selectColors(theme).borderColor,
+    color: queryString.color ? queryString.color : selectColors(theme).color,
     lineColor: queryString.line
       ? queryString.line
       : selectColors(theme).lineColor,
@@ -88,6 +87,30 @@ export const getGraph = (graphqlQuery: gqlQuery, fetch: fetcher) => async (
     }
   } catch (error) {
     setHttpHeader(res, 'no-store, max-age=0');
+    res.send(invalidUserSvg('Something unexpected happened 💥'));
+  }
+};
+
+/* DO NOT CHANGE THE CODE BELOW */
+export const getData = (graphqlQuery: gqlQuery, fetch: fetcher) => async (
+  req: Request,
+  res: Response
+) => {
+  try {
+    const options: queryOption = queryOptions(req.query);
+
+    const fetchCalendarData: userDetails | string = await fetchContributions(
+      `${options.username}`,
+      graphqlQuery,
+      fetch
+    );
+
+    if (typeof fetchCalendarData === 'object') {
+      res.status(200).send(fetchCalendarData);
+    } else {
+      res.send(invalidUserSvg(fetchCalendarData));
+    }
+  } catch (error) {
     res.send(invalidUserSvg('Something unexpected happened 💥'));
   }
 };
