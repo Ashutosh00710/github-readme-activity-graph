@@ -1,9 +1,9 @@
 let valueToCopy = {
   username: '',
-  bgColor: 'ffcfe9',
-  color: '9e4c98',
-  line: '9e4c98',
-  point: '403d3d',
+  bgColor: '#ffcfe9',
+  color: '#9e4c98',
+  line: '#9e4c98',
+  point: '#403d3d',
 };
 
 //Get submit button
