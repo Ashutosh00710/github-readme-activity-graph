@@ -23,6 +23,7 @@ submitButton.addEventListener('click', (event) => {
   axios({
     url: `https://activity-graph.herokuapp.com/data?username=${username}`,
     method: 'GET',
+    headers: { 'Access-Control-Allow-Origin': '*' },
   })
     .then((contributionData) => {
       let userData = contributionData;
