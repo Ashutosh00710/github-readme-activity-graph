@@ -14,7 +14,7 @@ A dynamically generated activity graph to show your GitHub activities of last 31
 - [Use themes](#use-themes)
 - [Available Themes](#available-themes)
 - [Customization](#customization)
-    - [Common Options](#common-options)
+  - [Common Options](#common-options)
 - [Deploy on your own Heroku instance](#deploy-on-your-own-heroku-instance)
   - [Set up your server](#set-up-your-server)
 - [Contributing](#contributing)
@@ -205,7 +205,7 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 |      Purpose       |  Library Name   |                   Link                    |
 | :----------------: | :-------------: | :---------------------------------------: |
-| Graph Construction | **CHARTISH.JS** | <https://github.com/gionkunz/chartist-js> |
+| Graph Construction | **CHARTIST.JS** | <https://github.com/gionkunz/chartist-js> |
 
 </br>
 <hr/>
