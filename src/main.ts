@@ -1,11 +1,13 @@
 import express, { Application, Request, Response } from 'express';
 import { getData, getGraph } from './utils';
 import { graphqlQuery, fetch } from './fetcher';
+import cors from 'cors';
 
 const app: Application = express();
 let port: string | number = process.env.PORT || 5100;
 
 app.use(express.urlencoded({ extended: false }));
+app.use(cors());
 
 app.get('/', (req: Request, res: Response) => {
   res.send(`<h1>GitHub Readme Activity Graph 📈</h1>`);

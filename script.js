@@ -21,12 +21,12 @@ submitButton.addEventListener('click', (event) => {
 
   //get user data
   axios({
-    url: `https://activity-graph.herokuapp.com/data?username=${username}`,
+    url: `http://localhost:5100/data?username=${username}`,
     method: 'GET',
-    headers: { 'Access-Control-Allow-Origin': '*' },
   })
     .then((contributionData) => {
-      let userData = contributionData;
+      console.log(contributionData.data);
+      let userData = contributionData.data;
       var data = {
         labels: [...Array(userData.contributions.length + 1).keys()].slice(1),
         series: [{ value: userData.contributions }],
