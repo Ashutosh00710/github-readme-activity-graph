@@ -1,19 +1,14 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const request = require('supertest');
-const { queryOptions, getGraph } = require('../src/utils');
-const { createGraph } = require('../src/createChart');
-const {
+import express from 'express';
+import request from 'supertest';
+import { queryOptions, getGraph } from '../src/utils';
+import { createGraph } from '../src/createChart';
+import {
   mockQueryCorrect,
   mockQueryIncorrect,
   mockFetchCorrect,
   mockFetchIncorrect,
-} = require('./mockFunctions');
-const {
-  fakeQueryString,
-  fakeQueryStringRes,
-  options,
-} = require('./fakeInputs');
+} from './mockFunctions';
+import { fakeQueryString, fakeQueryStringRes, options } from './fakeInputs';
 
 //- Query Option Function (utils.ts) ✔
 it('Query Options', () => {

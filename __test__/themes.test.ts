@@ -1,5 +1,5 @@
-const { selectColors } = require('../styles/themes');
-const { themes } = require('./fakeInputs');
+import { selectColors } from '../styles/themes';
+import { themes } from './fakeInputs';
 
 it('Theme testing', () => {
   expect.assertions(11);

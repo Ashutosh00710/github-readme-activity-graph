@@ -1,4 +1,6 @@
-let fakeQueryString = [
+import { graphArgs } from '../interfaces/interface';
+
+export let fakeQueryString = [
   {
     username: 'githubusername',
   },
@@ -43,7 +45,7 @@ let fakeQueryString = [
   },
 ];
 
-let fakeQueryStringRes = [
+export let fakeQueryStringRes = [
   {
     username: 'githubusername',
     colors: {
@@ -123,17 +125,23 @@ let fakeQueryStringRes = [
   },
 ];
 
-let fakeGraphArgs = {
+export let fakeGraphArgs: graphArgs = {
   height: 10,
   width: 20,
-  colors: 'red',
+  colors: {
+    bgColor: '44475a',
+    borderColor: '0000',
+    color: 'f8f8f2',
+    lineColor: 'ff79c6',
+    pointColor: 'bd93f9',
+  },
   title: 'graphSvg',
-  line: 'line',
+  line: Promise.resolve('line'),
 };
 
-let options = {
-  width: this.width,
-  height: this.height,
+export let options = {
+  width: 10,
+  height: 5,
   axisY: {
     title: 'Contributions',
     onlyInteger: true,
@@ -155,11 +163,11 @@ let options = {
     bottom: 20,
     left: 20,
   },
-  showArea: this.area,
+  showArea: false,
   fullWidth: true,
 };
 
-const expectedQuery = (username) => {
+export const expectedQuery = (username: string) => {
   return {
     query: `
       query userInfo($LOGIN: String!) {
@@ -184,7 +192,7 @@ const expectedQuery = (username) => {
   };
 };
 
-const dummyWeeksData = [
+export const dummyWeeksData = [
   {
     contributionDays: [
       {
@@ -344,7 +352,7 @@ const dummyWeeksData = [
   },
 ];
 
-const themes = {
+export const themes = {
   dracula: {
     bgColor: '44475a',
     borderColor: 'ffffff',
@@ -422,14 +430,4 @@ const themes = {
     lineColor: '9e4c98',
     pointColor: '403d3d',
   },
-};
-
-module.exports = {
-  fakeQueryString,
-  fakeQueryStringRes,
-  fakeGraphArgs,
-  options,
-  dummyWeeksData,
-  expectedQuery,
-  themes,
 };

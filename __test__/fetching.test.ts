@@ -1,11 +1,12 @@
-const { fetchContributions, graphqlQuery } = require('../src/fetcher');
-const {
+import { fetchContributions, graphqlQuery } from '../src/fetcher';
+import {
   mockQueryCorrect,
   mockQueryIncorrect,
   mockFetchCorrect,
   mockFetchIncorrect,
-} = require('./mockFunctions');
-const { expectedQuery } = require('./fakeInputs');
+} from './mockFunctions';
+import { expectedQuery } from './fakeInputs';
+import { userDetails } from '../interfaces/interface';
 
 //Query Testing ✔
 test('Query Test', () => {
@@ -16,14 +17,16 @@ test('Query Test', () => {
 test('Fetching Contributions Test', () => {
   expect.assertions(4);
   fetchContributions('ashutosh00710', mockQueryCorrect, mockFetchCorrect).then(
-    (data) => {
+    //@ts-ignore: will always return data of type userDetails
+    (data: userDetails) => {
       expect(data.contributions).toEqual(expect.any(Array));
       expect(data.contributions.length).toEqual(31);
       expect(data.name).toEqual('Ashutosh Dwivedi');
     }
   );
   fetchContributions('', mockQueryIncorrect, mockFetchIncorrect).then(
-    (data) => {
+    //@ts-ignore: will always return data of type string
+    (data: string) => {
       expect(data).toEqual(
         `Can't fetch any contribution. Please check your username 😬`
       );

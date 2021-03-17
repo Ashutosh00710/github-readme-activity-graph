@@ -1,4 +1,4 @@
-const { dummyWeeksData } = require('./fakeInputs');
+import { dummyWeeksData } from './fakeInputs';
 
 const weeks = () => {
   for (let i = 1; i <= new Date().getDay(); i++) {
@@ -10,7 +10,7 @@ const weeks = () => {
 };
 
 //For valid username
-const mockFetchCorrect = jest.fn().mockReturnValue(
+export const mockFetchCorrect = jest.fn().mockReturnValue(
   Promise.resolve({
     data: {
       data: {
@@ -29,7 +29,7 @@ const mockFetchCorrect = jest.fn().mockReturnValue(
 );
 
 //For invalid username
-const mockFetchIncorrect = jest.fn().mockReturnValue({
+export const mockFetchIncorrect = jest.fn().mockReturnValue({
   data: {
     data: {
       user: null,
@@ -51,20 +51,20 @@ const mockFetchIncorrect = jest.fn().mockReturnValue({
 });
 
 //For valid username
-const mockQueryCorrect = jest.fn().mockReturnValue({
+export const mockQueryCorrect = jest.fn().mockReturnValue({
   query: `
       query userInfo($LOGIN: String!) {
        user(login: $LOGIN) {
          name
          contributionsCollection {
            contributionCalendar {
-              totalContributions 
+              totalContributions
               weeks {
                 contributionDays {
-                  contributionCount 
+                  contributionCount
                 }
               }
-            }      
+            }
           }
         }
       },
@@ -75,20 +75,20 @@ const mockQueryCorrect = jest.fn().mockReturnValue({
 });
 
 //For invalid username
-const mockQueryIncorrect = jest.fn().mockReturnValue({
+export const mockQueryIncorrect = jest.fn().mockReturnValue({
   query: `
       query userInfo($LOGIN: String!) {
        user(login: $LOGIN) {
          name
          contributionsCollection {
            contributionCalendar {
-              totalContributions 
+              totalContributions
               weeks {
                 contributionDays {
-                  contributionCount 
+                  contributionCount
                 }
               }
-            }      
+            }
           }
         }
       },
@@ -97,10 +97,3 @@ const mockQueryIncorrect = jest.fn().mockReturnValue({
     LOGIN: '',
   },
 });
-
-module.exports = {
-  mockFetchCorrect,
-  mockFetchIncorrect,
-  mockQueryCorrect,
-  mockQueryIncorrect,
-};

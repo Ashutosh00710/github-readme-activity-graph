@@ -10,7 +10,7 @@ exports[`Test SVGs 1`] = `
         xmlns=\\"http://www.w3.org/2000/svg\\">
             <rect xmlns=\\"http://www.w3.org/2000/svg\\" data-testid=\\"card_bg\\" id=\\"cardBg\\" 
             x=\\"0\\" y=\\"0\\" rx=\\"2.5\\" height=\\"100%\\" stroke=\\"#E4E2E2\\" fill-opacity=\\"1\\" 
-            width=\\"100%\\" fill=\\"#undefined\\" stroke-opacity=\\"1\\" style=\\"stroke:#undefined; stroke-width:1;\\"/>
+            width=\\"100%\\" fill=\\"#44475a\\" stroke-opacity=\\"1\\" style=\\"stroke:#0000; stroke-width:1;\\"/>
         
             <style>
                 body {
@@ -19,7 +19,7 @@ exports[`Test SVGs 1`] = `
                 .header {
                     font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
                     text-align: center;
-                    color: #undefined;
+                    color: #f8f8f2;
                     margin-top: 20px; 
                 }
                 svg {
@@ -27,8 +27,8 @@ exports[`Test SVGs 1`] = `
                 }
                 
     .ct-label {
-      fill: #undefined;
-      color: #undefined;
+      fill: #f8f8f2;
+      color: #f8f8f2;
       font-size: .75rem;
       line-height: 1;
     }
@@ -101,7 +101,7 @@ exports[`Test SVGs 1`] = `
     }
 
     .ct-grid {
-      stroke: #undefined;
+      stroke: #f8f8f2;
       stroke-width: 1px;
       stroke-opacity: 0.3;  
       stroke-dasharray: 2px;
@@ -110,7 +110,7 @@ exports[`Test SVGs 1`] = `
     .ct-point {
       stroke-width: 10px;
       stroke-linecap: round;
-      stroke: #undefined;
+      stroke: #bd93f9;
       animation: blink 1s ease-in-out forwards;
     }
 
@@ -118,7 +118,7 @@ exports[`Test SVGs 1`] = `
       stroke-width: 4px;
       stroke-dasharray: 5000;
       stroke-dashoffset: 5000;
-      stroke: #undefined;
+      stroke: #ff79c6;
       animation: dash 5s ease-in-out forwards;
     }
     
@@ -164,7 +164,7 @@ exports[`Test SVGs 1`] = `
                     graphSvg
                 </h1>
             </foreignObject>
-            line
+            [object Promise]
     </svg>
 "
 `;

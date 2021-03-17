@@ -1,6 +1,6 @@
-const { graphSvg, invalidUserSvg } = require('../src/svgs');
-const { Card } = require('../src/GraphCards');
-const { fakeGraphArgs, fakeQueryStringRes } = require('./fakeInputs');
+import { graphSvg, invalidUserSvg } from '../src/svgs';
+import { Card } from '../src/GraphCards';
+import { fakeGraphArgs, fakeQueryStringRes } from './fakeInputs';
 
 //- Svg testing ✔
 it('Test SVGs', () => {
