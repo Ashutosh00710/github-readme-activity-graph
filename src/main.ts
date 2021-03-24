@@ -9,7 +9,7 @@ let port: string | number = process.env.PORT || 5100;
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
-app.get('/', (req: Request, res: Response) => {
+app.get('/', (_req: Request, res: Response) => {
   res.send(`<h1>GitHub Readme Activity Graph 📈</h1>`);
 });
 
