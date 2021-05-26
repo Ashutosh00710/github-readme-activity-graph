@@ -1,9 +1,9 @@
 let valueToCopy = {
   username: '',
-  bgColor: '#ffcfe9',
-  color: '#9e4c98',
-  line: '#9e4c98',
-  point: '#403d3d',
+  bgColor: 'ffcfe9',
+  color: '9e4c98',
+  line: '9e4c98',
+  point: '403d3d',
 };
 
 //Get submit button
@@ -86,76 +86,52 @@ submitButton.addEventListener('click', (event) => {
     .catch((err) => console.error(err));
 });
 //Dynamic changes
-let bgInput = document.getElementById('bgColor');
-let lineInput = document.getElementById('line');
-let colorInput = document.getElementById('color');
-let pointInput = document.getElementById('point');
-
 //Background
+let bgInput = document.getElementById('bgColor');
 bgInput.addEventListener('input', function () {
   valueToCopy.bgColor = bgInput.value;
   document.querySelector('.rect').style.backgroundColor = bgInput.value;
 });
-
 //line
-lineInput.addEventListener('input', function () {
-  valueToCopy.line = lineInput.value;
-  document.querySelector('.ct-line').style.stroke = lineInput.value;
-});
-
-function loopTroughQueries(className, styleAttributes) {
-  console.log(styleAttributes[0]);
-  let allElementsToChange = document.querySelectorAll(`${className}`);
-  var index = 0,
-    length = allElementsToChange.length;
-  for (; index < length; index++) {
-    if (styleAttributes.length === 2) {
-      allElementsToChange[index].style.styleAttributes[0] = colorInput.value;
-      allElementsToChange[index].style.styleAttributes[1] = colorInput.value;
-    } else {
-      allElementsToChange[index].style.styleAttributes[0] = colorInput.value;
-    }
-  }
+function line() {
+  let theInput = document.getElementById('line');
+  theInput.addEventListener('input', function () {
+    valueToCopy.line = theInput.value;
+    document.querySelector('.ct-line').style.stroke = theInput.value;
+  });
 }
-
-colorInput.addEventListener('input', function () {
-  loopTroughQueries('.ct-label', ['fill', 'color']);
-  // loopTroughQueries('.ct-axis-title', colorInput, ['fill']);
-  // loopTroughQueries('.ct-grid', colorInput, ['stroke']);
-});
-
 //color
-// function color() {
-//   let theInput = document.getElementById('color');
-//   theInput.addEventListener('input', function () {
-//     valueToCopy.color = theInput.value;
-//     let allLables = document.querySelectorAll('.ct-label');
-//     var index = 0,
-//       length = allLables.length;
-//     for (; index < length; index++) {
-//       allLables[index].style.fill = theInput.value;
-//       allLables[index].style.color = theInput.value;
-//     }
-//   });
+function color() {
+  let theInput = document.getElementById('color');
+  theInput.addEventListener('input', function () {
+    valueToCopy.color = theInput.value;
+    let allLables = document.querySelectorAll('.ct-label');
+    var index = 0,
+      length = allLables.length;
+    for (; index < length; index++) {
+      allLables[index].style.fill = theInput.value;
+      allLables[index].style.color = theInput.value;
+    }
+  });
 
-//   theInput.addEventListener('input', function () {
-//     let allLables = document.querySelectorAll('.ct-axis-title');
-//     var index = 0,
-//       length = allLables.length;
-//     for (; index < length; index++) {
-//       allLables[index].style.fill = theInput.value;
-//     }
-//   });
+  theInput.addEventListener('input', function () {
+    let allLables = document.querySelectorAll('.ct-axis-title');
+    var index = 0,
+      length = allLables.length;
+    for (; index < length; index++) {
+      allLables[index].style.fill = theInput.value;
+    }
+  });
 
-//   theInput.addEventListener('input', function () {
-//     let allLables = document.querySelectorAll('.ct-grid');
-//     var index = 0,
-//       length = allLables.length;
-//     for (; index < length; index++) {
-//       allLables[index].style.stroke = theInput.value;
-//     }
-//   });
-// }
+  theInput.addEventListener('input', function () {
+    let allLables = document.querySelectorAll('.ct-grid');
+    var index = 0,
+      length = allLables.length;
+    for (; index < length; index++) {
+      allLables[index].style.stroke = theInput.value;
+    }
+  });
+}
 //point
 function point() {
   let pointInput = document.getElementById('point');
@@ -171,7 +147,8 @@ function point() {
 }
 
 //calling
-//color();
+line();
+color();
 point();
 
 document.querySelector('.copy').addEventListener('click', copyText);
