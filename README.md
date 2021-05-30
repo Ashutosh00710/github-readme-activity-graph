@@ -69,6 +69,7 @@ Customize the appearance of your Activity Graph however you want with URL params
 |    `color`     |            graph card's text color            |   hex code (without `#`)   |
 |     `line`     |              graph's line color               |   hex code (without `#`)   |
 |    `point`     |         color of points on line graph         |   hex code (without `#`)   |
+|  `area_color`  |      color of the area under the graph        |   hex code (without `#`)   |
 |     `area`     |          shows area under the graph           | boolean (default: `false`) |
 | `hide_border`  |   makes the border of the graph transparent   | boolean (default: `false`) |
 |  `hide_title`  |       sets the title to an empty string       | boolean (default: `false`) |

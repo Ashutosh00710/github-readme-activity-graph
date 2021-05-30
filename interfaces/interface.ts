@@ -6,6 +6,7 @@ export interface query {
 }
 
 export interface colors {
+  areaColor: string;
   bgColor: string;
   borderColor: string;
   color: string;
@@ -27,6 +28,7 @@ export interface ParsedQs {
   custom_title?: string;
   bg_color?: string;
   hide_border?: boolean;
+  area_color?: string;
   color?: string;
   line?: string;
   point?: string;

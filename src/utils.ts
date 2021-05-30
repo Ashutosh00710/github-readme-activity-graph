@@ -22,6 +22,9 @@ export const queryOptions = (queryString: ParsedQs): queryOption => {
 
   // Custom options for user
   colors = {
+    areaColor: queryString.area_color
+      ? queryString.area_color
+      : selectColors(theme).areaColor,
     bgColor: queryString.bg_color
       ? queryString.bg_color
       : selectColors(theme).bgColor,
