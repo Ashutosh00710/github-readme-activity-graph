@@ -40,6 +40,8 @@ export const queryOptions = (queryString: ParsedQs): queryOption => {
 
   const options: queryOption = {
     username: String(queryString.username),
+    hide_title: String(queryString.hide_title),
+    custom_title: String(queryString.custom_title),
     colors: colors,
     area: area,
   };
@@ -67,11 +69,22 @@ export const getGraph = (graphqlQuery: gqlQuery, fetch: fetcher) => async (
     );
 
     if (typeof fetchCalendarData === 'object') {
+
+      let title = ''
+
+      if (options.hide_title.toLowerCase() != 'true') {
+        if (options.custom_title.toLowerCase() != 'undefined') {
+          title = options.custom_title
+        } else {
+          title = `${fetchCalendarData.name}'s Contribution Graph`
+        }
+      }
+
       const graph: Card = new Card(
         420,
         1200,
         options.colors,
-        `${fetchCalendarData.name}'s Contribution Graph`,
+        title,
         options.area
       );
 
