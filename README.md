@@ -215,6 +215,16 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
         <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=jgphilpott" title="Code">💻</a>
         <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=jgphilpott" title="Documentation">📖</a>
     </td>
+    <td align="center">
+        <a href="https://github.com/SonuKumar81800">
+            <img src="https://avatars.githubusercontent.com/u/45717030?v=4" width="100px;" alt=""/>
+            <br />
+            <sub><b>Sonu Kumar</b></sub>
+        </a>
+        <br />
+        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=SonuKumar81800" title="Style">🎨</a>
+        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=SonuKumar81800" title="Documentation">📖</a>
+    </td>
   </tr>
 </table>
 
