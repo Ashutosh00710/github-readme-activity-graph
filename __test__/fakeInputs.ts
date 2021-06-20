@@ -3,21 +3,29 @@ import { graphArgs } from '../interfaces/interface';
 export let fakeQueryString = [
   {
     username: 'githubusername',
+    hide_title: false,
+    custom_title: undefined,
   },
   {
     username: 'githubusername',
     bg_color: '44475a',
+    hide_title: false,
+    custom_title: undefined,
   },
   {
     username: 'githubusername',
     bg_color: '44475a',
     color: '000000',
+    hide_title: false,
+    custom_title: undefined,
   },
   {
     username: 'githubusername',
     bg_color: '44475a',
     color: '000000',
     line: '9e4c98',
+    hide_title: false,
+    custom_title: undefined,
   },
   {
     username: 'githubusername',
@@ -25,6 +33,8 @@ export let fakeQueryString = [
     color: '000000',
     line: '9e4c98',
     point: '44475a',
+    hide_title: false,
+    custom_title: undefined,
   },
   {
     username: 'githubusername',
@@ -33,6 +43,8 @@ export let fakeQueryString = [
     line: 'ff79c6',
     point: 'bd93f9',
     area: true,
+    hide_title: false,
+    custom_title: undefined,
   },
   {
     username: 'githubusername',
@@ -42,6 +54,29 @@ export let fakeQueryString = [
     point: 'bd93f9',
     area: true,
     hide_border: true,
+    hide_title: false,
+    custom_title: undefined,
+  },
+  {
+    username: 'githubusername',
+    bg_color: '44475a',
+    color: 'f8f8f2',
+    line: 'ff79c6',
+    point: 'bd93f9',
+    area: true,
+    hide_border: true,
+    hide_title: true,
+    custom_title: undefined,
+  },
+  {
+    username: 'githubusername',
+    bg_color: '44475a',
+    color: 'f8f8f2',
+    line: 'ff79c6',
+    point: 'bd93f9',
+    area: true,
+    hide_border: true,
+    custom_title: 'some title',
   },
 ];
 
@@ -55,6 +90,7 @@ export let fakeQueryStringRes = [
       lineColor: '9e4c98',
       pointColor: '403d3d',
     },
+    hide_title: false,
     area: false,
   },
   {
@@ -66,6 +102,7 @@ export let fakeQueryStringRes = [
       lineColor: '9e4c98',
       pointColor: '403d3d',
     },
+    hide_title: false,
     area: false,
   },
   {
@@ -77,6 +114,7 @@ export let fakeQueryStringRes = [
       lineColor: '9e4c98',
       pointColor: '403d3d',
     },
+    hide_title: false,
     area: false,
   },
   {
@@ -88,6 +126,7 @@ export let fakeQueryStringRes = [
       lineColor: '9e4c98',
       pointColor: '403d3d',
     },
+    hide_title: false,
     area: false,
   },
   {
@@ -99,6 +138,7 @@ export let fakeQueryStringRes = [
       lineColor: '9e4c98',
       pointColor: '44475a',
     },
+    hide_title: false,
     area: false,
   },
   {
@@ -110,6 +150,7 @@ export let fakeQueryStringRes = [
       lineColor: 'ff79c6',
       pointColor: 'bd93f9',
     },
+    hide_title: false,
     area: true,
   },
   {
@@ -122,6 +163,32 @@ export let fakeQueryStringRes = [
       pointColor: 'bd93f9',
     },
     area: true,
+    hide_title: false,
+  },
+  {
+    username: 'githubusername',
+    colors: {
+      bgColor: '44475a',
+      borderColor: '0000',
+      color: 'f8f8f2',
+      lineColor: 'ff79c6',
+      pointColor: 'bd93f9',
+    },
+    area: true,
+    hide_title: true,
+  },
+  {
+    username: 'githubusername',
+    colors: {
+      bgColor: '44475a',
+      borderColor: '0000',
+      color: 'f8f8f2',
+      lineColor: 'ff79c6',
+      pointColor: 'bd93f9',
+    },
+    area: true,
+    hide_title: false,
+    custom_title: 'some title',
   },
 ];
 

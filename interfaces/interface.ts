@@ -15,15 +15,15 @@ export interface colors {
 
 export interface queryOption {
   username: string;
-  hide_title: string;
-  custom_title: string;
+  hide_title?: boolean;
+  custom_title?: string;
   colors: colors;
   area: boolean;
 }
 
 export interface ParsedQs {
   username?: string;
-  hide_title?: string;
+  hide_title?: boolean;
   custom_title?: string;
   bg_color?: string;
   hide_border?: boolean;

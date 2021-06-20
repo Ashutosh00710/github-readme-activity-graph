@@ -40,11 +40,13 @@ export const queryOptions = (queryString: ParsedQs): queryOption => {
 
   const options: queryOption = {
     username: String(queryString.username),
-    hide_title: String(queryString.hide_title),
-    custom_title: String(queryString.custom_title),
+    hide_title: String(queryString.hide_title) === 'true' ? true : false,
     colors: colors,
     area: area,
   };
+
+  if (queryString.custom_title)
+    options['custom_title'] = String(queryString.custom_title);
 
   return options;
 };
@@ -55,75 +57,72 @@ const setHttpHeader = (res: Response, directivesAndAge: string): void => {
 };
 
 //HOF
-export const getGraph = (graphqlQuery: gqlQuery, fetch: fetcher) => async (
-  req: Request,
-  res: Response
-) => {
-  try {
-    const options: queryOption = queryOptions(req.query);
+export const getGraph =
+  (graphqlQuery: gqlQuery, fetch: fetcher) =>
+  async (req: Request, res: Response) => {
+    try {
+      const options: queryOption = queryOptions(req.query);
 
-    const fetchCalendarData: userDetails | string = await fetchContributions(
-      `${options.username}`,
-      graphqlQuery,
-      fetch
-    );
+      const fetchCalendarData: userDetails | string = await fetchContributions(
+        `${options.username}`,
+        graphqlQuery,
+        fetch
+      );
 
-    if (typeof fetchCalendarData === 'object') {
+      if (typeof fetchCalendarData === 'object') {
+        let title = '';
 
-      let title = ''
-
-      if (options.hide_title.toLowerCase() != 'true') {
-        if (options.custom_title.toLowerCase() != 'undefined') {
-          title = options.custom_title
-        } else {
-          title = `${fetchCalendarData.name}'s Contribution Graph`
+        if (!options.hide_title) {
+          if (options.custom_title) {
+            title = options.custom_title;
+          } else {
+            title = `${fetchCalendarData.name}'s Contribution Graph`;
+          }
         }
+
+        const graph: Card = new Card(
+          420,
+          1200,
+          options.colors,
+          title,
+          options.area
+        );
+
+        const getChart: string = await graph.chart(
+          fetchCalendarData.contributions
+        );
+
+        setHttpHeader(res, 'public, max-age=1800');
+        res.status(200).send(getChart);
+      } else {
+        setHttpHeader(res, 'no-store, max-age=0');
+        res.send(invalidUserSvg(fetchCalendarData));
       }
-
-      const graph: Card = new Card(
-        420,
-        1200,
-        options.colors,
-        title,
-        options.area
-      );
-
-      const getChart: string = await graph.chart(
-        fetchCalendarData.contributions
-      );
-
-      setHttpHeader(res, 'public, max-age=1800');
-      res.status(200).send(getChart);
-    } else {
+    } catch (error) {
       setHttpHeader(res, 'no-store, max-age=0');
-      res.send(invalidUserSvg(fetchCalendarData));
+      res.send(invalidUserSvg('Something unexpected happened 💥'));
     }
-  } catch (error) {
-    setHttpHeader(res, 'no-store, max-age=0');
-    res.send(invalidUserSvg('Something unexpected happened 💥'));
-  }
-};
+  };
 
 /* DO NOT CHANGE THE CODE BELOW */
-export const getData = (graphqlQuery: gqlQuery, fetch: fetcher) => async (
-  req: Request,
-  res: Response
-) => {
-  try {
-    const options: queryOption = queryOptions(req.query);
+export const getData =
+  (graphqlQuery: gqlQuery, fetch: fetcher) =>
+  async (req: Request, res: Response) => {
+    try {
+      const options: queryOption = queryOptions(req.query);
 
-    const fetchCalendarData: userDetails | string = await fetchContributions(
-      `${options.username}`,
-      graphqlQuery,
-      fetch
-    );
+      const fetchCalendarData: userDetails | string = await fetchContributions(
+        `${options.username}`,
+        graphqlQuery,
+        fetch
+      );
 
-    if (typeof fetchCalendarData === 'object') {
-      res.status(200).send(fetchCalendarData);
-    } else {
-      res.send(invalidUserSvg(fetchCalendarData));
+      if (typeof fetchCalendarData === 'object') {
+        res.status(200).send(fetchCalendarData);
+      } else {
+        res.send(invalidUserSvg(fetchCalendarData));
+      }
+    } catch (error) {
+      res.send(invalidUserSvg('Something unexpected happened 💥'));
     }
-  } catch (error) {
-    res.send(invalidUserSvg('Something unexpected happened 💥'));
-  }
-};
+  };

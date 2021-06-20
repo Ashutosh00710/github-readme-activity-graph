@@ -75,6 +75,16 @@ Customize the appearance of your Activity Graph however you want with URL params
 | `custom_title` |          set the title to any string          |           string           |
 |    `theme`     | name of [available themes](#available-themes) |           string           |
 
+⚠ **For `custom_title` please make sure you are use %20 for spaces**
+
+Example:
+
+**`custom_title=This%20is%20a%20title`**
+
+```md
+[![Ashutosh's github activity graph](https://activity-graph.herokuapp.com/graph?username=ashutosh00710&custom_title=This%20is%20a%20title&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
+```
+
 **Example:**
 
 ```md
@@ -193,6 +203,16 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
         <br />
         <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=Vaibhav-afk" title="Code">💻</a>
         <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=Vaibhav-afk" title="Documentation">📖</a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/jgphilpott">
+            <img src="https://avatars.githubusercontent.com/u/4128208?v=4" width="100px;" alt=""/>
+            <br />
+            <sub><b>Jacob Philpott</b></sub>
+        </a>
+        <br />
+        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=jgphilpott" title="Code">💻</a>
+        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=jgphilpott" title="Documentation">📖</a>
     </td>
   </tr>
 </table>
