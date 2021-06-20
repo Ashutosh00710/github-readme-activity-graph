@@ -54,7 +54,6 @@ _`username=ashutosh00710&theme=theme_name`_
 |         **github**         |   <img src="./asset/github.svg" height=250 alt="graph"/>   |
 |         **xcode**          |   <img src="./asset/xcode.svg" height=250 alt="graph"/>    |
 |         **rogue**          |   <img src="./asset/rogue.svg" height=250 alt="graph"/>    |
-|    **chartreuse-dark**     | <img src="./asset/chartreuse.png" height=250 alt="graph"/> |
 
 For more themes click [here](https://github.com/Ashutosh00710/github-readme-activity-graph/blob/main/THEMES.md)
 
@@ -70,7 +69,7 @@ Customize the appearance of your Activity Graph however you want with URL params
 |    `color`     |            graph card's text color            |   hex code (without `#`)   |
 |     `line`     |              graph's line color               |   hex code (without `#`)   |
 |    `point`     |         color of points on line graph         |   hex code (without `#`)   |
-|  `area_color`  |      color of the area under the graph        |   hex code (without `#`)   |
+|  `area_color`  |       color of the area under the graph       |   hex code (without `#`)   |
 |     `area`     |          shows area under the graph           | boolean (default: `false`) |
 | `hide_border`  |   makes the border of the graph transparent   | boolean (default: `false`) |
 |  `hide_title`  |       sets the title to an empty string       | boolean (default: `false`) |

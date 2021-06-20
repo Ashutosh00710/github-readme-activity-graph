@@ -510,6 +510,14 @@ export const themes = {
     lineColor: 'ffd369',
     pointColor: 'faf3e0',
   },
+  chartreuseDark: {
+    areaColor: '87ceeb',
+    bgColor: '000000',
+    borderColor: '000000',
+    color: '7ffe00',
+    lineColor: '00adfe',
+    pointColor: '7ffe00',
+  },
   default: {
     areaColor: '87ceeb',
     bgColor: 'ffcfe9',
