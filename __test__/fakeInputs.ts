@@ -84,6 +84,7 @@ export let fakeQueryStringRes = [
   {
     username: 'githubusername',
     colors: {
+      areaColor: '87ceeb',
       bgColor: 'ffcfe9',
       borderColor: 'ffffff',
       color: '9e4c98',
@@ -96,6 +97,7 @@ export let fakeQueryStringRes = [
   {
     username: 'githubusername',
     colors: {
+      areaColor: '87ceeb',
       bgColor: '44475a',
       borderColor: 'ffffff',
       color: '9e4c98',
@@ -108,6 +110,7 @@ export let fakeQueryStringRes = [
   {
     username: 'githubusername',
     colors: {
+      areaColor: '87ceeb',
       bgColor: '44475a',
       borderColor: 'ffffff',
       color: '000000',
@@ -120,6 +123,7 @@ export let fakeQueryStringRes = [
   {
     username: 'githubusername',
     colors: {
+      areaColor: '87ceeb',
       bgColor: '44475a',
       borderColor: 'ffffff',
       color: '000000',
@@ -132,6 +136,7 @@ export let fakeQueryStringRes = [
   {
     username: 'githubusername',
     colors: {
+      areaColor: '87ceeb',
       bgColor: '44475a',
       borderColor: 'ffffff',
       color: '000000',
@@ -144,6 +149,7 @@ export let fakeQueryStringRes = [
   {
     username: 'githubusername',
     colors: {
+      areaColor: '87ceeb',
       bgColor: '44475a',
       borderColor: 'ffffff',
       color: 'f8f8f2',
@@ -156,6 +162,7 @@ export let fakeQueryStringRes = [
   {
     username: 'githubusername',
     colors: {
+      areaColor: '87ceeb',
       bgColor: '44475a',
       borderColor: '0000',
       color: 'f8f8f2',
@@ -168,6 +175,7 @@ export let fakeQueryStringRes = [
   {
     username: 'githubusername',
     colors: {
+      areaColor: '87ceeb',
       bgColor: '44475a',
       borderColor: '0000',
       color: 'f8f8f2',
@@ -180,6 +188,7 @@ export let fakeQueryStringRes = [
   {
     username: 'githubusername',
     colors: {
+      areaColor: '87ceeb',
       bgColor: '44475a',
       borderColor: '0000',
       color: 'f8f8f2',
@@ -196,6 +205,7 @@ export let fakeGraphArgs: graphArgs = {
   height: 10,
   width: 20,
   colors: {
+    areaColor: '87ceeb',
     bgColor: '44475a',
     borderColor: '0000',
     color: 'f8f8f2',
@@ -421,6 +431,7 @@ export const dummyWeeksData = [
 
 export const themes = {
   dracula: {
+    areaColor: '87ceeb',
     bgColor: '44475a',
     borderColor: 'ffffff',
     color: 'f8f8f2',
@@ -428,6 +439,7 @@ export const themes = {
     pointColor: 'bd93f9',
   },
   gruvbox: {
+    areaColor: '87ceeb',
     bgColor: '504945',
     borderColor: 'ffffff',
     color: 'd4be98',
@@ -435,6 +447,7 @@ export const themes = {
     pointColor: 'e78a4e',
   },
   github: {
+    areaColor: '87ceeb',
     bgColor: '293036',
     borderColor: 'ffffff',
     color: 'ffffff',
@@ -442,6 +455,7 @@ export const themes = {
     pointColor: 'f97583',
   },
   rogue: {
+    areaColor: '87ceeb',
     bgColor: '172030',
     borderColor: 'ffffff',
     color: 'a3b09a',
@@ -449,6 +463,7 @@ export const themes = {
     pointColor: 'c6797e',
   },
   xcode: {
+    areaColor: '87ceeb',
     bgColor: '202124',
     borderColor: 'ffffff',
     color: 'fcfcfa',
@@ -456,6 +471,7 @@ export const themes = {
     pointColor: 'ff8070',
   },
   redical: {
+    areaColor: '87ceeb',
     bgColor: '141321',
     borderColor: 'ffffff',
     color: 'a9fef7',
@@ -463,6 +479,7 @@ export const themes = {
     pointColor: 'f8d847',
   },
   coral: {
+    areaColor: '87ceeb',
     bgColor: '9a3838',
     borderColor: 'ffffff',
     color: 'f9fae9',
@@ -470,6 +487,7 @@ export const themes = {
     pointColor: 'f4e7e7',
   },
   reactDark: {
+    areaColor: '87ceeb',
     bgColor: '0d1117',
     borderColor: 'ffffff',
     color: '5bcdec',
@@ -477,6 +495,7 @@ export const themes = {
     pointColor: 'ffffff',
   },
   nord: {
+    areaColor: '87ceeb',
     bgColor: '2e3440',
     borderColor: 'ffffff',
     color: '88c0d0',
@@ -484,6 +503,7 @@ export const themes = {
     pointColor: 'ffffff',
   },
   lucent: {
+    areaColor: '87ceeb',
     bgColor: 'cccccc',
     borderColor: '000000',
     color: '000000',
@@ -491,6 +511,7 @@ export const themes = {
     pointColor: 'faf3e0',
   },
   default: {
+    areaColor: '87ceeb',
     bgColor: 'ffcfe9',
     borderColor: 'ffffff',
     color: '9e4c98',

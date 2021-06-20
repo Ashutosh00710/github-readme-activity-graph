@@ -8,10 +8,10 @@ exports[`Test SVGs 1`] = `
         viewBox=\\"0 0 20 10\\"
         fill=\\"none\\"
         xmlns=\\"http://www.w3.org/2000/svg\\">
-            <rect xmlns=\\"http://www.w3.org/2000/svg\\" data-testid=\\"card_bg\\" id=\\"cardBg\\" 
-            x=\\"0\\" y=\\"0\\" rx=\\"2.5\\" height=\\"100%\\" stroke=\\"#E4E2E2\\" fill-opacity=\\"1\\" 
+            <rect xmlns=\\"http://www.w3.org/2000/svg\\" data-testid=\\"card_bg\\" id=\\"cardBg\\"
+            x=\\"0\\" y=\\"0\\" rx=\\"2.5\\" height=\\"100%\\" stroke=\\"#E4E2E2\\" fill-opacity=\\"1\\"
             width=\\"100%\\" fill=\\"#44475a\\" stroke-opacity=\\"1\\" style=\\"stroke:#0000; stroke-width:1;\\"/>
-        
+
             <style>
                 body {
                     font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -20,7 +20,7 @@ exports[`Test SVGs 1`] = `
                     font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
                     text-align: center;
                     color: #f8f8f2;
-                    margin-top: 20px; 
+                    margin-top: 20px;
                 }
                 svg {
                     font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -103,7 +103,7 @@ exports[`Test SVGs 1`] = `
     .ct-grid {
       stroke: #f8f8f2;
       stroke-width: 1px;
-      stroke-opacity: 0.3;  
+      stroke-opacity: 0.3;
       stroke-dasharray: 2px;
     }
 
@@ -121,7 +121,7 @@ exports[`Test SVGs 1`] = `
       stroke: #ff79c6;
       animation: dash 5s ease-in-out forwards;
     }
-    
+
     .ct-area {
       stroke: none;
       fill-opacity: 0.1;
@@ -129,13 +129,13 @@ exports[`Test SVGs 1`] = `
 
     .ct-series-a .ct-area,
     .ct-series-a .ct-slice-pie {
-      fill: skyblue;
+      fill: #87ceeb;
     }
 
     .ct-label .ct-horizontal {
       transform: rotate(-90deg)
     }
-    
+
     
                 
         @keyframes blink {
@@ -182,8 +182,8 @@ exports[`Test SVGs 2`] = `
                     font: 600 14px 'Segoe UI', Ubuntu, Sans-Serif;
                 }
         </style>
-        <rect xmlns=\\"http://www.w3.org/2000/svg\\" data-testid=\\"card_bg\\" id=\\"cardBg\\" x=\\"0.5\\" 
-        y=\\"0.5\\" rx=\\"4.5\\" height=\\"100%\\" stroke=\\"#E4E2E2\\" fill-opacity=\\"1\\" width=\\"100%\\" 
+        <rect xmlns=\\"http://www.w3.org/2000/svg\\" data-testid=\\"card_bg\\" id=\\"cardBg\\" x=\\"0.5\\"
+        y=\\"0.5\\" rx=\\"4.5\\" height=\\"100%\\" stroke=\\"#E4E2E2\\" fill-opacity=\\"1\\" width=\\"100%\\"
         fill=\\"#44475a\\" stroke-opacity=\\"1\\"/>
         <text x=\\"20\\" y=\\"100\\" fill=\\"#bd93f9\\">User not found!</text>
     </svg>
@@ -198,10 +198,10 @@ exports[`chart SVGs 1`] = `
         viewBox=\\"0 0 1200 420\\"
         fill=\\"none\\"
         xmlns=\\"http://www.w3.org/2000/svg\\">
-            <rect xmlns=\\"http://www.w3.org/2000/svg\\" data-testid=\\"card_bg\\" id=\\"cardBg\\" 
-            x=\\"0\\" y=\\"0\\" rx=\\"2.5\\" height=\\"100%\\" stroke=\\"#E4E2E2\\" fill-opacity=\\"1\\" 
+            <rect xmlns=\\"http://www.w3.org/2000/svg\\" data-testid=\\"card_bg\\" id=\\"cardBg\\"
+            x=\\"0\\" y=\\"0\\" rx=\\"2.5\\" height=\\"100%\\" stroke=\\"#E4E2E2\\" fill-opacity=\\"1\\"
             width=\\"100%\\" fill=\\"#ffcfe9\\" stroke-opacity=\\"1\\" style=\\"stroke:#ffffff; stroke-width:1;\\"/>
-        
+
             <style>
                 body {
                     font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -210,7 +210,7 @@ exports[`chart SVGs 1`] = `
                     font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
                     text-align: center;
                     color: #9e4c98;
-                    margin-top: 20px; 
+                    margin-top: 20px;
                 }
                 svg {
                     font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -293,7 +293,7 @@ exports[`chart SVGs 1`] = `
     .ct-grid {
       stroke: #9e4c98;
       stroke-width: 1px;
-      stroke-opacity: 0.3;  
+      stroke-opacity: 0.3;
       stroke-dasharray: 2px;
     }
 
@@ -311,7 +311,7 @@ exports[`chart SVGs 1`] = `
       stroke: #9e4c98;
       animation: dash 5s ease-in-out forwards;
     }
-    
+
     .ct-area {
       stroke: none;
       fill-opacity: 0.1;
@@ -319,13 +319,13 @@ exports[`chart SVGs 1`] = `
 
     .ct-series-a .ct-area,
     .ct-series-a .ct-slice-pie {
-      fill: skyblue;
+      fill: #87ceeb;
     }
 
     .ct-label .ct-horizontal {
       transform: rotate(-90deg)
     }
-    
+
     
                 
         @keyframes blink {
