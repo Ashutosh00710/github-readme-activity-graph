@@ -29,6 +29,14 @@ export const selectColors = (queryString: string): colors => {
         lineColor: '9ecbff',
         pointColor: 'f97583',
       };
+    case 'chartreuse-dark':
+      return {
+        bgColor:'000000',
+        borderColor: '000000',
+        color:'7ffe00',
+        lineColor:'00adfe',
+        pointColor:'7ffe00',
+      }
     case 'rogue':
       return {
         areaColor: '87ceeb',
