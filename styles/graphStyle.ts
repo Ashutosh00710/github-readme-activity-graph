@@ -1,4 +1,4 @@
-export const graphStyle = (color: string, line: string, point: string) =>
+export const graphStyle = (color: string, line: string, point: string, area: string) =>
   `
     .ct-label {
       fill: #${color};
@@ -77,7 +77,7 @@ export const graphStyle = (color: string, line: string, point: string) =>
     .ct-grid {
       stroke: #${color};
       stroke-width: 1px;
-      stroke-opacity: 0.3;  
+      stroke-opacity: 0.3;
       stroke-dasharray: 2px;
     }
 
@@ -95,7 +95,7 @@ export const graphStyle = (color: string, line: string, point: string) =>
       stroke: #${line};
       animation: dash 5s ease-in-out forwards;
     }
-    
+
     .ct-area {
       stroke: none;
       fill-opacity: 0.1;
@@ -103,11 +103,11 @@ export const graphStyle = (color: string, line: string, point: string) =>
 
     .ct-series-a .ct-area,
     .ct-series-a .ct-slice-pie {
-      fill: skyblue;
+      fill: #${area};
     }
 
     .ct-label .ct-horizontal {
       transform: rotate(-90deg)
     }
-    
+
     `;
