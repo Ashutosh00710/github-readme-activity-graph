@@ -101,7 +101,25 @@ E.g. `https://activity-graph.herokuapp.com/graph?username=<your_username>`
 
 However, if there are a large number of requests or if the heroku account being used for the project runs out of dyno hours your graph will not load.
 
-### Set up your server
+### Step-by-step instructions for deploying to Heroku (from UI)
+
+1. Sign in to Heroku or create a new account at <https://heroku.com>
+2. Click the Deploy button below
+
+<p align="center">
+    <a href="https://heroku.com/deploy?template=https://github.com/Ashutosh00710/github-readme-activity-graph/main">
+        <img src="https://www.herokucdn.com/deploy/button.svg" title="Deploy to Heroku" alt="Deploy"/>
+    </a>
+</p>
+
+3. On the page that comes up, click "**Deploy App**" at the end of the form
+4. Once the app is deployed, click "**Manage App**" to go to the dashboard
+5. Visit the "**Settings**" tab and click "**Reveal Config Vars**"
+6. Visit [this link](https://github.com/settings/tokens/new?description=GitHub%20Readme%20Activity%20Graph) to create a new Personal Access Token
+7. Scroll to the bottom and click "**Generate token**"
+8. Add the token as a Config Var with the key `TOKEN`
+
+### Set up your server (from CLI)
 
 1. Make a [Heroku](https://signup.heroku.com/) account.
 2. Install the Heroku CLI
