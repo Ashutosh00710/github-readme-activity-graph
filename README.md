@@ -120,6 +120,10 @@ However, if there are a large number of requests or if the heroku account being 
 7. Scroll to the bottom and click "**Generate token**"
 8. Add the token as a Config Var with the key `TOKEN`
 
+![TOKEN](./asset/token-config.png)
+
+9. Scroll down to the Domains section to find the URL you will use in place of `activity-graph.herokuapp.com`
+
 ### Step-by-step instructions for deploying to Heroku (from CLI)
 
 1. Make a [Heroku](https://signup.heroku.com/) account.
