@@ -16,7 +16,8 @@ A dynamically generated activity graph to show your GitHub activities of last 31
 - [Customization](#customization)
   - [Common Options](#common-options)
 - [Deploy on your own Heroku instance](#deploy-on-your-own-heroku-instance)
-  - [Set up your server](#set-up-your-server)
+  - [Step-by-step instructions for deploying to Heroku **(from UI)**](#step-by-step-instructions-for-deploying-to-heroku-from-ui)
+  - [Step-by-step instructions for deploying to Heroku **(from CLI)**](#step-by-step-instructions-for-deploying-to-heroku-from-cli)
 - [Contributing](#contributing)
 - [Core Team 💻](#core-team-)
 - [Contributors ✨](#contributors-)
@@ -119,7 +120,7 @@ However, if there are a large number of requests or if the heroku account being 
 7. Scroll to the bottom and click "**Generate token**"
 8. Add the token as a Config Var with the key `TOKEN`
 
-### Set up your server (from CLI)
+### Step-by-step instructions for deploying to Heroku (from CLI)
 
 1. Make a [Heroku](https://signup.heroku.com/) account.
 2. Install the Heroku CLI
