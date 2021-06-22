@@ -4,7 +4,7 @@ export const selectColors = (queryString: string): colors => {
   switch (queryString) {
     case 'dracula':
       return {
-        areaColor: '87ceeb',
+        areaColor: 'ff79c6',
         bgColor: '44475a',
         borderColor: 'ffffff',
         color: 'f8f8f2',
@@ -13,7 +13,7 @@ export const selectColors = (queryString: string): colors => {
       };
     case 'gruvbox':
       return {
-        areaColor: '87ceeb',
+        areaColor: 'd8a657',
         bgColor: '504945',
         borderColor: 'ffffff',
         color: 'd4be98',
@@ -22,7 +22,7 @@ export const selectColors = (queryString: string): colors => {
       };
     case 'github':
       return {
-        areaColor: '87ceeb',
+        areaColor: '9ecbff',
         bgColor: '293036',
         borderColor: 'ffffff',
         color: 'ffffff',
@@ -31,7 +31,7 @@ export const selectColors = (queryString: string): colors => {
       };
     case 'rogue':
       return {
-        areaColor: '87ceeb',
+        areaColor: 'b18bb1',
         bgColor: '172030',
         borderColor: 'ffffff',
         color: 'a3b09a',
@@ -40,7 +40,7 @@ export const selectColors = (queryString: string): colors => {
       };
     case 'xcode':
       return {
-        areaColor: '87ceeb',
+        areaColor: 'c4e3ff',
         bgColor: '202124',
         borderColor: 'ffffff',
         color: 'fcfcfa',
@@ -49,7 +49,7 @@ export const selectColors = (queryString: string): colors => {
       };
     case 'redical':
       return {
-        areaColor: '87ceeb',
+        areaColor: 'fe428e',
         bgColor: '141321',
         borderColor: 'ffffff',
         color: 'a9fef7',
@@ -58,7 +58,7 @@ export const selectColors = (queryString: string): colors => {
       };
     case 'coral':
       return {
-        areaColor: '87ceeb',
+        areaColor: 'f4e23d',
         bgColor: '9a3838',
         borderColor: 'ffffff',
         color: 'f9fae9',
@@ -67,7 +67,7 @@ export const selectColors = (queryString: string): colors => {
       };
     case 'react-dark':
       return {
-        areaColor: '87ceeb',
+        areaColor: '5bcdec',
         bgColor: '0d1117',
         borderColor: 'ffffff',
         color: '5bcdec',
@@ -76,7 +76,7 @@ export const selectColors = (queryString: string): colors => {
       };
     case 'nord':
       return {
-        areaColor: '87ceeb',
+        areaColor: '88c0d0',
         bgColor: '2e3440',
         borderColor: 'ffffff',
         color: '88c0d0',
@@ -85,7 +85,7 @@ export const selectColors = (queryString: string): colors => {
       };
     case 'lucent':
       return {
-        areaColor: '87ceeb',
+        areaColor: 'ffd369',
         bgColor: 'cccccc',
         borderColor: '000000',
         color: '000000',
@@ -94,7 +94,7 @@ export const selectColors = (queryString: string): colors => {
       };
     case 'chartreuse-dark':
       return {
-        areaColor: '87ceeb',
+        areaColor: '00adfe',
         bgColor: '000000',
         borderColor: '000000',
         color: '7ffe00',
@@ -103,7 +103,7 @@ export const selectColors = (queryString: string): colors => {
       };
     default:
       return {
-        areaColor: '87ceeb',
+        areaColor: '9e4c98',
         bgColor: 'ffcfe9',
         borderColor: 'ffffff',
         color: '9e4c98',
