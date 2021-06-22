@@ -319,7 +319,7 @@ exports[`chart SVGs 1`] = `
 
     .ct-series-a .ct-area,
     .ct-series-a .ct-slice-pie {
-      fill: #87ceeb;
+      fill: #9e4c98;
     }
 
     .ct-label .ct-horizontal {
