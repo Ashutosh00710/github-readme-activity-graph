@@ -518,6 +518,22 @@ export const themes = {
     lineColor: '00adfe',
     pointColor: '7ffe00',
   },
+  githubLight: {
+    areaColor: '9be9a8',
+    bgColor: 'ffffff',
+    borderColor: 'ffffff',
+    color: '000000',
+    lineColor: '9be9a8',
+    pointColor: '40c463',
+  },
+  minimal: {
+    areaColor: 'd3e6fa',
+    bgColor: 'ffffff',
+    borderColor: 'ffffff',
+    color: '000000',
+    lineColor: 'd3e6fa',
+    pointColor: '3f99ed',
+  },
   default: {
     areaColor: '9e4c98',
     bgColor: 'ffcfe9',
