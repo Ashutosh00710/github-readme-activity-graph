@@ -10,3 +10,4 @@
 |     **gruvbox**     |   <img src="./asset/gruvbox.svg" height=250 alt="graph"/>    |
 | **chartreuse-dark** |  <img src="./asset/chartreuse.png" height=250 alt="graph"/>  |
 |   **github-light**  | <img src="./asset/github-light.png" height=250 alt="graph"/> |
+|     **minimal**     |   <img src="./asset/minimal.png" height=250 alt="graph"/>    |
