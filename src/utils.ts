@@ -79,7 +79,11 @@ export const getGraph =
           if (options.custom_title) {
             title = options.custom_title;
           } else {
-            title = `${fetchCalendarData.name}'s Contribution Graph`;
+            title = `${
+              fetchCalendarData.name !== null
+                ? fetchCalendarData.name
+                : options.username
+            }'s Contribution Graph`;
           }
         }
 
