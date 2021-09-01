@@ -534,6 +534,14 @@ export const themes = {
     lineColor: 'd3e6fa',
     pointColor: '3f99ed',
   },
+  materialPalenight: {
+    areaColor: 'c792ea',
+    bgColor: '292d3e',
+    borderColor: 'ffffff',
+    color: 'a6accd',
+    lineColor: 'c792ea',
+    pointColor: '89ddff',
+  },
   default: {
     areaColor: '9e4c98',
     bgColor: 'ffcfe9',
