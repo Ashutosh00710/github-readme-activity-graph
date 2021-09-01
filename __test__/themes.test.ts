@@ -16,5 +16,6 @@ it('Theme testing', () => {
   expect(selectColors('chartreuse-dark')).toEqual(themes['chartreuseDark']);
   expect(selectColors('github-light')).toEqual(themes['githubLight']);
   expect(selectColors('minimal')).toEqual(themes['minimal']);
+  expect(selectColors('material-palenight')).toEqual(themes['materialPalenight']);
   expect(selectColors('default')).toEqual(themes['default']);
 });
