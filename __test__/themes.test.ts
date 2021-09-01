@@ -2,7 +2,7 @@ import { selectColors } from '../styles/themes';
 import { themes } from './fakeInputs';
 
 it('Theme testing', () => {
-  expect.assertions(14);
+  expect.assertions(15);
   expect(selectColors('dracula')).toEqual(themes['dracula']);
   expect(selectColors('gruvbox')).toEqual(themes['gruvbox']);
   expect(selectColors('github')).toEqual(themes['github']);
@@ -16,6 +16,8 @@ it('Theme testing', () => {
   expect(selectColors('chartreuse-dark')).toEqual(themes['chartreuseDark']);
   expect(selectColors('github-light')).toEqual(themes['githubLight']);
   expect(selectColors('minimal')).toEqual(themes['minimal']);
-  expect(selectColors('material-palenight')).toEqual(themes['materialPalenight']);
+  expect(selectColors('material-palenight')).toEqual(
+    themes['materialPalenight']
+  );
   expect(selectColors('default')).toEqual(themes['default']);
 });
