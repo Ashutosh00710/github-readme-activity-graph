@@ -2,12 +2,14 @@
   "name": "github-readme-activity-graph",
   "version": "1.0.0",
   "description": "An activity graph to show you github activities (or contribution)",
-  "main": "main.js",
+  "main": "main.ts",
   "scripts": {
     "start": "nodemon src/main.ts",
     "build": "tsc -p .",
     "test": "jest",
-    "coverage": "npm test -- --coverage"
+    "coverage": "npm test -- --coverage",
+    "lint": "eslint \"{src,styles,types,interfaces,__test__}/**/*.ts\" --fix",
+    "format": "prettier --write \"src/**/*.ts\" \"__test__/**/*.ts\" \"interfaces/**/*.ts\" \"styles/**/*.ts\" \"types/**/*.ts\""
   },
   "repository": {
     "type": "git",
@@ -37,7 +39,13 @@
   "devDependencies": {
     "@types/jest": "^26.0.20",
     "@types/supertest": "^2.0.10",
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "jest": "^26.6.3",
+    "prettier": "^2.3.2",
     "ts-jest": "^26.4.4"
   }
 }

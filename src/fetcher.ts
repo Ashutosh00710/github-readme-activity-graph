@@ -1,4 +1,5 @@
 import axios from 'axios';
+import * as dotenv from 'dotenv';
 import {
   query,
   userDetails,
@@ -7,7 +8,7 @@ import {
 } from '../interfaces/interface';
 import { fetchContribution, fetcher, gqlQuery } from '../types/types';
 
-require('dotenv').config('../');
+dotenv.config();
 
 //GraphQl query to get everyday contributions as a response
 export const graphqlQuery: gqlQuery = (username: string) => {
@@ -60,7 +61,7 @@ export const fetchContributions: fetchContribution = async (
     if (apiResponse.data.data.user === null)
       return `Can't fetch any contribution. Please check your username 😬`;
     else {
-      let userData: userDetails = {
+      const userData: userDetails = {
         contributions: [],
         name: apiResponse.data.data.user.name,
       };

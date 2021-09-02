@@ -1,6 +1,6 @@
 import { createGraph } from './createChart';
-import { colors, graphArgs } from '../interfaces/interface';
 import { graphSvg } from './svgs';
+import { colors, graphArgs } from '../interfaces/interface';
 
 export class Card {
   height: number;
@@ -12,8 +12,8 @@ export class Card {
     height: number,
     width: number,
     colors: colors,
-    title: string = '',
-    area: boolean = false
+    title = '',
+    area = false
   ) {
     this.height = height;
     this.width = width;

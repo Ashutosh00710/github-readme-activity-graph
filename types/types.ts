@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import { query, responseOfApi, userDetails } from '../interfaces/interface';
 import { AxiosResponse } from 'axios';
+import { query, responseOfApi, userDetails } from '../interfaces/interface';
 
 //Addition type declaration for function expressions
 export type responseGraph = (req: Request, res: Response) => Promise<void>;

@@ -1,27 +1,21 @@
 import { Request, Response } from 'express';
 import { Card } from './GraphCards';
 import { invalidUserSvg } from './svgs';
-import {
-  queryOption,
-  colors,
-  ParsedQs,
-  userDetails,
-} from '../interfaces/interface';
-import { fetcher, gqlQuery } from '../types/types';
 import { fetchContributions } from './fetcher';
 import { selectColors } from '../styles/themes';
+import { queryOption, ParsedQs, userDetails } from '../interfaces/interface';
+import { fetcher, gqlQuery } from '../types/types';
 
 export const queryOptions = (queryString: ParsedQs): queryOption => {
-  let area: boolean = false;
-  let colors: colors;
-  let theme: string = queryString.theme || 'default';
+  let area = false;
+  const theme: string = queryString.theme || 'default';
 
   if (String(queryString.area) === 'true') {
     area = true;
   }
 
   // Custom options for user
-  colors = {
+  const colors = {
     areaColor: queryString.area_color
       ? queryString.area_color
       : selectColors(theme).areaColor,

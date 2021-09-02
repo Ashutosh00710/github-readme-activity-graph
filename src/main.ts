@@ -1,10 +1,10 @@
 import express, { Application, Request, Response } from 'express';
+import cors from 'cors';
 import { getData, getGraph } from './utils';
 import { graphqlQuery, fetch } from './fetcher';
-import cors from 'cors';
 
 const app: Application = express();
-let port: string | number = process.env.PORT || 5100;
+const port = process.env.PORT || 5100;
 
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
