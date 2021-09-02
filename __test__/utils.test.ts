@@ -25,7 +25,7 @@ const fakeSurver = () => {
 };
 
 describe('GET /graph with correct credential', () => {
-  it('responding', (done) => {
+  test('responding', (done) => {
     const app = fakeSurver();
     app.get('/graph', getGraph(mockQueryCorrect, mockFetchCorrect));
     request(app)
@@ -37,7 +37,7 @@ describe('GET /graph with correct credential', () => {
 });
 
 describe('GET /graph with incorrect credential', () => {
-  it('responding', (done) => {
+  test('responding', (done) => {
     const app = fakeSurver();
     app.get('/graph', getGraph(mockQueryIncorrect, mockFetchIncorrect));
     request(app)
@@ -49,7 +49,7 @@ describe('GET /graph with incorrect credential', () => {
 });
 
 //- Chart Function ([Promise] Inside Graph Cards Class) ✔
-it('Graph Generation', async () => {
+test('Graph Generation', async () => {
   expect.assertions(1);
   let contributions = [1, 2, 3];
   const graph = await createGraph('line', options, {

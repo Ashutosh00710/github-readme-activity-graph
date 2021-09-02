@@ -3,7 +3,7 @@ import { Card } from '../src/GraphCards';
 import { fakeGraphArgs, fakeQueryStringRes } from './fakeInputs';
 
 //- Svg testing ✔
-it('Test SVGs', () => {
+test('Test SVGs', () => {
   let fakeInvalidSvgArg = 'User not found!';
   expect.assertions(4);
   expect(graphSvg(fakeGraphArgs)).toEqual(expect.any(String));
@@ -13,7 +13,7 @@ it('Test SVGs', () => {
 });
 
 //- Svg testing Promise<string> (GrapgCards.ts)✔
-it('chart SVGs', async () => {
+test('chart SVGs', async () => {
   expect.assertions(1);
   expect(
     await new Card(

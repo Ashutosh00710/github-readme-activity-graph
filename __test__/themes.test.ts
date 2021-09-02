@@ -1,7 +1,7 @@
 import { selectColors } from '../styles/themes';
 import { themes } from './fakeInputs';
 
-it('Theme testing', () => {
+test('Theme testing', () => {
   expect.assertions(15);
   expect(selectColors('dracula')).toEqual(themes['dracula']);
   expect(selectColors('gruvbox')).toEqual(themes['gruvbox']);
