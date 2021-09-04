@@ -63,6 +63,7 @@ export const fetchContributions: fetchContribution = async (
     else {
       const userData: userDetails = {
         contributions: [],
+        contributions_dates: [],
         name: apiResponse.data.data.user.name,
       };
       //filtering the week data from API response
@@ -76,12 +77,30 @@ export const fetchContributions: fetchContribution = async (
         })
       );
 
-      //returning data of last 31 days
+      //data of last 31 days
       const presentDay = new Date().getDay();
       userData.contributions = userData.contributions.slice(
         5 + presentDay,
         36 + presentDay
       );
+      //contribution dates for the last 31 days
+      userData.contributions_dates = ((): string[] => {
+        for (
+          var days = [], date = new Date();
+          days.length < 31;
+          date.setDate(date.getDate() - 1)
+        ) {
+          const current = new Date(date);
+          days.push(
+            date.toLocaleString('default', { month: 'short' }) +
+              ' ' +
+              current.getUTCDate().toString()
+          );
+        }
+
+        return days.reverse();
+      })();
+
       return userData;
     }
   } catch (error) {
