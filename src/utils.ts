@@ -90,8 +90,7 @@ export const getGraph =
         );
 
         const getChart: string = await graph.chart(
-          fetchCalendarData.contributions,
-          fetchCalendarData.contributions_dates
+          fetchCalendarData.contributions
         );
 
         setHttpHeader(res, 'public, max-age=1800');
