@@ -117,6 +117,10 @@ export const graphStyle = (
 
     .ct-label.ct-horizontal.ct-end {
       transform: rotate(-30deg);
+      -webkit-transform: rotate(-30deg);
+      -moz-transform: rotate(-30deg);
+      -o-transform: rotate(-30deg);
+      -ms-transform: rotate(-30deg);
       transform-box: fill-box;
       transform-origin: 100% 0;
       text-anchor: end;
