@@ -22,7 +22,10 @@ export class Card {
     this.area = area;
   }
 
-  async chart(contributions: number[], contributions_dates: string[]): Promise<string> {
+  async chart(
+    contributions: number[],
+    contributions_dates: string[]
+  ): Promise<string> {
     //Options to pass in createGraph function
     const options = {
       width: this.width,

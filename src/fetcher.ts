@@ -86,7 +86,7 @@ export const fetchContributions: fetchContribution = async (
       //contribution dates for the last 31 days
       userData.contributions_dates = ((): string[] => {
         for (
-          var days = [], date = new Date();
+          let days = [], date = new Date();
           days.length < 31;
           date.setDate(date.getDate() - 1)
         ) {
