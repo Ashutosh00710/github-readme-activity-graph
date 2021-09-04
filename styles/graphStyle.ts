@@ -115,4 +115,11 @@ export const graphStyle = (
       transform: rotate(-90deg)
     }
 
+    .ct-label.ct-horizontal.ct-end {
+      transform: rotate(-30deg);
+      transform-box: fill-box;
+      transform-origin: 100% 0;
+      text-anchor: end;
+    }
+
     `;

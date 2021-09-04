@@ -22,7 +22,10 @@ export class Card {
     this.area = area;
   }
 
-  async chart(contributions: number[]): Promise<string> {
+  async chart(
+    contributions: number[],
+    contributions_dates: string[]
+  ): Promise<string> {
     //Options to pass in createGraph function
     const options = {
       width: this.width,
@@ -37,7 +40,7 @@ export class Card {
       },
       axisX: {
         title: 'Days',
-        offset: 50,
+        offset: 70,
         labelOffset: {
           x: -4.5,
         },
@@ -54,7 +57,7 @@ export class Card {
 
     //Construction of graph from node-chartist
     const line: Promise<string> = await createGraph('line', options, {
-      labels: [...Array(contributions.length + 1).keys()].slice(1),
+      labels: contributions_dates,
       series: [{ value: contributions }],
     });
 
