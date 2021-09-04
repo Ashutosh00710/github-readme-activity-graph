@@ -52,8 +52,23 @@ describe('GET /graph with incorrect credential', () => {
 test('Graph Generation', async () => {
   expect.assertions(1);
   let contributions = [1, 2, 3];
+
+  let date = new Date();
+  date.setUTCMonth(8);
+  date.setUTCDate(1);
+  let contributions_dates = [
+    date.toLocaleString('default', { month: 'short' }) +
+      ' ' +
+      date.getUTCDate().toString(), // Sep 1
+    date.toLocaleString('default', { month: 'short' }) +
+      ' ' +
+      (date.getUTCDate() + 1).toString(), // Sep 2
+    date.toLocaleString('default', { month: 'short' }) +
+      ' ' +
+      (date.getUTCDate() + 2).toString(), // Sep 3
+  ];
   const graph = await createGraph('line', options, {
-    labels: Array.from(Array(contributions.length).keys(), (day) => day + 1),
+    labels: contributions_dates,
     series: [{ value: contributions }],
   });
   expect(graph).toMatchSnapshot();

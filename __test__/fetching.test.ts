@@ -15,12 +15,13 @@ test('Query Test', () => {
 
 //Fetching Contributions Testing ✔
 test('Fetching Contributions Test', () => {
-  expect.assertions(4);
+  expect.assertions(5);
   fetchContributions('ashutosh00710', mockQueryCorrect, mockFetchCorrect).then(
     //@ts-ignore: will always return data of type userDetails
     (data: userDetails) => {
       expect(data.contributions).toEqual(expect.any(Array));
       expect(data.contributions.length).toEqual(31);
+      expect(data.contributions_dates.length).toEqual(31);
       expect(data.name).toEqual('Ashutosh Dwivedi');
     }
   );
