@@ -93,7 +93,7 @@ export const fetchContributions: fetchContribution = async (
         ) {
           const current = new Date(date);
           days.push(
-            date.toLocaleString('default', { month: 'short' }) +
+            current.toLocaleString('default', { month: 'short' }) +
               ' ' +
               current.getUTCDate().toString()
           );
