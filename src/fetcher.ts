@@ -51,6 +51,24 @@ export const fetch: fetcher = (data: query) =>
     data,
   });
 
+const getContrubutionDates = () => {
+  const days = [];
+  for (
+    const date = new Date();
+    days.length < 31;
+    date.setDate(date.getUTCDate() - 1)
+  ) {
+    const current = new Date(date);
+    days.push(
+      current.toLocaleString('default', { month: 'short' }) +
+        ' ' +
+        current.getUTCDate().toString()
+    );
+  }
+
+  return days.reverse();
+};
+
 export const fetchContributions: fetchContribution = async (
   username: string,
   graphqlQuery: gqlQuery, //Dependency Injection
@@ -63,6 +81,7 @@ export const fetchContributions: fetchContribution = async (
     else {
       const userData: userDetails = {
         contributions: [],
+        contribution_dates: getContrubutionDates(),
         name: apiResponse.data.data.user.name,
       };
       //filtering the week data from API response
@@ -77,11 +96,12 @@ export const fetchContributions: fetchContribution = async (
       );
 
       //returning data of last 31 days
-      const presentDay = new Date().getDay();
+      const presentDay = new Date().getUTCDay();
       userData.contributions = userData.contributions.slice(
         5 + presentDay,
         36 + presentDay
       );
+
       return userData;
     }
   } catch (error) {

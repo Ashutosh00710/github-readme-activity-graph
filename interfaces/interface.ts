@@ -46,6 +46,7 @@ export interface graphArgs {
 
 export interface userDetails {
   contributions: number[];
+  contribution_dates: string[];
   name: string;
 }
 
