@@ -22,6 +22,6 @@ test('chart SVGs', async () => {
       fakeQueryStringRes[0].colors,
       "xyz's Contribution Graph",
       fakeQueryStringRes[0].area
-    ).chart([1, 2, 3, 4, 5])
+    ).chart([1, 2, 3, 4, 5], ['Oct 1', 'Oct 2', 'Oct 3', 'Oct 4', 'Oct 5'])
   ).toMatchSnapshot();
 });

@@ -135,6 +135,17 @@ exports[`Test SVGs 1`] = `
     .ct-label .ct-horizontal {
       transform: rotate(-90deg)
     }
+
+    .ct-label.ct-horizontal.ct-end {
+      transform: rotate(-30deg);
+      -webkit-transform: rotate(-30deg);
+      -moz-transform: rotate(-30deg);
+      -o-transform: rotate(-30deg);
+      -ms-transform: rotate(-30deg);
+      transform-box: fill-box;
+      transform-origin: 100% 0;
+      text-anchor: end;
+    }
     
                 
         @keyframes blink {
@@ -324,6 +335,17 @@ exports[`chart SVGs 1`] = `
     .ct-label .ct-horizontal {
       transform: rotate(-90deg)
     }
+
+    .ct-label.ct-horizontal.ct-end {
+      transform: rotate(-30deg);
+      -webkit-transform: rotate(-30deg);
+      -moz-transform: rotate(-30deg);
+      -o-transform: rotate(-30deg);
+      -ms-transform: rotate(-30deg);
+      transform-box: fill-box;
+      transform-origin: 100% 0;
+      text-anchor: end;
+    }
     
                 
         @keyframes blink {
@@ -352,7 +374,7 @@ exports[`chart SVGs 1`] = `
                     xyz's Contribution Graph
                 </h1>
             </foreignObject>
-            <svg xmlns:ct=\\"http://gionkunz.github.com/chartist-js/ct\\" width=\\"1200\\" height=\\"420\\" class=\\"ct-chart-line\\"><g class=\\"ct-grids\\"><line x1=\\"90\\" x2=\\"90\\" y1=\\"80\\" y2=\\"350\\" class=\\"ct-grid ct-horizontal\\"></line><line x1=\\"355\\" x2=\\"355\\" y1=\\"80\\" y2=\\"350\\" class=\\"ct-grid ct-horizontal\\"></line><line x1=\\"620\\" x2=\\"620\\" y1=\\"80\\" y2=\\"350\\" class=\\"ct-grid ct-horizontal\\"></line><line x1=\\"885\\" x2=\\"885\\" y1=\\"80\\" y2=\\"350\\" class=\\"ct-grid ct-horizontal\\"></line><line x1=\\"1150\\" x2=\\"1150\\" y1=\\"80\\" y2=\\"350\\" class=\\"ct-grid ct-horizontal\\"></line><line y1=\\"350\\" y2=\\"350\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line><line y1=\\"282.5\\" y2=\\"282.5\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line><line y1=\\"215\\" y2=\\"215\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line><line y1=\\"147.5\\" y2=\\"147.5\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line><line y1=\\"80\\" y2=\\"80\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line></g><g><g class=\\"ct-series ct-series-a\\"><path d=\\"M90,350C178.333,327.5,266.667,305,355,282.5C443.333,260,531.667,237.5,620,215C708.333,192.5,796.667,170,885,147.5C973.333,125,1061.667,102.5,1150,80\\" class=\\"ct-line\\"></path><line x1=\\"90\\" y1=\\"350\\" x2=\\"90.01\\" y2=\\"350\\" class=\\"ct-point\\" ct:value=\\"1\\"></line><line x1=\\"355\\" y1=\\"282.5\\" x2=\\"355.01\\" y2=\\"282.5\\" class=\\"ct-point\\" ct:value=\\"2\\"></line><line x1=\\"620\\" y1=\\"215\\" x2=\\"620.01\\" y2=\\"215\\" class=\\"ct-point\\" ct:value=\\"3\\"></line><line x1=\\"885\\" y1=\\"147.5\\" x2=\\"885.01\\" y2=\\"147.5\\" class=\\"ct-point\\" ct:value=\\"4\\"></line><line x1=\\"1150\\" y1=\\"80\\" x2=\\"1150.01\\" y2=\\"80\\" class=\\"ct-point\\" ct:value=\\"5\\"></line></g></g><g class=\\"ct-labels\\"><text x=\\"85.5\\" y=\\"370\\" width=\\"265\\" height=\\"40\\" class=\\"ct-label ct-horizontal ct-end\\">1</text><text x=\\"350.5\\" y=\\"370\\" width=\\"265\\" height=\\"40\\" class=\\"ct-label ct-horizontal ct-end\\">2</text><text x=\\"615.5\\" y=\\"370\\" width=\\"265\\" height=\\"40\\" class=\\"ct-label ct-horizontal ct-end\\">3</text><text x=\\"880.5\\" y=\\"370\\" width=\\"265\\" height=\\"40\\" class=\\"ct-label ct-horizontal ct-end\\">4</text><text x=\\"1145.5\\" y=\\"370\\" width=\\"30\\" height=\\"40\\" class=\\"ct-label ct-horizontal ct-end\\">5</text><text y=\\"354.5\\" x=\\"80\\" height=\\"67.5\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">1</text><text y=\\"287\\" x=\\"80\\" height=\\"67.5\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">2</text><text y=\\"219.5\\" x=\\"80\\" height=\\"67.5\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">3</text><text y=\\"152\\" x=\\"80\\" height=\\"67.5\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">4</text><text y=\\"84.5\\" x=\\"80\\" height=\\"30\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">5</text></g><text class=\\"ct-axis-title ct-label\\" x=\\"620\\" y=\\"400\\" dominant-baseline=\\"text-after-edge\\" text-anchor=\\"middle\\">Days</text><text class=\\"ct-axis-title ct-label\\" x=\\"20\\" y=\\"215\\" transform=\\"rotate(-90, 20, 215)\\" dominant-baseline=\\"hanging\\" text-anchor=\\"middle\\">Contributions</text></svg>
+            <svg xmlns:ct=\\"http://gionkunz.github.com/chartist-js/ct\\" width=\\"1200\\" height=\\"420\\" class=\\"ct-chart-line\\"><g class=\\"ct-grids\\"><line x1=\\"90\\" x2=\\"90\\" y1=\\"80\\" y2=\\"330\\" class=\\"ct-grid ct-horizontal\\"></line><line x1=\\"355\\" x2=\\"355\\" y1=\\"80\\" y2=\\"330\\" class=\\"ct-grid ct-horizontal\\"></line><line x1=\\"620\\" x2=\\"620\\" y1=\\"80\\" y2=\\"330\\" class=\\"ct-grid ct-horizontal\\"></line><line x1=\\"885\\" x2=\\"885\\" y1=\\"80\\" y2=\\"330\\" class=\\"ct-grid ct-horizontal\\"></line><line x1=\\"1150\\" x2=\\"1150\\" y1=\\"80\\" y2=\\"330\\" class=\\"ct-grid ct-horizontal\\"></line><line y1=\\"330\\" y2=\\"330\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line><line y1=\\"267.5\\" y2=\\"267.5\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line><line y1=\\"205\\" y2=\\"205\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line><line y1=\\"142.5\\" y2=\\"142.5\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line><line y1=\\"80\\" y2=\\"80\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line></g><g><g class=\\"ct-series ct-series-a\\"><path d=\\"M90,330C178.333,309.167,266.667,288.333,355,267.5C443.333,246.667,531.667,225.833,620,205C708.333,184.167,796.667,163.333,885,142.5C973.333,121.667,1061.667,100.833,1150,80\\" class=\\"ct-line\\"></path><line x1=\\"90\\" y1=\\"330\\" x2=\\"90.01\\" y2=\\"330\\" class=\\"ct-point\\" ct:value=\\"1\\"></line><line x1=\\"355\\" y1=\\"267.5\\" x2=\\"355.01\\" y2=\\"267.5\\" class=\\"ct-point\\" ct:value=\\"2\\"></line><line x1=\\"620\\" y1=\\"205\\" x2=\\"620.01\\" y2=\\"205\\" class=\\"ct-point\\" ct:value=\\"3\\"></line><line x1=\\"885\\" y1=\\"142.5\\" x2=\\"885.01\\" y2=\\"142.5\\" class=\\"ct-point\\" ct:value=\\"4\\"></line><line x1=\\"1150\\" y1=\\"80\\" x2=\\"1150.01\\" y2=\\"80\\" class=\\"ct-point\\" ct:value=\\"5\\"></line></g></g><g class=\\"ct-labels\\"><text x=\\"85.5\\" y=\\"350\\" width=\\"265\\" height=\\"60\\" class=\\"ct-label ct-horizontal ct-end\\">Oct 1</text><text x=\\"350.5\\" y=\\"350\\" width=\\"265\\" height=\\"60\\" class=\\"ct-label ct-horizontal ct-end\\">Oct 2</text><text x=\\"615.5\\" y=\\"350\\" width=\\"265\\" height=\\"60\\" class=\\"ct-label ct-horizontal ct-end\\">Oct 3</text><text x=\\"880.5\\" y=\\"350\\" width=\\"265\\" height=\\"60\\" class=\\"ct-label ct-horizontal ct-end\\">Oct 4</text><text x=\\"1145.5\\" y=\\"350\\" width=\\"30\\" height=\\"60\\" class=\\"ct-label ct-horizontal ct-end\\">Oct 5</text><text y=\\"334.5\\" x=\\"80\\" height=\\"62.5\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">1</text><text y=\\"272\\" x=\\"80\\" height=\\"62.5\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">2</text><text y=\\"209.5\\" x=\\"80\\" height=\\"62.5\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">3</text><text y=\\"147\\" x=\\"80\\" height=\\"62.5\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">4</text><text y=\\"84.5\\" x=\\"80\\" height=\\"30\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">5</text></g><text class=\\"ct-axis-title ct-label\\" x=\\"620\\" y=\\"400\\" dominant-baseline=\\"text-after-edge\\" text-anchor=\\"middle\\">Dates</text><text class=\\"ct-axis-title ct-label\\" x=\\"20\\" y=\\"205\\" transform=\\"rotate(-90, 20, 205)\\" dominant-baseline=\\"hanging\\" text-anchor=\\"middle\\">Contributions</text></svg>
     </svg>
 "
 `;
