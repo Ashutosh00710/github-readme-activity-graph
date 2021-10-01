@@ -128,6 +128,15 @@ export const selectColors = (queryString: string): colors => {
         lineColor: 'c792ea',
         pointColor: '89ddff',
       };
+    case 'green':
+      return {
+        areaColor: '588157',
+        borderColor: 'ffffff',
+        bgColor: 'dad7cd',
+        color: '3a5a40',
+        lineColor: '588157',
+        pointColor: '344e41',
+      };
     default:
       return {
         areaColor: '9e4c98',

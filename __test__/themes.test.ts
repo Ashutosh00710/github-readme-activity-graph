@@ -19,5 +19,6 @@ test('Theme testing', () => {
   expect(selectColors('material-palenight')).toEqual(
     themes['materialPalenight']
   );
+  expect(selectColors('green')).toEqual(themes['green']);
   expect(selectColors('default')).toEqual(themes['default']);
 });
