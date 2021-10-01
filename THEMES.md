@@ -12,3 +12,4 @@
 |   **github-light**  | <img src="./asset/github-light.png" height=250 alt="graph"/> |
 |     **minimal**     |   <img src="./asset/minimal.png" height=250 alt="graph"/>    |
 |**material-palenight**|<img src="./asset/material-palenight.svg" height=250 alt="graph"/>|
+|**green**|<img src="./asset/green.png" height=250 alt="graph"/>|
