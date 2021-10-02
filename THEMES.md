@@ -13,3 +13,4 @@
 |     **minimal**     |   <img src="./asset/minimal.png" height=250 alt="graph"/>    |
 |**material-palenight**|<img src="./asset/material-palenight.svg" height=250 alt="graph"/>|
 |**green**|<img src="./asset/green.png" height=250 alt="graph"/>|
+|**gotham**|<img src="./asset/gotham.svg" height=250 alt="graph"/>|
