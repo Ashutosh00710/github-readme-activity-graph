@@ -550,6 +550,14 @@ export const themes = {
     lineColor: '588157',
     pointColor: '344e41',
   },
+  gotham: {
+    areaColor: '2aa889',
+    bgColor: '0c1014',
+    borderColor: '2aa889',
+    color: '2aa889',
+    lineColor: '599cab',
+    pointColor: '99d1ce',
+  },
   default: {
     areaColor: '9e4c98',
     bgColor: 'ffcfe9',
