@@ -29,6 +29,15 @@ export const selectColors = (queryString: string): colors => {
         lineColor: '9ecbff',
         pointColor: 'f97583',
       };
+    case 'gotham':
+      return {
+        areaColor: '2aa889',
+        bgColor: '0c1014',
+        borderColor: '2aa889',
+        color: '2aa889',
+        lineColor: '599cab',
+        pointColor: '99d1ce',
+      };
     case 'rogue':
       return {
         areaColor: 'b18bb1',
