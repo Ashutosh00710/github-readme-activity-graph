@@ -88,19 +88,19 @@ export const fetchContributions: fetchContribution = async (
       const weeks: week[] =
         apiResponse.data.data.user.contributionsCollection.contributionCalendar
           .weeks;
+
+      const contributions: number[] = [];
       //slicing last 6 weeks
       weeks.slice(weeks.length - 6, weeks.length).map((week: week) =>
         week.contributionDays.map((contributionCount: contributionCount) => {
-          userData.contributions.push(contributionCount.contributionCount);
+          contributions.push(contributionCount.contributionCount);
         })
       );
 
-      //returning data of last 31 days
-      const presentDay = new Date().getUTCDay();
-      userData.contributions = userData.contributions.slice(
-        5 + presentDay,
-        36 + presentDay
-      );
+      // get 31 days contributions
+      for (let i = contributions.length - 31; i < contributions.length; i++) {
+        userData.contributions.push(contributions[i]);
+      }
 
       return userData;
     }
