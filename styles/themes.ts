@@ -146,6 +146,33 @@ export const selectColors = (queryString: string): colors => {
         lineColor: '588157',
         pointColor: '344e41',
       };
+    case 'noctis-minimus':
+      return {
+        areaColor: '72b7c0',
+        borderColor: 'ffffff',
+        bgColor: '1b2932',
+        color: 'd3b692',
+        lineColor: '72b7c0',
+        pointColor: 'c5cdd3',
+      };
+    case 'one-dark':
+      return {
+        areaColor: 'e5c17c',
+        borderColor: 'ffffff',
+        bgColor: '282C34',
+        color: 'abb2bf',
+        lineColor: 'e5c17c',
+        pointColor: 'e06c75',
+      };
+    case 'monokai':
+      return {
+        areaColor: 'ff6188',
+        borderColor: 'ffffff',
+        bgColor: '2D2A2E',
+        color: 'fcfcfa',
+        lineColor: 'ff6188',
+        pointColor: 'ffd866',
+      };
     default:
       return {
         areaColor: '9e4c98',
