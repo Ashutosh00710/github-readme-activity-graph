@@ -146,6 +146,15 @@ export const selectColors = (queryString: string): colors => {
         lineColor: '588157',
         pointColor: '344e41',
       };
+    case 'noctis-minimus':
+      return {
+        areaColor: '72b7c0',
+        borderColor: 'ffffff',
+        bgColor: '1b2932',
+        color: 'd3b692',
+        lineColor: '72b7c0',
+        pointColor: 'c5cdd3',
+      };
     default:
       return {
         areaColor: '9e4c98',
