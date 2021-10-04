@@ -14,4 +14,6 @@
 | **material-palenight** | <img src="./asset/material-palenight.svg" height=250 alt="graph"/> |
 |       **green**        |       <img src="./asset/green.png" height=250 alt="graph"/>        |
 |       **gotham**       |       <img src="./asset/gotham.svg" height=250 alt="graph"/>       |
-|   **noctis-minimus**   |       <img src="./asset/noctis-minimus.svg" height=250 alt="graph"/>       |
+|   **noctis-minimus**   |   <img src="./asset/noctis-minimus.svg" height=250 alt="graph"/>   |
+|      **monokai**       |      <img src="./asset/monokai.svg" height=250 alt="graph"/>       |
+|      **one-dark**      |      <img src="./asset/one-dark.svg" height=250 alt="graph"/>      |
