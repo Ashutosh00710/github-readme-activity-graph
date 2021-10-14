@@ -38,7 +38,7 @@ Our aim is to **keep it simple** for the developers to contribute to this projec
 
 7. Get a screenshot of your finished work! (if there are any UI changes) Try to crop it so that it looks good as a smallish (preferably squarish) image.
 
-8. Pull from the upstream again before you commit your changes, like you did in step 3. This is to ensure your still have the latest code.
+8. Pull from the upstream again before you commit your changes, like you did in step 3. This is to ensure you still have the latest code.
 
 9. If you see a error like
 
@@ -99,7 +99,7 @@ Pull requests are the best way to propose changes to the codebase (we use [Githu
 
 1. Fork the repo and create your branch from `main`.
 2. If you've added code that should be tested, add tests.
-3. If your change needs an explaination to the user, update the documentation.
+3. If your change needs an explanation to the user, update the documentation.
 4. Ensure the test suite passes.
 5. Make sure your code lints.
 6. Issue that pull request!
