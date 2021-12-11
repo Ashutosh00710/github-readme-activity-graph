@@ -32,7 +32,6 @@ p {
 /* ------  Loader Styles -------*/
 
 .loader {
-  background: transparent;
   position: absolute;
   top: 0;
   left: 0;
@@ -171,7 +170,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px 0px;
+  gap: 10px 0;
   flex-wrap: wrap;
   padding: 20px 10px;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
