@@ -18,5 +18,5 @@ app.get('/graph', getGraph(graphqlQuery, fetch));
 app.get('/data', getData(graphqlQuery, fetch));
 
 app.listen(port, (): void => {
-  console.log(`Server is Running in port ${port}`);
+  console.log(`Server is Running on Port ${port}`);
 });

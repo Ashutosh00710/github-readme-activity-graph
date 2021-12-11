@@ -17,3 +17,5 @@
 |   **noctis-minimus**   |   <img src="./asset/noctis-minimus.svg" height=250 alt="graph"/>   |
 |      **monokai**       |      <img src="./asset/monokai.svg" height=250 alt="graph"/>       |
 |      **one-dark**      |      <img src="./asset/one-dark.svg" height=250 alt="graph"/>      |
+|      **elegant**       |      <img src="./asset/elegant.svg" height=250 alt="graph"/>       | 
+|      **aqua**          |      <img src="./asset/aqua.svg" height=250 alt="graph"/>          | 
