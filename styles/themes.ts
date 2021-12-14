@@ -173,6 +173,24 @@ export const selectColors = (queryString: string): colors => {
         lineColor: 'ff6188',
         pointColor: 'ffd866',
       };
+    case 'elegant':
+      return {
+        areaColor: '006699',
+        borderColor: '161e2d',
+        bgColor: '161e2d',
+        color: 'd8d5d5',
+        lineColor: 'fb8500',
+        pointColor: '42002b',
+      };
+    case 'aqua':
+      return {
+        areaColor: '226d64',
+        borderColor: '161e2d',
+        bgColor: '52b69a',
+        color: '187177',
+        lineColor: '226d64',
+        pointColor: '156f69',
+      };
     default:
       return {
         areaColor: '9e4c98',

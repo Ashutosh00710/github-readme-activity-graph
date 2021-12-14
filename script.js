@@ -6,14 +6,27 @@ let valueToCopy = {
   point: '403d3d',
 };
 
+/*-------- For displaying loading animation ---------*/
+
+const loader = document.querySelector('.loader');
+const setLoader = () => {
+  loader.classList.add('active');
+};
+const reomveLoader = () => {
+  loader.classList.remove('active');
+};
+
 //Get submit button
 let submitButton = document.getElementById('submit-button');
 //on click event
 submitButton.addEventListener('click', (event) => {
   //get username
+
+  event.preventDefault();
   var username = document.getElementById('username').value;
   if (username.length > 0) {
     valueToCopy.username = username;
+    setLoader();
   } else {
     alert('Enter your Username');
     return;
@@ -82,15 +95,22 @@ submitButton.addEventListener('click', (event) => {
         ],
       };
       new Chartist.Line('.ct-chart', data, options);
+      reomveLoader();
     })
-    .catch((err) => console.error(err));
+    .catch((err) => {
+      console.error(err);
+      reomveLoader();
+      alert('Sorry! something went wrong.');
+    });
 });
+
 //Dynamic changes
 //Background
 let bgInput = document.getElementById('bgColor');
 bgInput.addEventListener('input', function () {
   valueToCopy.bgColor = bgInput.value;
   document.querySelector('.rect').style.backgroundColor = bgInput.value;
+  console.log(`bgInput`, bgInput.value);
 });
 //line
 function line() {

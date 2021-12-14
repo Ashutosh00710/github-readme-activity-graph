@@ -1,101 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GitHub Readme Activity Graph</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link href="./styles.css" rel="stylesheet" />
-  </head>
-  <body>
-    <div class="container">
-      <h1>GitHub Readme Activity Graph</h1>
-      <div class="split_container">
-        <section class="left">
-          <form>
-            <input
-              type="color"
-              class="picker"
-              name="bgColor"
-              value="#ffcfe9"
-              id="bgColor"
-            />
-            <label for="bgColor">Background Color</label>
-          </form>
-          <div>
-            <input
-              type="color"
-              class="picker"
-              name="line"
-              value="#9e4c98"
-              id="line"
-            />
-            <label for="line">Line Color</label>
-          </div>
-          <div>
-            <input
-              type="color"
-              class="picker"
-              name="point"
-              value="#403d3d"
-              id="point"
-            />
-            <label for="point">Point Color</label>
-          </div>
-          <div>
-            <input
-              type="color"
-              class="picker"
-              name="color"
-              value="#9e4c98"
-              id="color"
-            />
-            <label for="color">Text Color</label>
-          </div>
-        </section>
-        <section class="right">
-          <div class="container__item">
-            <form class="form">
-              <input
-                type="username"
-                class="form__field"
-                placeholder="Your GitHub Username"
-                id="username"
-              />
-              <button
-                type="button"
-                class="btn btn--primary btn--inside uppercase"
-                id="submit-button"
-              >
-                Build Graph
-              </button>
-            </form>
-          </div>
-          <div class="rect">
-            <div class="ct-chart"></div>
-          </div>
-          <div>
-            <div class="wrapper">
-              <button type="submit" class="copy">
-                Copy Link ✔
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Readme Activity Graph</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet" />
+  <link href="./styles.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <main class="container">
+    <!-- Loader -->
+    <div class="loader">
+      <span></span>
     </div>
-  </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.4/chartist.min.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chartist-plugin-axistitle@0.0.7/dist/chartist-plugin-axistitle.min.js"></script>
-  <script src="./script.js"></script>
+    <!-- Header - Logo & Text -->
+    <header class="header">
+      <img src="./asset/logo.svg" alt="logo">
+      <h1 class="heading">GitHub Readme Activity Graph</h1>
+    </header>
+    <!-- Form - Input & Submit button for  Username -->
+    <div class="container__item">
+      <form class="form">
+        <input type="username" class="form__field" placeholder="Enter Your GitHub Username" id="username" />
+        <button type="submit" class="btn btn--primary" id="submit-button">
+          Build Graph
+        </button>
+      </form>
+    </div>
+    <!-- Split Container Contains - Color Pickers , Chart, & Copy Button -->
+    <div class="split_container">
+      <section class="left">
+        <form>
+          <input type="color" class="picker" name="bgColor" value="#ffcfe9" id="bgColor" />
+          <label for="bgColor">Background Color</label>
+        </form>
+        <div>
+          <input type="color" class="picker" name="line" value="#9e4c98" id="line" />
+          <label for="line">Line Color</label>
+        </div>
+        <div>
+          <input type="color" class="picker" name="point" value="#403d3d" id="point" />
+          <label for="point">Point Color</label>
+        </div>
+        <div>
+          <input type="color" class="picker" name="color" value="#9e4c98" id="color" />
+          <label for="color">Text Color</label>
+        </div>
+      </section>
+      <section class="right">
+        <div class="rect">
+          <div class="ct-chart"></div>
+        </div>
+        <div>
+          <div class="wrapper">
+            <button type="submit" class="copy">
+              Copy Link ✔
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Footer - Text & Link -->
+    <footer class="footer">
+      <p>
+        A dynamically generated activity graph to show your GitHub activities of last 31 days.
+      </p>
+      <span>
+        More Info: <a href="https://github.com/Ashutosh00710/github-readme-activity-graph">GitHub</a>
+      </span>
+
+    </footer>
+
+  </main>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.4/chartist.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/chartist-plugin-axistitle@0.0.7/dist/chartist-plugin-axistitle.min.js"></script>
+<script src="./script.js"></script>
+
 </html>
