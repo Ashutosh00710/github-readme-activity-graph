@@ -257,6 +257,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
         <br />
         <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=andinoriel" title="Code">💻</a>
     </td>
+  </tr>
+  <tr>
     <td align="center">
         <a href="https://github.com/sreyan-ghosh">
             <img src="https://avatars.githubusercontent.com/u/60854658?v=4" width="100px;" alt=""/>
