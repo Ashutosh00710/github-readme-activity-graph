@@ -248,6 +248,70 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
         <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=SonuKumar81800" title="Style">🎨</a>
         <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=SonuKumar81800" title="Documentation">📖</a>
     </td>
+    <td align="center">
+        <a href="https://github.com/andinoriel">
+            <img src="https://avatars.githubusercontent.com/u/36269798?v=4" width="100px;" alt=""/>
+            <br />
+            <sub><b>Mykola Symon</b></sub>
+        </a>
+        <br />
+        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=andinoriel" title="Code">💻</a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/sreyan-ghosh">
+            <img src="https://avatars.githubusercontent.com/u/60854658?v=4" width="100px;" alt=""/>
+            <br />
+            <sub><b>Sreyan Ghosh</b></sub>
+        </a>
+        <br />
+        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=sreyan-ghosh" title="Style">🎨</a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/Anant-mishra1729">
+            <img src="https://avatars.githubusercontent.com/u/84588156?v=4" width="100px;" alt=""/>
+            <br />
+            <sub><b>Anant Mishra</b></sub>
+        </a>
+        <br />
+        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=Anant-mishra1729" title="Style">🎨</a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/SKewLinez">
+            <img src="https://avatars.githubusercontent.com/u/37243931?v=4" width="100px;" alt=""/>
+            <br />
+            <sub><b>Skyler</b></sub>
+        </a>
+        <br />
+        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=SKewLinez" title="Style">🎨</a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/eliely">
+            <img src="https://avatars.githubusercontent.com/u/16717633?v=4" width="100px;" alt=""/>
+            <br />
+            <sub><b>Iryna Mykoliuk</b></sub>
+        </a>
+        <br />
+        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=eliely" title="Style">🎨</a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/DalpatRathore">
+            <img src="https://avatars.githubusercontent.com/u/69510006?v=4" width="100px;" alt=""/>
+            <br />
+            <sub><b>Dalpat Rathore</b></sub>
+        </a>
+        <br />
+        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=DalpatRathore" title="Style">🎨</a>
+        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=DalpatRathore" title="Code">💻</a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/fishmandev">
+            <img src="https://avatars.githubusercontent.com/u/29619660?v=4" width="100px;" alt=""/>
+            <br />
+            <sub><b>Dmitriy Fishman</b></sub>
+        </a>
+        <br />
+        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=fishmandev" title="Documentation">📖</a>
+    </td>
   </tr>
 </table>
 
