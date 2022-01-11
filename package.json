@@ -5,7 +5,6 @@
   "main": "main.ts",
   "scripts": {
     "start": "nodemon src/main.ts",
-    "build": "tsc -p .",
     "test": "jest",
     "coverage": "npm test -- --coverage",
     "lint": "eslint \"{src,styles,types,interfaces,__test__}/**/*.ts\" --fix",
