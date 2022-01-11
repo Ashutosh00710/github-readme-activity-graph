@@ -191,6 +191,15 @@ export const selectColors = (queryString: string): colors => {
         lineColor: '226d64',
         pointColor: '156f69',
       };
+    case 'synthwave-84':
+      return {
+        areaColor: '3A2442',
+        borderColor: '251e30',
+        bgColor: '2C223B',
+        color: 'FF3CA2',
+        lineColor: 'F7F645',
+        pointColor: '22E5F4',
+      };
     default:
       return {
         areaColor: '9e4c98',
