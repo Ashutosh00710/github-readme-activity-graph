@@ -19,6 +19,9 @@ p {
 
 .bg-color {
   min-height: 90vh;
+  max-width: 1550px;
+  margin: 0 auto;
+  position: relative;
   background: #f5f6fa;
   -webkit-transition: background 0.5s ease-in-out;
   transition: background 0.5s ease-in-out;
@@ -220,13 +223,36 @@ p {
 
 .header img {
   width: 75px;
+  width: clamp(40px, 5vw, 75px);
   -o-object-fit: contain;
   object-fit: contain;
+  -webkit-box-shadow: 0 0 5px rgba(17, 17, 17, 0.5);
+  box-shadow: 0 0 5px rgba(17, 17, 17, 0.5);
+  border-radius: 10%;
+  padding: 5px;
 }
 .header h1 {
   margin-left: 10px;
   font-size: 2.2rem;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.85);
+  font-size: clamp(1rem, 5vw, 3rem);
+  font-weight: bolder;
+  letter-spacing: 1px;
+  background: #f77f00;
+  background: linear-gradient(
+    45deg,
+    #3c096c 0%,
+    #f77f00 25%,
+    #03543f 35%,
+    #f77f00 55%,
+    #fd0363 65%,
+    #014f86 80%,
+    #f77f00 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 2px rgba(17, 17, 17, 0.35);
 }
 
 /* ------  Form Input Styles -------*/
