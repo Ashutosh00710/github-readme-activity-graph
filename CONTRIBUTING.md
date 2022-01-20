@@ -28,7 +28,7 @@ Our aim is to **keep it simple** for the developers to contribute to this projec
 
 5. [Generate your personal access token](https://github.com/settings/tokens)
 
-6. Create a `.env` file in root directory and in there write  
+6. Create a `.env` file in the root directory and in there write  
    `TOKEN=<your_generated_token>`
 
    Now, open your terminal and write the following commands:
@@ -38,9 +38,9 @@ Our aim is to **keep it simple** for the developers to contribute to this projec
 
 7. Get a screenshot of your finished work! (if there are any UI changes) Try to crop it so that it looks good as a smallish (preferably squarish) image.
 
-8. Pull from the upstream again before you commit your changes, like you did in step 3. This is to ensure you still have the latest code.
+8. Pull from the upstream again before you commit your changes as you did in step 3. This is to ensure you still have the latest code.
 
-9. If you see a error like
+9. If you see an error like
 
    ```md
    Your local changes to the following files would be overwritten by merge. Please commit your changes or stash them before you merge
@@ -119,7 +119,7 @@ We use GitHub issues to track public bugs. Report a bug by [opening a new issue]
 - A quick summary and/or background
 - Steps to reproduce
   - Be specific!
-  - Give sample code if you can.
+  - Give a sample code if you can.
 - What you expected would happen
 - What actually happens
 - Notes (possibly including why you think this might be happening, or stuff you tried that didn't work)
