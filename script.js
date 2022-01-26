@@ -1,9 +1,9 @@
 let valueToCopy = {
   username: '',
-  bgColor: 'ffcfe9',
-  color: '9e4c98',
-  line: '9e4c98',
-  point: '403d3d',
+  bgColor: '#ffcfe9',
+  color: '#9e4c98',
+  line: '#9e4c98',
+  point: '#403d3d',
 };
 
 /*-------- Dark Theme Mode---------*/
@@ -39,8 +39,15 @@ const loader = document.querySelector('.loader');
 const setLoader = () => {
   loader.classList.add('active');
 };
-const reomveLoader = () => {
+const removeLoader = () => {
   loader.classList.remove('active');
+};
+
+const removePlaceholder = () => {
+  const placeholder = document.querySelector('.chart_placeholder');
+  const adjustMargin = document.querySelector('.copy_container');
+  placeholder.classList.remove('active');
+  adjustMargin.style.marginTop = '2rem';
 };
 
 //Get submit button
@@ -122,91 +129,119 @@ submitButton.addEventListener('click', (event) => {
         ],
       };
       new Chartist.Line('.ct-chart', data, options);
-      reomveLoader();
+      removeLoader();
+      removePlaceholder();
+      generateLink();
     })
     .catch((err) => {
       console.error(err);
-      reomveLoader();
+      removeLoader();
       alert('Sorry! something went wrong.');
     });
 });
 
 //Dynamic changes
-//Background
-let bgInput = document.getElementById('bgColor');
-bgInput.addEventListener('input', function () {
-  valueToCopy.bgColor = bgInput.value;
-  document.querySelector('.rect').style.backgroundColor = bgInput.value;
-  console.log(`bgInput`, bgInput.value);
-});
-//line
-function line() {
-  let theInput = document.getElementById('line');
+
+// Background Color
+function changeBgColor() {
+  const bgInput = document.getElementById('bgColor');
+  bgInput.addEventListener('input', function () {
+    valueToCopy.bgColor = bgInput.value;
+    document.querySelector('.rect').style.backgroundColor = bgInput.value;
+    generateLink();
+  });
+}
+
+// Line Color
+function lineColor() {
+  const theInput = document.getElementById('line');
   theInput.addEventListener('input', function () {
     valueToCopy.line = theInput.value;
     document.querySelector('.ct-line').style.stroke = theInput.value;
+    generateLink();
   });
 }
-//color
-function color() {
-  let theInput = document.getElementById('color');
+
+//Lables, Title and Grid color
+function labelsAndGridColor() {
+  const theInput = document.getElementById('color');
+  const allLables = document.querySelectorAll('.ct-label');
+  const axisTitles = document.querySelectorAll('.ct-axis-title');
+  const grids = document.querySelectorAll('.ct-grid');
+
+  const labelLength = allLables.length;
+  const axisTitleLength = axisTitles.length;
+  const gridLength = grids.length;
+
   theInput.addEventListener('input', function () {
     valueToCopy.color = theInput.value;
-    let allLables = document.querySelectorAll('.ct-label');
-    var index = 0,
-      length = allLables.length;
-    for (; index < length; index++) {
+
+    for (let index = 0; index < labelLength; index++) {
       allLables[index].style.fill = theInput.value;
       allLables[index].style.color = theInput.value;
     }
-  });
-
-  theInput.addEventListener('input', function () {
-    let allLables = document.querySelectorAll('.ct-axis-title');
-    var index = 0,
-      length = allLables.length;
-    for (; index < length; index++) {
-      allLables[index].style.fill = theInput.value;
+    for (let index = 0; index < axisTitleLength; index++) {
+      axisTitles[index].style.fill = theInput.value;
     }
-  });
-
-  theInput.addEventListener('input', function () {
-    let allLables = document.querySelectorAll('.ct-grid');
-    var index = 0,
-      length = allLables.length;
-    for (; index < length; index++) {
-      allLables[index].style.stroke = theInput.value;
+    for (let index = 0; index < gridLength; index++) {
+      grids[index].style.stroke = theInput.value;
     }
+    generateLink();
   });
 }
-//point
-function point() {
-  let pointInput = document.getElementById('point');
+
+// Point Color
+function pointColor() {
+  const pointInput = document.getElementById('point');
   pointInput.addEventListener('input', function () {
     valueToCopy.point = pointInput.value;
-    let allPointLables = document.querySelectorAll('.ct-point');
-    var idx = 0,
-      len = allPointLables.length;
-    for (; idx < len; idx++) {
+    const allPointLables = document.querySelectorAll('.ct-point');
+    const len = allPointLables.length;
+    for (let idx = 0; idx < len; idx++) {
       allPointLables[idx].style.stroke = pointInput.value;
     }
+    generateLink();
   });
 }
 
-//calling
-line();
-color();
-point();
+changeBgColor();
+lineColor();
+labelsAndGridColor();
+pointColor();
 
-document.querySelector('.copy').addEventListener('click', copyText);
-function copyText() {
-  var copyText = `[![Ashutosh's github activity graph](https://activity-graph.herokuapp.com/graph?username=${
+const copyButton = document.querySelector('.copy_text').childNodes[3];
+const textArea = document.querySelector('.text');
+// Generate Chart Link
+function generateLink() {
+  let link = `[![Ashutosh's github activity graph](https://activity-graph.herokuapp.com/graph?username=${
     valueToCopy.username
   }&bg_color=${valueToCopy.bgColor.slice(1)}&color=${valueToCopy.color.slice(
     1
   )}&line=${valueToCopy.line.slice(1)}&point=${valueToCopy.point.slice(
     1
   )}&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)`;
-  navigator.clipboard.writeText(copyText);
-  alert('The copied text is: ' + copyText);
+  textArea.value = link;
+  copyButton.style.backgroundColor = 'rgb(87, 132, 245)';
+  return link;
 }
+
+// Copy to clipboard
+const copyLink = () => {
+  console.log(copyButton.style);
+  if (textArea.value !== '') {
+    if (copyButton.style.backgroundColor === 'rgb(87, 132, 245)') {
+      const copiedText = generateLink();
+      navigator.clipboard.writeText(copiedText);
+      copyButton.style.backgroundColor = '#2bbe60';
+      const copyText = document.querySelector('.copy_text');
+      const input = copyText.querySelector('input.text');
+      input.select();
+      copyText.classList.add('active');
+      setTimeout(() => {
+        copyText.classList.remove('active');
+      }, 2500);
+    }
+  }
+};
+
+copyButton.addEventListener('click', copyLink);
