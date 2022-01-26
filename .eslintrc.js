@@ -14,7 +14,12 @@ module.exports = {
     node: true,
     jest: true,
   },
-  ignorePatterns: ['.eslintrc.js', 'src/createChart.ts', '__test__'],
+  ignorePatterns: [
+    '.eslintrc.js',
+    'src/createChart.ts',
+    '__test__',
+    'script.js',
+  ],
   rules: {
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
