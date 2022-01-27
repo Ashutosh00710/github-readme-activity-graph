@@ -153,45 +153,47 @@ function changeBgColor() {
 }
 
 // Line Color
-function lineColor() {
-  const theInput = document.getElementById('line');
-  theInput.addEventListener('input', function () {
-    valueToCopy.line = theInput.value;
-    document.querySelector('.ct-line').style.stroke = theInput.value;
+function changeLineColor() {
+  const lineInput = document.getElementById('line');
+  lineInput.addEventListener('input', function () {
+    valueToCopy.line = lineInput.value;
+    document.querySelector('.ct-line').style.stroke = lineInput.value;
     generateLink();
   });
 }
 
 //Lables, Title and Grid color
-function labelsAndGridColor() {
-  const theInput = document.getElementById('color');
-  const allLables = document.querySelectorAll('.ct-label');
-  const axisTitles = document.querySelectorAll('.ct-axis-title');
-  const grids = document.querySelectorAll('.ct-grid');
+function changeLabelsAndGridColor() {
+  const ltgInput = document.getElementById('color');
 
-  const labelLength = allLables.length;
-  const axisTitleLength = axisTitles.length;
-  const gridLength = grids.length;
+  const changeColor = () => {
+    valueToCopy.color = ltgInput.value;
+    const allLables = document.querySelectorAll('.ct-label');
+    const axisTitles = document.querySelectorAll('.ct-axis-title');
+    const grids = document.querySelectorAll('.ct-grid');
 
-  theInput.addEventListener('input', function () {
-    valueToCopy.color = theInput.value;
+    const labelLength = allLables.length;
+    const axisTitleLength = axisTitles.length;
+    const gridLength = grids.length;
 
     for (let index = 0; index < labelLength; index++) {
-      allLables[index].style.fill = theInput.value;
-      allLables[index].style.color = theInput.value;
+      allLables[index].style.fill = ltgInput.value;
+      allLables[index].style.color = ltgInput.value;
     }
     for (let index = 0; index < axisTitleLength; index++) {
-      axisTitles[index].style.fill = theInput.value;
+      axisTitles[index].style.fill = ltgInput.value;
     }
     for (let index = 0; index < gridLength; index++) {
-      grids[index].style.stroke = theInput.value;
+      grids[index].style.stroke = ltgInput.value;
     }
     generateLink();
-  });
+  };
+
+  ltgInput.addEventListener('input', changeColor);
 }
 
 // Point Color
-function pointColor() {
+function changePointColor() {
   const pointInput = document.getElementById('point');
   pointInput.addEventListener('input', function () {
     valueToCopy.point = pointInput.value;
@@ -205,9 +207,9 @@ function pointColor() {
 }
 
 changeBgColor();
-lineColor();
-labelsAndGridColor();
-pointColor();
+changeLineColor();
+changePointColor();
+changeLabelsAndGridColor();
 
 const copyButton = document.querySelector('.copy_text').childNodes[3];
 const textArea = document.querySelector('.text');
