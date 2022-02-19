@@ -1,8 +1,30 @@
+import { colors, pcsType } from 'interfaces/interface';
+
+const processPCS = (props: colors, type: 'light' | 'dark'): string =>
+  `
+    @media (prefers-color-scheme: ${type}) {
+        :root {
+            --svg-fill: #${props.bgColor};
+            --svg-stroke: #${props.borderColor};
+        }
+        .header {
+            color: #${props.color};
+        }
+        ${graphStyle(
+          props.color,
+          props.lineColor,
+          props.pointColor,
+          props.areaColor
+        )}
+    }
+  `;
+
 export const graphStyle = (
   color: string,
   line: string,
   point: string,
-  area: string
+  area: string,
+  pcs?: pcsType
 ) =>
   `
     .ct-label {
@@ -114,4 +136,7 @@ export const graphStyle = (
     .ct-label .ct-horizontal {
       transform: rotate(-90deg)
     }
+
+    ${pcs?.light ? processPCS(pcs.light, 'light') : ''}
+    ${pcs?.dark ? processPCS(pcs.dark, 'dark') : ''}
     `;

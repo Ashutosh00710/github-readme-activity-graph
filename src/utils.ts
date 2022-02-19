@@ -3,7 +3,13 @@ import { Card } from './GraphCards';
 import { invalidUserSvg } from './svgs';
 import { fetchContributions } from './fetcher';
 import { selectColors } from '../styles/themes';
-import { queryOption, ParsedQs, userDetails } from '../interfaces/interface';
+import {
+  queryOption,
+  ParsedQs,
+  userDetails,
+  ParsedQsPCS,
+  pcsType,
+} from '../interfaces/interface';
 import { fetcher, gqlQuery } from '../types/types';
 
 export const queryOptions = (queryString: ParsedQs): queryOption => {
@@ -14,32 +20,35 @@ export const queryOptions = (queryString: ParsedQs): queryOption => {
     area = true;
   }
 
-  // Custom options for user
-  const colors = {
-    areaColor: queryString.area_color
-      ? queryString.area_color
+  const getColors = (query: ParsedQs | ParsedQsPCS) => ({
+    areaColor: query.area_color
+      ? query.area_color
       : selectColors(theme).areaColor,
-    bgColor: queryString.bg_color
-      ? queryString.bg_color
-      : selectColors(theme).bgColor,
+    bgColor: query.bg_color ? query.bg_color : selectColors(theme).bgColor,
     borderColor:
-      String(queryString.hide_border) === 'true'
+      String(query.hide_border) === 'true'
         ? '0000' // transparent
         : selectColors(theme).borderColor,
-    color: queryString.color ? queryString.color : selectColors(theme).color,
-    lineColor: queryString.line
-      ? queryString.line
-      : selectColors(theme).lineColor,
-    pointColor: queryString.point
-      ? queryString.point
-      : selectColors(theme).pointColor,
-  };
+    color: query.color ? query.color : selectColors(theme).color,
+    lineColor: query.line ? query.line : selectColors(theme).lineColor,
+    pointColor: query.point ? query.point : selectColors(theme).pointColor,
+  });
+
+  // Custom options for user
+  const colors = getColors(queryString);
+
+  // Custom prefers color scheme options for user
+  const pcs: pcsType = {};
+
+  if (queryString?.pcs_light) pcs.light = getColors(queryString.pcs_light);
+  if (queryString?.pcs_dark) pcs.dark = getColors(queryString.pcs_dark);
 
   const options: queryOption = {
     username: String(queryString.username),
     hide_title: String(queryString.hide_title) === 'true' ? true : false,
     colors: colors,
     area: area,
+    pcs: pcs,
   };
 
   if (queryString.custom_title)
@@ -86,7 +95,8 @@ export const getGraph =
           1200,
           options.colors,
           title,
-          options.area
+          options.area,
+          options.pcs
         );
 
         const getChart: string = await graph.chart(
@@ -100,6 +110,7 @@ export const getGraph =
         res.send(invalidUserSvg(fetchCalendarData));
       }
     } catch (error) {
+      console.log(error);
       setHttpHeader(res, 'no-store, max-age=0');
       res.send(invalidUserSvg('Something unexpected happened 💥'));
     }
@@ -124,6 +135,7 @@ export const getData =
         res.send(invalidUserSvg(fetchCalendarData));
       }
     } catch (error) {
+      console.log(error);
       res.send(invalidUserSvg('Something unexpected happened 💥'));
     }
   };

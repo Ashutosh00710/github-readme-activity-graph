@@ -14,12 +14,27 @@ export interface colors {
   pointColor: string;
 }
 
+export interface pcsType {
+  light?: colors;
+  dark?: colors;
+}
+
 export interface queryOption {
   username: string;
   hide_title?: boolean;
   custom_title?: string;
   colors: colors;
   area: boolean;
+  pcs: pcsType;
+}
+
+export interface ParsedQsPCS {
+  area_color?: string;
+  bg_color?: string;
+  hide_border?: boolean;
+  color?: string;
+  line?: string;
+  point?: string;
 }
 
 export interface ParsedQs {
@@ -34,6 +49,8 @@ export interface ParsedQs {
   point?: string;
   theme?: string;
   area?: boolean;
+  pcs_light?: ParsedQsPCS;
+  pcs_dark?: ParsedQsPCS;
 }
 
 export interface graphArgs {
@@ -42,6 +59,7 @@ export interface graphArgs {
   colors: colors;
   title: string;
   line: Promise<string>;
+  pcs: pcsType;
 }
 
 export interface userDetails {

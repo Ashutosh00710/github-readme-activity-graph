@@ -1,6 +1,6 @@
 import { createGraph } from './createChart';
 import { graphSvg } from './svgs';
-import { colors, graphArgs } from '../interfaces/interface';
+import { colors, graphArgs, pcsType } from '../interfaces/interface';
 
 export class Card {
   height: number;
@@ -8,18 +8,21 @@ export class Card {
   colors: colors;
   title: string;
   area: boolean;
+  pcs: pcsType;
   constructor(
     height: number,
     width: number,
     colors: colors,
     title = '',
-    area = false
+    area = false,
+    pcs: pcsType
   ) {
     this.height = height;
     this.width = width;
     this.colors = colors;
     this.title = title;
     this.area = area;
+    this.pcs = pcs;
   }
 
   async chart(contributions: number[]): Promise<string> {
@@ -65,6 +68,7 @@ export class Card {
       colors: this.colors,
       title: this.title,
       line,
+      pcs: this.pcs,
     };
 
     return graphSvg(args);
