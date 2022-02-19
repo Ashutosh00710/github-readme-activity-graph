@@ -93,6 +93,7 @@ export let fakeQueryStringRes = [
     },
     hide_title: false,
     area: false,
+    pcs: {},
   },
   {
     username: 'githubusername',
@@ -106,6 +107,7 @@ export let fakeQueryStringRes = [
     },
     hide_title: false,
     area: false,
+    pcs: {},
   },
   {
     username: 'githubusername',
@@ -119,6 +121,7 @@ export let fakeQueryStringRes = [
     },
     hide_title: false,
     area: false,
+    pcs: {},
   },
   {
     username: 'githubusername',
@@ -132,6 +135,7 @@ export let fakeQueryStringRes = [
     },
     hide_title: false,
     area: false,
+    pcs: {},
   },
   {
     username: 'githubusername',
@@ -145,6 +149,7 @@ export let fakeQueryStringRes = [
     },
     hide_title: false,
     area: false,
+    pcs: {},
   },
   {
     username: 'githubusername',
@@ -158,6 +163,7 @@ export let fakeQueryStringRes = [
     },
     hide_title: false,
     area: true,
+    pcs: {},
   },
   {
     username: 'githubusername',
@@ -171,6 +177,7 @@ export let fakeQueryStringRes = [
     },
     area: true,
     hide_title: false,
+    pcs: {},
   },
   {
     username: 'githubusername',
@@ -184,6 +191,7 @@ export let fakeQueryStringRes = [
     },
     area: true,
     hide_title: true,
+    pcs: {},
   },
   {
     username: 'githubusername',
@@ -198,6 +206,7 @@ export let fakeQueryStringRes = [
     area: true,
     hide_title: false,
     custom_title: 'some title',
+    pcs: {},
   },
 ];
 
@@ -214,6 +223,7 @@ export let fakeGraphArgs: graphArgs = {
   },
   title: 'graphSvg',
   line: Promise.resolve('line'),
+  pcs: {},
 };
 
 export let options = {

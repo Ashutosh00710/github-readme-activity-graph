@@ -21,7 +21,8 @@ test('chart SVGs', async () => {
       1200,
       fakeQueryStringRes[0].colors,
       "xyz's Contribution Graph",
-      fakeQueryStringRes[0].area
+      fakeQueryStringRes[0].area,
+      fakeQueryStringRes[0].pcs
     ).chart([1, 2, 3, 4, 5])
   ).toMatchSnapshot();
 });
