@@ -64,18 +64,32 @@ Customize the appearance of your Activity Graph however you want with URL params
 
 #### Common Options
 
-|   Arguments    |                  Description                  |       Type of Value        |
-| :------------: | :-------------------------------------------: | :------------------------: |
-|   `bg_color`   |            card's background color            |   hex code (without `#`)   |
-|    `color`     |            graph card's text color            |   hex code (without `#`)   |
-|     `line`     |              graph's line color               |   hex code (without `#`)   |
-|    `point`     |         color of points on line graph         |   hex code (without `#`)   |
-|  `area_color`  |       color of the area under the graph       |   hex code (without `#`)   |
-|     `area`     |          shows area under the graph           | boolean (default: `false`) |
-| `hide_border`  |   makes the border of the graph transparent   | boolean (default: `false`) |
-|  `hide_title`  |       sets the title to an empty string       | boolean (default: `false`) |
-| `custom_title` |          set the title to any string          |           string           |
-|    `theme`     | name of [available themes](#available-themes) |           string           |
+|   Arguments    |                                 Description                                  |       Type of Value        |
+| :------------: | :--------------------------------------------------------------------------: | :------------------------: |
+|   `bg_color`   |                           card's background color                            |   hex code (without `#`)   |
+|    `color`     |                           graph card's text color                            |   hex code (without `#`)   |
+|     `line`     |                              graph's line color                              |   hex code (without `#`)   |
+|    `point`     |                        color of points on line graph                         |   hex code (without `#`)   |
+|  `area_color`  |                      color of the area under the graph                       |   hex code (without `#`)   |
+|     `area`     |                          shows area under the graph                          | boolean (default: `false`) |
+| `hide_border`  |                  makes the border of the graph transparent                   | boolean (default: `false`) |
+|  `hide_title`  |                      sets the title to an empty string                       | boolean (default: `false`) |
+| `custom_title` |                         set the title to any string                          |           string           |
+|    `theme`     |                name of [available themes](#available-themes)                 |           string           |
+|  `pcs_light`   | can take the values of bg_color, color, line, point, area_color, hide_border |           object           |
+|   `pcs_dark`   | can take the values of bg_color, color, line, point, area_color, hide_border |           object           |
+
+⚠ **For `pcs_light` and `pcs_dark` please make sure you are passing object with PHP-style**
+
+Example:
+
+**`pcs_light[bg_color]=0d111700&pcs_light[color]=24292F&pcs_light[line]=1f6feb&pcs_light[point]=24292F`**
+
+```md
+[![Ashutosh's github activity graph](https://activity-graph.herokuapp.com/graph?username=ashutosh00710&pcs_light[bg_color]=0d111700&pcs_light[color]=24292F&pcs_light[line]=1f6feb&pcs_light[point]=24292F&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
+```
+
+The support of Prefers Color Scheme (pcs) is limited to Github website, in Github app (ios/android) the value always return light theme, you can read more about pcs [here](https://github.com/RodrigoTomeES/prefers-color-scheme-hack#readme).
 
 ⚠ **For `custom_title` please make sure you are use %20 for spaces**
 
