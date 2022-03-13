@@ -5,7 +5,7 @@ export class Query {
   };
 }
 
-export class colors {
+export class Colors {
   areaColor: string;
   bgColor: string;
   borderColor: string;
@@ -18,7 +18,7 @@ export class queryOption {
   username: string;
   hide_title?: boolean;
   custom_title?: string;
-  colors: colors;
+  colors: Colors;
   area: boolean;
 }
 
@@ -36,16 +36,16 @@ export class ParsedQs {
   area?: boolean;
 }
 
-export class graphArgs {
+export class GraphArgs {
   height: number;
   width: number;
-  colors: colors;
+  colors: Colors;
   title: string;
   line: Promise<string>;
 }
 
 export class UserDetails {
-  contributions: number[];
+  contributions: Array<number>;
   name: string;
 }
 

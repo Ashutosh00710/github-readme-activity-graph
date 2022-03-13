@@ -1,30 +1,18 @@
 import { createGraph } from './createChart';
 import { graphSvg } from './svgs';
-import { colors, graphArgs } from './interfaces/interface';
+import { Colors } from './interfaces/interface';
 
 export class Card {
-  height: number;
-  width: number;
-  colors: colors;
-  title: string;
-  area: boolean;
   constructor(
-    height: number,
-    width: number,
-    colors: colors,
-    title = '',
-    area = false
-  ) {
-    this.height = height;
-    this.width = width;
-    this.colors = colors;
-    this.title = title;
-    this.area = area;
-  }
+    private readonly height: number,
+    private readonly width: number,
+    private readonly colors: Colors,
+    private readonly title = '',
+    private readonly area = false
+  ) {}
 
-  async chart(contributions: number[]): Promise<string> {
-    //Options to pass in createGraph function
-    const options = {
+  private getOptions() {
+    return {
       width: this.width,
       height: this.height,
       axisY: {
@@ -51,6 +39,11 @@ export class Card {
       showArea: this.area,
       fullWidth: true,
     };
+  }
+
+  async buildGraph(contributions: number[]): Promise<string> {
+    //Options to pass in createGraph function
+    const options = this.getOptions();
 
     //Construction of graph from node-chartist
     const line: Promise<string> = await createGraph('line', options, {
@@ -59,7 +52,7 @@ export class Card {
     });
 
     //Arguments to construct graphs with rect and other options
-    const args: graphArgs = {
+    const args = {
       height: this.height,
       width: this.width,
       colors: this.colors,

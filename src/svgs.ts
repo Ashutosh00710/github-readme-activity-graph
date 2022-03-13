@@ -1,8 +1,8 @@
 import { graphStyle } from './styles/graphStyle';
 import { pointAnimation, lineAnimation } from './styles/graphAnimation';
-import { graphArgs } from './interfaces/interface';
+import { GraphArgs } from './interfaces/interface';
 
-export const graphSvg = (props: graphArgs) => `
+export const graphSvg = (props: GraphArgs) => `
     <svg
         width="${props.width}"
         height="${props.height}"

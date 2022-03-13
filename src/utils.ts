@@ -82,7 +82,7 @@ export const getGraph = async (req: Request, res: Response) => {
         options.area
       );
 
-      const getChart: string = await graph.chart(
+      const getChart: string = await graph.buildGraph(
         fetchCalendarData.contributions
       );
 

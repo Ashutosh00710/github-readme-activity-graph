@@ -1,6 +1,6 @@
-import { colors } from 'src/interfaces/interface';
+import { Colors } from 'src/interfaces/interface';
 
-export const selectColors = (queryString: string): colors => {
+export const selectColors = (queryString: string): Colors => {
   switch (queryString) {
     case 'dracula':
       return {
