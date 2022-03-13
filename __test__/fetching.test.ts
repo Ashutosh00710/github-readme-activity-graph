@@ -6,7 +6,7 @@ import {
   mockFetchIncorrect,
 } from './mockFunctions';
 import { expectedQuery } from './fakeInputs';
-import { userDetails } from '../interfaces/interface';
+import { userDetails } from '../src/interfaces/interface';
 
 //Query Testing ✔
 test('Query Test', () => {

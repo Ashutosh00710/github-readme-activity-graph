@@ -1,4 +1,4 @@
-import { graphArgs } from '../interfaces/interface';
+import { graphArgs } from '../src/interfaces/interface';
 
 export let fakeQueryString = [
   {

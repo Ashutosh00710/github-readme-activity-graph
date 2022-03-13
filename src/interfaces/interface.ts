@@ -1,11 +1,11 @@
-export interface query {
+export class Query {
   query: string;
   variables: {
     LOGIN: string;
   };
 }
 
-export interface colors {
+export class colors {
   areaColor: string;
   bgColor: string;
   borderColor: string;
@@ -14,7 +14,7 @@ export interface colors {
   pointColor: string;
 }
 
-export interface queryOption {
+export class queryOption {
   username: string;
   hide_title?: boolean;
   custom_title?: string;
@@ -22,7 +22,7 @@ export interface queryOption {
   area: boolean;
 }
 
-export interface ParsedQs {
+export class ParsedQs {
   username?: string;
   hide_title?: boolean;
   custom_title?: string;
@@ -36,7 +36,7 @@ export interface ParsedQs {
   area?: boolean;
 }
 
-export interface graphArgs {
+export class graphArgs {
   height: number;
   width: number;
   colors: colors;
@@ -44,27 +44,27 @@ export interface graphArgs {
   line: Promise<string>;
 }
 
-export interface userDetails {
+export class UserDetails {
   contributions: number[];
   name: string;
 }
 
-export interface contributionCount {
+export class ContributionCount {
   contributionCount: number;
 }
 
-export interface week {
-  contributionDays: contributionCount[];
+export class Week {
+  contributionDays: Array<ContributionCount>;
 }
 
-export interface responseOfApi {
+export class ResponseOfApi {
   data: {
     user: {
       name: string;
       contributionsCollection: {
         contributionCalendar: {
           totalContributions: number;
-          weeks: week[];
+          weeks: Array<Week>;
         };
       };
     };

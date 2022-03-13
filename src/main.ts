@@ -1,7 +1,6 @@
 import express, { Application, Request, Response } from 'express';
 import cors from 'cors';
-import { getData, getGraph } from './utils';
-import { graphqlQuery, fetch } from './fetcher';
+import { getGraph } from './utils';
 
 const app: Application = express();
 const port = process.env.PORT || 5100;
@@ -14,8 +13,7 @@ app.get('/', (_req: Request, res: Response) => {
 });
 
 //Get Graph
-app.get('/graph', getGraph(graphqlQuery, fetch));
-app.get('/data', getData(graphqlQuery, fetch));
+app.get('/graph', getGraph);
 
 app.listen(port, (): void => {
   console.log(`Server is Running on Port ${port}`);

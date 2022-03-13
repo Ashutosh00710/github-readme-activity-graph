@@ -1,6 +1,6 @@
 import { createGraph } from './createChart';
 import { graphSvg } from './svgs';
-import { colors, graphArgs } from '../interfaces/interface';
+import { colors, graphArgs } from './interfaces/interface';
 
 export class Card {
   height: number;
