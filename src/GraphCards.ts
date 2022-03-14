@@ -1,72 +1,65 @@
 import { createGraph } from './createChart';
 import { graphSvg } from './svgs';
-import { colors, graphArgs } from '../interfaces/interface';
+import { Colors } from './interfaces/interface';
 
 export class Card {
-  height: number;
-  width: number;
-  colors: colors;
-  title: string;
-  area: boolean;
-  constructor(
-    height: number,
-    width: number,
-    colors: colors,
-    title = '',
-    area = false
-  ) {
-    this.height = height;
-    this.width = width;
-    this.colors = colors;
-    this.title = title;
-    this.area = area;
-  }
+    constructor(
+        private readonly height: number,
+        private readonly width: number,
+        private readonly colors: Colors,
+        private readonly title = '',
+        private readonly area = false
+    ) {}
 
-  async chart(contributions: number[]): Promise<string> {
-    //Options to pass in createGraph function
-    const options = {
-      width: this.width,
-      height: this.height,
-      axisY: {
-        title: 'Contributions',
-        onlyInteger: true,
-        offset: 70,
-        labelOffset: {
-          y: 4.5,
-        },
-      },
-      axisX: {
-        title: 'Days',
-        offset: 50,
-        labelOffset: {
-          x: -4.5,
-        },
-      },
-      chartPadding: {
-        top: 80,
-        right: 50,
-        bottom: 20,
-        left: 20,
-      },
-      showArea: this.area,
-      fullWidth: true,
-    };
+    private getOptions() {
+        return {
+            width: this.width,
+            height: this.height,
+            axisY: {
+                title: 'Contributions',
+                onlyInteger: true,
+                offset: 70,
+                labelOffset: {
+                    y: 4.5,
+                },
+            },
+            axisX: {
+                title: 'Days',
+                offset: 50,
+                labelOffset: {
+                    x: -4.5,
+                },
+            },
+            chartPadding: {
+                top: 80,
+                right: 50,
+                bottom: 20,
+                left: 20,
+            },
+            showArea: this.area,
+            fullWidth: true,
+        };
+    }
 
-    //Construction of graph from node-chartist
-    const line: Promise<string> = await createGraph('line', options, {
-      labels: [...Array(contributions.length + 1).keys()].slice(1),
-      series: [{ value: contributions }],
-    });
+    async buildGraph(contributions: number[]): Promise<string> {
+        //Options to pass in createGraph function
+        const options = this.getOptions();
 
-    //Arguments to construct graphs with rect and other options
-    const args: graphArgs = {
-      height: this.height,
-      width: this.width,
-      colors: this.colors,
-      title: this.title,
-      line,
-    };
+        //Construction of graph from node-chartist
+        const line: Promise<string> = await createGraph('line', options, {
+            labels: [...Array(contributions.length + 1).keys()].slice(1),
+            series: [{ value: contributions }],
+        });
 
-    return graphSvg(args);
-  }
+        //Arguments to construct graphs with rect and other options
+        const args = {
+            height: this.height,
+            width: this.width,
+            colors: this.colors,
+            title: this.title,
+            line,
+        };
+
+        return graphSvg(args);
+    }
 }
