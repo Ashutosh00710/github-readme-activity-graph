@@ -1,4 +1,4 @@
-import { graphArgs } from '../src/interfaces/interface';
+import { GraphArgs } from '../src/interfaces/interface';
 
 export let fakeQueryString = [
   {
@@ -201,7 +201,7 @@ export let fakeQueryStringRes = [
   },
 ];
 
-export let fakeGraphArgs: graphArgs = {
+export let fakeGraphArgs: GraphArgs = {
   height: 10,
   width: 20,
   colors: {

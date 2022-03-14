@@ -1,4 +1,4 @@
-import { selectColors } from '../styles/themes';
+import { selectColors } from '../src/styles/themes';
 import { themes } from './fakeInputs';
 
 test('Theme testing', () => {

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test SVGs 1`] = `
+exports[`SVG Testing Test SVGs 1`] = `
 "
     <svg
         width=\\"20\\"
@@ -168,7 +168,7 @@ exports[`Test SVGs 1`] = `
 "
 `;
 
-exports[`Test SVGs 2`] = `
+exports[`SVG Testing Test SVGs 2`] = `
 "
     <svg
         width=\\"400\\"
@@ -189,7 +189,7 @@ exports[`Test SVGs 2`] = `
 "
 `;
 
-exports[`chart SVGs 1`] = `
+exports[`SVG Testing chart SVGs 1`] = `
 "
     <svg
         width=\\"1200\\"
