@@ -1,16 +1,12 @@
-// import express from 'express';
-// import request from 'supertest';
+import express from 'express';
+import request from 'supertest';
 import { Utilities } from '../src/utils';
 import { createGraph } from '../src/createChart';
-// import {
-//   mockQueryCorrect,
-//   mockQueryIncorrect,
-//   mockFetchCorrect,
-//   mockFetchIncorrect,
-// } from './mockFunctions';
 import { fakeQueryString, fakeQueryStringRes, options } from './fakeInputs';
+import { Handlers } from '../src/handlers';
 
 describe('Utilities Test', () => {
+  const handlers = new Handlers();
   it('Query Options', () => {
     expect(
       fakeQueryString.map((arg) => {
@@ -20,24 +16,36 @@ describe('Utilities Test', () => {
     ).toEqual(fakeQueryStringRes);
   });
 
-  //Testing express routes
-  // const fakeSurver = () => {
-  //   const app = express();
-  //   app.use(express.urlencoded({ extended: false }));
-  //   return app;
-  // };
+  // Testing express routes
+  const fakeSurver = () => {
+    const app = express();
+    app.use(express.urlencoded({ extended: false }));
+    return app;
+  };
 
-  // describe('GET /graph with correct credential', () => {
-  //   test('responding', (done) => {
-  //     const app = fakeSurver();
-  //     app.get('/graph', getGraph(mockQueryCorrect, mockFetchCorrect));
-  //     request(app)
-  //       .get('/graph?username=ashutosh00710')
-  //       .expect('Content-Type', 'image/svg+xml; charset=utf-8')
-  //       .expect('Cache-Control', 'public, max-age=1800')
-  //       .expect(200, done);
-  //   });
-  // });
+  describe('GET /graph with correct credential', () => {
+    test('responding', (done) => {
+      const app = fakeSurver();
+      app.get('/graph', handlers.getGraph);
+      request(app)
+        .get('/graph?username=ashutosh00710')
+        .expect('Content-Type', 'image/svg+xml; charset=utf-8')
+        .expect('Cache-Control', 'public, max-age=1800')
+        .expect(200, done);
+    });
+  });
+
+  describe('GET /graph with incorrect credential', () => {
+    test('responding', (done) => {
+      const app = fakeSurver();
+      app.get('/graph', handlers.getGraph);
+      request(app)
+        .get('/graph?username=')
+        .expect('Content-Type', 'image/svg+xml; charset=utf-8')
+        .expect('Cache-Control', 'no-store, max-age=0')
+        .expect(200, done);
+    });
+  });
 
   //- Chart Function ([Promise] Inside Graph Cards Class) ✔
   it('Graph Generation', async () => {
@@ -65,15 +73,3 @@ describe('Utilities Test', () => {
     expect(graph).toMatchSnapshot();
   });
 });
-
-// describe('GET /graph with incorrect credential', () => {
-//   test('responding', (done) => {
-//     const app = fakeSurver();
-//     app.get('/graph', getGraph(mockQueryIncorrect, mockFetchIncorrect));
-//     request(app)
-//       .get('/graph?username=')
-//       .expect('Content-Type', 'image/svg+xml; charset=utf-8')
-//       .expect('Cache-Control', 'no-store, max-age=0')
-//       .expect(200, done);
-//   });
-// });
