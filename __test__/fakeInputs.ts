@@ -582,6 +582,22 @@ export const themes = {
         lineColor: 'ff6188',
         pointColor: 'ffd866',
     },
+    'synthwave-84': {
+        areaColor: '3A2442',
+        borderColor: '251e30',
+        bgColor: '2C223B',
+        color: 'FF3CA2',
+        lineColor: 'F7F645',
+        pointColor: '22E5F4',
+    },
+    aqua: {
+        areaColor: '226d64',
+        borderColor: '161e2d',
+        bgColor: '52b69a',
+        color: '187177',
+        lineColor: '226d64',
+        pointColor: '156f69',
+    },
     default: {
         areaColor: '9e4c98',
         bgColor: 'ffcfe9',
