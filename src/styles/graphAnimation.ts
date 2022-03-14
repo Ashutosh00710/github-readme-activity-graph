@@ -1,5 +1,5 @@
 export const pointAnimation = () =>
-  `
+    `
         @keyframes blink {
             from {
                 opacity: 0;
@@ -13,7 +13,7 @@ export const pointAnimation = () =>
     `;
 
 export const lineAnimation = () =>
-  `
+    `
         @keyframes dash {
             to {
                 stroke-dashoffset: 0;

@@ -15,5 +15,5 @@ app.get('/', handlers.getRoot);
 app.get('/graph', handlers.getGraph);
 
 app.listen(port, (): void => {
-  console.log(`Server is Running on Port ${port}`);
+    console.log(`Server is Running on Port ${port}`);
 });
