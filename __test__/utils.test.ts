@@ -17,7 +17,7 @@ describe('Utilities Test', () => {
     });
 
     // Testing express routes
-    const fakeSurver = () => {
+    const fakeServer = () => {
         const app = express();
         app.use(express.urlencoded({ extended: false }));
         return app;
@@ -25,7 +25,7 @@ describe('Utilities Test', () => {
 
     describe('GET /graph with correct credential', () => {
         test('responding', (done) => {
-            const app = fakeSurver();
+            const app = fakeServer();
             app.get('/graph', handlers.getGraph);
             request(app)
                 .get('/graph?username=ashutosh00710')
@@ -37,7 +37,7 @@ describe('Utilities Test', () => {
 
     describe('GET /graph with incorrect credential', () => {
         test('responding', (done) => {
-            const app = fakeSurver();
+            const app = fakeServer();
             app.get('/graph', handlers.getGraph);
             request(app)
                 .get('/graph?username=')

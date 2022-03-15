@@ -2,10 +2,10 @@ import { Response } from 'express';
 import { Card } from './GraphCards';
 import { invalidUserSvg } from './svgs';
 import { selectColors } from './styles/themes';
-import { queryOption, ParsedQs, UserDetails } from './interfaces/interface';
+import { QueryOption, ParsedQs, UserDetails } from './interfaces/interface';
 
 export class Utilities {
-    username: string;
+    public username: string;
     constructor(private readonly queryString: ParsedQs) {
         this.username = String(this.queryString.username);
     }
@@ -42,9 +42,9 @@ export class Utilities {
         // Custom options for user
         const colors = this.getColors();
 
-        const options: queryOption = {
+        const options: QueryOption = {
             username: this.username,
-            hide_title: String(this.queryString.hide_title) === 'true' ? true : false,
+            hide_title: String(this.queryString.hide_title) === 'true',
             colors: colors,
             area: area,
         };
@@ -70,9 +70,9 @@ export class Utilities {
                 }
             }
 
-            const graph: Card = new Card(420, 1200, options.colors, title, options.area);
+            const graph = new Card(420, 1200, options.colors, title, options.area);
 
-            const getChart: string = await graph.buildGraph(fetchCalendarData.contributions);
+            const getChart = await graph.buildGraph(fetchCalendarData.contributions);
 
             return {
                 finalGraph: getChart,

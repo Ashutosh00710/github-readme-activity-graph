@@ -14,7 +14,7 @@ export class Colors {
     pointColor: string;
 }
 
-export class queryOption {
+export class QueryOption {
     username: string;
     hide_title?: boolean;
     custom_title?: string;
