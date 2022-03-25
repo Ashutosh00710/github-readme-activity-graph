@@ -42,19 +42,19 @@ export class Card {
     }
 
     /** Unused Code ref #85 */
-    private getContrubutionDates() {
-        const days = [];
-        for (const date = new Date(); days.length < 31; date.setDate(date.getUTCDate() - 1)) {
-            const current = new Date(date);
-            days.push(
-                current.toLocaleString('default', { month: 'short' }) +
-                    ' ' +
-                    current.getUTCDate().toString()
-            );
-        }
+    // private getContrubutionDates() {
+    //     const days = [];
+    //     for (const date = new Date(); days.length < 31; date.setDate(date.getUTCDate() - 1)) {
+    //         const current = new Date(date);
+    //         days.push(
+    //             current.toLocaleString('default', { month: 'short' }) +
+    //                 ' ' +
+    //                 current.getUTCDate().toString()
+    //         );
+    //     }
 
-        return days.reverse();
-    }
+    //     return days.reverse();
+    // }
 
     async buildGraph(contributions: number[]): Promise<string> {
         //Options to pass in createGraph function
