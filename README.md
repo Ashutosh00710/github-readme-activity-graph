@@ -320,6 +320,16 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
         <br />
         <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=fishmandev" title="Documentation">📖</a>
     </td>
+    <td align="center">
+        <a href="https://github.com/MagicLike">
+            <img src="https://avatars.githubusercontent.com/u/82117109?v=4" width="100px;" alt=""/>
+            <br />
+            <sub><b>MagicLike</b></sub>
+        </a>
+        <br />
+        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=MagicLike" title="Style">🎨</a>
+        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=MagicLike" title="Code">💻</a>
+    </td>
   </tr>
 </table>
 
