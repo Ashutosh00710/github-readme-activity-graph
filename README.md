@@ -82,6 +82,7 @@ Customize the appearance of your Activity Graph however you want with URL params
 |  `hide_title`  |       sets the title to an empty string       | boolean (default: `false`) |
 | `custom_title` |          set the title to any string          |           string           |
 |    `theme`     | name of [available themes](#available-themes) |           string           |
+|   `radius`     |            border radius of graph             |  number (0-16 inclusive)   |
 
 ⚠ **For `custom_title` please make sure you are use %20 for spaces**
 

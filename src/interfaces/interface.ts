@@ -20,6 +20,7 @@ export class QueryOption {
     custom_title?: string;
     colors: Colors;
     area: boolean;
+    radius: number;
 }
 
 export class ParsedQs {
@@ -34,6 +35,7 @@ export class ParsedQs {
     point?: string;
     theme?: string;
     area?: boolean;
+    radius?: number;
 }
 
 export class GraphArgs {
@@ -41,6 +43,7 @@ export class GraphArgs {
     width: number;
     colors: Colors;
     title: string;
+    radius: number;
     line: Promise<string>;
 }
 

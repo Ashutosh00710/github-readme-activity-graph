@@ -20,6 +20,7 @@ describe('SVG Testing', () => {
             await new Card(
                 420,
                 1200,
+                fakeQueryStringRes[0].radius,
                 fakeQueryStringRes[0].colors,
                 "xyz's Contribution Graph",
                 fakeQueryStringRes[0].area

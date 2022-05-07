@@ -24,6 +24,7 @@ exports[`SVG Testing Test SVGs 1`] = `
                 }
                 svg {
                     font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+                    border-radius: 0px;
                 }
                 
     .ct-label {
@@ -213,6 +214,7 @@ exports[`SVG Testing chart SVGs 1`] = `
                 }
                 svg {
                     font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+                    border-radius: 8px;
                 }
                 
     .ct-label {

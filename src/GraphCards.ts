@@ -6,6 +6,7 @@ export class Card {
     constructor(
         private readonly height: number,
         private readonly width: number,
+        private readonly radius: number,
         private readonly colors: Colors,
         private readonly title = '',
         private readonly area = false
@@ -72,6 +73,7 @@ export class Card {
             width: this.width,
             colors: this.colors,
             title: this.title,
+            radius: this.radius,
             line,
         };
 

@@ -3,17 +3,20 @@ import { GraphArgs } from '../src/interfaces/interface';
 export let fakeQueryString = [
     {
         username: 'githubusername',
+        radius: 8,
         hide_title: false,
         custom_title: undefined,
     },
     {
         username: 'githubusername',
+        radius: -10,
         bg_color: '44475a',
         hide_title: false,
         custom_title: undefined,
     },
     {
         username: 'githubusername',
+        radius: 35,
         bg_color: '44475a',
         color: '000000',
         hide_title: false,
@@ -83,6 +86,7 @@ export let fakeQueryString = [
 export let fakeQueryStringRes = [
     {
         username: 'githubusername',
+        radius: 8,
         colors: {
             areaColor: '9e4c98',
             bgColor: 'ffcfe9',
@@ -96,6 +100,7 @@ export let fakeQueryStringRes = [
     },
     {
         username: 'githubusername',
+        radius: 0,
         colors: {
             areaColor: '9e4c98',
             bgColor: '44475a',
@@ -109,6 +114,7 @@ export let fakeQueryStringRes = [
     },
     {
         username: 'githubusername',
+        radius: 16,
         colors: {
             areaColor: '9e4c98',
             bgColor: '44475a',
@@ -122,6 +128,7 @@ export let fakeQueryStringRes = [
     },
     {
         username: 'githubusername',
+        radius: 0,
         colors: {
             areaColor: '9e4c98',
             bgColor: '44475a',
@@ -135,6 +142,7 @@ export let fakeQueryStringRes = [
     },
     {
         username: 'githubusername',
+        radius: 0,
         colors: {
             areaColor: '9e4c98',
             bgColor: '44475a',
@@ -148,6 +156,7 @@ export let fakeQueryStringRes = [
     },
     {
         username: 'githubusername',
+        radius: 0,
         colors: {
             areaColor: '9e4c98',
             bgColor: '44475a',
@@ -161,6 +170,7 @@ export let fakeQueryStringRes = [
     },
     {
         username: 'githubusername',
+        radius: 0,
         colors: {
             areaColor: '9e4c98',
             bgColor: '44475a',
@@ -174,6 +184,7 @@ export let fakeQueryStringRes = [
     },
     {
         username: 'githubusername',
+        radius: 0,
         colors: {
             areaColor: '9e4c98',
             bgColor: '44475a',
@@ -187,6 +198,7 @@ export let fakeQueryStringRes = [
     },
     {
         username: 'githubusername',
+        radius: 0,
         colors: {
             areaColor: '9e4c98',
             bgColor: '44475a',
@@ -204,6 +216,7 @@ export let fakeQueryStringRes = [
 export let fakeGraphArgs: GraphArgs = {
     height: 10,
     width: 20,
+    radius: 0,
     colors: {
         areaColor: '87ceeb',
         bgColor: '44475a',
