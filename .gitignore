@@ -7,3 +7,4 @@
 .env
 /coverage
 /.idea
+.package-lock.json
