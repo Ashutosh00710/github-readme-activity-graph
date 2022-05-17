@@ -68,7 +68,7 @@ submitButton.addEventListener('click', (event) => {
 
     //get user data
     axios({
-        url: `http://localhost:5100/data?username=${username}`,
+        url: `https://activity-graph.herokuapp.com/data?username=${username}`,
         method: 'GET',
     })
         .then((contributionData) => {
