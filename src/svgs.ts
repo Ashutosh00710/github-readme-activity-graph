@@ -28,6 +28,7 @@ export const graphSvg = (props: GraphArgs) => `
                 svg {
                     font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
                     border-radius: ${props.radius}px;
+                    user-select: none;
                 }
                 ${graphStyle(
                     props.colors.color,

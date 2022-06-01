@@ -48,16 +48,17 @@ export class GraphArgs {
 }
 
 export class UserDetails {
-    contributions: Array<number>;
+    contributions: Array<ContributionDay>;
     name: string;
 }
 
-export class ContributionCount {
+export class ContributionDay {
     contributionCount: number;
+    date: string;
 }
 
 export class Week {
-    contributionDays: Array<ContributionCount>;
+    contributionDays: Array<ContributionDay>;
 }
 
 export class ResponseOfApi {

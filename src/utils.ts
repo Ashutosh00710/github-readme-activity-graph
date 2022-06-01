@@ -45,7 +45,9 @@ export class Utilities {
         const options: QueryOption = {
             username: this.username,
             hide_title: String(this.queryString.hide_title) === 'true',
-            radius:  this.queryString.radius ? Math.min(Math.max(this.queryString.radius, 0), 16) : 0, // Border radius in range [0, 16]
+            radius: this.queryString.radius
+                ? Math.min(Math.max(this.queryString.radius, 0), 16)
+                : 0, // Border radius in range [0, 16]
             colors: colors,
             area: area,
         };
