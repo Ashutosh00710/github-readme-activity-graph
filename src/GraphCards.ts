@@ -1,6 +1,6 @@
 import { createGraph } from './createChart';
 import { graphSvg } from './svgs';
-import { Colors } from './interfaces/interface';
+import { Colors, ContributionDay } from './interfaces/interface';
 
 export class Card {
     constructor(
@@ -57,14 +57,14 @@ export class Card {
     //     return days.reverse();
     // }
 
-    async buildGraph(contributions: number[]): Promise<string> {
+    async buildGraph(days: ContributionDay[]): Promise<string> {
         //Options to pass in createGraph function
         const options = this.getOptions();
 
         //Construction of graph from node-chartist
         const line: Promise<string> = await createGraph('line', options, {
-            labels: [...Array(contributions.length + 1).keys()].slice(1),
-            series: [{ value: contributions }],
+            labels: days.map((day) => day.date),
+            series: [{ value: days.map((day) => day.contributionCount) }],
         });
 
         //Arguments to construct graphs with rect and other options

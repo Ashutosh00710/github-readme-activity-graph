@@ -257,29 +257,31 @@ export let options = {
     fullWidth: true,
 };
 
-export const expectedQuery = (username: string) => {
-    return {
-        query: `
-      query userInfo($LOGIN: String!) {
-       user(login: $LOGIN) {
-         name
-         contributionsCollection {
-           contributionCalendar {
-              totalContributions
-              weeks {
-                contributionDays {
-                  contributionCount
+export const expectedQuery = (username: string, from: string, to: string) => {
+        return {
+            query: `
+              query userInfo($LOGIN: String!, $FROM: DateTime!, $TO: DateTime!) {
+                user(login: $LOGIN) {
+                  name
+                  contributionsCollection(from: $FROM, to: $TO) {
+                    contributionCalendar {
+                      weeks {
+                        contributionDays {
+                          contributionCount
+                          date
+                        }
+                      }
+                    }
+                  }
                 }
               }
-            }
-          }
-        }
-      },
-    `,
-        variables: {
-            LOGIN: username,
-        },
-    };
+            `,
+            variables: {
+                LOGIN: username,
+                FROM: from,
+                TO: to,
+            },
+        };
 };
 
 export const dummyWeeksData = [

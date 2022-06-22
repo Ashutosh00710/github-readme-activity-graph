@@ -1,39 +1,36 @@
 import axios, { AxiosResponse } from 'axios';
 import * as dotenv from 'dotenv';
-import {
-    Query,
-    UserDetails,
-    Week,
-    ContributionCount,
-    ResponseOfApi,
-} from 'src/interfaces/interface';
+import moment from 'moment';
+import { Query, UserDetails, Week, ContributionDay, ResponseOfApi } from 'src/interfaces/interface';
 
 dotenv.config();
 
 export class Fetcher {
     constructor(private readonly username: string) {}
 
-    private getGraphQLQuery() {
+    private getGraphQLQuery(from: string, to: string) {
         return {
             query: `
-      query userInfo($LOGIN: String!) {
-       user(login: $LOGIN) {
-         name
-         contributionsCollection {
-           contributionCalendar {
-              totalContributions
-              weeks {
-                contributionDays {
-                  contributionCount
+              query userInfo($LOGIN: String!, $FROM: DateTime!, $TO: DateTime!) {
+                user(login: $LOGIN) {
+                  name
+                  contributionsCollection(from: $FROM, to: $TO) {
+                    contributionCalendar {
+                      weeks {
+                        contributionDays {
+                          contributionCount
+                          date
+                        }
+                      }
+                    }
+                  }
                 }
               }
-            }
-          }
-        }
-      },
-    `,
+            `,
             variables: {
                 LOGIN: this.username,
+                FROM: from,
+                TO: to,
             },
         };
     }
@@ -50,8 +47,13 @@ export class Fetcher {
     }
 
     public async fetchContributions(): Promise<UserDetails | string> {
+        const now = moment();
+        const from = moment(now).subtract(30, 'days').utc().toISOString();
+        // also include the next day in case our server is behind in time with respect to GitHub
+        const to = moment(now).add(1, 'days').utc().toISOString();
+
         try {
-            const apiResponse = await this.fetch(this.getGraphQLQuery());
+            const apiResponse = await this.fetch(this.getGraphQLQuery(from, to));
             if (apiResponse.data.data.user === null)
                 return `Can't fetch any contribution. Please check your username 😬`;
             else {
@@ -62,19 +64,25 @@ export class Fetcher {
                 //filtering the week data from API response
                 const weeks =
                     apiResponse.data.data.user.contributionsCollection.contributionCalendar.weeks;
-                //slicing last 6 weeks
-                weeks.slice(weeks.length - 6, weeks.length).map((week: Week) =>
-                    week.contributionDays.map((contributionCount: ContributionCount) => {
-                        userData.contributions.push(contributionCount.contributionCount);
+                // get day-contribution data
+                weeks.map((week: Week) =>
+                    week.contributionDays.map((contributionDay: ContributionDay) => {
+                        contributionDay.date = moment(contributionDay.date, moment.ISO_8601)
+                            .date().toString();
+                        userData.contributions.push(contributionDay);
                     })
                 );
 
-                //returning data of last 31 days
-                const presentDay = new Date().getDay();
-                userData.contributions = userData.contributions.slice(
-                    5 + presentDay,
-                    36 + presentDay
-                );
+                // if 32nd entry is 0 means:
+                // either the day hasn't really started
+                // or the user hasn't contributed today
+                const length = userData.contributions.length;
+
+                if (userData.contributions[length - 1].contributionCount === 0) {
+                    userData.contributions.pop();
+                }
+                const extra = userData.contributions.length - 31;
+                userData.contributions.splice(0, extra);
                 return userData;
             }
         } catch (error) {

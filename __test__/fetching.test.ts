@@ -11,8 +11,9 @@ import { UserDetails } from '../src/interfaces/interface';
 describe('Fetching Tests', () => {
     const fetcher = new Fetcher('ashutosh00710');
     it('Query Test', () => {
+        const expected = expectedQuery('ashutosh00710', '2022-05-01T00:00:00.000+00:00', '2022-06-01T00:00:00.000+00:00')
         // @ts-ignore: testing private method
-        expect(fetcher.getGraphQLQuery('ashutosh00710')).toEqual(expectedQuery('ashutosh00710'));
+        expect(fetcher.getGraphQLQuery('2022-05-01T00:00:00.000+00:00', '2022-06-01T00:00:00.000+00:00')).toEqual(expected);
     });
 
     it('Fetching Contributions Test', () => {
