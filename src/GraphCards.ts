@@ -25,7 +25,7 @@ export class Card {
                 },
             },
             axisX: {
-                title: 'Days (UTC)',
+                title: 'Days',
                 offset: 50,
                 labelOffset: {
                     x: -4.5,
