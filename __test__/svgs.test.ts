@@ -24,7 +24,28 @@ describe('SVG Testing', () => {
                 fakeQueryStringRes[0].colors,
                 "xyz's Contribution Graph",
                 fakeQueryStringRes[0].area
-            ).buildGraph([1, 2, 3, 4, 5])
+            ).buildGraph([
+                {
+                    contributionCount: 2,
+                    date: '1',
+                },
+                {
+                    contributionCount: 3,
+                    date: '2',
+                },
+                {
+                    contributionCount: 10,
+                    date: '1',
+                },
+                {
+                    contributionCount: 12,
+                    date: '1',
+                },
+                {
+                    contributionCount: 14,
+                    date: '1',
+                },
+            ])
         ).toMatchSnapshot();
     });
 });

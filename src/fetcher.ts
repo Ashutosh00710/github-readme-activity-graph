@@ -68,7 +68,8 @@ export class Fetcher {
                 weeks.map((week: Week) =>
                     week.contributionDays.map((contributionDay: ContributionDay) => {
                         contributionDay.date = moment(contributionDay.date, moment.ISO_8601)
-                            .date().toString();
+                            .date()
+                            .toString();
                         userData.contributions.push(contributionDay);
                     })
                 );
