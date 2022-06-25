@@ -20,3 +20,4 @@
 |      **elegant**       |      <img src="./asset/elegant.svg" height=250 alt="graph"/>       | 
 |      **aqua**          |      <img src="./asset/aqua.svg" height=250 alt="graph"/>          | 
 |    **synthwave-84**     |    <img src="./asset/synthwave-84.svg" height=250 alt="graph"/>   |
+|  **midnight-purple**   |<img src="https://user-images.githubusercontent.com/80617824/175781724-27a07cc5-f629-44ef-897c-7d092d7c45ec.png" height=250 alt="graph"/>|
