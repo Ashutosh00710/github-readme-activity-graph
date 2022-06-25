@@ -200,6 +200,15 @@ export const selectColors = (queryString: string): Colors => {
                 lineColor: 'F7F645',
                 pointColor: '22E5F4',
             };
+        case 'midnight-purple':
+            return {
+                areaColor: '000000',
+                borderColor: 'ffffff',
+                bgColor: '000000',
+                color: '9745f5',
+                lineColor: '9745f5',
+                pointColor: 'ffffff',
+            };
         default:
             return {
                 areaColor: '9e4c98',
