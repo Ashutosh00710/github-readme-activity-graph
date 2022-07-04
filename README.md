@@ -332,6 +332,17 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
         <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=MagicLike" title="Code">💻</a>
     </td>
   </tr>
+  </tr>
+    <td align="center">
+        <a href="https://github.com/OnkarRuikar">
+            <img src="https://avatars.githubusercontent.com/u/87750369?v=4" width="100px;" alt=""/>
+            <br />
+            <sub><b>OnkarRuikar</b></sub>
+        </a>
+        <br />
+        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=OnkarRuikar" title="Code">💻</a>
+    </td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
