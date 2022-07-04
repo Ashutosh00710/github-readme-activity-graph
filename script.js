@@ -72,11 +72,10 @@ submitButton.addEventListener('click', (event) => {
         method: 'GET',
     })
         .then((contributionData) => {
-            console.log(contributionData.data);
-            let userData = contributionData.data;
+            let days = contributionData.data.contributions;
             var data = {
-                labels: [...Array(userData.contributions.length + 1).keys()].slice(1),
-                series: [{ value: userData.contributions }],
+                labels: days.map((day) => day.date),
+                series: [{ value: days.map((day) => day.contributionCount) }],
             };
             const options = {
                 width: 1000,
