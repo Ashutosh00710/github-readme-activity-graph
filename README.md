@@ -177,7 +177,7 @@ Now just add the following to your profile readme and you're good to go.
 
 ![Secrets](./asset/replit2.png)
 
-5. Click the green `RUN` button on top The console will run Atlast The url will shows on the right
+5. Click the green `RUN` button on top, the console will run and at last the url will shows on the right
 6. Now just add the following to your profile readme and you're good to go
 
 ```
@@ -373,6 +373,15 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
         </a>
         <br />
         <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=OnkarRuikar" title="Code">💻</a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/valetzx">
+            <img src="https://avatars.githubusercontent.com/u/45054400?v=4" width="100px;" alt=""/>
+            <br />
+            <sub><b>valetzx</b></sub>
+        </a>
+        <br />
+        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=valetzx" title="Documentation">📖</a>
     </td>
   </tr>
 </table>
