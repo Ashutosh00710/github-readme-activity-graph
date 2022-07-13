@@ -24,6 +24,8 @@ A dynamically generated activity graph to show your GitHub activities of last 31
 - [Deploy on your own Heroku instance](#deploy-on-your-own-heroku-instance)
   - [Step-by-step instructions for deploying to Heroku **(from UI)**](#step-by-step-instructions-for-deploying-to-heroku-from-ui)
   - [Step-by-step instructions for deploying to Heroku **(from CLI)**](#step-by-step-instructions-for-deploying-to-heroku-from-cli)
+- [Deploy on your own Replit instance](#deploy-on-your-own-replit-instance)
+  - [Step-by-step instructions for deploying to Replit **(from UI)**](#step-by-step-instructions-for-deploying-to-replit-from-ui)
 - [Contributing](#contributing)
 - [Core Team 💻](#core-team-)
 - [Contributors ✨](#contributors-)
@@ -150,6 +152,36 @@ Now just add the following to your profile readme and you're good to go.
 
 ```md
 ![Github Activity Graph](<url from step 6>/graph?username=<username>)
+```
+
+## Deploy on your own Replit instance
+
+### Step-by-step instructions for deploying to Replit (from UI)
+
+1. Sign in to Replit or create a new account at https://replit.com
+2. Click the Deploy button below
+
+<p align="center">
+<a href="https://repl.it/github/Ashutosh00710/github-readme-activity-graph">
+  <img alt="Run on Repl.it" src="https://repl.it/badge/github/Ashutosh00710/github-readme-activity-graph" style="height: 40px; width: 190px;" />
+</a></p>
+
+3. On the page that comes up, choose language as `Node.js` and then click `Import from GitHub` Button
+
+![Replit](./asset/replit1.png)
+
+4. Visit the "**Settings**" tab and click "**Reveal Config Vars**"
+5. Visit [this link](https://github.com/settings/tokens/new?description=GitHub%20Readme%20Activity%20Graph) to create a new Personal Access Token
+6. Scroll to the bottom and click "**Generate token**"
+4. Wait clone done and add `Secrets` with your `Github token`
+
+![Secrets](./asset/replit2.png)
+
+5. Click the green `RUN` button on top The console will run Atlast The url will shows on the right
+6. Now just add the following to your profile readme and you're good to go
+
+```
+![Github Activity Graph](<url from step 5>/graph?username=<username>)
 ```
 
 ## Contributing
