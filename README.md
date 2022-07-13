@@ -171,7 +171,7 @@ Now just add the following to your profile readme and you're good to go.
 ![Replit](./asset/replit1.png)
 
 4. Visit the "**Settings**" tab and click "**Reveal Config Vars**"
-5. Visit ![this link](https://github.com/settings/tokens/new?description=GitHub Readme Activity Graph) to create a new Personal Access Token
+5. Visit [this link](https://github.com/settings/tokens/new?description=GitHub%20Readme%20Activity%20Graph) to create a new Personal Access Token
 6. Scroll to the bottom and click "**Generate token**"
 4. Wait clone done and add `Secrets` with your `Github token`
 
