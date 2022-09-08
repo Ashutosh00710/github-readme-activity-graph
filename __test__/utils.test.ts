@@ -28,7 +28,7 @@ describe('Utilities Test', () => {
             const app = fakeServer();
             app.get('/graph', handlers.getGraph);
             request(app)
-                .get('/graph?username=ashutosh00710')
+                .get('/graph?username=blackkspydo')
                 .expect('Content-Type', 'image/svg+xml; charset=utf-8')
                 .expect('Cache-Control', 'public, max-age=1800')
                 .expect(200, done);

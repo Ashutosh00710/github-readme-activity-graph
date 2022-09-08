@@ -8,6 +8,7 @@ export const selectColors = (queryString: string): Colors => {
                 bgColor: '44475a',
                 borderColor: 'ffffff',
                 color: 'f8f8f2',
+                titleColor: 'f8f8f2',
                 lineColor: 'ff79c6',
                 pointColor: 'bd93f9',
             };
@@ -17,6 +18,7 @@ export const selectColors = (queryString: string): Colors => {
                 bgColor: '504945',
                 borderColor: 'ffffff',
                 color: 'd4be98',
+                titleColor: 'd4be98',
                 lineColor: 'd8a657',
                 pointColor: 'e78a4e',
             };
@@ -26,6 +28,7 @@ export const selectColors = (queryString: string): Colors => {
                 bgColor: '293036',
                 borderColor: 'ffffff',
                 color: 'ffffff',
+                titleColor: 'ffffff',
                 lineColor: '9ecbff',
                 pointColor: 'f97583',
             };
@@ -35,6 +38,7 @@ export const selectColors = (queryString: string): Colors => {
                 bgColor: '0c1014',
                 borderColor: '2aa889',
                 color: '2aa889',
+                titleColor: '2aa889',
                 lineColor: '599cab',
                 pointColor: '99d1ce',
             };
@@ -44,6 +48,7 @@ export const selectColors = (queryString: string): Colors => {
                 bgColor: '172030',
                 borderColor: 'ffffff',
                 color: 'a3b09a',
+                titleColor: 'a3b09a',
                 lineColor: 'b18bb1',
                 pointColor: 'c6797e',
             };
@@ -53,6 +58,7 @@ export const selectColors = (queryString: string): Colors => {
                 bgColor: '202124',
                 borderColor: 'ffffff',
                 color: 'fcfcfa',
+                titleColor: 'fcfcfa',
                 lineColor: 'c4e3ff',
                 pointColor: 'ff8070',
             };
@@ -62,6 +68,7 @@ export const selectColors = (queryString: string): Colors => {
                 bgColor: '141321',
                 borderColor: 'ffffff',
                 color: 'a9fef7',
+                titleColor: 'a9fef7',
                 lineColor: 'fe428e',
                 pointColor: 'f8d847',
             };
@@ -71,6 +78,7 @@ export const selectColors = (queryString: string): Colors => {
                 bgColor: '9a3838',
                 borderColor: 'ffffff',
                 color: 'f9fae9',
+                titleColor: 'f9fae9',
                 lineColor: 'f4e23d',
                 pointColor: 'f4e7e7',
             };
@@ -80,6 +88,7 @@ export const selectColors = (queryString: string): Colors => {
                 bgColor: '0d1117',
                 borderColor: 'ffffff',
                 color: '5bcdec',
+                titleColor: '5bcdec',
                 lineColor: '5bcdec',
                 pointColor: 'ffffff',
             };
@@ -89,6 +98,7 @@ export const selectColors = (queryString: string): Colors => {
                 bgColor: '2e3440',
                 borderColor: 'ffffff',
                 color: '88c0d0',
+                titleColor: '88c0d0',
                 lineColor: '88c0d0',
                 pointColor: 'ffffff',
             };
@@ -98,6 +108,7 @@ export const selectColors = (queryString: string): Colors => {
                 bgColor: 'cccccc',
                 borderColor: '000000',
                 color: '000000',
+                titleColor: '000000',
                 lineColor: 'ffd369',
                 pointColor: 'faf3e0',
             };
@@ -107,6 +118,7 @@ export const selectColors = (queryString: string): Colors => {
                 bgColor: '000000',
                 borderColor: '000000',
                 color: '7ffe00',
+                titleColor: '7ffe00',
                 lineColor: '00adfe',
                 pointColor: '7ffe00',
             };
@@ -116,6 +128,7 @@ export const selectColors = (queryString: string): Colors => {
                 bgColor: 'ffffff',
                 borderColor: 'ffffff',
                 color: '000000',
+                titleColor: '000000',
                 lineColor: '9be9a8',
                 pointColor: '40c463',
             };
@@ -125,15 +138,17 @@ export const selectColors = (queryString: string): Colors => {
                 bgColor: '0D1117',
                 borderColor: 'ffffff',
                 color: '58A6FF',
+                titleColor: '58A6FF',
                 lineColor: '1F6FEB',
                 pointColor: '58A6FF',
-            };    
+            };
         case 'minimal':
             return {
                 areaColor: 'd3e6fa',
                 bgColor: 'ffffff',
                 borderColor: 'ffffff',
                 color: '000000',
+                titleColor: '000000',
                 lineColor: 'd3e6fa',
                 pointColor: '3f99ed',
             };
@@ -143,6 +158,7 @@ export const selectColors = (queryString: string): Colors => {
                 bgColor: '292d3e',
                 borderColor: 'ffffff',
                 color: 'a6accd',
+                titleColor: 'a6accd',
                 lineColor: 'c792ea',
                 pointColor: '89ddff',
             };
@@ -152,6 +168,7 @@ export const selectColors = (queryString: string): Colors => {
                 borderColor: 'ffffff',
                 bgColor: 'dad7cd',
                 color: '3a5a40',
+                titleColor: '3a5a40',
                 lineColor: '588157',
                 pointColor: '344e41',
             };
@@ -161,6 +178,7 @@ export const selectColors = (queryString: string): Colors => {
                 borderColor: 'ffffff',
                 bgColor: '1b2932',
                 color: 'd3b692',
+                titleColor: 'd3b692',
                 lineColor: '72b7c0',
                 pointColor: 'c5cdd3',
             };
@@ -170,6 +188,7 @@ export const selectColors = (queryString: string): Colors => {
                 borderColor: 'ffffff',
                 bgColor: '282C34',
                 color: 'abb2bf',
+                titleColor: 'abb2bf',
                 lineColor: 'e5c17c',
                 pointColor: 'e06c75',
             };
@@ -179,6 +198,7 @@ export const selectColors = (queryString: string): Colors => {
                 borderColor: 'ffffff',
                 bgColor: '2D2A2E',
                 color: 'fcfcfa',
+                titleColor: 'fcfcfa',
                 lineColor: 'ff6188',
                 pointColor: 'ffd866',
             };
@@ -188,6 +208,7 @@ export const selectColors = (queryString: string): Colors => {
                 borderColor: '161e2d',
                 bgColor: '161e2d',
                 color: 'd8d5d5',
+                titleColor: 'd8d5d5',
                 lineColor: 'fb8500',
                 pointColor: '42002b',
             };
@@ -197,6 +218,7 @@ export const selectColors = (queryString: string): Colors => {
                 borderColor: '161e2d',
                 bgColor: '52b69a',
                 color: '187177',
+                titleColor: '187177',
                 lineColor: '226d64',
                 pointColor: '156f69',
             };
@@ -206,6 +228,7 @@ export const selectColors = (queryString: string): Colors => {
                 borderColor: '251e30',
                 bgColor: '2C223B',
                 color: 'FF3CA2',
+                titleColor: 'FF3CA2',
                 lineColor: 'F7F645',
                 pointColor: '22E5F4',
             };
@@ -215,6 +238,7 @@ export const selectColors = (queryString: string): Colors => {
                 bgColor: 'ffcfe9',
                 borderColor: 'ffffff',
                 color: '9e4c98',
+                titleColor: '9e4c98',
                 lineColor: '9e4c98',
                 pointColor: '403d3d',
             };

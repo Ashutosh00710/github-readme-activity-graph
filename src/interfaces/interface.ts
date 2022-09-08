@@ -10,6 +10,7 @@ export class Colors {
     bgColor: string;
     borderColor: string;
     color: string;
+    titleColor: string;
     lineColor: string;
     pointColor: string;
 }
@@ -36,6 +37,7 @@ export class ParsedQs {
     theme?: string;
     area?: boolean;
     radius?: number;
+    title_color?: string;
 }
 
 export class GraphArgs {

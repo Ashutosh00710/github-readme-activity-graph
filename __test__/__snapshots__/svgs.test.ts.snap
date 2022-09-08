@@ -17,7 +17,7 @@ exports[`SVG Testing Test SVGs 1`] = `
                     font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
                 }
                 .header {
-                    font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+                    font: 600 20px 'Segoe UI', Ubuntu, Sans-Serif;
                     text-align: center;
                     color: #f8f8f2;
                     margin-top: 20px;
@@ -208,9 +208,9 @@ exports[`SVG Testing chart SVGs 1`] = `
                     font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
                 }
                 .header {
-                    font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+                    font: 600 20px 'Segoe UI', Ubuntu, Sans-Serif;
                     text-align: center;
-                    color: #9e4c98;
+                    color: #ffffff;
                     margin-top: 20px;
                 }
                 svg {
