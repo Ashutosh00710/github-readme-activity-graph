@@ -59,6 +59,7 @@ _`username=ashutosh00710&theme=theme_name`_
 |            Name            |                          Preview                           |
 | :------------------------: | :--------------------------------------------------------: |
 | **Default (cotton candy)** |  <img src="./asset/default.svg" height=250 alt="graph"/>   |
+|         **react**          | <img src="./asset/react.png" height=250 alt="graph"/>      |
 |       **react-dark**       | <img src="./asset/react-dark.svg" height=250 alt="graph"/> |
 |         **github**         |   <img src="./asset/github.svg" height=250 alt="graph"/>   |
 |         **xcode**          |   <img src="./asset/xcode.svg" height=250 alt="graph"/>    |
