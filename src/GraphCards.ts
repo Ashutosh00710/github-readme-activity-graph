@@ -23,6 +23,7 @@ export class Card {
                 labelOffset: {
                     y: 4.5,
                 },
+                low: 0,
             },
             axisX: {
                 title: 'Days',
