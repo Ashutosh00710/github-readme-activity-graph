@@ -82,6 +82,15 @@ export const selectColors = (queryString: string): Colors => {
                 lineColor: 'f4e23d',
                 pointColor: 'f4e7e7',
             };
+        case 'react':
+            return {
+                areaColor: '61dafb',
+                bgColor: '282c34',
+                borderColor: 'ffffff',
+                color: 'ffffff',
+                lineColor: '61dafb',
+                pointColor: '61dafb',
+            };
         case 'react-dark':
             return {
                 areaColor: '5bcdec',
