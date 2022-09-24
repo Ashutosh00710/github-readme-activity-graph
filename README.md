@@ -76,6 +76,7 @@ Customize the appearance of your Activity Graph however you want with URL params
 | :------------: | :-------------------------------------------: | :------------------------: |
 |   `bg_color`   |            card's background color            |   hex code (without `#`)   |
 |    `color`     |            graph card's text color            |   hex code (without `#`)   |
+| `title_color`  |            graph card's title color           |   hex code (without `#`)   |
 |     `line`     |              graph's line color               |   hex code (without `#`)   |
 |    `point`     |         color of points on line graph         |   hex code (without `#`)   |
 |  `area_color`  |       color of the area under the graph       |   hex code (without `#`)   |

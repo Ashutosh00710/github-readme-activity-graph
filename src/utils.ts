@@ -24,6 +24,11 @@ export class Utilities {
                     ? '0000' // transparent
                     : selectColors(theme).borderColor,
             color: this.queryString.color ? this.queryString.color : selectColors(theme).color,
+            titleColor: this.queryString.title_color
+                ? this.queryString.title_color
+                : this.queryString.color
+                ? this.queryString.color
+                : selectColors(theme).titleColor,
             lineColor: this.queryString.line
                 ? this.queryString.line
                 : selectColors(theme).lineColor,
@@ -74,9 +79,7 @@ export class Utilities {
             }
 
             const graph = new Card(420, 1200, options.radius, options.colors, title, options.area);
-
             const getChart = await graph.buildGraph(fetchCalendarData.contributions);
-
             return {
                 finalGraph: getChart,
                 header: {
