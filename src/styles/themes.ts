@@ -88,6 +88,7 @@ export const selectColors = (queryString: string): Colors => {
                 bgColor: '282c34',
                 borderColor: 'ffffff',
                 color: 'ffffff',
+                titleColor: 'ffffff',
                 lineColor: '61dafb',
                 pointColor: '61dafb',
             };
