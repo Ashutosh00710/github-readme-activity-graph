@@ -23,4 +23,5 @@
 |    **synthwave-84**    |    <img src="./asset/synthwave-84.svg" height=250 alt="graph"/>    |
 |      **react**         |      <img src="./asset/react.png" height=250 alt="graph"/>         |
 |      **merko**         |      <img src="./asset/merko.png" height=250 alt="graph"/>         |
-|          **vue**       |        <img src="./asset/vue.svg" height=250 alt="graph"/>         |
+|       **vue**          |        <img src="./asset/vue.png" height=250 alt="graph"/>         |
+|    **tokyo-night**     |    <img src="./asset/tokyo-night.png" height=250 alt="graph"/>     |

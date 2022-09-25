@@ -65,7 +65,8 @@ _`username=ashutosh00710&theme=theme_name`_
 |         **xcode**          |   <img src="./asset/xcode.svg" height=250 alt="graph"/>    |
 |         **rogue**          |   <img src="./asset/rogue.svg" height=250 alt="graph"/>    |
 |         **merko**          |   <img src="./asset/merko.png" height=250 alt="graph"/>    |
-|          **vue**           |   <img src="./asset/vue.svg" height=250 alt="graph"/>      |
+|          **vue**           |   <img src="./asset/vue.png" height=250 alt="graph"/>      |
+|       **tokyo-night**      |<img src="./asset/tokyo-night.png" height=250 alt="graph"/> |
 
 For more themes click [here](https://github.com/Ashutosh00710/github-readme-activity-graph/blob/main/THEMES.md)
 

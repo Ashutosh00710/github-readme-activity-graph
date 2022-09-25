@@ -262,6 +262,16 @@ export const selectColors = (queryString: string): Colors => {
                 lineColor: '41b883',
                 pointColor: 'f6f8fa',
             };
+        case 'tokyo-night':
+            return {
+                areaColor: '70a5fd',
+                borderColor: 'ffffff',
+                bgColor: '1a1b27',
+                color: '70a5fd',
+                titleColor: '70a5fd',
+                lineColor: '70a5fd',
+                pointColor: 'a9b1d6',
+            };
         default:
             return {
                 areaColor: '9e4c98',
