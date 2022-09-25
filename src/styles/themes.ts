@@ -252,6 +252,16 @@ export const selectColors = (queryString: string): Colors => {
                 lineColor: 'abd200',
                 pointColor: 'f6f8fa',
             };
+        case 'vue':
+            return {
+                areaColor: '41b883',
+                borderColor: 'ffffff',
+                bgColor: '2c3e50',
+                color: '41b883',
+                titleColor: '41b883',
+                lineColor: '41b883',
+                pointColor: 'f6f8fa',
+            };
         default:
             return {
                 areaColor: '9e4c98',
