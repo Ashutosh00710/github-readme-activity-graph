@@ -56,17 +56,18 @@ _`username=ashutosh00710&theme=theme_name`_
 
 ## Available Themes
 
-|            Name            |                          Preview                           |
-| :------------------------: | :--------------------------------------------------------: |
-| **Default (cotton candy)** |  <img src="./asset/default.svg" height=250 alt="graph"/>   |
-|         **react**          | <img src="./asset/react.png" height=250 alt="graph"/>      |
-|       **react-dark**       | <img src="./asset/react-dark.svg" height=250 alt="graph"/> |
-|         **github**         |   <img src="./asset/github.svg" height=250 alt="graph"/>   |
-|         **xcode**          |   <img src="./asset/xcode.svg" height=250 alt="graph"/>    |
-|         **rogue**          |   <img src="./asset/rogue.svg" height=250 alt="graph"/>    |
-|         **merko**          |   <img src="./asset/merko.png" height=250 alt="graph"/>    |
-|          **vue**           |   <img src="./asset/vue.png" height=250 alt="graph"/>      |
-|       **tokyo-night**      |<img src="./asset/tokyo-night.png" height=250 alt="graph"/> |
+|            Name            |                          Preview                            |
+| :------------------------: | :--------------------------------------------------------:  |
+| **Default (cotton candy)** |  <img src="./asset/default.svg" height=250 alt="graph"/>    |
+|         **react**          | <img src="./asset/react.png" height=250 alt="graph"/>       |
+|       **react-dark**       | <img src="./asset/react-dark.svg" height=250 alt="graph"/>  |
+|         **github**         |   <img src="./asset/github.svg" height=250 alt="graph"/>    |
+|         **xcode**          |   <img src="./asset/xcode.svg" height=250 alt="graph"/>     |
+|         **rogue**          |   <img src="./asset/rogue.svg" height=250 alt="graph"/>     |
+|         **merko**          |   <img src="./asset/merko.png" height=250 alt="graph"/>     |
+|          **vue**           |   <img src="./asset/vue.png" height=250 alt="graph"/>       |
+|       **tokyo-night**      |<img src="./asset/tokyo-night.png" height=250 alt="graph"/>  |
+|       **high-contrast**    |<img src="./asset/high-contrast.png" height=250 alt="graph"/>|
 
 For more themes click [here](https://github.com/Ashutosh00710/github-readme-activity-graph/blob/main/THEMES.md)
 
