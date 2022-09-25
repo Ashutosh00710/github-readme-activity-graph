@@ -242,6 +242,16 @@ export const selectColors = (queryString: string): Colors => {
                 lineColor: 'F7F645',
                 pointColor: '22E5F4',
             };
+        case 'merko':
+            return {
+                areaColor: 'abd200',
+                borderColor: 'ffffff',
+                bgColor: '0a0f0b',
+                color: 'f6f8fa',
+                titleColor: 'f6f8fa',
+                lineColor: 'abd200',
+                pointColor: 'f6f8fa',
+            };
         default:
             return {
                 areaColor: '9e4c98',

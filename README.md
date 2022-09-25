@@ -64,6 +64,7 @@ _`username=ashutosh00710&theme=theme_name`_
 |         **github**         |   <img src="./asset/github.svg" height=250 alt="graph"/>   |
 |         **xcode**          |   <img src="./asset/xcode.svg" height=250 alt="graph"/>    |
 |         **rogue**          |   <img src="./asset/rogue.svg" height=250 alt="graph"/>    |
+|         **merko**          |   <img src="./asset/merko.svg" height=250 alt="graph"/>    |
 
 For more themes click [here](https://github.com/Ashutosh00710/github-readme-activity-graph/blob/main/THEMES.md)
 
