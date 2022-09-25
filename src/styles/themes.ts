@@ -242,6 +242,36 @@ export const selectColors = (queryString: string): Colors => {
                 lineColor: 'F7F645',
                 pointColor: '22E5F4',
             };
+        case 'merko':
+            return {
+                areaColor: 'abd200',
+                borderColor: 'ffffff',
+                bgColor: '0a0f0b',
+                color: 'f6f8fa',
+                titleColor: 'f6f8fa',
+                lineColor: 'abd200',
+                pointColor: 'f6f8fa',
+            };
+        case 'vue':
+            return {
+                areaColor: '41b883',
+                borderColor: 'ffffff',
+                bgColor: '2c3e50',
+                color: '41b883',
+                titleColor: '41b883',
+                lineColor: '41b883',
+                pointColor: 'f6f8fa',
+            };
+        case 'tokyo-night':
+            return {
+                areaColor: '70a5fd',
+                borderColor: 'ffffff',
+                bgColor: '1a1b27',
+                color: '70a5fd',
+                titleColor: '70a5fd',
+                lineColor: '70a5fd',
+                pointColor: 'a9b1d6',
+            };
         default:
             return {
                 areaColor: '9e4c98',
