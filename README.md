@@ -66,6 +66,7 @@ _`username=ashutosh00710&theme=theme_name`_
 |         **rogue**          |   <img src="./asset/rogue.svg" height=250 alt="graph"/>     |
 |         **merko**          |   <img src="./asset/merko.png" height=250 alt="graph"/>     |
 |          **vue**           |   <img src="./asset/vue.png" height=250 alt="graph"/>       |
+|        **tokyo-day**       | <img src="./asset/tokyo-day.png" height=250 alt="graph"/>   |
 |       **tokyo-night**      |<img src="./asset/tokyo-night.png" height=250 alt="graph"/>  |
 |       **high-contrast**    |<img src="./asset/high-contrast.png" height=250 alt="graph"/>|
 
@@ -388,6 +389,16 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
         </a>
         <br />
         <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=valetzx" title="Documentation">📖</a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/tranthaituananh">
+            <img src="https://avatars.githubusercontent.com/u/77098480?v=4" width="100px;" alt=""/>
+            <br />
+            <sub><b>Tran Thai Tuan Anh</b></sub>
+        </a>
+        <br />
+        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=tranthaituananh" title="Style">🎨</a>
+        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=tranthaituananh" title="Documentation">📖</a>
     </td>
   </tr>
 </table>
