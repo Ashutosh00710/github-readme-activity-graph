@@ -92,7 +92,7 @@ Customize the appearance of your Activity Graph however you want with URL params
 |    `theme`     | name of [available themes](#available-themes) |           string           |
 |   `radius`     |            border radius of graph             |  number (0-16 inclusive)   |
 
-⚠ **For `custom_title` please make sure you are use %20 for spaces**
+⚠ **For `custom_title` please make sure that you are using %20 for spaces**
 
 Example:
 
@@ -192,7 +192,7 @@ Now just add the following to your profile readme and you're good to go.
 
 ## Contributing
 
-Please read through our [contributing guidelines](https://github.com/Ashutosh00710/github-readme-activity-graph/blob/main/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
+Please read through our [contributing guidelines](https://github.com/Ashutosh00710/github-readme-activity-graph/blob/main/CONTRIBUTING.md). Directions are included for opening issues, coding standards, and notes on development.
 
 ## Core Team 💻
 
