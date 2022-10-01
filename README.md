@@ -389,6 +389,16 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
         <br />
         <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=valetzx" title="Documentation">📖</a>
     </td>
+    <td align="center">
+        <a href="https://github.com/tranthaituananh">
+            <img src="https://avatars.githubusercontent.com/u/77098480?v=4" width="100px;" alt=""/>
+            <br />
+            <sub><b>Tran Thai Tuan Anh</b></sub>
+        </a>
+        <br />
+        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=tranthaituananh" title="Style">🎨</a>
+        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=tranthaituananh" title="Documentation">📖</a>
+    </td>
   </tr>
 </table>
 
