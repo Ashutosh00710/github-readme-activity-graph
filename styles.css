@@ -661,7 +661,63 @@ p {
   margin-bottom: 15px;
 }
 
-.footer p {
-  color: #9c9c9c;
-  padding-right: 8px;
+.footer{
+  height : 50px;
+  background-color: rgb(197, 209, 222);
 }
+.footer p {
+  color: grey;
+  padding-right: 8px;
+  margin: 10px;
+}
+.footer a:hover{
+  color : rgb(196, 24, 179);
+}
+/* Footer socials  */
+
+.footer_socials {  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  width: 70px;
+  border-radius: 35px;
+  text-align: center;
+  margin: 3px;
+}
+
+a i {
+  transition: all 0.3s linear;
+}
+
+a:hover i {
+  transform: scale(1.5);
+}
+
+.youtube:hover {
+  color: red;
+}
+
+.facebook:hover {
+  color: blue;
+}
+
+.instagram:hover {
+  color: #e11d74;
+}
+
+.twitter:hover {
+  color: #00adb5;
+}
+
+.github:hover {
+  color: black;
+}
+
+.linkedin:hover {
+  color: #04009a;
+}
+
+
