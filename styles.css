@@ -665,3 +665,12 @@ p {
   color: #9c9c9c;
   padding-right: 8px;
 }
+
+/* Updated with the below changes to resolve the issue of Title padding in mobile devices */
+
+@media screen and (max-width: 674px) {
+  .heading{
+    margin-bottom: 0px !important;
+    margin-top: 40px !important;
+  }
+}
