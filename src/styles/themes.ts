@@ -292,6 +292,16 @@ export const selectColors = (queryString: string): Colors => {
                 lineColor: 'e7e7e7',
                 pointColor: 'e7e7e7',
             };
+        case 'cobalt':
+            return {
+                areaColor: 'd19a66',
+                borderColor: 'ffffff',
+                bgColor: '193549',
+                color: 'd19a66',
+                titleColor: 'd19a66',
+                lineColor: 'd19a66',
+                pointColor: 'e7e7e7',
+            };
         default:
             return {
                 areaColor: '9e4c98',
