@@ -302,6 +302,16 @@ export const selectColors = (queryString: string): Colors => {
                 lineColor: 'd19a66',
                 pointColor: 'e7e7e7',
             };
+        case 'material':
+            return {
+                areaColor: '80cbc4',
+                borderColor: 'ffffff',
+                bgColor: '263238',
+                color: '80cbc4',
+                titleColor: '80cbc4',
+                lineColor: '80cbc4',
+                pointColor: 'ffab91',
+            };
         default:
             return {
                 areaColor: '9e4c98',

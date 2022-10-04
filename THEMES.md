@@ -28,3 +28,4 @@
 |    **tokyo-night**     |    <img src="./asset/tokyo-night.png" height=250 alt="graph"/>     |
 |   **high-contrast**    |   <img src="./asset/high-contrast.png" height=250 alt="graph"/>    |
 |      **cobalt**        |        <img src="./asset/cobalt.jpg" height=250 alt="graph"/>      |
+|     **material**       |        <img src="./asset/material.jpg" height=250 alt="graph"/>    |
