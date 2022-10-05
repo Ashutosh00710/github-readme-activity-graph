@@ -665,3 +665,13 @@ p {
   color: #9c9c9c;
   padding-right: 8px;
 }
+.footer a:hover{
+  color : rgb(81, 80, 81);
+}
+
+.link i {
+  transition: all 0.1s linear;
+}
+
+.link:hover i {
+  transform: scale(1.05);
