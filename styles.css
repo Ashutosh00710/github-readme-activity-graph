@@ -706,8 +706,8 @@ p {
   transition: all 0.1s linear;
 }
 
-a:hover i {
-  transform: scale(1.5);
+.link:hover i {
+  transform: scale(1.05);
 }
 
 .youtube:hover {
