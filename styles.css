@@ -689,7 +689,7 @@ p {
 }
 
 .link i {
-  transition: all 0.3s linear;
+  transition: all 0.1s linear;
 }
 
 a:hover i {
