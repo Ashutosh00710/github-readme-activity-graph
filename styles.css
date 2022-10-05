@@ -644,7 +644,8 @@ p {
 /* ------ Footer - Text & Link Styles -------*/
 
 .footer {
-  width: 100%;
+  /* width: 100%; */
+  /* background-color: rgb(197,209,222); */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -661,7 +662,23 @@ p {
   margin-bottom: 15px;
 }
 
+.footer{
+  height : 50px;
+  /* background-color: rgb(197, 209, 222); */
+}
 .footer p {
   color: #9c9c9c;
   padding-right: 8px;
+  margin: 10px;
+}
+.footer a:hover{
+  color : rgb(81, 80, 81);
+}
+
+.link i {
+  transition: all 0.1s linear;
+}
+
+.link:hover i {
+  transform: scale(1.05);
 }
