@@ -688,7 +688,7 @@ p {
   margin: 3px;
 }
 
-a i {
+.link i {
   transition: all 0.3s linear;
 }
 
