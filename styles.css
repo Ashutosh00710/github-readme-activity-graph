@@ -644,7 +644,8 @@ p {
 /* ------ Footer - Text & Link Styles -------*/
 
 .footer {
-  width: 100%;
+  /* width: 100%; */
+  /* background-color: rgb(197,209,222); */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -663,43 +664,15 @@ p {
 
 .footer{
   height : 50px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin-bottom: 15px;
+  /* background-color: rgb(197, 209, 222); */
 }
 .footer p {
-  color: grey;
+  color: #9c9c9c;
   padding-right: 8px;
   margin: 10px;
 }
 .footer a:hover{
-  color : rgb(196, 24, 179);
-}
-/* Footer socials  */
-
-.footer_socials {  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.link {
-  width: 70px;
-  border-radius: 35px;
-  text-align: center;
-  margin: 3px;
+  color : rgb(81, 80, 81);
 }
 
 .link i {
@@ -709,29 +682,3 @@ p {
 .link:hover i {
   transform: scale(1.05);
 }
-
-.youtube:hover {
-  color: red;
-}
-
-.facebook:hover {
-  color: blue;
-}
-
-.instagram:hover {
-  color: #e11d74;
-}
-
-.twitter:hover {
-  color: #00adb5;
-}
-
-.github:hover {
-  color: black;
-}
-
-.linkedin:hover {
-  color: #04009a;
-}
-
-
