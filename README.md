@@ -393,7 +393,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
         <a href="https://github.com/tranthaituananh">
             <img src="https://avatars.githubusercontent.com/u/77098480?v=4" width="100px;" alt=""/>
             <br />
-            <sub><b>Tran Thai Tuan Anh</b></sub>
+            <sub><b>tranthaituananh</b></sub>
         </a>
         <br />
         <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=tranthaituananh" title="Style">🎨</a>
