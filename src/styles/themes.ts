@@ -312,6 +312,16 @@ export const selectColors = (queryString: string): Colors => {
                 lineColor: '80cbc4',
                 pointColor: 'ffab91',
             };
+        case 'nightowl':
+            return {
+                areaColor: 'c792ea',
+                borderColor: 'ffffff',
+                bgColor: '011627',
+                color: 'c792ea',
+                titleColor: 'c792ea',
+                lineColor: 'c792ea',
+                pointColor: 'ffeb95',
+            };
         default:
             return {
                 areaColor: '9e4c98',
