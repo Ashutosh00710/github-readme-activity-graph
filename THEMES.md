@@ -29,3 +29,4 @@
 |   **high-contrast**    |   <img src="./asset/high-contrast.png" height=250 alt="graph"/>    |
 |      **cobalt**        |        <img src="./asset/cobalt.png" height=250 alt="graph"/>      |
 |     **material**       |        <img src="./asset/material.png" height=250 alt="graph"/>    |
+|      **nightowl**      |       <img src="./asset/nightowl.png" height=250 alt="graph"/>     |
