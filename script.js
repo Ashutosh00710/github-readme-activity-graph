@@ -78,7 +78,6 @@ submitButton.addEventListener('click', (event) => {
                 series: [{ value: days.map((day) => day.contributionCount) }],
             };
             const options = {
-                width: 1000,
                 height: 380,
                 axisY: {
                     title: 'Contributions',
