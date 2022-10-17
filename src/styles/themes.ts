@@ -322,6 +322,16 @@ export const selectColors = (queryString: string): Colors => {
                 lineColor: 'c792ea',
                 pointColor: 'ffeb95',
             };
+        case 'bluecreek':
+            return {
+                areaColor: 'c792ea',
+                borderColor: 'ffffff',
+                bgColor: '1f46c4',
+                color: 'bafffd',
+                titleColor: 'c792ea',
+                lineColor: 'f3ffb9',
+                pointColor: '1fc4c4',
+            };    
         default:
             return {
                 areaColor: '9e4c98',
