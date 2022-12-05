@@ -14,7 +14,7 @@ A dynamically generated activity graph to show your GitHub activities of last 31
 
 ### ⚠️ NOTICE: DEPLOYMENT MOVED ⚠️
 
-The deployment of this project is moved from `https://https://activity-graph.herokuapp.com` domain to `https://github-readme-activity-graph.cyclic.app`.
+The deployment of this project is moved from `https://activity-graph.herokuapp.com` domain to `https://github-readme-activity-graph.cyclic.app`.
 
 Please refer to the updated link [here](#how-to-use)
 
