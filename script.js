@@ -7,14 +7,14 @@ const elements = {
     textArea: document.querySelector('.text'),
     copyText: document.querySelector('.copy_text'),
     submitButton: document.getElementById('submit-button'),
-    username: document.getElementById('username'),
+    username: document.getElementById('username')
 };
 
 const inputElements = {
     bgInput: document.getElementById('bgColor'),
     lineInput: document.getElementById('line'),
     ltgInput: document.getElementById('color'),
-    pointInput: document.getElementById('point'),
+    pointInput: document.getElementById('point')
 };
 
 const valueToCopy = {
@@ -22,11 +22,11 @@ const valueToCopy = {
     bgColor: '#ffcfe9',
     color: '#9e4c98',
     line: '#9e4c98',
-    point: '#403d3d',
+    point: '#403d3d'
 };
 
 /*-----------------------------------------
-        Fetch user's contribution data 
+        Fetch user's contribution data
         and generate graph link
 -------------------------------------------*/
 
@@ -47,7 +47,7 @@ const removePlaceholder = () => {
 // Generate chart link with user data
 
 const generateLink = () => {
-    let link = `[![Ashutosh's github activity graph](https://activity-graph.herokuapp.com/graph?username=${
+    let link = `[![Ashutosh's github activity graph](https://github-readme-activity-graph.cyclic.app/graph?username=${
         valueToCopy.username
     }&bg_color=${valueToCopy.bgColor.slice(1)}&color=${valueToCopy.color.slice(
         1
@@ -71,21 +71,21 @@ const getGraph = (username) => {
             onlyInteger: true,
             offset: 70,
             labelOffset: {
-                y: 4.5,
-            },
+                y: 4.5
+            }
         },
         axisX: {
             title: 'Days',
             offset: 50,
             labelOffset: {
-                x: -4.5,
-            },
+                x: -4.5
+            }
         },
         chartPadding: {
             top: 80,
             right: 50,
             bottom: 20,
-            left: 20,
+            left: 20
         },
         showArea: true,
         fullWidth: true,
@@ -96,33 +96,33 @@ const getGraph = (username) => {
                     axisClass: 'ct-axis-title',
                     offset: {
                         x: 0,
-                        y: 50,
+                        y: 50
                     },
-                    textAnchor: 'middle',
+                    textAnchor: 'middle'
                 },
                 axisY: {
                     axisTitle: 'Contributions',
                     axisClass: 'ct-axis-title',
                     offset: {
                         x: 0,
-                        y: 50,
+                        y: 50
                     },
                     textAnchor: 'middle',
-                    flipTitle: true,
-                },
-            }),
-        ],
+                    flipTitle: true
+                }
+            })
+        ]
     };
 
     axios({
-        url: `https://activity-graph.herokuapp.com/data?username=${username}`,
-        method: 'GET',
+        url: `https://github-readme-activity-graph.cyclic.app/data?username=${username}`,
+        method: 'GET'
     })
         .then((contributionData) => {
             const days = contributionData.data.contributions;
             const data = {
                 labels: days.map((day) => day.date),
-                series: [{ value: days.map((day) => day.contributionCount) }],
+                series: [{ value: days.map((day) => day.contributionCount) }]
             };
 
             new Chartist.Line('.ct-chart', data, options); //Create chart
