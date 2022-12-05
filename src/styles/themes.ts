@@ -262,6 +262,16 @@ export const selectColors = (queryString: string): Colors => {
                 lineColor: '41b883',
                 pointColor: 'f6f8fa',
             };
+        case 'tokyo-day':
+            return {
+                areaColor: '8f5a02',
+                borderColor: 'ffffff',
+                bgColor: 'e5e8d8',
+                color: '8f5a02',
+                titleColor: '8f5a02',
+                lineColor: '8f5a02',
+                pointColor: '562e49',
+            };
         case 'tokyo-night':
             return {
                 areaColor: '70a5fd',
@@ -271,6 +281,46 @@ export const selectColors = (queryString: string): Colors => {
                 titleColor: '70a5fd',
                 lineColor: '70a5fd',
                 pointColor: 'a9b1d6',
+            };
+        case 'high-contrast':
+            return {
+                areaColor: 'e7e7e7',
+                borderColor: 'ffffff',
+                bgColor: '000000',
+                color: 'e7e7e7',
+                titleColor: 'e7e7e7',
+                lineColor: 'e7e7e7',
+                pointColor: 'e7e7e7',
+            };
+        case 'cobalt':
+            return {
+                areaColor: 'd19a66',
+                borderColor: 'ffffff',
+                bgColor: '193549',
+                color: 'd19a66',
+                titleColor: 'd19a66',
+                lineColor: 'd19a66',
+                pointColor: 'e7e7e7',
+            };
+        case 'material':
+            return {
+                areaColor: '80cbc4',
+                borderColor: 'ffffff',
+                bgColor: '263238',
+                color: '80cbc4',
+                titleColor: '80cbc4',
+                lineColor: '80cbc4',
+                pointColor: 'ffab91',
+            };
+        case 'nightowl':
+            return {
+                areaColor: 'c792ea',
+                borderColor: 'ffffff',
+                bgColor: '011627',
+                color: 'c792ea',
+                titleColor: 'c792ea',
+                lineColor: 'c792ea',
+                pointColor: 'ffeb95',
             };
         default:
             return {

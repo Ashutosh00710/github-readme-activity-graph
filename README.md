@@ -56,17 +56,18 @@ _`username=ashutosh00710&theme=theme_name`_
 
 ## Available Themes
 
-|            Name            |                          Preview                           |
-| :------------------------: | :--------------------------------------------------------: |
-| **Default (cotton candy)** |  <img src="./asset/default.svg" height=250 alt="graph"/>   |
-|         **react**          | <img src="./asset/react.png" height=250 alt="graph"/>      |
-|       **react-dark**       | <img src="./asset/react-dark.svg" height=250 alt="graph"/> |
-|         **github**         |   <img src="./asset/github.svg" height=250 alt="graph"/>   |
-|         **xcode**          |   <img src="./asset/xcode.svg" height=250 alt="graph"/>    |
-|         **rogue**          |   <img src="./asset/rogue.svg" height=250 alt="graph"/>    |
-|         **merko**          |   <img src="./asset/merko.png" height=250 alt="graph"/>    |
-|          **vue**           |   <img src="./asset/vue.png" height=250 alt="graph"/>      |
-|       **tokyo-night**      |<img src="./asset/tokyo-night.png" height=250 alt="graph"/> |
+|            Name            |                          Preview                            |
+| :------------------------: | :--------------------------------------------------------:  |
+| **Default (cotton candy)** |  <img src="./asset/default.svg" height=250 alt="graph"/>    |
+|         **react**          | <img src="./asset/react.png" height=250 alt="graph"/>       |
+|       **react-dark**       | <img src="./asset/react-dark.svg" height=250 alt="graph"/>  |
+|         **github**         |   <img src="./asset/github.svg" height=250 alt="graph"/>    |
+|         **xcode**          |   <img src="./asset/xcode.svg" height=250 alt="graph"/>     |
+|         **rogue**          |   <img src="./asset/rogue.svg" height=250 alt="graph"/>     |
+|         **merko**          |   <img src="./asset/merko.png" height=250 alt="graph"/>     |
+|          **vue**           |   <img src="./asset/vue.png" height=250 alt="graph"/>       |
+|       **tokyo-night**      |<img src="./asset/tokyo-night.png" height=250 alt="graph"/>  |
+|       **high-contrast**    |<img src="./asset/high-contrast.png" height=250 alt="graph"/>|
 
 For more themes click [here](https://github.com/Ashutosh00710/github-readme-activity-graph/blob/main/THEMES.md)
 
@@ -91,7 +92,7 @@ Customize the appearance of your Activity Graph however you want with URL params
 |    `theme`     | name of [available themes](#available-themes) |           string           |
 |   `radius`     |            border radius of graph             |  number (0-16 inclusive)   |
 
-⚠ **For `custom_title` please make sure you are use %20 for spaces**
+⚠ **For `custom_title` please make sure that you are using %20 for spaces**
 
 Example:
 
@@ -191,7 +192,7 @@ Now just add the following to your profile readme and you're good to go.
 
 ## Contributing
 
-Please read through our [contributing guidelines](https://github.com/Ashutosh00710/github-readme-activity-graph/blob/main/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
+Please read through our [contributing guidelines](https://github.com/Ashutosh00710/github-readme-activity-graph/blob/main/CONTRIBUTING.md). Directions are included for opening issues, coding standards, and notes on development.
 
 ## Core Team 💻
 
@@ -388,6 +389,16 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
         <br />
         <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=valetzx" title="Documentation">📖</a>
     </td>
+    <td align="center">
+        <a href="https://github.com/tranthaituananh">
+            <img src="https://avatars.githubusercontent.com/u/77098480?v=4" width="100px;" alt=""/>
+            <br />
+            <sub><b>tranthaituananh</b></sub>
+        </a>
+        <br />
+        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=tranthaituananh" title="Style">🎨</a>
+        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=tranthaituananh" title="Documentation">📖</a>
+    </td>
   </tr>
 </table>
 
@@ -406,5 +417,9 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 </br>
 <hr/>
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Ashutosh00710/github-readme-activity-graph&type=Timeline)](https://star-history.com/#Ashutosh00710/github-readme-activity-graph&Timeline)
 
 ### Made with ❤ and TypeScript <img src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg" width="25">

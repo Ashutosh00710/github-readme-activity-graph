@@ -56,11 +56,11 @@ describe('Utilities Test', () => {
         date.setUTCMonth(8);
         date.setUTCDate(1);
         let contributions_dates = [
-            date.toLocaleString('default', { month: 'short' }) + ' ' + date.getUTCDate().toString(), // Sep 1
-            date.toLocaleString('default', { month: 'short' }) +
+            date.toLocaleString('en', { month: 'short' }) + ' ' + date.getUTCDate().toString(), // Sep 1
+            date.toLocaleString('en', { month: 'short' }) +
                 ' ' +
                 (date.getUTCDate() + 1).toString(), // Sep 2
-            date.toLocaleString('default', { month: 'short' }) +
+            date.toLocaleString('en', { month: 'short' }) +
                 ' ' +
                 (date.getUTCDate() + 2).toString(), // Sep 3
         ];

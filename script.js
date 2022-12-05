@@ -1,4 +1,23 @@
-let valueToCopy = {
+const elements = {
+    toggleBtn: document.querySelector('.toggle-btn'),
+    bgColor: document.querySelector('.bg-color'),
+    loader: document.querySelector('.loader'),
+    placeholder: document.querySelector('.chart_placeholder'),
+    copyContainer: document.querySelector('.copy_container'),
+    textArea: document.querySelector('.text'),
+    copyText: document.querySelector('.copy_text'),
+    submitButton: document.getElementById('submit-button'),
+    username: document.getElementById('username'),
+};
+
+const inputElements = {
+    bgInput: document.getElementById('bgColor'),
+    lineInput: document.getElementById('line'),
+    ltgInput: document.getElementById('color'),
+    pointInput: document.getElementById('point'),
+};
+
+const valueToCopy = {
     username: '',
     bgColor: '#ffcfe9',
     color: '#9e4c98',
@@ -6,128 +25,108 @@ let valueToCopy = {
     point: '#403d3d',
 };
 
-/*-------- Dark Theme Mode---------*/
-let darkMode = localStorage.getItem('darkMode');
-const toggleBtn = document.querySelector('.toggle-btn');
-const bgColor = document.querySelector('.bg-color');
+/*-----------------------------------------
+        Fetch user's contribution data 
+        and generate graph link
+-------------------------------------------*/
 
-const enableDarkMode = () => {
-    bgColor.classList.add('active');
-    localStorage.setItem('darkMode', 'enabled');
-};
-const disableDarkMode = () => {
-    bgColor.classList.remove('active');
-    localStorage.setItem('darkMode', '');
-};
-if (darkMode === 'enabled') {
-    enableDarkMode();
-}
+//For displaying loading animation
 
-toggleBtn.addEventListener('click', () => {
-    darkMode = localStorage.getItem('darkMode');
-
-    if (darkMode !== 'enabled') {
-        enableDarkMode();
-    } else {
-        disableDarkMode();
-    }
-});
-
-/*-------- For displaying loading animation ---------*/
-
-const loader = document.querySelector('.loader');
 const setLoader = () => {
-    loader.classList.add('active');
+    elements.loader.classList.add('active');
 };
 const removeLoader = () => {
-    loader.classList.remove('active');
+    elements.loader.classList.remove('active');
 };
 
 const removePlaceholder = () => {
-    const placeholder = document.querySelector('.chart_placeholder');
-    const adjustMargin = document.querySelector('.copy_container');
-    placeholder.classList.remove('active');
-    adjustMargin.style.marginTop = '2rem';
+    elements.placeholder.classList.remove('active');
+    elements.copyContainer.style.marginTop = '2rem';
 };
 
-//Get submit button
-let submitButton = document.getElementById('submit-button');
-//on click event
-submitButton.addEventListener('click', (event) => {
-    //get username
+// Generate chart link with user data
 
-    event.preventDefault();
-    var username = document.getElementById('username').value;
-    if (username.length > 0) {
-        valueToCopy.username = username;
-        setLoader();
-    } else {
-        alert('Enter your Username');
-        return;
-    }
+const generateLink = () => {
+    let link = `[![Ashutosh's github activity graph](https://activity-graph.herokuapp.com/graph?username=${
+        valueToCopy.username
+    }&bg_color=${valueToCopy.bgColor.slice(1)}&color=${valueToCopy.color.slice(
+        1
+    )}&line=${valueToCopy.line.slice(1)}&point=${valueToCopy.point.slice(
+        1
+    )}&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)`;
+    elements.textArea.value = link;
+    elements.copyText.childNodes[3].style.backgroundColor = 'rgb(87, 132, 245)';
+    return link;
+};
 
-    //get user data
+// Fetch user data and create graph
+
+const getGraph = (username) => {
+    // Graph Configuration
+
+    const options = {
+        height: 380,
+        axisY: {
+            title: 'Contributions',
+            onlyInteger: true,
+            offset: 70,
+            labelOffset: {
+                y: 4.5,
+            },
+        },
+        axisX: {
+            title: 'Days',
+            offset: 50,
+            labelOffset: {
+                x: -4.5,
+            },
+        },
+        chartPadding: {
+            top: 80,
+            right: 50,
+            bottom: 20,
+            left: 20,
+        },
+        showArea: true,
+        fullWidth: true,
+        plugins: [
+            Chartist.plugins.ctAxisTitle({
+                axisX: {
+                    axisTitle: 'Days',
+                    axisClass: 'ct-axis-title',
+                    offset: {
+                        x: 0,
+                        y: 50,
+                    },
+                    textAnchor: 'middle',
+                },
+                axisY: {
+                    axisTitle: 'Contributions',
+                    axisClass: 'ct-axis-title',
+                    offset: {
+                        x: 0,
+                        y: 50,
+                    },
+                    textAnchor: 'middle',
+                    flipTitle: true,
+                },
+            }),
+        ],
+    };
+
     axios({
         url: `https://activity-graph.herokuapp.com/data?username=${username}`,
         method: 'GET',
     })
         .then((contributionData) => {
-            let days = contributionData.data.contributions;
-            var data = {
+            const days = contributionData.data.contributions;
+            const data = {
                 labels: days.map((day) => day.date),
                 series: [{ value: days.map((day) => day.contributionCount) }],
             };
-            const options = {
-                width: 1000,
-                height: 380,
-                axisY: {
-                    title: 'Contributions',
-                    onlyInteger: true,
-                    offset: 70,
-                    labelOffset: {
-                        y: 4.5,
-                    },
-                },
-                axisX: {
-                    title: 'Days',
-                    offset: 50,
-                    labelOffset: {
-                        x: -4.5,
-                    },
-                },
-                chartPadding: {
-                    top: 80,
-                    right: 50,
-                    bottom: 20,
-                    left: 20,
-                },
-                showArea: true,
-                fullWidth: true,
-                plugins: [
-                    Chartist.plugins.ctAxisTitle({
-                        axisX: {
-                            axisTitle: 'Days',
-                            axisClass: 'ct-axis-title',
-                            offset: {
-                                x: 0,
-                                y: 50,
-                            },
-                            textAnchor: 'middle',
-                        },
-                        axisY: {
-                            axisTitle: 'Contributions',
-                            axisClass: 'ct-axis-title',
-                            offset: {
-                                x: 0,
-                                y: 50,
-                            },
-                            textAnchor: 'middle',
-                            flipTitle: true,
-                        },
-                    }),
-                ],
-            };
-            new Chartist.Line('.ct-chart', data, options);
+
+            new Chartist.Line('.ct-chart', data, options); //Create chart
+
             removeLoader();
             removePlaceholder();
             generateLink();
@@ -137,112 +136,129 @@ submitButton.addEventListener('click', (event) => {
             removeLoader();
             alert('Sorry! something went wrong.');
         });
-});
+};
+
+// Handle submit button
+const onSubmit = (event) => {
+    event.preventDefault();
+
+    //get username
+    const username = elements.username.value;
+    if (username.length > 0) {
+        valueToCopy.username = username;
+        setLoader();
+        getGraph(username);
+    } else {
+        alert('Enter your Username');
+        return;
+    }
+};
+
+/*-----------------------------------------
+                Dark Theme
+-------------------------------------------*/
+
+let darkMode = localStorage.getItem('darkMode');
+
+const enableDarkMode = () => {
+    elements.bgColor.classList.add('active');
+    localStorage.setItem('darkMode', 'enabled');
+};
+const disableDarkMode = () => {
+    elements.bgColor.classList.remove('active');
+    localStorage.setItem('darkMode', '');
+};
+if (darkMode === 'enabled') {
+    enableDarkMode();
+}
+
+const handleDarkMode = () => {
+    darkMode = localStorage.getItem('darkMode');
+
+    if (darkMode !== 'enabled') {
+        enableDarkMode();
+    } else {
+        disableDarkMode();
+    }
+};
 
 //Dynamic changes
 
 // Background Color
-function changeBgColor() {
-    const bgInput = document.getElementById('bgColor');
-    bgInput.addEventListener('input', function () {
-        valueToCopy.bgColor = bgInput.value;
-        document.querySelector('.rect').style.backgroundColor = bgInput.value;
-        generateLink();
-    });
-}
+const changeBgColor = () => {
+    valueToCopy.bgColor = inputElements.bgInput.value;
+    document.querySelector('.rect').style.backgroundColor = inputElements.bgInput.value;
+    generateLink();
+};
 
 // Line Color
-function changeLineColor() {
-    const lineInput = document.getElementById('line');
-    lineInput.addEventListener('input', function () {
-        valueToCopy.line = lineInput.value;
-        document.querySelector('.ct-line').style.stroke = lineInput.value;
-        generateLink();
-    });
-}
+const changeLineColor = () => {
+    valueToCopy.line = inputElements.lineInput.value;
+    document.querySelector('.ct-line').style.stroke = inputElements.lineInput.value;
+    generateLink();
+};
 
 //Lables, Title and Grid color
-function changeLabelsAndGridColor() {
-    const ltgInput = document.getElementById('color');
+const changeLabelsAndGridColor = () => {
+    const ltgValue = inputElements.ltgInput.value;
+    valueToCopy.color = ltgValue;
 
-    const changeColor = () => {
-        valueToCopy.color = ltgInput.value;
-        const allLables = document.querySelectorAll('.ct-label');
-        const axisTitles = document.querySelectorAll('.ct-axis-title');
-        const grids = document.querySelectorAll('.ct-grid');
+    const allLables = document.querySelectorAll('.ct-label');
+    const axisTitles = document.querySelectorAll('.ct-axis-title');
+    const grids = document.querySelectorAll('.ct-grid');
 
-        const labelLength = allLables.length;
-        const axisTitleLength = axisTitles.length;
-        const gridLength = grids.length;
+    allLables.forEach((el) => {
+        el.style.fill = ltgValue;
+        el.style.color = ltgValue;
+    });
 
-        for (let index = 0; index < labelLength; index++) {
-            allLables[index].style.fill = ltgInput.value;
-            allLables[index].style.color = ltgInput.value;
-        }
-        for (let index = 0; index < axisTitleLength; index++) {
-            axisTitles[index].style.fill = ltgInput.value;
-        }
-        for (let index = 0; index < gridLength; index++) {
-            grids[index].style.stroke = ltgInput.value;
-        }
-        generateLink();
-    };
+    axisTitles.forEach((el) => {
+        el.style.fill = ltgValue;
+    });
+    grids.forEach((el) => {
+        el.style.stroke = ltgValue;
+    });
 
-    ltgInput.addEventListener('input', changeColor);
-}
+    generateLink();
+};
 
 // Point Color
-function changePointColor() {
-    const pointInput = document.getElementById('point');
-    pointInput.addEventListener('input', function () {
-        valueToCopy.point = pointInput.value;
-        const allPointLables = document.querySelectorAll('.ct-point');
-        const len = allPointLables.length;
-        for (let idx = 0; idx < len; idx++) {
-            allPointLables[idx].style.stroke = pointInput.value;
-        }
-        generateLink();
-    });
-}
-
-changeBgColor();
-changeLineColor();
-changePointColor();
-changeLabelsAndGridColor();
-
-const copyButton = document.querySelector('.copy_text').childNodes[3];
-const textArea = document.querySelector('.text');
-// Generate Chart Link
-function generateLink() {
-    let link = `[![Ashutosh's github activity graph](https://activity-graph.herokuapp.com/graph?username=${
-        valueToCopy.username
-    }&bg_color=${valueToCopy.bgColor.slice(1)}&color=${valueToCopy.color.slice(
-        1
-    )}&line=${valueToCopy.line.slice(1)}&point=${valueToCopy.point.slice(
-        1
-    )}&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)`;
-    textArea.value = link;
-    copyButton.style.backgroundColor = 'rgb(87, 132, 245)';
-    return link;
-}
+const changePointColor = () => {
+    valueToCopy.point = inputElements.pointInput.value;
+    const allPointLables = document.querySelectorAll('.ct-point');
+    const len = allPointLables.length;
+    for (let idx = 0; idx < len; idx++) {
+        allPointLables[idx].style.stroke = inputElements.pointInput.value;
+    }
+    generateLink();
+};
 
 // Copy to clipboard
 const copyLink = () => {
-    console.log(copyButton.style);
-    if (textArea.value !== '') {
-        if (copyButton.style.backgroundColor === 'rgb(87, 132, 245)') {
-            const copiedText = generateLink();
+    if (elements.textArea.value !== '') {
+        let copyBtn = elements.copyText.childNodes[3];
+        if (copyBtn.style.backgroundColor === 'rgb(87, 132, 245)') {
+            const copiedText = elements.textArea.value;
             navigator.clipboard.writeText(copiedText);
-            copyButton.style.backgroundColor = '#2bbe60';
-            const copyText = document.querySelector('.copy_text');
-            const input = copyText.querySelector('input.text');
+            const input = elements.copyText.querySelector('input.text');
             input.select();
-            copyText.classList.add('active');
+
+            copyBtn.style.backgroundColor = '#2bbe60';
+            elements.copyText.classList.add('active');
+
             setTimeout(() => {
-                copyText.classList.remove('active');
+                elements.copyText.classList.remove('active');
             }, 2500);
         }
     }
 };
 
-copyButton.addEventListener('click', copyLink);
+//Event Handlers
+
+elements.toggleBtn.addEventListener('click', handleDarkMode);
+elements.submitButton.addEventListener('click', onSubmit);
+elements.copyText.addEventListener('click', copyLink);
+inputElements.bgInput.addEventListener('input', changeBgColor);
+inputElements.lineInput.addEventListener('input', changeLineColor);
+inputElements.ltgInput.addEventListener('input', changeLabelsAndGridColor);
+inputElements.pointInput.addEventListener('input', changePointColor);

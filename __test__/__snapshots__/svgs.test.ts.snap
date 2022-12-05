@@ -9,7 +9,7 @@ exports[`SVG Testing Test SVGs 1`] = `
         fill=\\"none\\"
         xmlns=\\"http://www.w3.org/2000/svg\\">
             <rect xmlns=\\"http://www.w3.org/2000/svg\\" data-testid=\\"card_bg\\" id=\\"cardBg\\"
-            x=\\"0\\" y=\\"0\\" rx=\\"2.5\\" height=\\"100%\\" stroke=\\"#E4E2E2\\" fill-opacity=\\"1\\"
+            x=\\"0\\" y=\\"0\\" rx=\\"0\\" height=\\"100%\\" stroke=\\"#E4E2E2\\" fill-opacity=\\"1\\"
             width=\\"100%\\" fill=\\"#44475a\\" stroke-opacity=\\"1\\" style=\\"stroke:#0000; stroke-width:1;\\"/>
 
             <style>
@@ -24,7 +24,6 @@ exports[`SVG Testing Test SVGs 1`] = `
                 }
                 svg {
                     font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
-                    border-radius: 0px;
                     user-select: none;
                 }
                 
@@ -200,7 +199,7 @@ exports[`SVG Testing chart SVGs 1`] = `
         fill=\\"none\\"
         xmlns=\\"http://www.w3.org/2000/svg\\">
             <rect xmlns=\\"http://www.w3.org/2000/svg\\" data-testid=\\"card_bg\\" id=\\"cardBg\\"
-            x=\\"0\\" y=\\"0\\" rx=\\"2.5\\" height=\\"100%\\" stroke=\\"#E4E2E2\\" fill-opacity=\\"1\\"
+            x=\\"0\\" y=\\"0\\" rx=\\"8\\" height=\\"100%\\" stroke=\\"#E4E2E2\\" fill-opacity=\\"1\\"
             width=\\"100%\\" fill=\\"#ffcfe9\\" stroke-opacity=\\"1\\" style=\\"stroke:#ffffff; stroke-width:1;\\"/>
 
             <style>
@@ -215,7 +214,6 @@ exports[`SVG Testing chart SVGs 1`] = `
                 }
                 svg {
                     font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
-                    border-radius: 8px;
                     user-select: none;
                 }
                 

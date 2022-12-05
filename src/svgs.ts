@@ -10,7 +10,7 @@ export const graphSvg = (props: GraphArgs) => `
         fill="none"
         xmlns="http://www.w3.org/2000/svg">
             <rect xmlns="http://www.w3.org/2000/svg" data-testid="card_bg" id="cardBg"
-            x="0" y="0" rx="2.5" height="100%" stroke="#E4E2E2" fill-opacity="1"
+            x="0" y="0" rx="${props.radius}" height="100%" stroke="#E4E2E2" fill-opacity="1"
             width="100%" fill="#${props.colors.bgColor}" stroke-opacity="1" style="stroke:#${
     props.colors.borderColor
 }; stroke-width:1;"/>
@@ -27,7 +27,6 @@ export const graphSvg = (props: GraphArgs) => `
                 }
                 svg {
                     font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
-                    border-radius: ${props.radius}px;
                     user-select: none;
                 }
                 ${graphStyle(

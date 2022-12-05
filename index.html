@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GitHub Readme Activity Graph</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/457a315592.js" crossorigin="anonymous"></script>
     <link href="./styles.css" rel="stylesheet" />
     <link rel="icon" href="asset/logo.png" />
   </head>
@@ -57,8 +55,7 @@
           <h1 class="heading">GitHub Readme Activity Graph</h1>
         </div>
         <p class="description">
-          A dynamically generated activity graph to show your GitHub activities
-          of last 31 days.
+          A dynamically generated activity graph to show your GitHub activities of last 31 days.
         </p>
       </header>
       <!-- Form - Input & Submit button for  Username -->
@@ -70,52 +67,26 @@
             placeholder="Enter Your GitHub Username"
             id="username"
           />
-          <button type="submit" class="btn btn--primary" id="submit-button">
-            Build Graph
-          </button>
+          <button type="submit" class="btn btn--primary" id="submit-button">Build Graph</button>
         </form>
       </div>
       <!-- Split Container Contains - Color Pickers , Chart, & Copy Button -->
       <div class="split_container">
         <section class="left">
-          <form>
-            <input
-              type="color"
-              class="picker"
-              name="bgColor"
-              value="#ffcfe9"
-              id="bgColor"
-            />
-            <label for="bgColor">Background Color</label>
-          </form>
           <div>
-            <input
-              type="color"
-              class="picker"
-              name="line"
-              value="#9e4c98"
-              id="line"
-            />
+            <input type="color" class="picker" name="bgColor" value="#ffcfe9" id="bgColor" />
+            <label for="bgColor">Background Color</label>
+          </div>
+          <div>
+            <input type="color" class="picker" name="line" value="#9e4c98" id="line" />
             <label for="line">Line Color</label>
           </div>
           <div>
-            <input
-              type="color"
-              class="picker"
-              name="point"
-              value="#403d3d"
-              id="point"
-            />
+            <input type="color" class="picker" name="point" value="#403d3d" id="point" />
             <label for="point">Point Color</label>
           </div>
           <div>
-            <input
-              type="color"
-              class="picker"
-              name="color"
-              value="#9e4c98"
-              id="color"
-            />
+            <input type="color" class="picker" name="color" value="#9e4c98" id="color" />
             <label for="color">Text Color</label>
           </div>
         </section>
@@ -150,15 +121,10 @@
       </div>
       <!-- Footer - Text & Link -->
       <footer class="footer">
-        <p>More Info:</p>
-        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph"
-          ><img
-            style="padding-top: 2px; opacity: 0.7"
-            height="20px"
-            width="20px"
-            src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
-            alt="github icon"
-        /></a>
+        <p><b>More Info : </b></p>
+        <a class="link github" href="https://github.com/Ashutosh00710/github-readme-activity-graph">
+          <i class="fab fa-2x fa-github"></i>
+        </a>
       </footer>
     </main>
   </body>

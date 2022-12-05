@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   color: #9c9c9c;
   font: 1rem 'PT Sans', sans-serif;
@@ -43,13 +49,7 @@ p {
   height: 30px;
   border-radius: 30px;
   background: #434343;
-  background: linear-gradient(
-    60deg,
-    #fb8500 0%,
-    #fb8500 50%,
-    #22223b 50%,
-    #22223b 100%
-  );
+  background: linear-gradient(60deg, #fb8500 0%, #fb8500 50%, #22223b 50%, #22223b 100%);
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
   border: none;
@@ -263,7 +263,7 @@ p {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: clamp(350px, 75%, 620px);
+  width: clamp(290px, 75%, 620px);
   margin: 0 auto;
   position: relative;
   -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
@@ -343,7 +343,7 @@ p {
 }
 
 .left {
-  width: clamp(350px, 95%, 1000px);
+  width: clamp(350px, 95%, 800px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -353,13 +353,19 @@ p {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  gap: 10px 0;
+  gap: 4px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 20px 10px;
+  padding: 20px 22px;
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
+}
+
+.left div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .right {
@@ -380,7 +386,23 @@ p {
 }
 
 .picker {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 40px;
+  height: 42px;
+  margin-right: 2px;
+  background: none;
+  border: none;
   cursor: pointer;
+}
+
+.picker::-webkit-color-swatch {
+  border-radius: 100%;
+}
+
+.picker::-moz-color-swatch {
+  border-radius: 100%;
 }
 
 /* ------  Placeholder Styles -------*/
@@ -664,4 +686,15 @@ p {
 .footer p {
   color: #9c9c9c;
   padding-right: 8px;
+}
+.footer a:hover {
+  color: rgb(81, 80, 81);
+}
+
+.link i {
+  transition: all 0.1s linear;
+}
+
+.link:hover i {
+  transform: scale(1.05);
 }
