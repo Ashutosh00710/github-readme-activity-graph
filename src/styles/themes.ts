@@ -322,6 +322,16 @@ export const selectColors = (queryString: string): Colors => {
                 lineColor: 'c792ea',
                 pointColor: 'ffeb95',
             };
+        case 'github-compact':
+            return {
+                areaColor: '26a641',
+                bgColor: '00000000',
+                borderColor: '8b949e',
+                color: '8b949e',
+                titleColor: '8b949e',
+                lineColor: '26a641',
+                pointColor: '8b949e',
+            };
         default:
             return {
                 areaColor: '9e4c98',
