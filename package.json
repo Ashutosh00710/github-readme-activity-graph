@@ -4,9 +4,11 @@
     "description": "An activity graph to show you github activities (or contribution)",
     "main": "main.ts",
     "scripts": {
-        "start": "nodemon src/main.ts",
+        "dev:start": "nodemon src/main.ts",
         "test": "jest",
         "coverage": "npm test -- --coverage",
+        "build": "tsc",
+        "start": "node dist/main.js",
         "lint": "eslint \"{src,styles,types,interfaces,__test__}/**/*.ts\" --fix",
         "format": "prettier --write \"src/**/*.ts\" \"__test__/**/*.ts\" \"interfaces/**/*.ts\" \"styles/**/*.ts\" \"types/**/*.ts\""
     },
