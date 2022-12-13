@@ -184,15 +184,15 @@ Now just add the following to your profile readme and you're good to go.
 
 ![Replit](./asset/replit1.png)
 
-4. Visit the "**Settings**" tab and click "**Reveal Config Vars**"
-5. Visit [this link](https://github.com/settings/tokens/new?description=GitHub%20Readme%20Activity%20Graph) to create a new Personal Access Token
-6. Scroll to the bottom and click "**Generate token**"
-7. Wait clone done and add `Secrets` with your `Github token`
+
+4. Visit [this link](https://github.com/settings/tokens/new?description=GitHub%20Readme%20Activity%20Graph) to create a new Personal Access Token
+5. Scroll to the bottom and click "**Generate token**"
+6. Wait clone done and add `Secrets` with your `Github token`
 
 ![Secrets](./asset/replit2.png)
 
-5. Click the green `RUN` button on top, the console will run and at last the url will shows on the right
-6. Now just add the following to your profile readme and you're good to go
+7. Click the green `RUN` button on top, the console will run and at last the url will shows on the right
+8. Now just add the following to your profile readme and you're good to go
 
 ```
 ![Github Activity Graph](<url from step 5>/graph?username=<username>)
