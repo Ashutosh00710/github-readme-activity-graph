@@ -1,6 +1,6 @@
-import { Colors } from 'src/interfaces/interface';
+import { GraphColorAttributes } from 'src/interfaces/interface';
 
-export const selectColors = (queryString: string): Colors => {
+export const selectColors = (queryString: string): GraphColorAttributes => {
     switch (queryString) {
         case 'dracula':
             return {

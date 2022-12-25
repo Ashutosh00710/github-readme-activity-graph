@@ -1,13 +1,13 @@
 import { createGraph } from './createChart';
 import { graphSvg } from './svgs';
-import { Colors, ContributionDay } from './interfaces/interface';
+import { GraphColorAttributes, ContributionDay } from './interfaces/interface';
 
 export class Card {
     constructor(
         private readonly height: number,
         private readonly width: number,
         private readonly radius: number,
-        private readonly colors: Colors,
+        private readonly colors: GraphColorAttributes,
         private readonly title = '',
         private readonly area = false
     ) {}

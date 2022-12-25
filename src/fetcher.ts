@@ -91,4 +91,52 @@ export class Fetcher {
             return error;
         }
     }
+
+    public async fetchContributionsWithCustomDates(
+        days: number,
+        from?: string,
+        to?: string
+    ): Promise<UserDetails | string> {
+        try {
+            const modifiedTo = moment(to).add(1, 'days').utc().toISOString();
+            if (!from || !to)
+                return `Can't fetch any contribution. Please check dates parameter 😬`;
+            const apiResponse = await this.fetch(this.getGraphQLQuery(from, modifiedTo));
+            if (apiResponse.data.data.user === null)
+                return `Can't fetch any contribution. Please check your username 😬`;
+            else {
+                const userData: UserDetails = {
+                    contributions: [],
+                    name: apiResponse.data.data.user.name,
+                };
+                //filtering the week data from API response
+                const weeks =
+                    apiResponse.data.data.user.contributionsCollection.contributionCalendar.weeks;
+                // get day-contribution data
+                weeks.map((week: Week) =>
+                    week.contributionDays.map((contributionDay: ContributionDay) => {
+                        contributionDay.date = moment(contributionDay.date, moment.ISO_8601)
+                            .date()
+                            .toString();
+                        userData.contributions.push(contributionDay);
+                    })
+                );
+
+                // if 32nd entry is 0 means:
+                // either the day hasn't really started
+                // or the user hasn't contributed today
+                const length = userData.contributions.length;
+
+                if (userData.contributions[length - 1].contributionCount === 0) {
+                    userData.contributions.pop();
+                }
+                const extra = userData.contributions.length - days;
+                userData.contributions.splice(0, extra);
+                return userData;
+            }
+        } catch (error) {
+            console.log('error: ', error);
+            return error;
+        }
+    }
 }
