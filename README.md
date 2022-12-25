@@ -63,19 +63,19 @@ _`username=ashutosh00710&theme=theme_name`_
 
 ## Available Themes
 
-|            Name            |                            Preview                            |
-| :------------------------: | :-----------------------------------------------------------: |
-| **Default (cotton candy)** |    <img src="./asset/default.svg" height=250 alt="graph"/>    |
-|         **react**          |     <img src="./asset/react.png" height=250 alt="graph"/>     |
-|       **react-dark**       |  <img src="./asset/react-dark.svg" height=250 alt="graph"/>   |
-|         **github**         |    <img src="./asset/github.svg" height=250 alt="graph"/>     |
-|     **github-compact**     | <img src="./asset/github-compact.svg" height=250 alt="graph"/>|
-|         **xcode**          |     <img src="./asset/xcode.svg" height=250 alt="graph"/>     |
-|         **rogue**          |     <img src="./asset/rogue.svg" height=250 alt="graph"/>     |
-|         **merko**          |     <img src="./asset/merko.png" height=250 alt="graph"/>     |
-|          **vue**           |      <img src="./asset/vue.png" height=250 alt="graph"/>      |
-|      **tokyo-night**       |  <img src="./asset/tokyo-night.png" height=250 alt="graph"/>  |
-|     **high-contrast**      | <img src="./asset/high-contrast.png" height=250 alt="graph"/> |
+|            Name            |                            Preview                             |
+| :------------------------: | :------------------------------------------------------------: |
+| **Default (cotton candy)** |    <img src="./asset/default.svg" height=250 alt="graph"/>     |
+|         **react**          |     <img src="./asset/react.png" height=250 alt="graph"/>      |
+|       **react-dark**       |   <img src="./asset/react-dark.svg" height=250 alt="graph"/>   |
+|         **github**         |     <img src="./asset/github.svg" height=250 alt="graph"/>     |
+|     **github-compact**     | <img src="./asset/github-compact.svg" height=250 alt="graph"/> |
+|         **xcode**          |     <img src="./asset/xcode.svg" height=250 alt="graph"/>      |
+|         **rogue**          |     <img src="./asset/rogue.svg" height=250 alt="graph"/>      |
+|         **merko**          |     <img src="./asset/merko.png" height=250 alt="graph"/>      |
+|          **vue**           |      <img src="./asset/vue.png" height=250 alt="graph"/>       |
+|      **tokyo-night**       |  <img src="./asset/tokyo-night.png" height=250 alt="graph"/>   |
+|     **high-contrast**      | <img src="./asset/high-contrast.png" height=250 alt="graph"/>  |
 
 For more themes click [here](https://github.com/Ashutosh00710/github-readme-activity-graph/blob/main/THEMES.md)
 
@@ -85,20 +85,22 @@ Customize the appearance of your Activity Graph however you want with URL params
 
 #### Common Options
 
-|   Arguments    |                  Description                  |       Type of Value        |
-| :------------: | :-------------------------------------------: | :------------------------: |
-|   `bg_color`   |            card's background color            |   hex code (without `#`)   |
-|    `color`     |            graph card's text color            |   hex code (without `#`)   |
-| `title_color`  |           graph card's title color            |   hex code (without `#`)   |
-|     `line`     |              graph's line color               |   hex code (without `#`)   |
-|    `point`     |         color of points on line graph         |   hex code (without `#`)   |
-|  `area_color`  |       color of the area under the graph       |   hex code (without `#`)   |
-|     `area`     |          shows area under the graph           | boolean (default: `false`) |
-| `hide_border`  |   makes the border of the graph transparent   | boolean (default: `false`) |
-|  `hide_title`  |       sets the title to an empty string       | boolean (default: `false`) |
-| `custom_title` |          set the title to any string          |           string           |
-|    `theme`     | name of [available themes](#available-themes) |           string           |
-|    `radius`    |            border radius of graph             |  number (0-16 inclusive)   |
+|   Arguments    |                             Description                              |       Type of Value        |
+| :------------: | :------------------------------------------------------------------: | :------------------------: |
+|   `bg_color`   |                       card's background color                        |   hex code (without `#`)   |
+|    `color`     |                       graph card's text color                        |   hex code (without `#`)   |
+| `title_color`  |                       graph card's title color                       |   hex code (without `#`)   |
+|     `line`     |                          graph's line color                          |   hex code (without `#`)   |
+|    `point`     |                    color of points on line graph                     |   hex code (without `#`)   |
+|  `area_color`  |                  color of the area under the graph                   |   hex code (without `#`)   |
+|     `area`     |                      shows area under the graph                      | boolean (default: `false`) |
+| `hide_border`  |              makes the border of the graph transparent               | boolean (default: `false`) |
+|  `hide_title`  |                  sets the title to an empty string                   | boolean (default: `false`) |
+| `custom_title` |                     set the title to any string                      |           string           |
+|    `theme`     |            name of [available themes](#available-themes)             |           string           |
+|    `radius`    |                        border radius of graph                        |  number (0-16 inclusive)   |
+|     `from`     | date from which the graph should start (requires `to` param as well) | date string (`YYYY-MM-DD`) |
+|      `to`      |  date to which the graph should end (requires `from` param as well)  | date string (`YYYY-MM-DD`) |
 
 ⚠ **For `custom_title` please make sure that you are using %20 for spaces**
 
@@ -183,7 +185,6 @@ Now just add the following to your profile readme and you're good to go.
 3. On the page that comes up, choose language as `Node.js` and then click `Import from GitHub` Button
 
 ![Replit](./asset/replit1.png)
-
 
 4. Visit [this link](https://github.com/settings/tokens/new?description=GitHub%20Readme%20Activity%20Graph) to create a new Personal Access Token
 5. Scroll to the bottom and click "**Generate token**"
