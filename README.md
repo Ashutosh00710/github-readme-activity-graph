@@ -14,7 +14,7 @@ A dynamically generated activity graph to show your GitHub activities of last 31
 
 ### ⚠️ NOTICE: DEPLOYMENT MOVED ⚠️
 
-The deployment of this project is moved from `https://https://activity-graph.herokuapp.com` domain to `https://github-readme-activity-graph.cyclic.app`.
+The deployment of this project is moved from `https://activity-graph.herokuapp.com` domain to `https://github-readme-activity-graph.cyclic.app`.
 
 Please refer to the updated link [here](#how-to-use)
 
@@ -69,6 +69,7 @@ _`username=ashutosh00710&theme=theme_name`_
 |         **react**          |     <img src="./asset/react.png" height=250 alt="graph"/>     |
 |       **react-dark**       |  <img src="./asset/react-dark.svg" height=250 alt="graph"/>   |
 |         **github**         |    <img src="./asset/github.svg" height=250 alt="graph"/>     |
+|     **github-compact**     | <img src="./asset/github-compact.svg" height=250 alt="graph"/>|
 |         **xcode**          |     <img src="./asset/xcode.svg" height=250 alt="graph"/>     |
 |         **rogue**          |     <img src="./asset/rogue.svg" height=250 alt="graph"/>     |
 |         **merko**          |     <img src="./asset/merko.png" height=250 alt="graph"/>     |
@@ -183,15 +184,15 @@ Now just add the following to your profile readme and you're good to go.
 
 ![Replit](./asset/replit1.png)
 
-4. Visit the "**Settings**" tab and click "**Reveal Config Vars**"
-5. Visit [this link](https://github.com/settings/tokens/new?description=GitHub%20Readme%20Activity%20Graph) to create a new Personal Access Token
-6. Scroll to the bottom and click "**Generate token**"
-7. Wait clone done and add `Secrets` with your `Github token`
+
+4. Visit [this link](https://github.com/settings/tokens/new?description=GitHub%20Readme%20Activity%20Graph) to create a new Personal Access Token
+5. Scroll to the bottom and click "**Generate token**"
+6. Wait clone done and add `Secrets` with your `Github token`
 
 ![Secrets](./asset/replit2.png)
 
-5. Click the green `RUN` button on top, the console will run and at last the url will shows on the right
-6. Now just add the following to your profile readme and you're good to go
+7. Click the green `RUN` button on top, the console will run and at last the url will shows on the right
+8. Now just add the following to your profile readme and you're good to go
 
 ```
 ![Github Activity Graph](<url from step 5>/graph?username=<username>)
@@ -405,6 +406,15 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
         <br />
         <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=tranthaituananh" title="Style">🎨</a>
         <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=tranthaituananh" title="Documentation">📖</a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/polekstulod">
+            <img src="https://avatars.githubusercontent.com/u/38794173?v=4" width="100px;" alt=""/>
+            <br />
+            <sub><b>polekstulod</b></sub>
+        </a>
+        <br />
+        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=polekstulod" title="Documentation">📖</a>
     </td>
   </tr>
 </table>

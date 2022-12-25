@@ -322,6 +322,26 @@ export const selectColors = (queryString: string): GraphColorAttributes => {
                 lineColor: 'c792ea',
                 pointColor: 'ffeb95',
             };
+        case 'modern-lilac':
+            return {
+                areaColor: '5d417a',
+                borderColor: '1c1e26',
+                bgColor: '0a0e12',
+                color: '5d417a',
+                titleColor: '5d417a',
+                lineColor: '5d417a',
+                pointColor: 'fab795',
+            };
+        case 'github-compact':
+            return {
+                areaColor: '26a641',
+                bgColor: '00000000',
+                borderColor: '8b949e',
+                color: '8b949e',
+                titleColor: '8b949e',
+                lineColor: '26a641',
+                pointColor: '8b949e',
+            };
         default:
             return {
                 areaColor: '9e4c98',
