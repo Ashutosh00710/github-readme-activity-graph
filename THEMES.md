@@ -31,3 +31,4 @@
 |     **material**       |        <img src="./asset/material.png" height=250 alt="graph"/>    |
 |      **nightowl**      |       <img src="./asset/nightowl.png" height=250 alt="graph"/>     |
 |   **modern-lilac**     |    <img src="./asset/modern-lilac.png" height=250 alt="graph"/>    |
+|      **arctic**        |    <img src="./asset/arctic.png" height=250 alt="graph"/>          |
