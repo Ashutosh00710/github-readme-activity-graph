@@ -342,6 +342,16 @@ export const selectColors = (queryString: string): Colors => {
                 lineColor: '26a641',
                 pointColor: '8b949e',
             };
+        case 'arctic':
+            return {
+                areaColor: '51E1ED',
+                borderColor: 'ffffff',
+                bgColor: '03203C',
+                color: '5DA3FA',
+                titleColor: '5DA3FA',
+                lineColor: '5DA3FA',
+                pointColor: '2827CC',
+            };
         default:
             return {
                 areaColor: '9e4c98',
