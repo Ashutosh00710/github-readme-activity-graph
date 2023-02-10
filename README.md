@@ -16,28 +16,29 @@ A dynamically generated activity graph to show your GitHub activities of last 31
 
 The deployment of this project is moved from `https://activity-graph.herokuapp.com` domain to `https://github-readme-activity-graph.cyclic.app`.
 
-Please refer to the updated link [here](#how-to-use)
+Please refer to the updated link [here](#how-to-use).
 
-## Table of contents
+## Table of Contents
 
-- [Table of contents](#table-of-contents)
+- [Table of Contents](#table-of-contents)
 - [How to Use](#how-to-use)
   - [Attention ⚠](#attention-)
 - [Use themes](#use-themes)
 - [Available Themes](#available-themes)
 - [Customization](#customization)
     - [Common Options](#common-options)
-- [Deploy on your own Heroku instance](#deploy-on-your-own-heroku-instance)
+- [Deploy on Your Own Heroku Instance](#deploy-on-your-own-heroku-instance)
   - [Step-by-step instructions for deploying to Heroku (from UI)](#step-by-step-instructions-for-deploying-to-heroku-from-ui)
   - [Step-by-step instructions for deploying to Heroku (from CLI)](#step-by-step-instructions-for-deploying-to-heroku-from-cli)
-- [Deploy on your own Replit instance](#deploy-on-your-own-replit-instance)
+- [Deploy On Your Own Replit Instance](#deploy-on-your-own-replit-instance)
   - [Step-by-step instructions for deploying to Replit (from UI)](#step-by-step-instructions-for-deploying-to-replit-from-ui)
 - [Contributing](#contributing)
 - [Core Team 💻](#core-team-)
 - [Contributors ✨](#contributors-)
-- [Resources Used to build this project](#resources-used-to-build-this-project)
+- [Resources Used to Build This Project](#resources-used-to-build-this-project)
 - [Star History](#star-history)
-  - [Made with ❤ and TypeScript ](#made-with--and-typescript-)
+
+  ---
 
 ## How to Use
 
@@ -51,7 +52,9 @@ Just paste the following URL in your profile readme and you are good to go.
 
 ### [Attention ⚠](#Deploy-on-your-own-heroku-instance)
 
-## Use themes
+---
+
+## Use Themes
 
 _`username=ashutosh00710&theme=theme_name`_
 
@@ -59,25 +62,29 @@ _`username=ashutosh00710&theme=theme_name`_
 [![Ashutosh's github activity graph](https://github-readme-activity-graph.cyclic.app/graph?username=Ashutosh00710&theme=dracula)](https://github.com/ashutosh00710/github-readme-activity-graph)
 ```
 
-[Manual Customization](#customization) is also available
+[Manual Customization](#customization) is also available.
+
+---
 
 ## Available Themes
 
 |            Name            |                            Preview                            |
 | :------------------------: | :-----------------------------------------------------------: |
 | **Default (cotton candy)** |    <img src="./asset/default.svg" height=250 alt="graph"/>    |
-|         **react**          |     <img src="./asset/react.png" height=250 alt="graph"/>     |
-|       **react-dark**       |  <img src="./asset/react-dark.svg" height=250 alt="graph"/>   |
-|         **github**         |    <img src="./asset/github.svg" height=250 alt="graph"/>     |
-|     **github-compact**     | <img src="./asset/github-compact.svg" height=250 alt="graph"/>|
-|         **xcode**          |     <img src="./asset/xcode.svg" height=250 alt="graph"/>     |
-|         **rogue**          |     <img src="./asset/rogue.svg" height=250 alt="graph"/>     |
-|         **merko**          |     <img src="./asset/merko.png" height=250 alt="graph"/>     |
-|          **vue**           |      <img src="./asset/vue.png" height=250 alt="graph"/>      |
-|      **tokyo-night**       |  <img src="./asset/tokyo-night.png" height=250 alt="graph"/>  |
-|     **high-contrast**      | <img src="./asset/high-contrast.png" height=250 alt="graph"/> |
+|         **React**          |     <img src="./asset/react.png" height=250 alt="graph"/>     |
+|       **React-Dark**       |  <img src="./asset/react-dark.svg" height=250 alt="graph"/>   |
+|         **Github**         |    <img src="./asset/github.svg" height=250 alt="graph"/>     |
+|     **Github-compact**     | <img src="./asset/github-compact.svg" height=250 alt="graph"/>|
+|         **Xcode**          |     <img src="./asset/xcode.svg" height=250 alt="graph"/>     |
+|         **Rogue**          |     <img src="./asset/rogue.svg" height=250 alt="graph"/>     |
+|         **Merko**          |     <img src="./asset/merko.png" height=250 alt="graph"/>     |
+|          **Vue**           |      <img src="./asset/vue.png" height=250 alt="graph"/>      |
+|      **Tokyo-Night**       |  <img src="./asset/tokyo-night.png" height=250 alt="graph"/>  |
+|     **High-Contrast**      | <img src="./asset/high-contrast.png" height=250 alt="graph"/> |
 
-For more themes click [here](https://github.com/Ashutosh00710/github-readme-activity-graph/blob/main/THEMES.md)
+For more themes click [here](https://github.com/Ashutosh00710/github-readme-activity-graph/blob/main/THEMES.md).
+
+---
 
 ## Customization
 
@@ -110,15 +117,17 @@ Example:
 [![Ashutosh's github activity graph](https://github-readme-activity-graph.cyclic.app/graph?username=ashutosh00710&custom_title=This%20is%20a%20title&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
 ```
 
-**Example:**
+Example:
 
 ```md
 [![Ashutosh's github activity graph](https://github-readme-activity-graph.cyclic.app/graph?username=ashutosh00710&bg_color=fffff0&color=708090&line=24292e&point=24292e&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
 ```
 
-## Deploy on your own Heroku instance
+---
 
-The GitHub API only allows limited requests per hour, my activity-graph.herokuapp.com/graph could possibly hit the rate limiter. If you host it on your own Heroku server, then you don't have to worry about anything.
+## Deploy on Your Own Heroku Instance
+
+The GitHub API only allows limited requests per hour, and my activity-graph.herokuapp.com/graph can possibly hit the rate limiter. If you host it on your own Heroku server, then you don't have to worry about anything.
 
 You may use the server used by this project at <https://github-readme-activity-graph.cyclic.app> and pass in your username to access your graph.
 E.g. `https://github-readme-activity-graph.cyclic.app/graph?username=<your_username>`
@@ -127,40 +136,40 @@ However, if there are a large number of requests or if the heroku account being 
 
 ### Step-by-step instructions for deploying to Heroku (from UI)
 
-1. Sign in to Heroku or create a new account at <https://heroku.com>
-2. Click the Deploy button below
+1. Sign in to Heroku or create a new account [here](https://www.heroku.com/home).
+2. Click the Deploy button below:
 
-<p align="center">
+<p align="left">
     <a href="https://heroku.com/deploy?template=https://github.com/Ashutosh00710/github-readme-activity-graph/main">
         <img src="https://www.herokucdn.com/deploy/button.svg" title="Deploy to Heroku" alt="Deploy"/>
     </a>
 </p>
 
-3. On the page that comes up, click "**Deploy App**" at the end of the form
-4. Once the app is deployed, click "**Manage App**" to go to the dashboard
-5. Visit the "**Settings**" tab and click "**Reveal Config Vars**"
-6. Visit [this link](https://github.com/settings/tokens/new?description=GitHub%20Readme%20Activity%20Graph) to create a new Personal Access Token
-7. Scroll to the bottom and click "**Generate token**"
-8. Add the token as a Config Var with the key `TOKEN`
+3. On the page that comes up, click "**Deploy App**" at the end of the form.
+4. Once the app is deployed, click "**Manage App**" to go to the dashboard.
+5. Visit the "**Settings**" tab and click "**Reveal Config Vars**".
+6. Visit [this link](https://github.com/settings/tokens/new?description=GitHub%20Readme%20Activity%20Graph) to create a new Personal Access Token.
+7. Scroll to the bottom and click "**Generate token**".
+8. Add the token as a _Config Var_ with the key `TOKEN`.
 
 ![TOKEN](./asset/token-config.png)
 
-9. Scroll down to the Domains section to find the URL you will use in place of `activity-graph.herokuapp.com`
+9. Scroll down to the Domains section to find the URL you will use in place of `activity-graph.herokuapp.com`.
 
 ### Step-by-step instructions for deploying to Heroku (from CLI)
 
 1. Make a [Heroku](https://signup.heroku.com/) account.
-2. Install the Heroku CLI
+2. Install the Heroku CLI:
     - Mac: `brew install heroku/brew/heroku`
     - Ubuntu: `sudo snap install heroku --classic`
-    - Windows: [Find the Windows installer here](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
-3. Clone the repository: `git clone https://github.com/Ashutosh00710/github-readme-activity-graph.git`
-4. Navigate in to the directory: `cd github-readme-activity-graph`
-5. Login to Heroku: `heroku login`
+    - Windows: Find the Windows installer [here](https://devcenter.heroku.com/articles/heroku-cli#download-and-install).
+3. Clone the repository: `git clone https://github.com/Ashutosh00710/github-readme-activity-graph.git`.
+4. Navigate in to the directory: `cd github-readme-activity-graph`.
+5. Login to Heroku: `heroku login`.
 6. Create Heroku app: `heroku create` and copy the URL you are given as output.
-7. Deploy app to heroku: `git push heroku main`
-8. [Generate personal access token](https://github.com/settings/tokens). Copy your token.
-9. Set token as heroku config var: `heroku config:set TOKEN=<your token goes here>`
+7. Deploy app to Heroku: `git push heroku main`.
+8. Generate [personal access token](https://github.com/settings/tokens). Copy your token.
+9. Set token as Heroku config var: `heroku config:set TOKEN=<your token goes here>`
 
 Now just add the following to your profile readme and you're good to go.
 
@@ -168,39 +177,43 @@ Now just add the following to your profile readme and you're good to go.
 ![Github Activity Graph](<url from step 6>/graph?username=<username>)
 ```
 
-## Deploy on your own Replit instance
+---
+
+## Deploy on Your Own Replit Instance
 
 ### Step-by-step instructions for deploying to Replit (from UI)
 
-1. Sign in to Replit or create a new account at https://replit.com
-2. Click the Deploy button below
+1. Sign in to Replit or create a new account [here](https://replit.com).
+2. Click the Deploy button below.
 
-<p align="center">
+<p align="left">
 <a href="https://repl.it/github/Ashutosh00710/github-readme-activity-graph">
   <img alt="Run on Repl.it" src="https://repl.it/badge/github/Ashutosh00710/github-readme-activity-graph" style="height: 40px; width: 190px;" />
 </a></p>
 
-3. On the page that comes up, choose language as `Node.js` and then click `Import from GitHub` Button
+3. On the page that comes up, choose language as `Node.js` and then click `Import from GitHub` Button.
 
 ![Replit](./asset/replit1.png)
 
 
-4. Visit [this link](https://github.com/settings/tokens/new?description=GitHub%20Readme%20Activity%20Graph) to create a new Personal Access Token
-5. Scroll to the bottom and click "**Generate token**"
-6. Wait clone done and add `Secrets` with your `Github token`
+4. Visit [this link](https://github.com/settings/tokens/new?description=GitHub%20Readme%20Activity%20Graph) to create a new Personal Access Token.
+5. Scroll to the bottom and click "**Generate token**".
+6. Wait clone done and add `Secrets` with your `Github token`.
 
 ![Secrets](./asset/replit2.png)
 
-7. Click the green `RUN` button on top, the console will run and at last the url will shows on the right
-8. Now just add the following to your profile readme and you're good to go
+7. Click the green `RUN` button on top, the console will run and at last the url will shows on the right.
+8. Now just add the following to your profile readme and you're good to go:
 
 ```
 ![Github Activity Graph](<url from step 5>/graph?username=<username>)
 ```
 
+---
+
 ## Contributing
 
-Please read through our [contributing guidelines](https://github.com/Ashutosh00710/github-readme-activity-graph/blob/main/CONTRIBUTING.md). Directions are included for opening issues, coding standards, and notes on development.
+Please read through our [Contributing Guidelines](https://github.com/Ashutosh00710/github-readme-activity-graph/blob/main/CONTRIBUTING.md). Directions are included for opening issues, coding standards, and notes on development.
 
 ## Core Team 💻
 
@@ -426,6 +439,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
+---
+
 ## Resources Used to build this project
 
 |      Purpose       |  Library Name   |                   Link                    |
@@ -439,4 +454,4 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Ashutosh00710/github-readme-activity-graph&type=Timeline)](https://star-history.com/#Ashutosh00710/github-readme-activity-graph&Timeline)
 
-### Made with ❤ and TypeScript <img src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg" width="25">
+<h3 align="center"> Made with ❤ and TypeScript <img src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg" width="25"></h3>
