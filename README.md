@@ -74,7 +74,7 @@ _`username=ashutosh00710&theme=theme_name`_
 |         **React**          |     <img src="./asset/react.png" height=250 alt="graph"/>     |
 |       **React-Dark**       |  <img src="./asset/react-dark.svg" height=250 alt="graph"/>   |
 |         **Github**         |    <img src="./asset/github.svg" height=250 alt="graph"/>     |
-|     **Github-compact**     | <img src="./asset/github-compact.svg" height=250 alt="graph"/>|
+|     **Github-Compact**     | <img src="./asset/github-compact.svg" height=250 alt="graph"/>|
 |         **Xcode**          |     <img src="./asset/xcode.svg" height=250 alt="graph"/>     |
 |         **Rogue**          |     <img src="./asset/rogue.svg" height=250 alt="graph"/>     |
 |         **Merko**          |     <img src="./asset/merko.png" height=250 alt="graph"/>     |
