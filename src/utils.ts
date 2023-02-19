@@ -57,7 +57,7 @@ export class Utilities {
             area: area,
             height: this.queryString.height 
                 ? Math.min(Math.max(this.queryString.height, 200), 600)
-                : 420, // Custom height implementation from range [175, 600], if not specified use default value - 420
+                : 420, // Custom height implementation from range [200, 600], if not specified use default value - 420
         };
 
         if (this.queryString.custom_title)
