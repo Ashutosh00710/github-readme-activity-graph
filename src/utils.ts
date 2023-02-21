@@ -55,6 +55,9 @@ export class Utilities {
                 : 0, // Border radius in range [0, 16]
             colors: colors,
             area: area,
+            height: this.queryString.height 
+                ? Math.min(Math.max(this.queryString.height, 200), 600)
+                : 420, // Custom height implementation from range [200, 600], if not specified use default value - 420
         };
 
         if (this.queryString.custom_title)
@@ -78,7 +81,7 @@ export class Utilities {
                 }
             }
 
-            const graph = new Card(420, 1200, options.radius, options.colors, title, options.area);
+            const graph = new Card(options.height, 1200, options.radius, options.colors, title, options.area);
             const getChart = await graph.buildGraph(fetchCalendarData.contributions);
             return {
                 finalGraph: getChart,

@@ -4,6 +4,7 @@ export let fakeQueryString = [
     {
         username: 'githubusername',
         radius: 8,
+        height: 400,
         hide_title: false,
         custom_title: undefined,
         title_color: "ffffff",
@@ -11,6 +12,7 @@ export let fakeQueryString = [
     {
         username: 'githubusername',
         radius: -10,
+        height: 100,
         bg_color: '44475a',
         hide_title: false,
         custom_title: undefined,
@@ -18,6 +20,7 @@ export let fakeQueryString = [
     {
         username: 'githubusername',
         radius: 35,
+        height: 800,
         bg_color: '44475a',
         color: '000000',
         hide_title: false,
@@ -88,6 +91,7 @@ export let fakeQueryStringRes = [
     {
         username: 'githubusername',
         radius: 8,
+        height: 400,
         colors: {
             areaColor: '9e4c98',
             bgColor: 'ffcfe9',
@@ -103,6 +107,7 @@ export let fakeQueryStringRes = [
     {
         username: 'githubusername',
         radius: 0,
+        height: 200,
         colors: {
             areaColor: '9e4c98',
             bgColor: '44475a',
@@ -118,6 +123,7 @@ export let fakeQueryStringRes = [
     {
         username: 'githubusername',
         radius: 16,
+        height: 600,
         colors: {
             areaColor: '9e4c98',
             bgColor: '44475a',
@@ -133,6 +139,7 @@ export let fakeQueryStringRes = [
     {
         username: 'githubusername',
         radius: 0,
+        height: 420,
         colors: {
             areaColor: '9e4c98',
             bgColor: '44475a',
@@ -148,6 +155,7 @@ export let fakeQueryStringRes = [
     {
         username: 'githubusername',
         radius: 0,
+        height: 420,
         colors: {
             areaColor: '9e4c98',
             bgColor: '44475a',
@@ -163,6 +171,7 @@ export let fakeQueryStringRes = [
     {
         username: 'githubusername',
         radius: 0,
+        height: 420,
         colors: {
             areaColor: '9e4c98',
             bgColor: '44475a',
@@ -178,6 +187,7 @@ export let fakeQueryStringRes = [
     {
         username: 'githubusername',
         radius: 0,
+        height: 420,
         colors: {
             areaColor: '9e4c98',
             bgColor: '44475a',
@@ -193,6 +203,7 @@ export let fakeQueryStringRes = [
     {
         username: 'githubusername',
         radius: 0,
+        height: 420,
         colors: {
             areaColor: '9e4c98',
             bgColor: '44475a',
@@ -208,6 +219,7 @@ export let fakeQueryStringRes = [
     {
         username: 'githubusername',
         radius: 0,
+        height: 420,
         colors: {
             areaColor: '9e4c98',
             bgColor: '44475a',

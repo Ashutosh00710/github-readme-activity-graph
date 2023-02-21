@@ -22,6 +22,7 @@ export class QueryOption {
     colors: Colors;
     area: boolean;
     radius: number;
+    height: number;
 }
 
 export class ParsedQs {
@@ -38,6 +39,7 @@ export class ParsedQs {
     area?: boolean;
     radius?: number;
     title_color?: string;
+    height?: number;
 }
 
 export class GraphArgs {
