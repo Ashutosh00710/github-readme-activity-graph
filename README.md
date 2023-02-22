@@ -417,6 +417,15 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
         <br />
         <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=polekstulod" title="Documentation">📖</a>
     </td>
+    <td align="center">
+        <a href="https://github.com/jmloudis">
+            <img src="https://avatars.githubusercontent.com/u/70452698?v=4" width="100px;" alt=""/>
+            <br />
+            <sub><b>jmloudis</b></sub>
+        </a>
+        <br />
+        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/pulls?q=author%3Ajmloudis+" title="Code">💻</a>
+    </td>
   </tr>
 </table>
 
