@@ -7,7 +7,7 @@ export let fakeQueryString = [
         height: 400,
         hide_title: false,
         custom_title: undefined,
-        title_color: "ffffff",
+        title_color: 'ffffff',
     },
     {
         username: 'githubusername',
@@ -255,34 +255,23 @@ export let fakeGraphArgs: GraphArgs = {
 export let options = {
     width: 10,
     height: 5,
-    axisY: {
-        title: 'Contributions',
-        onlyInteger: true,
-        offset: 70,
-        labelOffset: {
-            y: 4.5,
-        },
+    radius: 5,
+    colors: {
+        areaColor: 'ff79c6',
+        bgColor: '44475a',
+        borderColor: 'ffffff',
+        color: 'f8f8f2',
+        titleColor: 'f8f8f2',
+        lineColor: 'ff79c6',
+        pointColor: 'bd93f9',
     },
-    axisX: {
-        title: 'Days',
-        offset: 50,
-        labelOffset: {
-            x: -4.5,
-        },
-    },
-    chartPadding: {
-        top: 80,
-        right: 50,
-        bottom: 20,
-        left: 20,
-    },
-    showArea: false,
-    fullWidth: true,
+    title: '',
+    area: false,
 };
 
 export const expectedQuery = (username: string, from: string, to: string) => {
-        return {
-            query: `
+    return {
+        query: `
               query userInfo($LOGIN: String!, $FROM: DateTime!, $TO: DateTime!) {
                 user(login: $LOGIN) {
                   name
@@ -299,12 +288,12 @@ export const expectedQuery = (username: string, from: string, to: string) => {
                 }
               }
             `,
-            variables: {
-                LOGIN: username,
-                FROM: from,
-                TO: to,
-            },
-        };
+        variables: {
+            LOGIN: username,
+            FROM: from,
+            TO: to,
+        },
+    };
 };
 
 export const dummyWeeksData = [

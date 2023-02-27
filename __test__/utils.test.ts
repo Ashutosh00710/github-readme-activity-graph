@@ -1,9 +1,9 @@
 import express from 'express';
 import request from 'supertest';
 import { Utilities } from '../src/utils';
-import { createGraph } from '../src/createChart';
 import { fakeQueryString, fakeQueryStringRes, options } from './fakeInputs';
 import { Handlers } from '../src/handlers';
+import { createGraph } from '../src/createChart';
 
 describe('Utilities Test', () => {
     const handlers = new Handlers();
@@ -50,23 +50,32 @@ describe('Utilities Test', () => {
     //- Chart Function ([Promise] Inside Graph Cards Class) ✔
     it('Graph Generation', async () => {
         expect.assertions(1);
-        let contributions = [1, 2, 3];
 
-        let date = new Date();
-        date.setUTCMonth(8);
-        date.setUTCDate(1);
-        let contributions_dates = [
-            date.toLocaleString('en', { month: 'short' }) + ' ' + date.getUTCDate().toString(), // Sep 1
-            date.toLocaleString('en', { month: 'short' }) +
-                ' ' +
-                (date.getUTCDate() + 1).toString(), // Sep 2
-            date.toLocaleString('en', { month: 'short' }) +
-                ' ' +
-                (date.getUTCDate() + 2).toString(), // Sep 3
+        const days = [
+            {
+                contributionCount: 2,
+                date: '1',
+            },
+            {
+                contributionCount: 3,
+                date: '2',
+            },
+            {
+                contributionCount: 10,
+                date: '3',
+            },
+            {
+                contributionCount: 12,
+                date: '4',
+            },
+            {
+                contributionCount: 14,
+                date: '5',
+            },
         ];
-        const graph = await createGraph('line', options, {
-            labels: contributions_dates,
-            series: [{ value: contributions }],
+        const graph: Promise<string> = await createGraph('line', options, {
+            labels: days.map((day) => day.date),
+            series: [{ value: days.map((day) => day.contributionCount) }],
         });
         expect(graph).toMatchSnapshot();
     });
