@@ -1,10 +1,6 @@
 {
-    "build": {
-        "outputs": [
-            "/",
-            ".vercel/**"
-        ]
-    },
+    "outputDirectory": "build",
+    "public": true,
     "redirects": [
         {
             "source": "/",
