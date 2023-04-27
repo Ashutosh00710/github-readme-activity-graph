@@ -1,6 +1,6 @@
 {
     "public": true,
-    "outputDirectory": "public",
+    "outputDirectory": "build",
     "redirects": [
         {
             "source": "/",
