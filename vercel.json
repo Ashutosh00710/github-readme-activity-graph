@@ -1,8 +1,9 @@
 {
-    "pipeline": {
-        "build": {
-            "outputs": ["/", ".svelte-kit/**", ".vercel/**"]
-        }
+    "build": {
+        "outputs": [
+            "/",
+            ".vercel/**"
+        ]
     },
     "redirects": [
         {
