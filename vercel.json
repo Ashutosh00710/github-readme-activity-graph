@@ -1,5 +1,6 @@
 {
     "public": true,
+    "outputDirectory": "public",
     "redirects": [
         {
             "source": "/",
