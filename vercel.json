@@ -1,8 +1,7 @@
 {
-    "functions": {
-        "api/*.js": {
-            "memory": 128,
-            "maxDuration": 10
+    "pipeline": {
+        "build": {
+            "outputs": ["/", ".svelte-kit/**", ".vercel/**"]
         }
     },
     "redirects": [
