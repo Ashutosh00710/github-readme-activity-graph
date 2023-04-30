@@ -221,14 +221,20 @@ Now just add the following to your profile readme and you're good to go.
 
 1.  Go to [vercel.com](https://vercel.com/).
 2.  Click on `Log in`.
+    ![image](https://user-images.githubusercontent.com/3431285/235332307-a98adccf-ac8e-4c05-8fae-b14e7d0b81e8.png)
 3.  Sign in with GitHub by pressing `Continue with GitHub`.
+    ![image](https://user-images.githubusercontent.com/3431285/235332299-70f52a0f-ffb9-4070-ae85-a4646a2bb1bf.png)
 4.  Sign in to GitHub and allow access to all repositories if prompted.
 5.  Fork this repo.
 6.  Go back to your [Vercel dashboard](https://vercel.com/dashboard).
 7.  To import a project, click the `Add New...` button and select the `Project` option.
-8.  Click the `Continue with GitHub` button, search for the required Git Repository and import it by clicking the `Import` button. Alternatively, you can import a Third-Party Git Repository using the `Import Third-Party Git Repository ->` link at the bottom of the page.
+    ![image](https://user-images.githubusercontent.com/3431285/235332320-d80e62c9-a7d9-45f3-8bef-b8950c4c9093.png)
+8.  Click the `Continue with GitHub` button, search for the required Git Repository and import it by clicking the `Import` button.
+    ![image](https://user-images.githubusercontent.com/3431285/235332373-3f28309c-d70b-490e-aa40-4d55ad429d5a.png)
 9. Create a personal access token (PAT) [here](https://github.com/settings/tokens/new) and enable the `repo` permissions (this allows access to see private repo stats).
+    ![image](https://user-images.githubusercontent.com/3431285/235332420-df83a424-009b-4f69-bbb2-54e807bff701.png)
 10. Add the PAT as an environment variable named `TOKEN`.
+    ![image](https://user-images.githubusercontent.com/3431285/235332471-6915abf8-04fe-4f5e-b734-191388a77140.png)
 11. Click deploy, and you're good to go. See your domains to use the API!
 
 ### Second Method
@@ -237,12 +243,17 @@ Alternatively, click the button below and follow the instructions.
 
 [![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/Ashutosh00710/github-readme-activity-graph)
 
-After deployment is complete:
+After the deployment is complete:
 
 1. Click the `Continue to Dashboard` button
+    ![image](https://user-images.githubusercontent.com/3431285/235332677-addafd5f-dce8-4823-9927-05657eec2084.png)
 2. In the `Settings` tab, click on `Environment Variables` and follow steps `9.` and `10.` of `First Method`.
+    ![image](https://user-images.githubusercontent.com/3431285/235332731-03207969-b16e-42e4-858a-67b05af7bcc8.png)
 3. Go to `Deployments` tab and redeploy the project.
+    ![image](https://user-images.githubusercontent.com/3431285/235332761-1d3ae9c5-0138-447f-a41a-601c73ef3104.png)
 
+### Finally
+    
 Now just add the following to your profile readme and you're good to go.
 
 ```md
