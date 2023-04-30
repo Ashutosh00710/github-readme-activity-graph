@@ -127,36 +127,34 @@ E.g. `https://github-readme-activity-graph.cyclic.app/graph?username=<your_usern
 However, if there are a large number of requests or if the heroku account being used for the project runs out of dyno hours your graph will not load.
 
 <details>
- <summary><b>Step-by-step instructions for deploying to Heroku (from UI)</b></summary>
+<summary><b>Step-by-step instructions for deploying to Heroku (from UI)</b></summary>
 
-### Step-by-step instructions for deploying to Heroku (from UI)
+#### Follow the steps
 
 1. Sign in to Heroku or create a new account at <https://heroku.com>
 2. Click the Deploy button below
-
-<p align="center">
+    
     <a href="https://heroku.com/deploy?template=https://github.com/Ashutosh00710/github-readme-activity-graph/main">
         <img src="https://www.herokucdn.com/deploy/button.svg" title="Deploy to Heroku" alt="Deploy"/>
     </a>
-</p>
-
+    
 3. On the page that comes up, click "**Deploy App**" at the end of the form
 4. Once the app is deployed, click "**Manage App**" to go to the dashboard
 5. Visit the "**Settings**" tab and click "**Reveal Config Vars**"
 6. Visit [this link](https://github.com/settings/tokens/new?description=GitHub%20Readme%20Activity%20Graph) to create a new Personal Access Token
 7. Scroll to the bottom and click "**Generate token**"
 8. Add the token as a Config Var with the key `TOKEN`
-
-![TOKEN](./asset/token-config.png)
-
+    
+    ![TOKEN](./asset/token-config.png)
+    
 9. Scroll down to the Domains section to find the URL you will use in place of `activity-graph.herokuapp.com`
 
 </details>
 
 <details>
- <summary><b>Step-by-step instructions for deploying to Heroku (from CLI)</b></summary>
+<summary><b>Step-by-step instructions for deploying to Heroku (from CLI)</b></summary>
 
-### Step-by-step instructions for deploying to Heroku (from CLI)
+#### Follow the steps
 
 1. Make a [Heroku](https://signup.heroku.com/) account.
 2. Install the Heroku CLI
@@ -182,26 +180,26 @@ Now just add the following to your profile readme and you're good to go.
 ## Deploy on your own Replit instance
 
 <details>
- <summary><b>Step-by-step instructions for deploying to Replit (from UI)</b></summary>
+<summary><b>Step-by-step instructions for deploying to Replit (from UI)</b></summary>
+
+#### Follow the steps
 
 1. Sign in to Replit or create a new account at https://replit.com
 2. Click the Deploy button below
-
-<p align="center">
-<a href="https://repl.it/github/Ashutosh00710/github-readme-activity-graph">
-  <img alt="Run on Repl.it" src="https://repl.it/badge/github/Ashutosh00710/github-readme-activity-graph" style="height: 40px; width: 190px;" />
-</a></p>
-
+    
+    <a href="https://repl.it/github/Ashutosh00710/github-readme-activity-graph">
+      <img alt="Run on Repl.it" src="https://repl.it/badge/github/Ashutosh00710/github-readme-activity-graph" style="height: 40px; width: 190px;" />
+    </a>
+    
 3. On the page that comes up, choose language as `Node.js` and then click `Import from GitHub` Button
-
-![Replit](./asset/replit1.png)
-
-
+    
+    ![Replit](./asset/replit1.png)
+    
 4. Visit [this link](https://github.com/settings/tokens/new?description=GitHub%20Readme%20Activity%20Graph) to create a new Personal Access Token
 5. Scroll to the bottom and click "**Generate token**"
 6. Wait clone done and add `Secrets` with your `Github token`
-
-![Secrets](./asset/replit2.png)
+    
+    ![Secrets](./asset/replit2.png)
 
 7. Click the green `RUN` button on top, the console will run and at last the url will shows on the right
 8. Now just add the following to your profile readme and you're good to go
@@ -215,9 +213,9 @@ Now just add the following to your profile readme and you're good to go.
 ## Deploy on your own Vercel instance
 
 <details>
- <summary><b>Step-by-step instructions for deploying to Vercel (from UI)</b></summary>
+<summary><b>Step-by-step instructions for deploying to Vercel (from UI)</b></summary>
 
- ### First Method
+#### First Method
 
 1.  Go to [vercel.com](https://vercel.com/).
 2.  Click on `Log in`.
@@ -237,7 +235,7 @@ Now just add the following to your profile readme and you're good to go.
     ![image](https://user-images.githubusercontent.com/3431285/235332471-6915abf8-04fe-4f5e-b734-191388a77140.png)
 11. Click deploy, and you're good to go. See your domains to use the API!
 
-### Second Method
+#### Second Method
 
 Alternatively, click the button below and follow the instructions.
 
@@ -252,7 +250,7 @@ After the deployment is complete:
 3. Go to `Deployments` tab and redeploy the project.
     ![image](https://user-images.githubusercontent.com/3431285/235332761-1d3ae9c5-0138-447f-a41a-601c73ef3104.png)
 
-### Finally
+#### Finally
     
 Now just add the following to your profile readme and you're good to go.
 
