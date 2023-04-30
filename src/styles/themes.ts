@@ -46,7 +46,7 @@ export const selectColors = (queryString: string): Colors => {
             return {
                 areaColor: 'ADBAC7',
                 bgColor: '24292F',
-                borderColor: '373E47',
+                borderColor: '444c56',
                 color: 'ADBAC7',
                 titleColor: '539bf5',
                 lineColor: 'ADBAC7',
