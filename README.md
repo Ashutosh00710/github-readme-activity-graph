@@ -126,6 +126,9 @@ E.g. `https://github-readme-activity-graph.cyclic.app/graph?username=<your_usern
 
 However, if there are a large number of requests or if the heroku account being used for the project runs out of dyno hours your graph will not load.
 
+<details>
+ <summary><b>Step-by-step instructions for deploying to Heroku (from UI)</b></summary>
+
 ### Step-by-step instructions for deploying to Heroku (from UI)
 
 1. Sign in to Heroku or create a new account at <https://heroku.com>
@@ -148,6 +151,11 @@ However, if there are a large number of requests or if the heroku account being 
 
 9. Scroll down to the Domains section to find the URL you will use in place of `activity-graph.herokuapp.com`
 
+</details>
+
+<details>
+ <summary><b>Step-by-step instructions for deploying to Heroku (from CLI)</b></summary>
+
 ### Step-by-step instructions for deploying to Heroku (from CLI)
 
 1. Make a [Heroku](https://signup.heroku.com/) account.
@@ -169,9 +177,12 @@ Now just add the following to your profile readme and you're good to go.
 ![Github Activity Graph](<url from step 6>/graph?username=<username>)
 ```
 
+</details>
+
 ## Deploy on your own Replit instance
 
-### Step-by-step instructions for deploying to Replit (from UI)
+<details>
+ <summary><b>Step-by-step instructions for deploying to Replit (from UI)</b></summary>
 
 1. Sign in to Replit or create a new account at https://replit.com
 2. Click the Deploy button below
@@ -198,6 +209,47 @@ Now just add the following to your profile readme and you're good to go.
 ```
 ![Github Activity Graph](<url from step 5>/graph?username=<username>)
 ```
+
+</details>
+
+## Deploy on your own Vercel instance
+
+<details>
+ <summary><b>Step-by-step instructions for deploying to Vercel (from UI)</b></summary>
+
+ ### First Method
+
+1.  Go to [vercel.com](https://vercel.com/).
+2.  Click on `Log in`.
+3.  Sign in with GitHub by pressing `Continue with GitHub`.
+4.  Sign in to GitHub and allow access to all repositories if prompted.
+5.  Fork this repo.
+6.  Go back to your [Vercel dashboard](https://vercel.com/dashboard).
+7.  To import a project, click the `Add New...` button and select the `Project` option.
+8.  Click the `Continue with GitHub` button, search for the required Git Repository and import it by clicking the `Import` button. Alternatively, you can import a Third-Party Git Repository using the `Import Third-Party Git Repository ->` link at the bottom of the page.
+9. Create a personal access token (PAT) [here](https://github.com/settings/tokens/new) and enable the `repo` permissions (this allows access to see private repo stats).
+10. Add the PAT as an environment variable named `TOKEN`.
+11. Click deploy, and you're good to go. See your domains to use the API!
+
+### Second Method
+
+Alternatively, click the button below and follow the instructions.
+
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/Ashutosh00710/github-readme-activity-graph)
+
+After deployment is complete:
+
+1. Click the `Continue to Dashboard` button
+2. In the `Settings` tab, click on `Environment Variables` and follow steps `9.` and `10.` of `First Method`.
+3. Go to `Deployments` tab and redeploy the project.
+
+Now just add the following to your profile readme and you're good to go.
+
+```md
+![Github Activity Graph](<{your_own_domain_name}.vercel.app>/graph?username=<username>)
+```
+
+</details>
 
 ## Contributing
 
