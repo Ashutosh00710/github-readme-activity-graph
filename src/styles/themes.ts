@@ -42,6 +42,16 @@ export const selectColors = (queryString: string): Colors => {
                 lineColor: '1F6FEB',
                 pointColor: '58A6FF',
             };
+        case 'github-dark-dimmed':
+            return {
+                areaColor: 'ADBAC7',
+                bgColor: '24292F',
+                borderColor: '373E47',
+                color: 'ADBAC7',
+                titleColor: '539bf5',
+                lineColor: 'ADBAC7',
+                pointColor: '539bf5',
+            };
         case 'dracula':
             return {
                 areaColor: 'ff79c6',
