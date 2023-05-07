@@ -2,6 +2,56 @@ import { Colors } from 'src/interfaces/interface';
 
 export const selectColors = (queryString: string): Colors => {
     switch (queryString) {
+        case 'github':
+            return {
+                areaColor: '9ecbff',
+                bgColor: '293036',
+                borderColor: 'ffffff',
+                color: 'ffffff',
+                titleColor: 'ffffff',
+                lineColor: '9ecbff',
+                pointColor: 'f97583',
+            };
+        case 'github-light':
+            return {
+                areaColor: '9be9a8',
+                bgColor: 'ffffff',
+                borderColor: 'ffffff',
+                color: '000000',
+                titleColor: '000000',
+                lineColor: '9be9a8',
+                pointColor: '40c463',
+            };
+        case 'github-compact':
+            return {
+                areaColor: '26a641',
+                bgColor: '00000000',
+                borderColor: '8b949e',
+                color: '8b949e',
+                titleColor: '8b949e',
+                lineColor: '26a641',
+                pointColor: '8b949e',
+            };
+        case 'github-dark':
+            return {
+                areaColor: '1F6FEB',
+                bgColor: '0D1117',
+                borderColor: 'ffffff',
+                color: '58A6FF',
+                titleColor: '58A6FF',
+                lineColor: '1F6FEB',
+                pointColor: '58A6FF',
+            };
+        case 'github-dark-dimmed':
+            return {
+                areaColor: 'ADBAC7',
+                bgColor: '24292F',
+                borderColor: '444c56',
+                color: 'ADBAC7',
+                titleColor: '539bf5',
+                lineColor: 'ADBAC7',
+                pointColor: '539bf5',
+            };
         case 'dracula':
             return {
                 areaColor: 'ff79c6',
@@ -21,16 +71,6 @@ export const selectColors = (queryString: string): Colors => {
                 titleColor: 'd4be98',
                 lineColor: 'd8a657',
                 pointColor: 'e78a4e',
-            };
-        case 'github':
-            return {
-                areaColor: '9ecbff',
-                bgColor: '293036',
-                borderColor: 'ffffff',
-                color: 'ffffff',
-                titleColor: 'ffffff',
-                lineColor: '9ecbff',
-                pointColor: 'f97583',
             };
         case 'gotham':
             return {
@@ -131,26 +171,6 @@ export const selectColors = (queryString: string): Colors => {
                 titleColor: '7ffe00',
                 lineColor: '00adfe',
                 pointColor: '7ffe00',
-            };
-        case 'github-light':
-            return {
-                areaColor: '9be9a8',
-                bgColor: 'ffffff',
-                borderColor: 'ffffff',
-                color: '000000',
-                titleColor: '000000',
-                lineColor: '9be9a8',
-                pointColor: '40c463',
-            };
-        case 'github-dark':
-            return {
-                areaColor: '1F6FEB',
-                bgColor: '0D1117',
-                borderColor: 'ffffff',
-                color: '58A6FF',
-                titleColor: '58A6FF',
-                lineColor: '1F6FEB',
-                pointColor: '58A6FF',
             };
         case 'minimal':
             return {
@@ -331,16 +351,6 @@ export const selectColors = (queryString: string): Colors => {
                 titleColor: '5d417a',
                 lineColor: '5d417a',
                 pointColor: 'fab795',
-            };
-        case 'github-compact':
-            return {
-                areaColor: '26a641',
-                bgColor: '00000000',
-                borderColor: '8b949e',
-                color: '8b949e',
-                titleColor: '8b949e',
-                lineColor: '26a641',
-                pointColor: '8b949e',
             };
         case 'arctic':
             return {
