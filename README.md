@@ -14,7 +14,7 @@ A dynamically generated activity graph to show your GitHub activities of last 31
 
 ### ⚠️ NOTICE: DEPLOYMENT MOVED ⚠️
 
-The deployment of this project is moved from `https://activity-graph.herokuapp.com` domain to `https://github-readme-activity-graph.cyclic.app`.
+The deployment of this project is moved from `https://activity-graph.herokuapp.com` domain to `https://github-readme-activity-graph.cyclic.app`. In case `https://github-readme-activity-graph.cyclic.app` doesn't work try with `https://github-readme-activity-graph.vercel.app` for more details, refer [this](https://github.com/Ashutosh00710/github-readme-activity-graph/issues/197#issuecomment-1560633754)
 
 Please refer to the updated link [here](#how-to-use)
 
@@ -47,7 +47,7 @@ Just paste the following URL in your profile readme and you are good to go.
 **Pass your `username` in the URL**
 
 ```md
-[![Ashutosh's github activity graph](https://github-readme-activity-graph.cyclic.app/graph?username=Ashutosh00710)](https://github.com/ashutosh00710/github-readme-activity-graph)
+[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Ashutosh00710)](https://github.com/ashutosh00710/github-readme-activity-graph)
 ```
 
 ### [Attention ⚠](#Deploy-on-your-own-heroku-instance)
@@ -57,7 +57,7 @@ Just paste the following URL in your profile readme and you are good to go.
 _`username=ashutosh00710&theme=theme_name`_
 
 ```md
-[![Ashutosh's github activity graph](https://github-readme-activity-graph.cyclic.app/graph?username=Ashutosh00710&theme=dracula)](https://github.com/ashutosh00710/github-readme-activity-graph)
+[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Ashutosh00710&theme=dracula)](https://github.com/ashutosh00710/github-readme-activity-graph)
 ```
 
 [Manual Customization](#customization) is also available
@@ -109,13 +109,13 @@ Example:
 **`custom_title=This%20is%20a%20title`**
 
 ```md
-[![Ashutosh's github activity graph](https://github-readme-activity-graph.cyclic.app/graph?username=ashutosh00710&custom_title=This%20is%20a%20title&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
+[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=ashutosh00710&custom_title=This%20is%20a%20title&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
 ```
 
 **Example:**
 
 ```md
-[![Ashutosh's github activity graph](https://github-readme-activity-graph.cyclic.app/graph?username=ashutosh00710&bg_color=fffff0&color=708090&line=24292e&point=24292e&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
+[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=ashutosh00710&bg_color=fffff0&color=708090&line=24292e&point=24292e&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
 ```
 
 ## Deploy on your own Replit instance

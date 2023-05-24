@@ -47,7 +47,7 @@ const removePlaceholder = () => {
 // Generate chart link with user data
 
 const generateLink = () => {
-    let link = `[![Ashutosh's github activity graph](https://github-readme-activity-graph.cyclic.app/graph?username=${
+    let link = `[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=${
         valueToCopy.username
     }&bg_color=${valueToCopy.bgColor.slice(1)}&color=${valueToCopy.color.slice(
         1
@@ -115,7 +115,7 @@ const getGraph = (username) => {
     };
 
     axios({
-        url: `https://github-readme-activity-graph.cyclic.app/data?username=${username}`,
+        url: `https://github-readme-activity-graph.vercel.app/data?username=${username}`,
         method: 'GET'
     })
         .then((contributionData) => {
