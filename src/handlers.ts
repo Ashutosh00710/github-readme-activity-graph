@@ -14,7 +14,7 @@ export class Handlers {
             const utils = new Utilities(req.query);
 
             const fetcher = new Fetcher(utils.username);
-            const fetchCalendarData = await fetcher.fetchContributions();
+            const fetchCalendarData = await fetcher.fetchContributions(utils.queryOptions().days);
 
             const { finalGraph, header } = await utils.buildGraph(fetchCalendarData);
             utils.setHttpHeader(res, header.maxAge);
@@ -32,7 +32,9 @@ export class Handlers {
             const utils = new Utilities(req.query);
 
             const fetcher = new Fetcher(utils.username);
-            const fetchCalendarData: UserDetails | string = await fetcher.fetchContributions();
+            const fetchCalendarData: UserDetails | string = await fetcher.fetchContributions(
+                utils.queryOptions().days
+            );
 
             if (typeof fetchCalendarData === 'object') {
                 res.status(200).send(fetchCalendarData);

@@ -38,6 +38,17 @@ export class Utilities {
         };
     }
 
+    private validateDate(days?: string): number {
+        const d = Number(days);
+        if (typeof d !== 'number') {
+            return 31;
+        } else if (d > 0 && d <= 90) {
+            return d;
+        } else {
+            return 31;
+        }
+    }
+
     public queryOptions() {
         let area = false;
         if (String(this.queryString.area) === 'true') {
@@ -55,9 +66,10 @@ export class Utilities {
                 : 0, // Border radius in range [0, 16]
             colors: colors,
             area: area,
-            height: this.queryString.height 
+            height: this.queryString.height
                 ? Math.min(Math.max(this.queryString.height, 200), 600)
                 : 420, // Custom height implementation from range [200, 600], if not specified use default value - 420
+            days: this.validateDate(this.queryString.days),
         };
 
         if (this.queryString.custom_title)
@@ -81,7 +93,14 @@ export class Utilities {
                 }
             }
 
-            const graph = new Card(options.height, 1200, options.radius, options.colors, title, options.area);
+            const graph = new Card(
+                options.height,
+                1200,
+                options.radius,
+                options.colors,
+                title,
+                options.area
+            );
             const getChart = await graph.buildGraph(fetchCalendarData.contributions);
             return {
                 finalGraph: getChart,

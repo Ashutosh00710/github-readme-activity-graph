@@ -103,6 +103,7 @@ export let fakeQueryStringRes = [
         },
         hide_title: false,
         area: false,
+        days: 31,
     },
     {
         username: 'githubusername',
@@ -119,6 +120,7 @@ export let fakeQueryStringRes = [
         },
         hide_title: false,
         area: false,
+        days: 31,
     },
     {
         username: 'githubusername',
@@ -135,6 +137,7 @@ export let fakeQueryStringRes = [
         },
         hide_title: false,
         area: false,
+        days: 31,
     },
     {
         username: 'githubusername',
@@ -151,6 +154,7 @@ export let fakeQueryStringRes = [
         },
         hide_title: false,
         area: false,
+        days: 31,
     },
     {
         username: 'githubusername',
@@ -167,6 +171,7 @@ export let fakeQueryStringRes = [
         },
         hide_title: false,
         area: false,
+        days: 31,
     },
     {
         username: 'githubusername',
@@ -183,6 +188,7 @@ export let fakeQueryStringRes = [
         },
         hide_title: false,
         area: true,
+        days: 31,
     },
     {
         username: 'githubusername',
@@ -199,6 +205,7 @@ export let fakeQueryStringRes = [
         },
         area: true,
         hide_title: false,
+        days: 31,
     },
     {
         username: 'githubusername',
@@ -215,6 +222,7 @@ export let fakeQueryStringRes = [
         },
         area: true,
         hide_title: true,
+        days: 31,
     },
     {
         username: 'githubusername',
@@ -232,6 +240,7 @@ export let fakeQueryStringRes = [
         area: true,
         hide_title: false,
         custom_title: 'some title',
+        days: 31,
     },
 ];
 

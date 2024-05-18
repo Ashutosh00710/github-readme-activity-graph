@@ -31,7 +31,7 @@ describe('Fetching Tests', () => {
         // @ts-ignore: mocking private method
         fetcher.fetch = mockFetchCorrect;
 
-        fetcher.fetchContributions().then(
+        fetcher.fetchContributions(31).then(
             //@ts-ignore: will always return data of type userDetails
             (data: UserDetails) => {
                 expect(data.contributions).toEqual(expect.any(Array));

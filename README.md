@@ -86,21 +86,22 @@ Customize the appearance of your Activity Graph however you want with URL params
 
 #### Common Options
 
-|   Arguments    |                  Description                  |       Type of Value        |
-| :------------: | :-------------------------------------------: | :------------------------: |
-|   `bg_color`   |            card's background color            |   hex code (without `#`)   |
-|    `color`     |            graph card's text color            |   hex code (without `#`)   |
-| `title_color`  |           graph card's title color            |   hex code (without `#`)   |
-|     `line`     |              graph's line color               |   hex code (without `#`)   |
-|    `point`     |         color of points on line graph         |   hex code (without `#`)   |
-|  `area_color`  |       color of the area under the graph       |   hex code (without `#`)   |
-|     `area`     |          shows area under the graph           | boolean (default: `false`) |
-| `hide_border`  |   makes the border of the graph transparent   | boolean (default: `false`) |
-|  `hide_title`  |       sets the title to an empty string       | boolean (default: `false`) |
-| `custom_title` |          set the title to any string          |           string           |
-|    `theme`     | name of [available themes](#available-themes) |           string           |
-|    `radius`    |            border radius of graph             |  number (0-16 inclusive)   |
-|    `height`    |              height of the graph              | number (200-600 inclusive) |
+|   Arguments    |                  Description                  |                  Type of Value                  |
+| :------------: | :-------------------------------------------: | :---------------------------------------------: |
+|   `bg_color`   |            card's background color            |             hex code (without `#`)              |
+|    `color`     |            graph card's text color            |             hex code (without `#`)              |
+| `title_color`  |           graph card's title color            |             hex code (without `#`)              |
+|     `line`     |              graph's line color               |             hex code (without `#`)              |
+|    `point`     |         color of points on line graph         |             hex code (without `#`)              |
+|  `area_color`  |       color of the area under the graph       |             hex code (without `#`)              |
+|     `area`     |          shows area under the graph           |           boolean (default: `false`)            |
+| `hide_border`  |   makes the border of the graph transparent   |           boolean (default: `false`)            |
+|  `hide_title`  |       sets the title to an empty string       |           boolean (default: `false`)            |
+| `custom_title` |          set the title to any string          |                     string                      |
+|    `theme`     | name of [available themes](#available-themes) |                     string                      |
+|    `radius`    |            border radius of graph             |             number (0-16 inclusive)             |
+|    `height`    |              height of the graph              |           number (200-600 inclusive)            |
+|     `days`     |         number of to display on graph         | number between (1 - 365) [Recommended below 40] |
 
 ⚠ **For `custom_title` please make sure that you are using %20 for spaces**
 
