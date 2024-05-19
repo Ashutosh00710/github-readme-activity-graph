@@ -9,7 +9,8 @@ export class Card {
         private readonly radius: number,
         private readonly colors: Colors,
         private readonly title = '',
-        private readonly area = false
+        private readonly area = false,
+        private readonly showGrid = true
     ) {}
 
     private getOptions() {
@@ -24,6 +25,7 @@ export class Card {
                     y: 4.5,
                 },
                 low: 0,
+                showGrid: this.showGrid,
             },
             axisX: {
                 title: 'Days',
@@ -31,6 +33,7 @@ export class Card {
                 labelOffset: {
                     x: -4.5,
                 },
+                showGrid: this.showGrid,
             },
             chartPadding: {
                 top: 80,
