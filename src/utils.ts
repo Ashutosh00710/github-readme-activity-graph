@@ -68,8 +68,8 @@ export class Utilities {
         // Compare the dates using the isBefore method
         return (
             fromDate.isBefore(toDate) &&
-            moment(now).isSameOrBefore(fromDate) &&
-            moment(now).isSameOrBefore(toDate)
+            moment(fromDate).isSameOrBefore(now) &&
+            moment(toDate).isSameOrBefore(now)
         );
     }
 
