@@ -46,11 +46,23 @@ export class Fetcher {
         });
     }
 
-    public async fetchContributions(days: number): Promise<UserDetails | string> {
-        const now = moment();
-        const from = moment(now).subtract(days, 'days').utc().toISOString();
-        // also include the next day in case our server is behind in time with respect to GitHub
-        const to = moment(now).add(1, 'days').utc().toISOString();
+    public async fetchContributions(
+        days: number,
+        customFromDate?: string,
+        customToDate?: string
+    ): Promise<UserDetails | string> {
+        let from = '',
+            to = '';
+        if (customFromDate && customToDate) {
+            from = customFromDate;
+            to = moment(customToDate).add(2, 'days').utc().toISOString();
+            days += 1;
+        } else {
+            const now = moment();
+            from = moment(now).subtract(days, 'days').utc().toISOString();
+            // also include the next day in case our server is behind in time with respect to GitHub
+            to = moment(now).add(1, 'days').utc().toISOString();
+        }
 
         try {
             const apiResponse = await this.fetch(this.getGraphQLQuery(from, to));

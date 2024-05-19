@@ -1,3 +1,4 @@
+import moment from 'moment';
 import { Response } from 'express';
 import { Card } from './GraphCards';
 import { invalidUserSvg } from './svgs';
@@ -38,7 +39,7 @@ export class Utilities {
         };
     }
 
-    private validateDate(days?: string): number {
+    private validateDays(days?: string): number {
         const d = Number(days);
         if (typeof d !== 'number') {
             return 31;
@@ -49,6 +50,38 @@ export class Utilities {
         }
     }
 
+    private validateDate(date?: string): boolean {
+        const format = 'YYYY-MM-DD';
+        return moment(date, format, true).isValid();
+    }
+
+    private stringDateToUTC(date?: string): string {
+        const format = 'YYYY-MM-DD';
+        return moment(date, format, true).utc().toISOString();
+    }
+
+    private validateFromIsLessThanTwo(from: string, to: string): boolean {
+        // Parse the ISO string dates into Moment objects
+        const fromDate = moment(from);
+        const toDate = moment(to);
+        const now = moment();
+        // Compare the dates using the isBefore method
+        return (
+            fromDate.isBefore(toDate) &&
+            moment(now).isSameOrBefore(fromDate) &&
+            moment(now).isSameOrBefore(toDate)
+        );
+    }
+
+    private calculateNumberOfDaysFromDate(from: string, to: string): number {
+        // Parse the ISO string dates into Moment objects
+        const fromDate = moment(from);
+        const toDate = moment(to);
+
+        // Compare the dates using the isBefore method
+        return toDate.diff(fromDate, 'days');
+    }
+
     public queryOptions() {
         let area = false;
         if (String(this.queryString.area) === 'true') {
@@ -57,6 +90,22 @@ export class Utilities {
 
         // Custom options for user
         const colors = this.getColors();
+        let from = '',
+            to = '',
+            days = 31;
+        const isFromValid = this.validateDate(this.queryString.from);
+        const isToValid = this.validateDate(this.queryString.to);
+        if (isFromValid && isToValid) {
+            from = this.stringDateToUTC(this.queryString.from);
+            to = this.stringDateToUTC(this.queryString.to);
+            if (!this.validateFromIsLessThanTwo(from, to)) {
+                from = '';
+                to = '';
+                days = 31;
+            } else {
+                days = this.calculateNumberOfDaysFromDate(from, to);
+            }
+        }
 
         const options: QueryOption = {
             username: this.username,
@@ -69,7 +118,9 @@ export class Utilities {
             height: this.queryString.height
                 ? Math.min(Math.max(this.queryString.height, 200), 600)
                 : 420, // Custom height implementation from range [200, 600], if not specified use default value - 420
-            days: this.validateDate(this.queryString.days),
+            days: isFromValid && isToValid ? days : this.validateDays(this.queryString.days),
+            from,
+            to,
         };
 
         if (this.queryString.custom_title)

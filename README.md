@@ -102,6 +102,8 @@ Customize the appearance of your Activity Graph however you want with URL params
 |    `radius`    |            border radius of graph             |            number (0-16 inclusive)             |
 |    `height`    |              height of the graph              |           number (200-600 inclusive)           |
 |     `days`     |      number of to days display on graph       | number between (1 - 90) [Recommended below 40] |
+|     `from`     |       date from which the graph starts        |              format `YYYY-MM-DD`               |
+|      `to`      |         date where the graph will end         |              format `YYYY-MM-DD`               |
 
 ⚠ **For `custom_title` please make sure that you are using %20 for spaces**
 
