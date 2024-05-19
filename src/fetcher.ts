@@ -54,8 +54,8 @@ export class Fetcher {
         let from = '',
             to = '';
         if (customFromDate && customToDate) {
-            from = moment(customFromDate).add(1, 'days').utc().toISOString(true);
-            to = moment(customToDate).add(2, 'days').utc().toISOString(true);
+            from = moment(customFromDate).utc().toISOString(true);
+            to = moment(customToDate).utc().toISOString(true);
         } else {
             const now = moment();
             from = moment(now).subtract(days, 'days').utc().toISOString();
