@@ -89,10 +89,10 @@ export class Fetcher {
                 // either the day hasn't really started
                 // or the user hasn't contributed today
                 const length = userData.contributions.length;
-                if (userData.contributions[length - 1].contributionCount === 0) {
-                    userData.contributions.pop();
-                }
                 if (!(customFromDate && customToDate)) {
+                    if (userData.contributions[length - 1].contributionCount === 0) {
+                        userData.contributions.pop();
+                    }
                     const extra = userData.contributions.length - days;
                     userData.contributions.splice(0, extra);
                 }
