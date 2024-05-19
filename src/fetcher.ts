@@ -54,9 +54,8 @@ export class Fetcher {
         let from = '',
             to = '';
         if (customFromDate && customToDate) {
-            from = customFromDate;
-            to = moment(customToDate).add(2, 'days').utc().toISOString();
-            days += 1;
+            from = moment(customFromDate).add(1, 'days').utc().toISOString(true);
+            to = moment(customToDate).add(2, 'days').utc().toISOString(true);
         } else {
             const now = moment();
             from = moment(now).subtract(days, 'days').utc().toISOString();
@@ -90,12 +89,13 @@ export class Fetcher {
                 // either the day hasn't really started
                 // or the user hasn't contributed today
                 const length = userData.contributions.length;
-
                 if (userData.contributions[length - 1].contributionCount === 0) {
                     userData.contributions.pop();
                 }
-                const extra = userData.contributions.length - days;
-                userData.contributions.splice(0, extra);
+                if (!(customFromDate && customToDate)) {
+                    const extra = userData.contributions.length - days;
+                    userData.contributions.splice(0, extra);
+                }
                 return userData;
             }
         } catch (error) {
