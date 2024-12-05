@@ -20,7 +20,7 @@ export class Card {
             axisY: {
                 title: 'Contributions',
                 onlyInteger: true,
-                offset: 70,
+                offset: 75,
                 labelOffset: {
                     y: 4.5,
                 },
