@@ -1,4 +1,5 @@
 import express, { Application } from 'express';
+import useragent from 'express-useragent';
 import cors from 'cors';
 import { Handlers } from './handlers';
 
@@ -7,6 +8,7 @@ const port = process.env.PORT || 5100;
 
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
+app.use(useragent.express());
 
 const handlers = new Handlers();
 

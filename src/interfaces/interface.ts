@@ -56,6 +56,7 @@ export class GraphArgs {
     colors: Colors;
     title: string;
     radius: number;
+    browser: string;
     line: Promise<string>;
 }
 

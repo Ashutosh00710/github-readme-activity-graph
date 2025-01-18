@@ -1,6 +1,7 @@
-import { graphStyle } from './styles/graphStyle';
+import { diagonalTiltStyle, graphStyle } from './styles/graphStyle';
 import { pointAnimation, lineAnimation } from './styles/graphAnimation';
 import { GraphArgs } from './interfaces/interface';
+import { Browser } from './constants';
 
 export const graphSvg = (props: GraphArgs) => `
     <svg
@@ -37,6 +38,7 @@ export const graphSvg = (props: GraphArgs) => `
                 )}
                 ${pointAnimation()}
                 ${lineAnimation()}
+                ${props.browser != Browser.SAFARI && diagonalTiltStyle()}
             </style>
 
             <foreignObject x="0" y="0" width="${props.width}" height="50">

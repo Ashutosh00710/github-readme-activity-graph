@@ -1,3 +1,4 @@
+import { Browser } from '../src/constants';
 import { GraphArgs } from '../src/interfaces/interface';
 
 export let fakeQueryString = [
@@ -104,6 +105,7 @@ export let fakeQueryStringRes = [
         hide_title: false,
         area: false,
         days: 31,
+        grid: true,
         from: '',
         to: '',
     },
@@ -124,6 +126,7 @@ export let fakeQueryStringRes = [
         area: false,
         days: 31,
         from: '',
+        grid: true,
         to: '',
     },
     {
@@ -143,6 +146,7 @@ export let fakeQueryStringRes = [
         area: false,
         days: 31,
         from: '',
+        grid: true,
         to: '',
     },
     {
@@ -161,6 +165,7 @@ export let fakeQueryStringRes = [
         hide_title: false,
         area: false,
         days: 31,
+        grid: true,
         from: '',
         to: '',
     },
@@ -180,6 +185,7 @@ export let fakeQueryStringRes = [
         hide_title: false,
         area: false,
         days: 31,
+        grid: true,
         from: '',
         to: '',
     },
@@ -199,6 +205,7 @@ export let fakeQueryStringRes = [
         hide_title: false,
         area: true,
         days: 31,
+        grid: true,
         from: '',
         to: '',
     },
@@ -218,7 +225,9 @@ export let fakeQueryStringRes = [
         area: true,
         hide_title: false,
         days: 31,
+        grid: true,
         from: '',
+
         to: '',
     },
     {
@@ -237,6 +246,7 @@ export let fakeQueryStringRes = [
         area: true,
         hide_title: true,
         days: 31,
+        grid: true,
         from: '',
         to: '',
     },
@@ -257,12 +267,31 @@ export let fakeQueryStringRes = [
         hide_title: false,
         custom_title: 'some title',
         days: 31,
+        grid: true,
         from: '',
         to: '',
     },
 ];
 
-export let fakeGraphArgs: GraphArgs = {
+export let fakeGraphArgsForSafari: GraphArgs = {
+    height: 10,
+    width: 20,
+    radius: 0,
+    colors: {
+        areaColor: '87ceeb',
+        bgColor: '44475a',
+        borderColor: '0000',
+        color: 'f8f8f2',
+        titleColor: 'f8f8f2',
+        lineColor: 'ff79c6',
+        pointColor: 'bd93f9',
+    },
+    browser: Browser.SAFARI,
+    title: 'graphSvg',
+    line: Promise.resolve('line'),
+};
+
+export let fakeGraphArgsForBrowsersOtherThanSafari: GraphArgs = {
     height: 10,
     width: 20,
     radius: 0,
@@ -276,6 +305,7 @@ export let fakeGraphArgs: GraphArgs = {
         pointColor: 'bd93f9',
     },
     title: 'graphSvg',
+    browser: 'Chrome',
     line: Promise.resolve('line'),
 };
 

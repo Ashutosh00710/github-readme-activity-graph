@@ -2,6 +2,7 @@ import axios, { AxiosResponse } from 'axios';
 import * as dotenv from 'dotenv';
 import moment from 'moment';
 import { Query, UserDetails, Week, ContributionDay, ResponseOfApi } from 'src/interfaces/interface';
+import { Browser } from './constants';
 
 dotenv.config();
 
@@ -48,6 +49,7 @@ export class Fetcher {
 
     public async fetchContributions(
         days: number,
+        browser?: string,
         customFromDate?: string,
         customToDate?: string
     ): Promise<UserDetails | string> {
@@ -78,9 +80,13 @@ export class Fetcher {
                 // get day-contribution data
                 weeks.map((week: Week) =>
                     week.contributionDays.map((contributionDay: ContributionDay) => {
-                        contributionDay.date = moment(contributionDay.date, moment.ISO_8601)
-                            .date()
-                            .toString();
+                        let format = 'D';
+                        if (browser != Browser.SAFARI) {
+                            format = 'D MMM';
+                        }
+                        contributionDay.date = moment(contributionDay.date, moment.ISO_8601).format(
+                            format
+                        );
                         userData.contributions.push(contributionDay);
                     })
                 );

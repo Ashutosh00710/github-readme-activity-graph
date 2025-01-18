@@ -8,6 +8,7 @@ export class Card {
         private readonly width: number,
         private readonly radius: number,
         private readonly colors: Colors,
+        private readonly browser: string,
         private readonly title = '',
         private readonly area = false,
         private readonly showGrid = true
@@ -46,21 +47,6 @@ export class Card {
         };
     }
 
-    /** Unused Code ref #85 */
-    // private getContrubutionDates() {
-    //     const days = [];
-    //     for (const date = new Date(); days.length < 31; date.setDate(date.getUTCDate() - 1)) {
-    //         const current = new Date(date);
-    //         days.push(
-    //             current.toLocaleString('default', { month: 'short' }) +
-    //                 ' ' +
-    //                 current.getUTCDate().toString()
-    //         );
-    //     }
-
-    //     return days.reverse();
-    // }
-
     async buildGraph(days: ContributionDay[]): Promise<string> {
         //Options to pass in createGraph function
         const options = this.getOptions();
@@ -78,6 +64,7 @@ export class Card {
             colors: this.colors,
             title: this.title,
             radius: this.radius,
+            browser: this.browser,
             line,
         };
 
