@@ -15,6 +15,7 @@ export class Handlers {
 
             const fetcher = new Fetcher(utils.username);
             const queryOptions = utils.queryOptions();
+            console.log('browser:', req.useragent?.browser);
             const fetchCalendarData = await fetcher.fetchContributions(
                 utils.queryOptions().days,
                 req.useragent?.browser,
