@@ -50,7 +50,7 @@ Just paste the following URL in your profile readme and you are good to go.
 [![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Ashutosh00710)](https://github.com/ashutosh00710/github-readme-activity-graph)
 ```
 
-### [Attention ⚠](#Deploy-on-your-own-heroku-instance)
+### [Attention ⚠](#deploy-on-your-own-replit-instance)
 
 ## Use themes
 
