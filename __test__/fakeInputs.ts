@@ -529,7 +529,7 @@ export const themes = {
         lineColor: 'c4e3ff',
         pointColor: 'ff8070',
     },
-    redical: {
+    radical: {
         areaColor: 'fe428e',
         bgColor: '141321',
         borderColor: 'ffffff',

@@ -102,7 +102,7 @@ export const selectColors = (queryString: string): Colors => {
                 lineColor: 'c4e3ff',
                 pointColor: 'ff8070',
             };
-        case 'redical':
+        case 'radical':
             return {
                 areaColor: 'fe428e',
                 bgColor: '141321',

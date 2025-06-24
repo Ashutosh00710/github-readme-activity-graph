@@ -7,7 +7,7 @@ test('Theme testing', () => {
     expect(selectColors('gruvbox')).toEqual(themes['gruvbox']);
     expect(selectColors('github')).toEqual(themes['github']);
     expect(selectColors('rogue')).toEqual(themes['rogue']);
-    expect(selectColors('redical')).toEqual(themes['redical']);
+    expect(selectColors('radical')).toEqual(themes['radical']);
     expect(selectColors('xcode')).toEqual(themes['xcode']);
     expect(selectColors('coral')).toEqual(themes['coral']);
     expect(selectColors('react-dark')).toEqual(themes['reactDark']);
