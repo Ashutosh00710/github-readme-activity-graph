@@ -111,7 +111,6 @@ export const graphStyle = (color: string, line: string, point: string, area: str
     }
     `;
 
-/** Unused style for dates feature #85 */
 export const diagonalTiltStyle = () => {
     return `
     .ct-label.ct-horizontal.ct-end {

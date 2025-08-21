@@ -11,12 +11,14 @@ export class Handlers {
 
     public async getGraph(req: Request, res: Response) {
         try {
-            const utils = new Utilities(req.query);
+            const utils = new Utilities(req.query, req.useragent?.browser);
 
             const fetcher = new Fetcher(utils.username);
             const queryOptions = utils.queryOptions();
+            console.log('browser:', req.useragent?.browser);
             const fetchCalendarData = await fetcher.fetchContributions(
                 utils.queryOptions().days,
+                req.useragent?.browser,
                 queryOptions.from,
                 queryOptions.to
             );

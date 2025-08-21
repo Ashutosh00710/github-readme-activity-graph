@@ -7,8 +7,13 @@ import { QueryOption, ParsedQs, UserDetails } from './interfaces/interface';
 
 export class Utilities {
     public username: string;
-    constructor(private readonly queryString: ParsedQs) {
+    private browser: string;
+    constructor(private readonly queryString: ParsedQs, browser?: string) {
         this.username = String(this.queryString.username);
+        // in case of undefined or browser we will send th old graph
+        if (browser) {
+            this.browser = browser;
+        }
     }
 
     private getColors() {
@@ -150,6 +155,7 @@ export class Utilities {
                 1200,
                 options.radius,
                 options.colors,
+                this.browser,
                 title,
                 options.area,
                 options.grid

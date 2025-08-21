@@ -157,6 +157,18 @@ exports[`SVG Testing Test SVGs 1`] = `
         }
     
     
+                
+    .ct-label.ct-horizontal.ct-end {
+      transform: rotate(-30deg);
+      -webkit-transform: rotate(-30deg);
+      -moz-transform: rotate(-30deg);
+      -o-transform: rotate(-30deg);
+      -ms-transform: rotate(-30deg);
+      transform-box: fill-box;
+      transform-origin: 100% 0;
+      text-anchor: end;
+    }
+  
             </style>
 
             <foreignObject x=\\"0\\" y=\\"0\\" width=\\"20\\" height=\\"50\\">
@@ -170,6 +182,176 @@ exports[`SVG Testing Test SVGs 1`] = `
 `;
 
 exports[`SVG Testing Test SVGs 2`] = `
+"
+    <svg
+        width=\\"20\\"
+        height=\\"10\\"
+        viewBox=\\"0 0 20 10\\"
+        fill=\\"none\\"
+        xmlns=\\"http://www.w3.org/2000/svg\\">
+            <rect xmlns=\\"http://www.w3.org/2000/svg\\" data-testid=\\"card_bg\\" id=\\"cardBg\\"
+            x=\\"0\\" y=\\"0\\" rx=\\"0\\" height=\\"100%\\" stroke=\\"#E4E2E2\\" fill-opacity=\\"1\\"
+            width=\\"100%\\" fill=\\"#44475a\\" stroke-opacity=\\"1\\" style=\\"stroke:#0000; stroke-width:1;\\"/>
+
+            <style>
+                body {
+                    font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+                }
+                .header {
+                    font: 600 20px 'Segoe UI', Ubuntu, Sans-Serif;
+                    text-align: center;
+                    color: #f8f8f2;
+                    margin-top: 20px;
+                }
+                svg {
+                    font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+                    user-select: none;
+                }
+                
+    .ct-label {
+      fill: #f8f8f2;
+      color: #f8f8f2;
+      font-size: .75rem;
+      line-height: 1;
+    }
+
+    .ct-grid-background,
+    .ct-line {
+      fill: none;
+    }
+
+    .ct-chart-bar .ct-label,
+    .ct-chart-line .ct-label {
+      display: block;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+    }
+
+    .ct-label.ct-horizontal.ct-start {
+      -webkit-box-align: flex-end;
+      -webkit-align-items: flex-end;
+      -ms-flex-align: flex-end;
+      align-items: flex-end;
+      -webkit-box-pack: flex-start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+      text-anchor: start;
+    }
+
+    .ct-label.ct-horizontal.ct-end {
+      -webkit-box-align: flex-start;
+      -webkit-align-items: flex-start;
+      -ms-flex-align: flex-start;
+      align-items: flex-start;
+      -webkit-box-pack: flex-start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+      text-anchor: start;
+    }
+
+    .ct-label.ct-vertical.ct-start {
+      -webkit-box-align: flex-end;
+      -webkit-align-items: flex-end;
+      -ms-flex-align: flex-end;
+      align-items: flex-end;
+      -webkit-box-pack: flex-end;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: flex-end;
+      justify-content: flex-end;
+      text-align: right;
+      text-anchor: end;
+    }
+
+    .ct-label.ct-vertical.ct-end {
+      -webkit-box-align: flex-end;
+      -webkit-align-items: flex-end;
+      -ms-flex-align: flex-end;
+      align-items: flex-end;
+      -webkit-box-pack: flex-start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+      text-anchor: start;
+    }
+
+    .ct-grid {
+      stroke: #f8f8f2;
+      stroke-width: 1px;
+      stroke-opacity: 0.3;
+      stroke-dasharray: 2px;
+    }
+
+    .ct-point {
+      stroke-width: 10px;
+      stroke-linecap: round;
+      stroke: #bd93f9;
+      animation: blink 1s ease-in-out forwards;
+    }
+
+    .ct-line {
+      stroke-width: 4px;
+      stroke-dasharray: 5000;
+      stroke-dashoffset: 5000;
+      stroke: #ff79c6;
+      animation: dash 5s ease-in-out forwards;
+    }
+
+    .ct-area {
+      stroke: none;
+      fill-opacity: 0.1;
+    }
+
+    .ct-series-a .ct-area,
+    .ct-series-a .ct-slice-pie {
+      fill: #87ceeb;
+    }
+
+    .ct-label .ct-horizontal {
+      transform: rotate(-90deg)
+    }
+    
+                
+        @keyframes blink {
+            from {
+                opacity: 0;
+                transform:translateX(-20px); 
+            }
+            to {
+                opacity:1;
+                transform: translateX(0);
+            }
+        }
+    
+                
+        @keyframes dash {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+    
+    
+                false
+            </style>
+
+            <foreignObject x=\\"0\\" y=\\"0\\" width=\\"20\\" height=\\"50\\">
+                <h1 xmlns=\\"http://www.w3.org/1999/xhtml\\" class=\\"header\\">
+                    graphSvg
+                </h1>
+            </foreignObject>
+            [object Promise]
+    </svg>
+"
+`;
+
+exports[`SVG Testing Test SVGs 3`] = `
 "
     <svg
         width=\\"400\\"
@@ -190,7 +372,7 @@ exports[`SVG Testing Test SVGs 2`] = `
 "
 `;
 
-exports[`SVG Testing chart SVGs 1`] = `
+exports[`SVG Testing chart SVGs for Safari browser 1`] = `
 "
     <svg
         width=\\"1200\\"
@@ -347,11 +529,204 @@ exports[`SVG Testing chart SVGs 1`] = `
         }
     
     
+                
+    .ct-label.ct-horizontal.ct-end {
+      transform: rotate(-30deg);
+      -webkit-transform: rotate(-30deg);
+      -moz-transform: rotate(-30deg);
+      -o-transform: rotate(-30deg);
+      -ms-transform: rotate(-30deg);
+      transform-box: fill-box;
+      transform-origin: 100% 0;
+      text-anchor: end;
+    }
+  
             </style>
 
             <foreignObject x=\\"0\\" y=\\"0\\" width=\\"1200\\" height=\\"50\\">
                 <h1 xmlns=\\"http://www.w3.org/1999/xhtml\\" class=\\"header\\">
-                    xyz's Contribution Graph
+                    Safari
+                </h1>
+            </foreignObject>
+            <svg xmlns:ct=\\"http://gionkunz.github.com/chartist-js/ct\\" width=\\"1200\\" height=\\"420\\" class=\\"ct-chart-line\\"><g class=\\"ct-grids\\"><line x1=\\"90\\" x2=\\"90\\" y1=\\"80\\" y2=\\"350\\" class=\\"ct-grid ct-horizontal\\"></line><line x1=\\"355\\" x2=\\"355\\" y1=\\"80\\" y2=\\"350\\" class=\\"ct-grid ct-horizontal\\"></line><line x1=\\"620\\" x2=\\"620\\" y1=\\"80\\" y2=\\"350\\" class=\\"ct-grid ct-horizontal\\"></line><line x1=\\"885\\" x2=\\"885\\" y1=\\"80\\" y2=\\"350\\" class=\\"ct-grid ct-horizontal\\"></line><line x1=\\"1150\\" x2=\\"1150\\" y1=\\"80\\" y2=\\"350\\" class=\\"ct-grid ct-horizontal\\"></line><line y1=\\"350\\" y2=\\"350\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line><line y1=\\"311.42857142857144\\" y2=\\"311.42857142857144\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line><line y1=\\"272.8571428571429\\" y2=\\"272.8571428571429\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line><line y1=\\"234.28571428571428\\" y2=\\"234.28571428571428\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line><line y1=\\"195.71428571428572\\" y2=\\"195.71428571428572\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line><line y1=\\"157.14285714285714\\" y2=\\"157.14285714285714\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line><line y1=\\"118.57142857142858\\" y2=\\"118.57142857142858\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line><line y1=\\"80\\" y2=\\"80\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line></g><g><g class=\\"ct-series ct-series-a\\"><path d=\\"M90,311.429C178.333,305,266.667,303.393,355,292.143C443.333,280.893,531.667,177.143,620,157.143C708.333,137.143,796.667,131.429,885,118.571C973.333,105.714,1061.667,92.857,1150,80\\" class=\\"ct-line\\"></path><line x1=\\"90\\" y1=\\"311.42857142857144\\" x2=\\"90.01\\" y2=\\"311.42857142857144\\" class=\\"ct-point\\" ct:value=\\"2\\"></line><line x1=\\"355\\" y1=\\"292.14285714285717\\" x2=\\"355.01\\" y2=\\"292.14285714285717\\" class=\\"ct-point\\" ct:value=\\"3\\"></line><line x1=\\"620\\" y1=\\"157.14285714285714\\" x2=\\"620.01\\" y2=\\"157.14285714285714\\" class=\\"ct-point\\" ct:value=\\"10\\"></line><line x1=\\"885\\" y1=\\"118.57142857142858\\" x2=\\"885.01\\" y2=\\"118.57142857142858\\" class=\\"ct-point\\" ct:value=\\"12\\"></line><line x1=\\"1150\\" y1=\\"80\\" x2=\\"1150.01\\" y2=\\"80\\" class=\\"ct-point\\" ct:value=\\"14\\"></line></g></g><g class=\\"ct-labels\\"><text x=\\"85.5\\" y=\\"370\\" width=\\"265\\" height=\\"40\\" class=\\"ct-label ct-horizontal ct-end\\">1</text><text x=\\"350.5\\" y=\\"370\\" width=\\"265\\" height=\\"40\\" class=\\"ct-label ct-horizontal ct-end\\">2</text><text x=\\"615.5\\" y=\\"370\\" width=\\"265\\" height=\\"40\\" class=\\"ct-label ct-horizontal ct-end\\">1</text><text x=\\"880.5\\" y=\\"370\\" width=\\"265\\" height=\\"40\\" class=\\"ct-label ct-horizontal ct-end\\">1</text><text x=\\"1145.5\\" y=\\"370\\" width=\\"30\\" height=\\"40\\" class=\\"ct-label ct-horizontal ct-end\\">1</text><text y=\\"354.5\\" x=\\"80\\" height=\\"38.57142857142857\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">0</text><text y=\\"315.92857142857144\\" x=\\"80\\" height=\\"38.57142857142857\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">2</text><text y=\\"277.3571428571429\\" x=\\"80\\" height=\\"38.57142857142857\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">4</text><text y=\\"238.78571428571428\\" x=\\"80\\" height=\\"38.57142857142857\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">6</text><text y=\\"200.21428571428572\\" x=\\"80\\" height=\\"38.571428571428584\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">8</text><text y=\\"161.64285714285714\\" x=\\"80\\" height=\\"38.571428571428555\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">10</text><text y=\\"123.07142857142858\\" x=\\"80\\" height=\\"38.571428571428584\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">12</text><text y=\\"84.5\\" x=\\"80\\" height=\\"30\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">14</text></g><text class=\\"ct-axis-title ct-label\\" x=\\"620\\" y=\\"400\\" dominant-baseline=\\"text-after-edge\\" text-anchor=\\"middle\\">Days</text><text class=\\"ct-axis-title ct-label\\" x=\\"20\\" y=\\"215\\" transform=\\"rotate(-90, 20, 215)\\" dominant-baseline=\\"hanging\\" text-anchor=\\"middle\\">Contributions</text></svg>
+    </svg>
+"
+`;
+
+exports[`SVG Testing chart SVGs for browsers other than Safari 1`] = `
+"
+    <svg
+        width=\\"1200\\"
+        height=\\"420\\"
+        viewBox=\\"0 0 1200 420\\"
+        fill=\\"none\\"
+        xmlns=\\"http://www.w3.org/2000/svg\\">
+            <rect xmlns=\\"http://www.w3.org/2000/svg\\" data-testid=\\"card_bg\\" id=\\"cardBg\\"
+            x=\\"0\\" y=\\"0\\" rx=\\"8\\" height=\\"100%\\" stroke=\\"#E4E2E2\\" fill-opacity=\\"1\\"
+            width=\\"100%\\" fill=\\"#ffcfe9\\" stroke-opacity=\\"1\\" style=\\"stroke:#ffffff; stroke-width:1;\\"/>
+
+            <style>
+                body {
+                    font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+                }
+                .header {
+                    font: 600 20px 'Segoe UI', Ubuntu, Sans-Serif;
+                    text-align: center;
+                    color: #ffffff;
+                    margin-top: 20px;
+                }
+                svg {
+                    font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+                    user-select: none;
+                }
+                
+    .ct-label {
+      fill: #9e4c98;
+      color: #9e4c98;
+      font-size: .75rem;
+      line-height: 1;
+    }
+
+    .ct-grid-background,
+    .ct-line {
+      fill: none;
+    }
+
+    .ct-chart-bar .ct-label,
+    .ct-chart-line .ct-label {
+      display: block;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+    }
+
+    .ct-label.ct-horizontal.ct-start {
+      -webkit-box-align: flex-end;
+      -webkit-align-items: flex-end;
+      -ms-flex-align: flex-end;
+      align-items: flex-end;
+      -webkit-box-pack: flex-start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+      text-anchor: start;
+    }
+
+    .ct-label.ct-horizontal.ct-end {
+      -webkit-box-align: flex-start;
+      -webkit-align-items: flex-start;
+      -ms-flex-align: flex-start;
+      align-items: flex-start;
+      -webkit-box-pack: flex-start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+      text-anchor: start;
+    }
+
+    .ct-label.ct-vertical.ct-start {
+      -webkit-box-align: flex-end;
+      -webkit-align-items: flex-end;
+      -ms-flex-align: flex-end;
+      align-items: flex-end;
+      -webkit-box-pack: flex-end;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: flex-end;
+      justify-content: flex-end;
+      text-align: right;
+      text-anchor: end;
+    }
+
+    .ct-label.ct-vertical.ct-end {
+      -webkit-box-align: flex-end;
+      -webkit-align-items: flex-end;
+      -ms-flex-align: flex-end;
+      align-items: flex-end;
+      -webkit-box-pack: flex-start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+      text-anchor: start;
+    }
+
+    .ct-grid {
+      stroke: #9e4c98;
+      stroke-width: 1px;
+      stroke-opacity: 0.3;
+      stroke-dasharray: 2px;
+    }
+
+    .ct-point {
+      stroke-width: 10px;
+      stroke-linecap: round;
+      stroke: #403d3d;
+      animation: blink 1s ease-in-out forwards;
+    }
+
+    .ct-line {
+      stroke-width: 4px;
+      stroke-dasharray: 5000;
+      stroke-dashoffset: 5000;
+      stroke: #9e4c98;
+      animation: dash 5s ease-in-out forwards;
+    }
+
+    .ct-area {
+      stroke: none;
+      fill-opacity: 0.1;
+    }
+
+    .ct-series-a .ct-area,
+    .ct-series-a .ct-slice-pie {
+      fill: #9e4c98;
+    }
+
+    .ct-label .ct-horizontal {
+      transform: rotate(-90deg)
+    }
+    
+                
+        @keyframes blink {
+            from {
+                opacity: 0;
+                transform:translateX(-20px); 
+            }
+            to {
+                opacity:1;
+                transform: translateX(0);
+            }
+        }
+    
+                
+        @keyframes dash {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+    
+    
+                
+    .ct-label.ct-horizontal.ct-end {
+      transform: rotate(-30deg);
+      -webkit-transform: rotate(-30deg);
+      -moz-transform: rotate(-30deg);
+      -o-transform: rotate(-30deg);
+      -ms-transform: rotate(-30deg);
+      transform-box: fill-box;
+      transform-origin: 100% 0;
+      text-anchor: end;
+    }
+  
+            </style>
+
+            <foreignObject x=\\"0\\" y=\\"0\\" width=\\"1200\\" height=\\"50\\">
+                <h1 xmlns=\\"http://www.w3.org/1999/xhtml\\" class=\\"header\\">
+                    Chrome
                 </h1>
             </foreignObject>
             <svg xmlns:ct=\\"http://gionkunz.github.com/chartist-js/ct\\" width=\\"1200\\" height=\\"420\\" class=\\"ct-chart-line\\"><g class=\\"ct-grids\\"><line x1=\\"90\\" x2=\\"90\\" y1=\\"80\\" y2=\\"350\\" class=\\"ct-grid ct-horizontal\\"></line><line x1=\\"355\\" x2=\\"355\\" y1=\\"80\\" y2=\\"350\\" class=\\"ct-grid ct-horizontal\\"></line><line x1=\\"620\\" x2=\\"620\\" y1=\\"80\\" y2=\\"350\\" class=\\"ct-grid ct-horizontal\\"></line><line x1=\\"885\\" x2=\\"885\\" y1=\\"80\\" y2=\\"350\\" class=\\"ct-grid ct-horizontal\\"></line><line x1=\\"1150\\" x2=\\"1150\\" y1=\\"80\\" y2=\\"350\\" class=\\"ct-grid ct-horizontal\\"></line><line y1=\\"350\\" y2=\\"350\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line><line y1=\\"311.42857142857144\\" y2=\\"311.42857142857144\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line><line y1=\\"272.8571428571429\\" y2=\\"272.8571428571429\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line><line y1=\\"234.28571428571428\\" y2=\\"234.28571428571428\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line><line y1=\\"195.71428571428572\\" y2=\\"195.71428571428572\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line><line y1=\\"157.14285714285714\\" y2=\\"157.14285714285714\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line><line y1=\\"118.57142857142858\\" y2=\\"118.57142857142858\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line><line y1=\\"80\\" y2=\\"80\\" x1=\\"90\\" x2=\\"1150\\" class=\\"ct-grid ct-vertical\\"></line></g><g><g class=\\"ct-series ct-series-a\\"><path d=\\"M90,311.429C178.333,305,266.667,303.393,355,292.143C443.333,280.893,531.667,177.143,620,157.143C708.333,137.143,796.667,131.429,885,118.571C973.333,105.714,1061.667,92.857,1150,80\\" class=\\"ct-line\\"></path><line x1=\\"90\\" y1=\\"311.42857142857144\\" x2=\\"90.01\\" y2=\\"311.42857142857144\\" class=\\"ct-point\\" ct:value=\\"2\\"></line><line x1=\\"355\\" y1=\\"292.14285714285717\\" x2=\\"355.01\\" y2=\\"292.14285714285717\\" class=\\"ct-point\\" ct:value=\\"3\\"></line><line x1=\\"620\\" y1=\\"157.14285714285714\\" x2=\\"620.01\\" y2=\\"157.14285714285714\\" class=\\"ct-point\\" ct:value=\\"10\\"></line><line x1=\\"885\\" y1=\\"118.57142857142858\\" x2=\\"885.01\\" y2=\\"118.57142857142858\\" class=\\"ct-point\\" ct:value=\\"12\\"></line><line x1=\\"1150\\" y1=\\"80\\" x2=\\"1150.01\\" y2=\\"80\\" class=\\"ct-point\\" ct:value=\\"14\\"></line></g></g><g class=\\"ct-labels\\"><text x=\\"85.5\\" y=\\"370\\" width=\\"265\\" height=\\"40\\" class=\\"ct-label ct-horizontal ct-end\\">1</text><text x=\\"350.5\\" y=\\"370\\" width=\\"265\\" height=\\"40\\" class=\\"ct-label ct-horizontal ct-end\\">2</text><text x=\\"615.5\\" y=\\"370\\" width=\\"265\\" height=\\"40\\" class=\\"ct-label ct-horizontal ct-end\\">1</text><text x=\\"880.5\\" y=\\"370\\" width=\\"265\\" height=\\"40\\" class=\\"ct-label ct-horizontal ct-end\\">1</text><text x=\\"1145.5\\" y=\\"370\\" width=\\"30\\" height=\\"40\\" class=\\"ct-label ct-horizontal ct-end\\">1</text><text y=\\"354.5\\" x=\\"80\\" height=\\"38.57142857142857\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">0</text><text y=\\"315.92857142857144\\" x=\\"80\\" height=\\"38.57142857142857\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">2</text><text y=\\"277.3571428571429\\" x=\\"80\\" height=\\"38.57142857142857\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">4</text><text y=\\"238.78571428571428\\" x=\\"80\\" height=\\"38.57142857142857\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">6</text><text y=\\"200.21428571428572\\" x=\\"80\\" height=\\"38.571428571428584\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">8</text><text y=\\"161.64285714285714\\" x=\\"80\\" height=\\"38.571428571428555\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">10</text><text y=\\"123.07142857142858\\" x=\\"80\\" height=\\"38.571428571428584\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">12</text><text y=\\"84.5\\" x=\\"80\\" height=\\"30\\" width=\\"60\\" class=\\"ct-label ct-vertical ct-start\\">14</text></g><text class=\\"ct-axis-title ct-label\\" x=\\"620\\" y=\\"400\\" dominant-baseline=\\"text-after-edge\\" text-anchor=\\"middle\\">Days</text><text class=\\"ct-axis-title ct-label\\" x=\\"20\\" y=\\"215\\" transform=\\"rotate(-90, 20, 215)\\" dominant-baseline=\\"hanging\\" text-anchor=\\"middle\\">Contributions</text></svg>
