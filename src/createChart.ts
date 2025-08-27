@@ -21,7 +21,7 @@ const Ru = require('@panosoft/ramda-utils');
 
 export const createGraph = R.curryN(
     3,
-    co.wrap(function* (type: string, options: any, data: any) {
+    co.wrap(function* (type: string, options: any, data: any): Generator<any, string, any> {
         const environment = yield chartist.initialize();
         const window = environment.window;
         const Chartist = environment.Chartist;
@@ -34,7 +34,7 @@ export const createGraph = R.curryN(
         const chart = yield generateChart(Chartist, window, type, options, data);
         const legend = options.legend ? generateLegend(data) : '';
         return `${chart}${legend}`;
-    })
+    }),
 );
 
 export default { chartist };

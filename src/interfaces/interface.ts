@@ -74,7 +74,7 @@ export class Week {
 }
 
 export class ResponseOfApi {
-    data: {
+    data?: {
         user: {
             name: string;
             contributionsCollection: {
@@ -85,4 +85,5 @@ export class ResponseOfApi {
             };
         };
     };
+    errors?: Array<{ message: string; type: string }>;
 }

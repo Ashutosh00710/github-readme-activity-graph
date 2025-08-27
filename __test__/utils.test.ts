@@ -12,7 +12,7 @@ describe('Utilities Test', () => {
             fakeQueryString.map((arg) => {
                 const utils = new Utilities(arg);
                 return utils.queryOptions();
-            })
+            }),
         ).toEqual(fakeQueryStringRes);
     });
 

@@ -106,6 +106,7 @@ export let fakeQueryStringRes = [
         days: 31,
         from: '',
         to: '',
+        grid: true,
     },
     {
         username: 'githubusername',
@@ -125,6 +126,7 @@ export let fakeQueryStringRes = [
         days: 31,
         from: '',
         to: '',
+        grid: true,
     },
     {
         username: 'githubusername',
@@ -144,6 +146,7 @@ export let fakeQueryStringRes = [
         days: 31,
         from: '',
         to: '',
+        grid: true,
     },
     {
         username: 'githubusername',
@@ -163,6 +166,7 @@ export let fakeQueryStringRes = [
         days: 31,
         from: '',
         to: '',
+        grid: true,
     },
     {
         username: 'githubusername',
@@ -182,6 +186,7 @@ export let fakeQueryStringRes = [
         days: 31,
         from: '',
         to: '',
+        grid: true,
     },
     {
         username: 'githubusername',
@@ -201,6 +206,7 @@ export let fakeQueryStringRes = [
         days: 31,
         from: '',
         to: '',
+        grid: true,
     },
     {
         username: 'githubusername',
@@ -220,6 +226,7 @@ export let fakeQueryStringRes = [
         days: 31,
         from: '',
         to: '',
+        grid: true,
     },
     {
         username: 'githubusername',
@@ -239,6 +246,7 @@ export let fakeQueryStringRes = [
         days: 31,
         from: '',
         to: '',
+        grid: true,
     },
     {
         username: 'githubusername',
@@ -259,6 +267,7 @@ export let fakeQueryStringRes = [
         days: 31,
         from: '',
         to: '',
+        grid: true,
     },
 ];
 
