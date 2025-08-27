@@ -49,7 +49,7 @@ export class Fetcher {
     public async fetchContributions(
         days: number,
         customFromDate?: string,
-        customToDate?: string
+        customToDate?: string,
     ): Promise<UserDetails | string> {
         let from = '',
             to = '';
@@ -65,39 +65,54 @@ export class Fetcher {
 
         try {
             const apiResponse = await this.fetch(this.getGraphQLQuery(from, to));
-            if (apiResponse.data.data.user === null)
-                return `Can't fetch any contribution. Please check your username 😬`;
-            else {
-                const userData: UserDetails = {
-                    contributions: [],
-                    name: apiResponse.data.data.user.name,
-                };
-                //filtering the week data from API response
-                const weeks =
-                    apiResponse.data.data.user.contributionsCollection.contributionCalendar.weeks;
-                // get day-contribution data
-                weeks.map((week: Week) =>
-                    week.contributionDays.map((contributionDay: ContributionDay) => {
-                        contributionDay.date = moment(contributionDay.date, moment.ISO_8601)
-                            .date()
-                            .toString();
-                        userData.contributions.push(contributionDay);
-                    })
-                );
-
-                // if 32nd entry is 0 means:
-                // either the day hasn't really started
-                // or the user hasn't contributed today
-                const length = userData.contributions.length;
-                if (!(customFromDate && customToDate)) {
-                    if (userData.contributions[length - 1].contributionCount === 0) {
-                        userData.contributions.pop();
+            if (apiResponse.status !== 200) {
+                console.error('API Error: ', apiResponse.data.errors);
+                if (apiResponse.data.errors) {
+                    if (apiResponse.data.errors[0].type === 'RATE_LIMITED') {
+                        console.log('GraphQL Error: API rate limit exceeded');
+                        return '💥 API rate limit exceeded. Please try again later or deploy your own instance.';
                     }
-                    const extra = userData.contributions.length - days;
-                    userData.contributions.splice(0, extra);
                 }
-                return userData;
+            } else if (apiResponse.data.data) {
+                if (apiResponse.data.data.user === null)
+                    return `Can't fetch any contribution. Please check your username 😬`;
+                else {
+                    const userData: UserDetails = {
+                        contributions: [],
+                        name: apiResponse.data.data.user.name,
+                    };
+                    //filtering the week data from API response
+                    const weeks =
+                        apiResponse.data.data.user.contributionsCollection.contributionCalendar
+                            .weeks;
+                    // get day-contribution data
+                    weeks.map((week: Week) =>
+                        week.contributionDays.map((contributionDay: ContributionDay) => {
+                            contributionDay.date = moment(contributionDay.date, moment.ISO_8601)
+                                .date()
+                                .toString();
+                            userData.contributions.push(contributionDay);
+                        }),
+                    );
+
+                    // if 32nd entry is 0 means:
+                    // either the day hasn't really started
+                    // or the user hasn't contributed today
+                    const length = userData.contributions.length;
+                    if (!(customFromDate && customToDate)) {
+                        if (userData.contributions[length - 1].contributionCount === 0) {
+                            userData.contributions.pop();
+                        }
+                        const extra = userData.contributions.length - days;
+                        userData.contributions.splice(0, extra);
+                    }
+                    return userData;
+                }
+            } else {
+                console.error('Unexpected API response structure');
+                throw new Error('Unexpected API response structure');
             }
+            throw new Error('Unreachable code reached');
         } catch (error) {
             console.log('error: ', error);
             return error;
