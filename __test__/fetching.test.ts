@@ -14,14 +14,14 @@ describe('Fetching Tests', () => {
         const expected = expectedQuery(
             'ashutosh00710',
             '2022-05-01T00:00:00.000+00:00',
-            '2022-06-01T00:00:00.000+00:00'
+            '2022-06-01T00:00:00.000+00:00',
         );
         expect(
             // @ts-ignore: testing private method
             fetcher.getGraphQLQuery(
                 '2022-05-01T00:00:00.000+00:00',
-                '2022-06-01T00:00:00.000+00:00'
-            )
+                '2022-06-01T00:00:00.000+00:00',
+            ),
         ).toEqual(expected);
     });
 
@@ -37,7 +37,7 @@ describe('Fetching Tests', () => {
                 expect(data.contributions).toEqual(expect.any(Array));
                 expect(data.contributions.length).toEqual(31);
                 expect(data.name).toEqual('Ashutosh Dwivedi');
-            }
+            },
         );
 
         // @ts-ignore: mocking private method

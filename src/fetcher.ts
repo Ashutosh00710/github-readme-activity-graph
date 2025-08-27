@@ -6,7 +6,10 @@ import { Query, UserDetails, Week, ContributionDay, ResponseOfApi } from 'src/in
 dotenv.config();
 
 export class Fetcher {
-    constructor(private readonly username: string) {}
+    private readonly username: string;
+    constructor(username: string) {
+        this.username = username;
+    }
 
     private getGraphQLQuery(from: string, to: string) {
         return {
@@ -71,6 +74,8 @@ export class Fetcher {
                 if (apiResponse.data.errors[0].type === 'RATE_LIMITED') {
                     console.log('GraphQL Error: API rate limit exceeded');
                     return '💥 API rate limit exceeded. Please deploy your own instance.';
+                } else {
+                    return `Can't fetch any contribution. Please check your username 😬`;
                 }
             } else if (apiResponse.data.data) {
                 if (apiResponse.data.data.user === null)
@@ -111,10 +116,9 @@ export class Fetcher {
                 console.error('Unexpected API response structure');
                 throw new Error('Unexpected API response structure');
             }
-            throw new Error('Unreachable code reached');
         } catch (error) {
             console.log('error: ', error);
-            return error;
+            return `Can't fetch any contribution. Please check your username 😬`;
         }
     }
 }
