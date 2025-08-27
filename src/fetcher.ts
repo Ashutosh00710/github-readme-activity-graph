@@ -70,7 +70,7 @@ export class Fetcher {
                 console.error('API Error: ', apiResponse.data.errors);
                 if (apiResponse.data.errors[0].type === 'RATE_LIMITED') {
                     console.log('GraphQL Error: API rate limit exceeded');
-                    return '💥 API rate limit exceeded. Please try again later or deploy your own instance.';
+                    return '💥 API rate limit exceeded. Please deploy your own instance.';
                 }
             } else if (apiResponse.data.data) {
                 if (apiResponse.data.data.user === null)
