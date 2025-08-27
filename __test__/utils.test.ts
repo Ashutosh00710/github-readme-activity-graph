@@ -30,7 +30,7 @@ describe('Utilities Test', () => {
             request(app)
                 .get('/graph?username=ashutosh00710')
                 .expect('Content-Type', 'image/svg+xml; charset=utf-8')
-                .expect('Cache-Control', 'no-store, max-age=0') // Updated to match current behavior due to API auth issues
+                .expect('Cache-Control', 'public, max-age=1800')
                 .expect(200, done);
         });
     });
