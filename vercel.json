@@ -1,10 +1,11 @@
 {
     "version": 2,
-    "functions": {
-        "src/main.ts": {
-            "runtime": "@vercel/node@2"
+    "builds": [
+        {
+            "src": "src/main.ts",
+            "use": "@vercel/node"
         }
-    },
+    ],
     "routes": [
         {
             "src": "/(.*)",
