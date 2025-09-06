@@ -12,8 +12,8 @@ export const graphSvg = (props: GraphArgs) => `
             <rect xmlns="http://www.w3.org/2000/svg" data-testid="card_bg" id="cardBg"
             x="0" y="0" rx="${props.radius}" height="100%" stroke="#E4E2E2" fill-opacity="1"
             width="100%" fill="#${props.colors.bgColor}" stroke-opacity="1" style="stroke:#${
-    props.colors.borderColor
-}; stroke-width:1;"/>
+                props.colors.borderColor
+            }; stroke-width:1;"/>
 
             <style>
                 body {
@@ -33,7 +33,7 @@ export const graphSvg = (props: GraphArgs) => `
                     props.colors.color,
                     props.colors.lineColor,
                     props.colors.pointColor,
-                    props.colors.areaColor
+                    props.colors.areaColor,
                 )}
                 ${pointAnimation()}
                 ${lineAnimation()}

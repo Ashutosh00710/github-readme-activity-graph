@@ -20,16 +20,17 @@ export class Utilities {
             bgColor: this.queryString.bg_color
                 ? this.queryString.bg_color
                 : selectColors(theme).bgColor,
-            borderColor:
-                String(this.queryString.hide_border) === 'true'
-                    ? '0000' // transparent
-                    : selectColors(theme).borderColor,
+            borderColor: this.queryString.border_color
+                ? this.queryString.border_color
+                : String(this.queryString.hide_border) === 'true'
+                  ? '0000' // transparent
+                  : selectColors(theme).borderColor,
             color: this.queryString.color ? this.queryString.color : selectColors(theme).color,
             titleColor: this.queryString.title_color
                 ? this.queryString.title_color
                 : this.queryString.color
-                ? this.queryString.color
-                : selectColors(theme).titleColor,
+                  ? this.queryString.color
+                  : selectColors(theme).titleColor,
             lineColor: this.queryString.line
                 ? this.queryString.line
                 : selectColors(theme).lineColor,
@@ -152,7 +153,7 @@ export class Utilities {
                 options.colors,
                 title,
                 options.area,
-                options.grid
+                options.grid,
             );
             const getChart = await graph.buildGraph(fetchCalendarData.contributions);
             return {
