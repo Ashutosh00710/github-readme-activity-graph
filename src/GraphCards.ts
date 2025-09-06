@@ -10,7 +10,7 @@ export class Card {
         private readonly colors: Colors,
         private readonly title = '',
         private readonly area = false,
-        private readonly showGrid = true
+        private readonly showGrid = true,
     ) {}
 
     private getOptions() {

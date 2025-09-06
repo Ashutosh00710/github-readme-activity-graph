@@ -25,7 +25,7 @@ export const mockFetchCorrect = jest.fn().mockReturnValue(
                 },
             },
         },
-    })
+    }),
 );
 
 //For invalid username
