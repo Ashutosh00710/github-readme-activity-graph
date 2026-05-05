@@ -29,6 +29,7 @@ const themes = {
     rogue: { bgColor: '#172030', line: '#b18bb1', point: '#c6797e', color: '#a3b09a' },
     xcode: { bgColor: '#202124', line: '#c4e3ff', point: '#ff8070', color: '#fcfcfa' },
     redical: { bgColor: '#141321', line: '#fe428e', point: '#f8d847', color: '#a9fef7' },
+    radical: { bgColor: '#141321', line: '#fe428e', point: '#f8d847', color: '#a9fef7' },
     coral: { bgColor: '#9a3838', line: '#f4e23d', point: '#f4e7e7', color: '#f9fae9' },
     react: { bgColor: '#282c34', line: '#61dafb', point: '#61dafb', color: '#ffffff' },
     'react-dark': { bgColor: '#0d1117', line: '#5bcdec', point: '#ffffff', color: '#5bcdec' },

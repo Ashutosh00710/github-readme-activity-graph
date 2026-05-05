@@ -2,12 +2,13 @@ import { selectColors } from '../src/styles/themes';
 import { themes } from './fakeInputs';
 
 test('Theme testing', () => {
-    expect.assertions(22);
+    expect.assertions(23);
     expect(selectColors('dracula')).toEqual(themes['dracula']);
     expect(selectColors('gruvbox')).toEqual(themes['gruvbox']);
     expect(selectColors('github')).toEqual(themes['github']);
     expect(selectColors('rogue')).toEqual(themes['rogue']);
     expect(selectColors('redical')).toEqual(themes['redical']);
+    expect(selectColors('radical')).toEqual(themes['redical']);
     expect(selectColors('xcode')).toEqual(themes['xcode']);
     expect(selectColors('coral')).toEqual(themes['coral']);
     expect(selectColors('react-dark')).toEqual(themes['reactDark']);
