@@ -102,7 +102,11 @@ export const selectColors = (queryString: string): Colors => {
                 lineColor: 'c4e3ff',
                 pointColor: 'ff8070',
             };
+        // "redical" was originally added as a typo of "radical" (see #236).
+        // Both names are accepted to avoid breaking users who already
+        // configured "redical"; "radical" is the canonical name going forward.
         case 'redical':
+        case 'radical':
             return {
                 areaColor: 'fe428e',
                 bgColor: '141321',
