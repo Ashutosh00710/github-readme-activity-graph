@@ -33,6 +33,7 @@ Please refer to the updated link [here](#how-to-use)
     - [First Method](#first-method)
     - [Second Method](#second-method)
     - [Finally](#finally)
+- [Deploy with Docker on Coolify](#deploy-with-docker-on-coolify)
 - [Contributing](#contributing)
 - [Core Team 💻](#core-team-)
 - [Contributors ✨](#contributors-)
@@ -203,6 +204,45 @@ Now just add the following to your profile readme and you're good to go.
 ```md
 ![Github Activity Graph](<{your_own_domain_name}.vercel.app>/graph?username=<username>)
 ```
+
+</details>
+
+## Deploy with Docker on Coolify
+
+A production-ready `Dockerfile` is shipped with the project for self-hosting on a dedicated server or VPS. It uses a multi-stage build on top of `node:20-alpine`, runs as a non-root user, and exposes the server on port `5100`. The steps below cover deploying it with [Coolify](https://coolify.io/), an open-source, self-hostable alternative to Heroku/Vercel/Netlify.
+
+<details>
+<summary><b>Step-by-step instructions for deploying to Coolify</b></summary>
+
+Since the repository contains a `Dockerfile`, Coolify can build and deploy it out of the box.
+
+1. Fork this repository to your GitHub account (optional, but recommended so you can pin a version).
+
+2. Create a [personal access token](https://github.com/settings/tokens/new?description=GitHub%20Readme%20Activity%20Graph) with the `repo` scope.
+
+3. In your Coolify dashboard, click **+ New** → **Resource** and pick **Public Repository** (or **Private Repository** if you prefer, after connecting the GitHub App).
+
+4. Paste the repository URL (e.g. `https://github.com/<your-user>/github-readme-activity-graph/`) and select the `main` branch.
+
+5. For the **Build Pack**, choose **Dockerfile**. Coolify will auto-detect the `Dockerfile` at the project root.
+
+6. Under **Network / Ports**, set the **Exposed Port** to `5100`.
+
+7. Under **Environment Variables**, add a new variable:
+
+    - Key: `TOKEN`
+    - Value: `<your_github_pat>`
+    - Mark it as **Is Build Variable?** → `No` (it is only needed at runtime).
+
+8. (Optional) In the **Domains** tab, attach a custom domain and enable **HTTPS** — Coolify will provision a Let's Encrypt certificate automatically.
+
+9. Click **Deploy**. Once the build succeeds and the container becomes healthy, your instance will be available at the domain you configured.
+
+10. Add the following to your profile README, replacing `<your-domain>` with your Coolify domain:
+
+    ```md
+    ![Github Activity Graph](https://<your-domain>/graph?username=<username>)
+    ```
 
 </details>
 
