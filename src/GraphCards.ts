@@ -11,6 +11,7 @@ export class Card {
         private readonly title = '',
         private readonly area = false,
         private readonly showGrid = true,
+        private readonly titleFontSize = 20,
     ) {}
 
     private getOptions() {
@@ -77,6 +78,7 @@ export class Card {
             width: this.width,
             colors: this.colors,
             title: this.title,
+            titleFontSize: this.titleFontSize,
             radius: this.radius,
             line,
         };

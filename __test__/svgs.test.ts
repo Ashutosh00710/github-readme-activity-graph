@@ -13,6 +13,14 @@ describe('SVG Testing', () => {
         expect(invalidUserSvg(fakeInvalidSvgArg)).toMatchSnapshot();
     });
 
+    it('Test custom title font-size', () => {
+        const svg = graphSvg({ ...fakeGraphArgs, titleFontSize: 32 });
+        expect(svg).toContain(
+            "font: 600 32px 'Segoe UI', Ubuntu, Sans-Serif;\n                    text-align: center;",
+        );
+        expect(svg).toContain('<foreignObject x="0" y="0" width="20" height="62">');
+    });
+
     //- Svg testing Promise<string> (GrapgCards.ts)✔
     it('chart SVGs', async () => {
         expect.assertions(1);
