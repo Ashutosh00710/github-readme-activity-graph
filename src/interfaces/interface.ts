@@ -19,6 +19,7 @@ export class QueryOption {
     username: string;
     hide_title?: boolean;
     custom_title?: string;
+    title_font_size: number;
     from?: string;
     to?: string;
     grid: boolean;
@@ -33,6 +34,7 @@ export class ParsedQs {
     username?: string;
     hide_title?: boolean;
     custom_title?: string;
+    title_font_size?: number;
     bg_color?: string;
     border_color?: string;
     hide_border?: boolean;
@@ -56,6 +58,7 @@ export class GraphArgs {
     width: number;
     colors: Colors;
     title: string;
+    titleFontSize: number;
     radius: number;
     line: Promise<string>;
 }

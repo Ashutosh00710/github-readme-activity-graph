@@ -111,6 +111,9 @@ export class Utilities {
         const options: QueryOption = {
             username: this.username,
             hide_title: String(this.queryString.hide_title) === 'true',
+            title_font_size: this.queryString.title_font_size
+                ? Math.min(Math.max(this.queryString.title_font_size, 5), 40)
+                : 20, // Custom title font-size in range [5, 40], if not specified use default value - 20
             radius: this.queryString.radius
                 ? Math.min(Math.max(this.queryString.radius, 0), 16)
                 : 0, // Border radius in range [0, 16]
@@ -154,6 +157,7 @@ export class Utilities {
                 title,
                 options.area,
                 options.grid,
+                options.title_font_size,
             );
             const getChart = await graph.buildGraph(fetchCalendarData.contributions);
             return {

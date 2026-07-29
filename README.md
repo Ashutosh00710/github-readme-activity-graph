@@ -99,6 +99,7 @@ Customize the appearance of your Activity Graph however you want with URL params
 | `hide_border`  |   makes the border of the graph transparent   |           boolean (default: `false`)           |
 |  `hide_title`  |       sets the title to an empty string       |           boolean (default: `false`)           |
 | `custom_title` |          set the title to any string          |                     string                     |
+| `title_font_size` |        font-size of the graph's title        |            number (5-40 inclusive)             |
 |    `theme`     | name of [available themes](#available-themes) |                     string                     |
 |    `radius`    |            border radius of graph             |            number (0-16 inclusive)             |
 |    `height`    |              height of the graph              |           number (200-600 inclusive)           |

@@ -20,7 +20,7 @@ export const graphSvg = (props: GraphArgs) => `
                     font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
                 }
                 .header {
-                    font: 600 20px 'Segoe UI', Ubuntu, Sans-Serif;
+                    font: 600 ${props.titleFontSize}px 'Segoe UI', Ubuntu, Sans-Serif;
                     text-align: center;
                     color: #${props.colors.titleColor ?? props.colors.color};
                     margin-top: 20px;
@@ -39,7 +39,7 @@ export const graphSvg = (props: GraphArgs) => `
                 ${lineAnimation()}
             </style>
 
-            <foreignObject x="0" y="0" width="${props.width}" height="50">
+            <foreignObject x="0" y="0" width="${props.width}" height="${props.titleFontSize + 30}">
                 <h1 xmlns="http://www.w3.org/1999/xhtml" class="header">
                     ${props.title}
                 </h1>
