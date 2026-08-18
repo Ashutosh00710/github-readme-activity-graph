@@ -713,6 +713,15 @@ export const themes = {
         lineColor: '226d64',
         pointColor: '156f69',
     },
+    espresso: {
+        areaColor: 'c68958',
+        borderColor: 'ffffff',
+        bgColor: '2b1d14',
+        color: 'e8c39e',
+        titleColor: 'e8c39e',
+        lineColor: 'c68958',
+        pointColor: 'e8c39e',
+    },
     default: {
         areaColor: '9e4c98',
         bgColor: 'ffcfe9',
