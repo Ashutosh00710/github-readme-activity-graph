@@ -94,7 +94,9 @@ runs:
         - name: Install dependencies
           shell: bash
           working-directory: ${{ github.action_path }}
-          run: npm ci --omit=dev --no-audit --no-fund
+          # No dependency needs install scripts; skipping them keeps third-party
+          # code from running in the job that holds the token.
+          run: npm ci --omit=dev --ignore-scripts --no-audit --no-fund
 
         # Inputs are passed through env, never interpolated into the script.
         - name: Generate activity graph
