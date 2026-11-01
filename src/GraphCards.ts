@@ -66,7 +66,7 @@ export class Card {
         const options = this.getOptions();
 
         //Construction of graph from node-chartist
-        const line: Promise<string> = await createGraph('line', options, {
+        const line: string = await createGraph('line', options, {
             labels: days.map((day) => day.date),
             series: [{ value: days.map((day) => day.contributionCount) }],
         });

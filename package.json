@@ -28,19 +28,21 @@
         "@types/express": "5.0.6",
         "@types/node": "26.6.6",
         "axios": "1.21.0",
+        "chartist": "0.11.4",
         "cors": "2.8.6",
         "dotenv": "18.0.9",
         "express": "5.3.0",
+        "jsdom": "26.1.0",
         "mime-db": "^1.54.0",
         "mime-types": "^3.0.2",
         "moment": "2.31.0",
-        "node-chartist": "^1.0.5",
         "supertest": "7.3.1",
         "ts-node": "10.9.2",
         "typescript": "5.9.2"
     },
     "devDependencies": {
         "@types/jest": "30.0.0",
+        "@types/jsdom": "21.1.7",
         "@types/supertest": "7.2.1",
         "@typescript-eslint/eslint-plugin": "8.72.1",
         "@typescript-eslint/parser": "8.72.1",
@@ -51,10 +53,5 @@
         "nodemon": "3.1.14",
         "prettier": "3.9.10",
         "ts-jest": "29.4.15"
-    },
-    "overrides": {
-        "request": {
-            "form-data": "2.5.6"
-        }
     }
 }
