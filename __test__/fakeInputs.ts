@@ -316,7 +316,7 @@ export let fakeGraphArgs: GraphArgs = {
         pointColor: 'bd93f9',
     },
     title: 'graphSvg',
-    line: Promise.resolve('line'),
+    line: 'line',
 };
 
 export let options = {

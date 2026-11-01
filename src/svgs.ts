@@ -2,6 +2,12 @@ import { graphStyle } from './styles/graphStyle';
 import { pointAnimation, lineAnimation } from './styles/graphAnimation';
 import { GraphArgs } from './interfaces/interface';
 
+// The title comes from the custom_title query parameter or the user's GitHub
+// display name, both user-controlled, so escape it before it goes into the
+// markup.
+export const escapeXml = (text: string) =>
+    text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
 export const graphSvg = (props: GraphArgs) => `
     <svg
         width="${props.width}"
@@ -41,7 +47,7 @@ export const graphSvg = (props: GraphArgs) => `
 
             <foreignObject x="0" y="0" width="${props.width}" height="50">
                 <h1 xmlns="http://www.w3.org/1999/xhtml" class="header">
-                    ${props.title}
+                    ${escapeXml(props.title)}
                 </h1>
             </foreignObject>
             ${props.line}
@@ -63,6 +69,6 @@ export const invalidUserSvg = (data: string) => `
         <rect xmlns="http://www.w3.org/2000/svg" data-testid="card_bg" id="cardBg" x="0.5"
         y="0.5" rx="4.5" height="100%" stroke="#E4E2E2" fill-opacity="1" width="100%"
         fill="#44475a" stroke-opacity="1"/>
-        <text x="20" y="100" fill="#bd93f9">${data}</text>
+        <text x="20" y="100" fill="#bd93f9">${escapeXml(data)}</text>
     </svg>
 `;

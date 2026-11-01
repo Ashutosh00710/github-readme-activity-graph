@@ -117,7 +117,10 @@ export class Fetcher {
                 throw new Error('Unexpected API response structure');
             }
         } catch (error) {
-            console.log('error: ', error);
+            // Log only the message: axios errors carry the request config,
+            // including the Authorization header with the token. Non-Error
+            // values are not logged at all, since their shape is unknown.
+            console.log('error: ', error instanceof Error ? error.message : 'unknown error');
             return `Can't fetch any contribution. Please check your username 😬`;
         }
     }

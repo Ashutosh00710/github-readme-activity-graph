@@ -9,6 +9,9 @@ on:
     pull_request:
         branches: [main]
 
+permissions:
+    contents: read
+
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -17,13 +20,13 @@ jobs:
                 node-version: [22.x]
         steps:
             - uses: actions/checkout@v4
-            - name: create env file
-              run: |
-                  touch .env
-                  echo TOKEN=${{ secrets.TOKEN }} >> .env
             - name: Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
             - run: npm ci
+            # Pass the secret through env rather than interpolating it into a
+            # script or writing it to a .env file on disk.
             - run: npm test
+              env:
+                  TOKEN: ${{ secrets.TOKEN }}

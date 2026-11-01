@@ -5,6 +5,12 @@ import { invalidUserSvg } from './svgs';
 import { selectColors } from './styles/themes';
 import { QueryOption, ParsedQs, UserDetails } from './interfaces/interface';
 
+// Colors are written into the SVG's <style> block as #<value>, so anything
+// other than a 3-8 digit hex code could break out of the CSS. Invalid values
+// are dropped and the theme color is used instead.
+const hexColor = (value?: string): string | undefined =>
+    value && /^[0-9a-fA-F]{3,8}$/.test(value) ? value : undefined;
+
 export class Utilities {
     public username: string;
     constructor(private readonly queryString: ParsedQs) {
@@ -13,30 +19,25 @@ export class Utilities {
 
     private getColors() {
         const theme = this.queryString.theme || 'default';
+        const areaColor = hexColor(this.queryString.area_color);
+        const bgColor = hexColor(this.queryString.bg_color);
+        const borderColor = hexColor(this.queryString.border_color);
+        const color = hexColor(this.queryString.color);
+        const titleColor = hexColor(this.queryString.title_color);
+        const lineColor = hexColor(this.queryString.line);
+        const pointColor = hexColor(this.queryString.point);
         return {
-            areaColor: this.queryString.area_color
-                ? this.queryString.area_color
-                : selectColors(theme).areaColor,
-            bgColor: this.queryString.bg_color
-                ? this.queryString.bg_color
-                : selectColors(theme).bgColor,
-            borderColor: this.queryString.border_color
-                ? this.queryString.border_color
+            areaColor: areaColor ? areaColor : selectColors(theme).areaColor,
+            bgColor: bgColor ? bgColor : selectColors(theme).bgColor,
+            borderColor: borderColor
+                ? borderColor
                 : String(this.queryString.hide_border) === 'true'
                   ? '0000' // transparent
                   : selectColors(theme).borderColor,
-            color: this.queryString.color ? this.queryString.color : selectColors(theme).color,
-            titleColor: this.queryString.title_color
-                ? this.queryString.title_color
-                : this.queryString.color
-                  ? this.queryString.color
-                  : selectColors(theme).titleColor,
-            lineColor: this.queryString.line
-                ? this.queryString.line
-                : selectColors(theme).lineColor,
-            pointColor: this.queryString.point
-                ? this.queryString.point
-                : selectColors(theme).pointColor,
+            color: color ? color : selectColors(theme).color,
+            titleColor: titleColor ? titleColor : color ? color : selectColors(theme).titleColor,
+            lineColor: lineColor ? lineColor : selectColors(theme).lineColor,
+            pointColor: pointColor ? pointColor : selectColors(theme).pointColor,
         };
     }
 

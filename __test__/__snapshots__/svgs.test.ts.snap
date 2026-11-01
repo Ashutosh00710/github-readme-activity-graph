@@ -164,7 +164,7 @@ exports[`SVG Testing Test SVGs 1`] = `
                     graphSvg
                 </h1>
             </foreignObject>
-            [object Promise]
+            line
     </svg>
 "
 `;

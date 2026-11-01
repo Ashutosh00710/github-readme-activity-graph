@@ -73,7 +73,7 @@ describe('Utilities Test', () => {
                 date: '5',
             },
         ];
-        const graph: Promise<string> = await createGraph('line', options, {
+        const graph: string = await createGraph('line', options, {
             labels: days.map((day) => day.date),
             series: [{ value: days.map((day) => day.contributionCount) }],
         });

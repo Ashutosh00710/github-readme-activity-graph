@@ -27,6 +27,7 @@ Please refer to the updated link [here](#how-to-use)
 - [Available Themes](#available-themes)
 - [Customization](#customization)
     - [Common Options](#common-options)
+- [Use as a GitHub Action](#use-as-a-github-action)
 - [Deploy on your own Replit instance](#deploy-on-your-own-replit-instance)
     - [Follow the steps](#follow-the-steps)
 - [Deploy on your own Vercel instance](#deploy-on-your-own-vercel-instance)
@@ -122,6 +123,49 @@ Example:
 ```md
 [![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=ashutosh00710&bg_color=fffff0&color=708090&line=24292e&point=24292e&area=true&border_color=ff0000)](https://github.com/ashutosh00710/github-readme-activity-graph)
 ```
+
+## Use as a GitHub Action
+
+Instead of relying on a hosted instance, you can render the graph to an SVG file in your own workflow and commit it to your profile repository.
+
+```yaml
+name: Activity Graph
+
+on:
+    schedule:
+        - cron: '0 0 * * *' # once a day
+    workflow_dispatch:
+
+permissions:
+    contents: write
+
+jobs:
+    graph:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - uses: Ashutosh00710/github-readme-activity-graph@main
+              with:
+                  username: ${{ github.repository_owner }}
+                  token: ${{ secrets.GITHUB_TOKEN }}
+                  output_path: profile/activity-graph.svg
+                  theme: github-light
+            - name: Commit graph
+              run: |
+                  git config user.name "github-actions[bot]"
+                  git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+                  git add profile/activity-graph.svg
+                  git diff --cached --quiet || git commit -m "Update activity graph"
+                  git push
+```
+
+Then reference the file from your README:
+
+```md
+![Activity Graph](profile/activity-graph.svg)
+```
+
+Every option from [Common Options](#common-options) is available as an input with the same name (`custom_title`, `hide_border`, `days`, `area`, `bg_color`, ...). See [`action.yml`](action.yml) for the full list. `secrets.GITHUB_TOKEN` only sees public activity; use a personal access token to include private contributions. If fetching fails, the step fails instead of writing an error image.
 
 ## Deploy on your own Replit instance
 

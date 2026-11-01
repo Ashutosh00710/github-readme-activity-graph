@@ -1,3 +1,4 @@
+import { format } from 'util';
 import { Fetcher } from '../src/fetcher';
 import {
     mockQueryCorrect,
@@ -49,5 +50,39 @@ describe('Fetching Tests', () => {
         fetcher.fetchContributions().then((data: string) => {
             expect(data).toEqual(`Can't fetch any contribution. Please check your username 😬`);
         });
+    });
+});
+
+describe('Fetching error logging', () => {
+    // format() renders arguments the same way console.log does
+    const logged = (spy: jest.SpyInstance) =>
+        spy.mock.calls.map((args) => format(...args)).join('\n');
+
+    it('never logs the token carried on a failed request', async () => {
+        const token = 'ghp_secretTokenValue123';
+        // axios attaches the request config, including headers, to thrown errors
+        const error = Object.assign(new Error('Request failed with status code 401'), {
+            config: { headers: { Authorization: `bearer ${token}` } },
+        });
+        const fetcher = new Fetcher('octocat');
+        // @ts-ignore: mocking private method
+        fetcher.fetch = jest.fn().mockRejectedValue(error);
+        const logSpy = jest.spyOn(console, 'log').mockImplementation(() => {});
+        const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+
+        try {
+            await fetcher.fetchContributions(31);
+            await fetcher.fetchContributions(31);
+            // @ts-ignore: mocking private method
+            fetcher.fetch = jest.fn().mockRejectedValue(error.config);
+            await fetcher.fetchContributions(31);
+
+            const output = logged(logSpy) + logged(errorSpy);
+            expect(output).toContain('Request failed with status code 401');
+            expect(output).not.toContain(token);
+        } finally {
+            logSpy.mockRestore();
+            errorSpy.mockRestore();
+        }
     });
 });
