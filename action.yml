@@ -1,0 +1,127 @@
+name: Generate GitHub Readme Activity Graph
+description: Render the contribution activity graph to an SVG file, without a hosted instance.
+inputs:
+    username:
+        description: 'GitHub username to generate the graph for'
+        required: true
+    token:
+        description: 'Token for the GitHub GraphQL API (a PAT is needed to include private contributions)'
+        required: true
+    output_path:
+        description: 'Path to write the SVG to, relative to the workspace'
+        required: false
+        default: 'activity-graph.svg'
+    theme:
+        description: 'Theme name (see THEMES.md)'
+        required: false
+        default: 'default'
+    custom_title:
+        description: 'Custom graph title'
+        required: false
+        default: ''
+    hide_title:
+        description: 'Set to true to hide the title'
+        required: false
+        default: 'false'
+    days:
+        description: 'Number of days to show, 1-90 (default 31)'
+        required: false
+        default: ''
+    from:
+        description: 'Start date, YYYY-MM-DD (use together with to)'
+        required: false
+        default: ''
+    to:
+        description: 'End date, YYYY-MM-DD (use together with from)'
+        required: false
+        default: ''
+    area:
+        description: 'Set to true to fill the area under the line'
+        required: false
+        default: 'false'
+    grid:
+        description: 'Set to false to hide the grid'
+        required: false
+        default: ''
+    radius:
+        description: 'Border radius, 0-16'
+        required: false
+        default: ''
+    height:
+        description: 'Graph height in px, 200-600 (default 420)'
+        required: false
+        default: ''
+    hide_border:
+        description: 'Set to true to hide the border'
+        required: false
+        default: 'false'
+    bg_color:
+        description: 'Background color (hex, without #)'
+        required: false
+        default: ''
+    color:
+        description: 'Text color (hex, without #)'
+        required: false
+        default: ''
+    title_color:
+        description: 'Title color (hex, without #)'
+        required: false
+        default: ''
+    line:
+        description: 'Line color (hex, without #)'
+        required: false
+        default: ''
+    point:
+        description: 'Point color (hex, without #)'
+        required: false
+        default: ''
+    area_color:
+        description: 'Area color (hex, without #)'
+        required: false
+        default: ''
+    border_color:
+        description: 'Border color (hex, without #)'
+        required: false
+        default: ''
+runs:
+    using: 'composite'
+    steps:
+        - name: Setup Node
+          uses: actions/setup-node@v4
+          with:
+              node-version: 22.x
+
+        - name: Install dependencies
+          shell: bash
+          working-directory: ${{ github.action_path }}
+          run: npm ci --omit=dev --no-audit --no-fund
+
+        # Inputs are passed through env, never interpolated into the script.
+        - name: Generate activity graph
+          shell: bash
+          env:
+              TOKEN: ${{ inputs.token }}
+              ACTIVITY_USERNAME: ${{ inputs.username }}
+              ACTIVITY_OUTPUT_PATH: ${{ inputs.output_path }}
+              ACTIVITY_THEME: ${{ inputs.theme }}
+              ACTIVITY_CUSTOM_TITLE: ${{ inputs.custom_title }}
+              ACTIVITY_HIDE_TITLE: ${{ inputs.hide_title }}
+              ACTIVITY_DAYS: ${{ inputs.days }}
+              ACTIVITY_FROM: ${{ inputs.from }}
+              ACTIVITY_TO: ${{ inputs.to }}
+              ACTIVITY_AREA: ${{ inputs.area }}
+              ACTIVITY_GRID: ${{ inputs.grid }}
+              ACTIVITY_RADIUS: ${{ inputs.radius }}
+              ACTIVITY_HEIGHT: ${{ inputs.height }}
+              ACTIVITY_HIDE_BORDER: ${{ inputs.hide_border }}
+              ACTIVITY_BG_COLOR: ${{ inputs.bg_color }}
+              ACTIVITY_COLOR: ${{ inputs.color }}
+              ACTIVITY_TITLE_COLOR: ${{ inputs.title_color }}
+              ACTIVITY_LINE: ${{ inputs.line }}
+              ACTIVITY_POINT: ${{ inputs.point }}
+              ACTIVITY_AREA_COLOR: ${{ inputs.area_color }}
+              ACTIVITY_BORDER_COLOR: ${{ inputs.border_color }}
+          run: |
+              "$GITHUB_ACTION_PATH/node_modules/.bin/ts-node" --transpile-only \
+                --project "$GITHUB_ACTION_PATH/tsconfig.json" \
+                "$GITHUB_ACTION_PATH/src/cli.ts"
