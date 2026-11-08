@@ -217,6 +217,7 @@ export const selectColors = (queryString: string): Colors => {
                 pointColor: 'c5cdd3',
             };
         case 'one-dark':
+        case 'onedark':
             return {
                 areaColor: 'e5c17c',
                 borderColor: 'ffffff',
@@ -287,6 +288,7 @@ export const selectColors = (queryString: string): Colors => {
                 pointColor: 'f6f8fa',
             };
         case 'tokyo-day':
+        case 'tokyoday':
             return {
                 areaColor: '8f5a02',
                 borderColor: 'ffffff',
@@ -297,6 +299,7 @@ export const selectColors = (queryString: string): Colors => {
                 pointColor: '562e49',
             };
         case 'tokyo-night':
+        case 'tokyonight':
             return {
                 areaColor: '70a5fd',
                 borderColor: 'ffffff',

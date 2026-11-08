@@ -686,6 +686,15 @@ export const themes = {
         lineColor: 'e5c17c',
         pointColor: 'e06c75',
     },
+    tokyo_night: {
+        areaColor: '70a5fd',
+        borderColor: 'ffffff',
+        bgColor: '1a1b27',
+        color: '70a5fd',
+        titleColor: '70a5fd',
+        lineColor: '70a5fd',
+        pointColor: 'a9b1d6',
+    },
     monokai: {
         areaColor: 'ff6188',
         borderColor: 'ffffff',
