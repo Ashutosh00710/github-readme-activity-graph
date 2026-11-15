@@ -8,3 +8,6 @@
 /coverage
 /.idea
 .package-lock.json
+# Cloudflare Workers
+.wrangler
+.dev.vars*

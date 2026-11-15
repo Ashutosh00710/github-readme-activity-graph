@@ -1,0 +1,14 @@
+{
+    "$schema": "node_modules/wrangler/config-schema.json",
+    // Must match the Worker name in the Cloudflare dashboard
+    "name": "github-readme-activity-graph",
+    "main": "src/worker.ts",
+    "compatibility_date": "2026-11-01",
+    // process.env and other Node built-ins used by the shared code
+    "compatibility_flags": ["nodejs_compat"],
+    "observability": {
+        "enabled": true
+    }
+    // Secrets (set once, not stored here):
+    //   npx wrangler secret put TOKEN
+}

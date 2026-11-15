@@ -1,14 +1,13 @@
-import axios, { AxiosResponse } from 'axios';
-import * as dotenv from 'dotenv';
 import moment from 'moment';
 import { Query, UserDetails, Week, ContributionDay, ResponseOfApi } from 'src/interfaces/interface';
 
-dotenv.config();
-
 export class Fetcher {
     private readonly username: string;
-    constructor(username: string) {
+    private readonly token: string | undefined;
+    // token defaults to process.env.TOKEN (Node); the Cloudflare Worker passes its TOKEN secret
+    constructor(username: string, token?: string) {
         this.username = username;
+        this.token = token ?? process.env.TOKEN;
     }
 
     private getGraphQLQuery(from: string, to: string) {
@@ -38,15 +37,22 @@ export class Fetcher {
         };
     }
 
-    private async fetch(graphQLQuery: Query): Promise<AxiosResponse<ResponseOfApi>> {
-        return axios({
-            url: 'https://api.github.com/graphql',
+    // Uses the built-in fetch (Node 18+ and Cloudflare Workers) instead of axios
+    private async fetch(graphQLQuery: Query): Promise<{ data: ResponseOfApi }> {
+        const response = await fetch('https://api.github.com/graphql', {
             method: 'POST',
             headers: {
-                Authorization: `bearer ${process.env.TOKEN}`,
+                Authorization: `bearer ${this.token}`,
+                'Content-Type': 'application/json',
+                // GitHub rejects API requests without a User-Agent (fetch doesn't set one in Workers)
+                'User-Agent': 'github-readme-activity-graph',
             },
-            data: graphQLQuery,
+            body: JSON.stringify(graphQLQuery),
         });
+        if (!response.ok) {
+            throw new Error(`GitHub API responded with status ${response.status}`);
+        }
+        return { data: (await response.json()) as ResponseOfApi };
     }
 
     public async fetchContributions(

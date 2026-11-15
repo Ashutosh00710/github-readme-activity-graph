@@ -1,6 +1,10 @@
+import * as dotenv from 'dotenv';
 import express, { Application } from 'express';
 import cors from 'cors';
 import { Handlers } from './handlers';
+
+// Load TOKEN from .env when running on Node (the Cloudflare Worker uses src/worker.ts instead)
+dotenv.config();
 
 const app: Application = express();
 const port = process.env.PORT || 5100;
