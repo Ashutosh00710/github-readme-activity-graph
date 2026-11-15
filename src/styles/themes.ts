@@ -366,6 +366,16 @@ export const selectColors = (queryString: string): Colors => {
                 lineColor: '5DA3FA',
                 pointColor: '2827CC',
             };
+        case 'espresso':
+            return {
+                areaColor: 'c68958',
+                borderColor: 'ffffff',
+                bgColor: '2b1d14',
+                color: 'e8c39e',
+                titleColor: 'e8c39e',
+                lineColor: 'c68958',
+                pointColor: 'e8c39e',
+            };
         default:
             return {
                 areaColor: '9e4c98',
