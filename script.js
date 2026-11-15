@@ -410,6 +410,17 @@ const THEMES = [
         point: '2827CC',
         area: '51E1ED',
     },
+    {
+        id: 'espresso',
+        name: 'Espresso',
+        bg: '2b1d14',
+        border: 'ffffff',
+        title: 'e8c39e',
+        color: 'e8c39e',
+        line: 'c68958',
+        point: 'e8c39e',
+        area: 'c68958',
+    },
 ];
 
 // URL parameter -> theme field, for the seven color options
