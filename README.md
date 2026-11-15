@@ -457,7 +457,7 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 |      Purpose       |  Library Name   |                   Link                    |
 | :----------------: | :-------------: | :---------------------------------------: |
-| Graph Construction | **CHARTIST.JS** | <https://github.com/gionkunz/chartist-js> |
+| Graph Construction (layout and styling based on) | **CHARTIST.JS** | <https://github.com/gionkunz/chartist-js> |
 
 </br>
 <hr/>

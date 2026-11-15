@@ -80,7 +80,7 @@ Our aim is to **keep it simple** for the developers to contribute to this projec
 ├── types
 │ └── types.ts                       #contains all used types throughout the code
 ├── src
-│ ├── createChart.ts                 #creation of graph with chartist.js and node-chartist
+│ ├── createChart.ts                 #renders the line chart as plain SVG (no DOM needed)
 │ ├── GraphChards.ts                 #class of Graph Cards
 │ ├── main.ts                        #everything starts from here
 │ ├── svgs.ts                        #contains svgs used or created throughout the project

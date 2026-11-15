@@ -1,4 +1,4 @@
-import { createGraph } from './createChart';
+import { createGraph, ChartOptions } from './createChart';
 import { graphSvg } from './svgs';
 import { Colors, ContributionDay } from './interfaces/interface';
 
@@ -13,7 +13,7 @@ export class Card {
         private readonly showGrid = true,
     ) {}
 
-    private getOptions() {
+    private getOptions(): ChartOptions {
         return {
             width: this.width,
             height: this.height,
@@ -22,9 +22,11 @@ export class Card {
                 onlyInteger: true,
                 offset: 70,
                 labelOffset: {
+                    x: 0,
                     y: 4.5,
                 },
                 low: 0,
+                scaleMinSpace: 20,
                 showGrid: this.showGrid,
             },
             axisX: {
@@ -32,6 +34,7 @@ export class Card {
                 offset: 50,
                 labelOffset: {
                     x: -4.5,
+                    y: 0,
                 },
                 showGrid: this.showGrid,
             },
@@ -42,7 +45,6 @@ export class Card {
                 left: 20,
             },
             showArea: this.area,
-            fullWidth: true,
         };
     }
 
@@ -65,11 +67,11 @@ export class Card {
         //Options to pass in createGraph function
         const options = this.getOptions();
 
-        //Construction of graph from node-chartist
-        const line: Promise<string> = await createGraph('line', options, {
-            labels: days.map((day) => day.date),
-            series: [{ value: days.map((day) => day.contributionCount) }],
-        });
+        const line = createGraph(
+            options,
+            days.map((day) => day.date),
+            days.map((day) => day.contributionCount),
+        );
 
         //Arguments to construct graphs with rect and other options
         const args = {

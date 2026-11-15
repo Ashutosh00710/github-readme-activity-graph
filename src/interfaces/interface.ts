@@ -57,7 +57,7 @@ export class GraphArgs {
     colors: Colors;
     title: string;
     radius: number;
-    line: Promise<string>;
+    line: string;
 }
 
 export class UserDetails {

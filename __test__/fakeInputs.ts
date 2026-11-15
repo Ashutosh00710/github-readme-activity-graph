@@ -316,24 +316,7 @@ export let fakeGraphArgs: GraphArgs = {
         pointColor: 'bd93f9',
     },
     title: 'graphSvg',
-    line: Promise.resolve('line'),
-};
-
-export let options = {
-    width: 10,
-    height: 5,
-    radius: 5,
-    colors: {
-        areaColor: 'ff79c6',
-        bgColor: '44475a',
-        borderColor: 'ffffff',
-        color: 'f8f8f2',
-        titleColor: 'f8f8f2',
-        lineColor: 'ff79c6',
-        pointColor: 'bd93f9',
-    },
-    title: '',
-    area: false,
+    line: 'line',
 };
 
 export const expectedQuery = (username: string, from: string, to: string) => {
