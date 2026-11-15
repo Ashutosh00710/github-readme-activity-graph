@@ -33,6 +33,7 @@ Please refer to the updated link [here](#how-to-use)
     - [First Method](#first-method)
     - [Second Method](#second-method)
     - [Finally](#finally)
+- [GitHub Actions](#github-actions)
 - [Contributing](#contributing)
 - [Core Team 💻](#core-team-)
 - [Contributors ✨](#contributors-)
@@ -205,6 +206,55 @@ Now just add the following to your profile readme and you're good to go.
 ```
 
 </details>
+
+## GitHub Actions
+
+GitHub Actions generates static SVGs and avoids per-request API calls. By default it uses GITHUB_TOKEN (public stats only), for private stats, set a TOKEN as a secret and pass it to the action instead.
+
+Create `/.github/workflows/activity-graph.yml` in your profile repo (USERNAME/USERNAME):
+
+```yaml
+name: Update Activity Graph
+
+on:
+  schedule: # execute every 12 hours
+    - cron: "* */12 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Generate activity graph
+        uses: maurodesouza/github-readme-activity-graph-action@v1
+        with:
+          username: ${{ github.repository_owner }}
+          options: theme=dracula&hide_border=true
+          output_path: dist/activity-graph.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push activity-graph.svg to the output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+
+Then add the following to your profile readme:
+
+```md
+![Activity Graph](https://raw.githubusercontent.com/{owner}/{repo}/output/activity-graph.svg)
+```
+
+The action is available [here](https://github.com/maurodesouza/github-readme-activity-graph-action).
 
 ## Contributing
 
