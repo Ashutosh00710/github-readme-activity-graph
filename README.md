@@ -493,6 +493,15 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
         <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=fabianocouto" title="Code">💻</a>
         <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=fabianocouto" title="Documentation">📖</a>
     </td>
+    <td align="center">
+        <a href="https://github.com/Shih-vaa">
+            <img src="https://avatars.githubusercontent.com/u/173008425?v=4" width="100px;" alt=""/>
+            <br />
+            <sub><b>Apoorv</b></sub>
+        </a>
+        <br />
+        <a href="https://github.com/Ashutosh00710/github-readme-activity-graph/commits?author=Shih-vaa" title="Design">🎨</a>
+    </td>
   </tr>
 </table>
 
