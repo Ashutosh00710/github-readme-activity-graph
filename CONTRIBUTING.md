@@ -34,7 +34,16 @@ Our aim is to **keep it simple** for the developers to contribute to this projec
    Now, open your terminal and write the following commands:
 
    - `npm install` (install the dependencies)
-   - `npm start` (run the project on localhost)
+   - `npm run dev:start` (run the Express server on `http://localhost:5100`, reloads on changes)
+   - or `npm run cf:dev` (run it as a Cloudflare Worker on `http://localhost:8787`, same as production)
+
+   Then open `/graph?username=<your_username>` to see the graph.
+
+   Before you open a pull request, make sure these pass:
+
+   - `npm test` (tests; they don't need a token or network access)
+   - `npx tsc --noEmit` (type check)
+   - `npm run format` (formats the code with Prettier)
 
 7. Get a screenshot of your finished work! (if there are any UI changes) Try to crop it so that it looks good as a smallish (preferably squarish) image.
 
@@ -63,32 +72,36 @@ Our aim is to **keep it simple** for the developers to contribute to this projec
 ```
 
 ├── ...
-├── .github                          #conatins issues and pull request templates
-│ ├── ISSUE_TEMPLATE
-│ │ ├── bug_report.md
-│ │ └── feature_request.md
+├── .github
+│ ├── ISSUE_TEMPLATE                 #issue templates
+│ ├── workflows                      #CI (tests on every push and pull request)
 │ └── PULL_REQUEST_TEMPLATE.md
-├── __test__                         #conatins test for the project
-│ ├── utils.test.js                  #tests for functions in src/utils.ts
-│ ├── svgs.test.js                   #tests for functions in src/svgs.ts
-│ ├── mockFunctions.js               #contains mock functions for fetching.test.js
-│ ├── fetching.test.js               #tests for functions in src/fetching.ts
-│ └── fakeInputs.js                  #conatins fake inputs for tests
-├── asset                            #contains logo and screenshots of graphs
-├── interfaces
-│ └── interface.ts                   #contains all used interfaces throughout the code
-├── types
-│ └── types.ts                       #contains all used types throughout the code
+├── __test__                         #tests for the project (Jest)
+│ ├── __snapshots__                  #saved SVG output used by snapshot tests
+│ ├── utils.test.ts                  #tests for src/utils.ts, the chart renderer and the /graph route
+│ ├── svgs.test.ts                   #tests for src/svgs.ts and src/GraphCards.ts
+│ ├── themes.test.ts                 #tests for src/styles/themes.ts
+│ ├── fetching.test.ts               #tests for src/fetcher.ts
+│ ├── mockFunctions.ts               #mock GitHub API responses for fetching.test.ts
+│ └── fakeInputs.ts                  #fake inputs for tests
+├── asset                            #logo and screenshots of graphs
 ├── src
+│ ├── interfaces
+│ │ └── interface.ts                 #all interfaces used throughout the code
+│ ├── styles
+│ │ ├── graphAnimation.ts            #animations of the graph
+│ │ ├── graphStyle.ts                #style (CSS) of the graph
+│ │ └── themes.ts                    #all the themes are here
 │ ├── createChart.ts                 #renders the line chart as plain SVG (no DOM needed)
-│ ├── GraphChards.ts                 #class of Graph Cards
-│ ├── main.ts                        #everything starts from here
-│ ├── svgs.ts                        #contains svgs used or created throughout the project
-│ └── utils.ts                       #contains utility functions
-├── styles
-│ ├── graphAnimation.ts              #contains all the animations of the graph
-│ ├── graphStyle.ts                  #contains style(CSS) of the graph
-│ └── themes.ts                      #all the themes are here
+│ ├── fetcher.ts                     #fetches contributions from GitHub's GraphQL API
+│ ├── GraphCards.ts                  #class of Graph Cards
+│ ├── handlers.ts                    #Express route handlers
+│ ├── main.ts                        #Express server entry point (Node)
+│ ├── worker.ts                      #Cloudflare Worker entry point (production)
+│ ├── svgs.ts                        #svgs used or created throughout the project
+│ └── utils.ts                       #query options, colors and graph building
+├── index.html, script.js, styles.css  #website with the link generator
+├── wrangler.jsonc                   #Cloudflare Worker configuration
 ├── ...
 
 ```

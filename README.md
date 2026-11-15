@@ -14,7 +14,20 @@ A dynamically generated activity graph to show your GitHub activities of last 31
 
 ### ⚠️ NOTICE: DEPLOYMENT MOVED ⚠️
 
-The canonical deployment is now `https://github-readme-activity-graph.vercel.app`. Previous deployments at `https://activity-graph.herokuapp.com` (Heroku free tier discontinued) and `https://github-readme-activity-graph.cyclic.app` (Cyclic.sh shut down in early 2025) are no longer reachable. For background see [issue #197](https://github.com/Ashutosh00710/github-readme-activity-graph/issues/197#issuecomment-1560633754).
+The Vercel URL `https://github-readme-activity-graph.vercel.app` is **deprecated** and no longer serves graphs. The graph is now hosted on Cloudflare Workers:
+
+```
+https://github-readme-activity-graph.ashutosh-dwivedi0710.workers.dev
+```
+
+**If your README still uses the old URL, replace the domain and keep everything after it.** For example:
+
+```diff
+- ![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=<username>&theme=dracula)
++ ![Activity Graph](https://github-readme-activity-graph.ashutosh-dwivedi0710.workers.dev/graph?username=<username>&theme=dracula)
+```
+
+Older deployments at `https://activity-graph.herokuapp.com` (Heroku free tier discontinued) and `https://github-readme-activity-graph.cyclic.app` (Cyclic.sh shut down in early 2025) are also gone. For background see [issue #197](https://github.com/Ashutosh00710/github-readme-activity-graph/issues/197#issuecomment-1560633754).
 
 Please refer to the updated link [here](#how-to-use)
 
@@ -27,6 +40,7 @@ Please refer to the updated link [here](#how-to-use)
 - [Available Themes](#available-themes)
 - [Customization](#customization)
     - [Common Options](#common-options)
+- [Deploy on your own Cloudflare Worker](#deploy-on-your-own-cloudflare-worker)
 - [Deploy on your own Replit instance](#deploy-on-your-own-replit-instance)
     - [Follow the steps](#follow-the-steps)
 - [Deploy on your own Vercel instance](#deploy-on-your-own-vercel-instance)
@@ -47,17 +61,19 @@ Just paste the following URL in your profile readme and you are good to go.
 **Pass your `username` in the URL**
 
 ```md
-[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Ashutosh00710)](https://github.com/ashutosh00710/github-readme-activity-graph)
+[![Ashutosh's github activity graph](https://github-readme-activity-graph.ashutosh-dwivedi0710.workers.dev/graph?username=Ashutosh00710)](https://github.com/ashutosh00710/github-readme-activity-graph)
 ```
 
-### [Attention ⚠](#deploy-on-your-own-replit-instance)
+### [Attention ⚠](#deploy-on-your-own-cloudflare-worker)
+
+The public instance is shared by everyone and can hit GitHub's API rate limit. For a graph that always loads, [deploy your own instance](#deploy-on-your-own-cloudflare-worker); it's free.
 
 ## Use themes
 
 _`username=ashutosh00710&theme=theme_name`_
 
 ```md
-[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Ashutosh00710&theme=dracula)](https://github.com/ashutosh00710/github-readme-activity-graph)
+[![Ashutosh's github activity graph](https://github-readme-activity-graph.ashutosh-dwivedi0710.workers.dev/graph?username=Ashutosh00710&theme=dracula)](https://github.com/ashutosh00710/github-readme-activity-graph)
 ```
 
 [Manual Customization](#customization) is also available
@@ -114,14 +130,54 @@ Example:
 **`custom_title=This%20is%20a%20title`**
 
 ```md
-[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=ashutosh00710&custom_title=This%20is%20a%20title&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
+[![Ashutosh's github activity graph](https://github-readme-activity-graph.ashutosh-dwivedi0710.workers.dev/graph?username=ashutosh00710&custom_title=This%20is%20a%20title&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
 ```
 
 **Example:**
 
 ```md
-[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=ashutosh00710&bg_color=fffff0&color=708090&line=24292e&point=24292e&area=true&border_color=ff0000)](https://github.com/ashutosh00710/github-readme-activity-graph)
+[![Ashutosh's github activity graph](https://github-readme-activity-graph.ashutosh-dwivedi0710.workers.dev/graph?username=ashutosh00710&bg_color=fffff0&color=708090&line=24292e&point=24292e&area=true&border_color=ff0000)](https://github.com/ashutosh00710/github-readme-activity-graph)
 ```
+
+## Deploy on your own Cloudflare Worker
+
+This is how the public instance runs, and Cloudflare's free plan is enough for personal use.
+
+<details>
+<summary><b>Step-by-step instructions for deploying to Cloudflare Workers</b></summary>
+
+#### From the Cloudflare dashboard
+
+1. Fork this repo.
+2. In the [Cloudflare dashboard](https://dash.cloudflare.com/), go to **Workers & Pages** → **Create** → **Import a repository** and pick your fork.
+3. Set the Worker name to `github-readme-activity-graph` (it must match `name` in `wrangler.jsonc`) and use:
+    - **Build command:** leave empty
+    - **Deploy command:** `npx wrangler deploy`
+    - **Preview command:** `npx wrangler versions upload`
+4. Create a personal access token (PAT) [here](https://github.com/settings/tokens/new?description=GitHub%20Readme%20Activity%20Graph). Enable `repo` access if you want private contributions counted.
+5. In the Worker's **Settings** → **Variables and Secrets**, add a **Secret** named `TOKEN` with your PAT, then redeploy.
+6. Optional but recommended: add a **custom domain** to the Worker. Graphs are cached at Cloudflare's edge only on custom domains, not on `*.workers.dev`.
+
+#### From the command line
+
+```bash
+npm install
+npx wrangler login
+npx wrangler secret put TOKEN
+npx wrangler deploy
+```
+
+To try it locally first, put `TOKEN=<your PAT>` in a `.env` file and run `npm run cf:dev`.
+
+#### Finally
+
+Add the following to your profile README:
+
+```md
+![Github Activity Graph](https://<your-worker>.<your-subdomain>.workers.dev/graph?username=<username>)
+```
+
+</details>
 
 ## Deploy on your own Replit instance
 
