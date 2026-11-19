@@ -58,7 +58,7 @@ export class Utilities {
 
     private stringDateToUTC(date?: string): string {
         const format = 'YYYY-MM-DD';
-        return moment(date, format, true).utc().toISOString();
+        return moment.utc(date, format, true).toISOString();
     }
 
     private validateFromIsLessThanTwo(from: string, to: string): boolean {
