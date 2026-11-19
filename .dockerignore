@@ -1,0 +1,41 @@
+# Dependencies and build output
+node_modules
+dist
+coverage
+
+# VCS and IDE metadata
+.git
+.gitignore
+.github
+.vscode
+.idea
+
+# Local env files (never ship secrets into images)
+.env
+.env.*
+!.env.example
+
+# Tests (not needed at runtime)
+__test__
+jest.config.js
+
+# Logs and caches
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker files themselves
+Dockerfile
+.dockerignore
+
+# Platform-specific configs (not used inside the container)
+.replit
+replit.nix
+replit.sh
+vercel.json
+app.json
