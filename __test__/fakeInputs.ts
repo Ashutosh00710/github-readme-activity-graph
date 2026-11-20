@@ -118,6 +118,7 @@ export let fakeQueryStringRes = [
         from: '',
         to: '',
         grid: true,
+        metric: 'contributions',
     },
     {
         username: 'githubusername',
@@ -138,6 +139,7 @@ export let fakeQueryStringRes = [
         from: '',
         to: '',
         grid: true,
+        metric: 'contributions',
     },
     {
         username: 'githubusername',
@@ -158,6 +160,7 @@ export let fakeQueryStringRes = [
         from: '',
         to: '',
         grid: true,
+        metric: 'contributions',
     },
     {
         username: 'githubusername',
@@ -178,6 +181,7 @@ export let fakeQueryStringRes = [
         from: '',
         to: '',
         grid: true,
+        metric: 'contributions',
     },
     {
         username: 'githubusername',
@@ -198,6 +202,7 @@ export let fakeQueryStringRes = [
         from: '',
         to: '',
         grid: true,
+        metric: 'contributions',
     },
     {
         username: 'githubusername',
@@ -218,6 +223,7 @@ export let fakeQueryStringRes = [
         from: '',
         to: '',
         grid: true,
+        metric: 'contributions',
     },
     {
         username: 'githubusername',
@@ -238,6 +244,7 @@ export let fakeQueryStringRes = [
         from: '',
         to: '',
         grid: true,
+        metric: 'contributions',
     },
     {
         username: 'githubusername',
@@ -258,6 +265,7 @@ export let fakeQueryStringRes = [
         from: '',
         to: '',
         grid: true,
+        metric: 'contributions',
     },
     {
         username: 'githubusername',
@@ -279,6 +287,7 @@ export let fakeQueryStringRes = [
         from: '',
         to: '',
         grid: true,
+        metric: 'contributions',
     },
     {
         username: 'githubusername',
@@ -299,6 +308,7 @@ export let fakeQueryStringRes = [
         from: '',
         to: '',
         grid: true,
+        metric: 'contributions',
     },
 ];
 

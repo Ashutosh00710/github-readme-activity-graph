@@ -3,7 +3,7 @@ import { Response } from 'express';
 import { Card } from './GraphCards';
 import { invalidUserSvg } from './svgs';
 import { selectColors } from './styles/themes';
-import { QueryOption, ParsedQs, UserDetails } from './interfaces/interface';
+import { QueryOption, ParsedQs, UserDetails, Metric } from './interfaces/interface';
 
 export class Utilities {
     public username: string;
@@ -83,6 +83,13 @@ export class Utilities {
         return toDate.diff(fromDate, 'days');
     }
 
+    // `metric=commits` switches to the daily commit graph; anything else keeps the default
+    private validateMetric(): Metric {
+        return String(this.queryString.metric).toLowerCase() === 'commits'
+            ? 'commits'
+            : 'contributions';
+    }
+
     public queryOptions() {
         let area = false;
         if (String(this.queryString.area) === 'true') {
@@ -121,6 +128,7 @@ export class Utilities {
                 : 420, // Custom height implementation from range [200, 600], if not specified use default value - 420
             days: isFromValid && isToValid ? days : this.validateDays(this.queryString.days),
             grid: this.queryString.grid === 'false' ? false : true,
+            metric: this.validateMetric(),
             from,
             to,
         };
@@ -134,15 +142,16 @@ export class Utilities {
     public async buildGraph(fetchCalendarData: string | UserDetails) {
         if (typeof fetchCalendarData === 'object') {
             const options = this.queryOptions();
+            const isCommits = options.metric === 'commits';
             let title = '';
 
             if (!options.hide_title) {
                 if (options.custom_title) {
                     title = options.custom_title;
                 } else {
-                    title = `${
-                        fetchCalendarData.name !== null ? fetchCalendarData.name : options.username
-                    }'s Contribution Graph`;
+                    const owner =
+                        fetchCalendarData.name !== null ? fetchCalendarData.name : options.username;
+                    title = `${owner}'s ${isCommits ? 'Commit' : 'Contribution'} Graph`;
                 }
             }
 
@@ -154,12 +163,14 @@ export class Utilities {
                 title,
                 options.area,
                 options.grid,
+                isCommits ? 'Commits' : 'Contributions',
             );
             const getChart = await graph.buildGraph(fetchCalendarData.contributions);
             return {
                 finalGraph: getChart,
                 header: {
-                    maxAge: 'public, max-age=1800',
+                    // commit graphs cost more API calls, so let them be cached for longer
+                    maxAge: isCommits ? 'public, max-age=3600' : 'public, max-age=1800',
                 },
             };
         } else {
