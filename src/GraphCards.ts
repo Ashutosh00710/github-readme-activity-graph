@@ -11,6 +11,7 @@ export class Card {
         private readonly title = '',
         private readonly area = false,
         private readonly showGrid = true,
+        private readonly yAxisTitle = 'Contributions',
     ) {}
 
     private getOptions(): ChartOptions {
@@ -18,7 +19,7 @@ export class Card {
             width: this.width,
             height: this.height,
             axisY: {
-                title: 'Contributions',
+                title: this.yAxisTitle,
                 onlyInteger: true,
                 offset: 70,
                 labelOffset: {

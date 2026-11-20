@@ -116,6 +116,27 @@ Customize the appearance of your Activity Graph however you want with URL params
 |     `from`     |       date from which the graph starts        |              format `YYYY-MM-DD`               |
 |      `to`      |         date where the graph will end         |              format `YYYY-MM-DD`               |
 |     `grid`     |                   show grid                   |           boolean (default: `true`)            |
+|    `metric`    |      plot contributions or daily commits      |     `contributions` (default) or `commits`     |
+
+#### Daily commit graph (`metric=commits`)
+
+By default the graph plots GitHub's contribution calendar. Add `metric=commits` to plot **daily commits** instead:
+
+```
+/graph?username=example&metric=commits
+```
+
+- Counts commits from **all branches**, including ones that were never merged into the default branch.
+- A commit that is reachable from several branches is counted **once per repository** (deduplicated by SHA).
+- All themes and customization options work the same way, including `days`, `from` and `to`.
+- Days are bucketed in UTC.
+
+Limitations (to keep API usage low on shared instances):
+
+- Only the user's **public, owned** repositories are included (forks you own are included); private repositories are never counted.
+- Only the 30 most recently pushed repositories, 30 branches per repository and 100 commits per branch within the selected range are considered.
+- Only commits GitHub attributes to the user (author email linked to the account) are counted.
+- Commit graphs are cached for 1 hour instead of 30 minutes. A commit graph request uses 2 GraphQL calls regardless of how many repositories are scanned.
 
 ⚠ **For `custom_title` please make sure that you are using %20 for spaces**
 

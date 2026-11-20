@@ -36,7 +36,8 @@ async function getGraph(url: URL, env: Env): Promise<Response> {
         const utils = new Utilities(getQuery(url));
         const queryOptions = utils.queryOptions();
         const fetcher = new Fetcher(utils.username, env.TOKEN);
-        const fetchCalendarData = await fetcher.fetchContributions(
+        const fetchCalendarData = await fetcher.fetchActivity(
+            queryOptions.metric,
             queryOptions.days,
             queryOptions.from,
             queryOptions.to,
@@ -56,7 +57,11 @@ async function getData(url: URL, env: Env): Promise<Response> {
     try {
         const utils = new Utilities(getQuery(url));
         const fetcher = new Fetcher(utils.username, env.TOKEN);
-        const fetchCalendarData = await fetcher.fetchContributions(utils.queryOptions().days);
+        const queryOptions = utils.queryOptions();
+        const fetchCalendarData = await fetcher.fetchActivity(
+            queryOptions.metric,
+            queryOptions.days,
+        );
         if (typeof fetchCalendarData === 'object') {
             return Response.json(fetchCalendarData, { headers: CORS_HEADERS });
         }

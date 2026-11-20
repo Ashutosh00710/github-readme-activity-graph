@@ -15,8 +15,9 @@ export class Handlers {
 
             const fetcher = new Fetcher(utils.username);
             const queryOptions = utils.queryOptions();
-            const fetchCalendarData = await fetcher.fetchContributions(
-                utils.queryOptions().days,
+            const fetchCalendarData = await fetcher.fetchActivity(
+                queryOptions.metric,
+                queryOptions.days,
                 queryOptions.from,
                 queryOptions.to,
             );
@@ -37,8 +38,10 @@ export class Handlers {
             const utils = new Utilities(req.query);
 
             const fetcher = new Fetcher(utils.username);
-            const fetchCalendarData: UserDetails | string = await fetcher.fetchContributions(
-                utils.queryOptions().days,
+            const queryOptions = utils.queryOptions();
+            const fetchCalendarData: UserDetails | string = await fetcher.fetchActivity(
+                queryOptions.metric,
+                queryOptions.days,
             );
 
             if (typeof fetchCalendarData === 'object') {

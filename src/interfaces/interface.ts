@@ -1,7 +1,10 @@
+export type Metric = 'contributions' | 'commits';
+
 export class Query {
     query: string;
     variables: {
         LOGIN: string;
+        [key: string]: unknown;
     };
 }
 
@@ -27,6 +30,7 @@ export class QueryOption {
     radius: number;
     height: number;
     days: number;
+    metric: Metric;
 }
 
 export class ParsedQs {
@@ -49,6 +53,7 @@ export class ParsedQs {
     from?: string;
     to?: string;
     grid?: string;
+    metric?: string;
 }
 
 export class GraphArgs {
@@ -85,6 +90,42 @@ export class ResponseOfApi {
                 };
             };
         };
+    };
+    errors?: Array<{ message: string; type: string }>;
+}
+
+export class CommitHistoryNode {
+    oid: string;
+    committedDate: string;
+}
+
+export class BranchNode {
+    target: {
+        history?: {
+            nodes: Array<CommitHistoryNode>;
+            pageInfo: { hasNextPage: boolean };
+        };
+    } | null;
+}
+
+export class RepositoryNode {
+    nameWithOwner: string;
+    pushedAt: string | null;
+    refs: { nodes: Array<BranchNode> } | null;
+}
+
+export class CommitsResponse {
+    data?: {
+        user: {
+            repositories: { nodes: Array<RepositoryNode> };
+        } | null;
+    };
+    errors?: Array<{ message: string; type: string }>;
+}
+
+export class UserIdResponse {
+    data?: {
+        user: { id: string; name: string | null } | null;
     };
     errors?: Array<{ message: string; type: string }>;
 }
